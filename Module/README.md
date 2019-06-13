@@ -1,7 +1,4 @@
 # UW-IDEA_AnalogTestCases
-Circuit release for Analog Test Cases from UW IDEA project.
-
-<img src="https://github.com/uwidea/UW-IDEA_AnalogTestCases/blob/master/schema.png">
 
 -------------------
 Modules
