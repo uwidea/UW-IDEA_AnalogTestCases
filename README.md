@@ -1,7 +1,17 @@
 # UW-IDEA_AnalogTestCases
-Circuit release for Analog Test Cases from UW IDEA project.
+------------------------------------------------------------
+Circuit release for Analog Test Cases from UW IDEA project
+------------------------------------------------------------
 
-<img src="https://github.com/uwidea/UW-IDEA_AnalogTestCases/blob/master/schema.png">
+| Circuit       | Architecture               | Design Files           |
+| -------------| ------------------ | -------------------|
+| SAR_ADC | 12b SAR ADC | SAR_ADC/UW_65nm_SARADC_Apr_2019 |
+| DLDO | Digital LDO | DLDO/UW_65nm_DLDO_Apr_2019 |
+| MDLL | Multiplying DLL  |	MDLL/UW_65nm_MDLL_Apr_2019 |
+| TX | Transmitter | Transmitter/UW_65nm_Transmitter_Apr_2019 |
+| TS | Temperature Sensor  | TempSensor/UW_65nm_TS_May_2019 |
+
+
 
 -------------------
 Modules
