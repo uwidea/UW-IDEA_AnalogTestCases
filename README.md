@@ -5,7 +5,7 @@ Circuit release for Analog Test Cases from UW IDEA project
 
 ---------
 Circuits
-
+---------
 | Circuit       | Architecture               | Design Files           |
 | :------------:| ------------------ | -------------------|
 | SAR_ADC | 12b SAR ADC | SAR_ADC/UW_65nm_SARADC_Apr_2019 |
@@ -16,9 +16,9 @@ Circuits
 
 
 
--------------------
+--------
 Modules
-
+--------
 | Module       | Cell               | Function           |
 | -------------| ------------------ | -------------------|
 | 5b_ADC | 5b coarse SAR ADC | Compute the 5-bit MSBs using merged capacitor switching (MCS) method |
