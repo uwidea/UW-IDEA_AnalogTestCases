@@ -43,6 +43,6 @@ Figure 4. The dynamic performance of the ADC in pre-layout simulation.
 **2.2. Post-layout simulation**
 The testbench for the post-layout simulation is the same as the pre-layout simulation shown in Figure 2. But with the cell 12b_ADC uses parasitic extraction netlist in calibre view. The simulated analog current I_A=19.52 uA, digital current I_D=146uA and the reference current is I_Ref=24.36uA. The dynamic performance is shown in Figure 5.
 
-.. image :: images/image0015.png
+.. image :: images/image015.png
 
 Figure 5. The dynamic performance of the ADC in post-layout simulation.
