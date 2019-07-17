@@ -3,6 +3,9 @@
 Circuit release for Analog Test Cases from UW IDEA project
 ------------------------------------------------------------
 
+* All designs are fabricated and tested
+* Contains hierarchical schematic, documentation and sanitized CDL netlist
+
 ---------
 Circuits
 ---------
