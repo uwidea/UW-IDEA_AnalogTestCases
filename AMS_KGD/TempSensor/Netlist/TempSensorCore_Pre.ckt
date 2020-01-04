@@ -1,0 +1,946 @@
+** Generated for: hspiceD
+** Generated on: Dec 30 23:39:36 2019
+** Design library name: TempSensorLayout_PostLayout
+** Design cell name: TempSensorCore_Pre
+** Design view name: schematic
+.PARAM cu
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: TempSensorLayout
+** Cell name: TunableRes_NonUniform
+** View name: schematic
+.subckt TunableRes_NonUniform rtocap rtune<0> rtune<1> rtune<2> rtune<3> rtune<4> rtune<5> rtune<6> rtune<7>
+xr7  rtune<7> rtune<6>   rppolys l=43.5e-6 w=970e-9 m=1 mf=1 mismatchflag=1
+
+xr6  rtune<6> rtune<5>   rppolys l=33.51e-6 w=970e-9 m=1 mf=1 mismatchflag=1
+
+xr5  rtune<5> rtune<4>   rppolys l=28.8e-6 w=930e-9 m=1 mf=1 mismatchflag=1
+
+xr4  rtune<4> rtune<3>   rppolys l=19.32e-6 w=930e-9 m=1 mf=1 mismatchflag=1
+
+xr3  rtune<3> rtune<2>   rppolys l=28.8e-6 w=930e-9 m=1 mf=1 mismatchflag=1
+
+xr2  rtune<2> rtune<1>   rppolys l=33.51e-6 w=970e-9 m=1 mf=1 mismatchflag=1
+
+xr1  rtune<1> rtune<0>   rppolys l=43.5e-6 w=970e-9 m=1 mf=1 mismatchflag=1
+
+**Series configuration of R0
+xr0_1__dmy0  rtune<0> xr0_1__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_2__dmy0  xr0_1__dmy0 xr0_2__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_3__dmy0  xr0_2__dmy0 xr0_3__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_4__dmy0  xr0_3__dmy0 xr0_4__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_5__dmy0  xr0_4__dmy0 xr0_5__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_6__dmy0  xr0_5__dmy0 xr0_6__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_7__dmy0  xr0_6__dmy0 xr0_7__dmy0  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+xr0_8__dmy0  xr0_7__dmy0 rtocap  rppolys l=77.1e-6 w=1e-6 m=1 mf=1 mismatchflag=1
+**End of R0
+
+.ends TunableRes_NonUniform
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_64X_TG
+** View name: schematic
+.subckt SwitchCap_64X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '64*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=420e-9 multi=4 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=420e-9 multi=4 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=420e-9 multi=4 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=420e-9 multi=4 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=560e-9 m=4 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=560e-9 m=4 nf=1 
+.ends SwitchCap_64X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_1X_TG
+** View name: schematic
+.subckt SwitchCap_1X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 cu IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+.ends SwitchCap_1X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_2X_TG
+** View name: schematic
+.subckt SwitchCap_2X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '2*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+.ends SwitchCap_2X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_4X_TG
+** View name: schematic
+.subckt SwitchCap_4X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '4*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=200e-9 multi=1 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+.ends SwitchCap_4X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_8X_TG
+** View name: schematic
+.subckt SwitchCap_8X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '8*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=240e-9 multi=1 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=240e-9 multi=1 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=240e-9 multi=1 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=240e-9 multi=1 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=300e-9 m=1 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=300e-9 m=1 nf=1 
+.ends SwitchCap_8X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_16X_TG
+** View name: schematic
+.subckt SwitchCap_16X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '16*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=460e-9 multi=1 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=460e-9 multi=1 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=460e-9 multi=1 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=460e-9 multi=1 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=600e-9 m=1 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=600e-9 m=1 nf=1 
+.ends SwitchCap_16X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_32X_TG
+** View name: schematic
+.subckt SwitchCap_32X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '32*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=440e-9 multi=2 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=440e-9 multi=2 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=440e-9 multi=2 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=440e-9 multi=2 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=580e-9 m=2 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=580e-9 m=2 nf=1 
+.ends SwitchCap_32X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_128X_TG
+** View name: schematic
+.subckt SwitchCap_128X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '128*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=400e-9 multi=8 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=400e-9 multi=8 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=400e-9 multi=8 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=400e-9 multi=8 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=540e-9 m=8 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=540e-9 m=8 nf=1 
+.ends SwitchCap_128X_TG
+** End of subcircuit definition.
+
+** Library name: Temp_Sensor
+** Cell name: SwitchCap_256X_TG
+** View name: schematic
+.subckt SwitchCap_256X_TG vdd vss vctl0 vctlin von vop
+c1 net08 net07 '256*cu' IC=0
+xm5 von vctlin net07 vss nch_lvt_mac l=60e-9 w=740e-9 multi=8 nf=1 
+xm3 vop vctlin net08 vss nch_lvt_mac l=60e-9 w=740e-9 multi=8 nf=1 
+xm0 net08 vctl0 vss vss nch_lvt_mac l=60e-9 w=740e-9 multi=8 nf=1 
+xm4 net07 vctl0 vss vss nch_lvt_mac l=60e-9 w=740e-9 multi=8 nf=1 
+m2 net08 vctl0 vop vdd pch_lvt l=60e-9 w=1.02e-6 m=8 nf=1 
+m1 net07 vctl0 von vdd pch_lvt l=60e-9 w=1.02e-6 m=8 nf=1 
+.ends SwitchCap_256X_TG
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: CapArray_Schematic
+** View name: schematic
+.subckt CapArray_Schematic vcn vcp vdd vss vctl0<8> vctl0<7> vctl0<6> vctl0<5> vctl0<4> vctl0<3> vctl0<2> vctl0<1> vctl0<0> vctlinp<8> vctlinp<7> vctlinp<6> vctlinp<5> vctlinp<4> vctlinp<3> vctlinp<2> vctlinp<1> vctlinp<0>
+xi37 vdd vss vctl0<6> vctlinp<6> vcn vcp SwitchCap_64X_TG
+xi43 vdd vss vctl0<0> vctlinp<0> vcn vcp SwitchCap_1X_TG
+xi42 vdd vss vctl0<1> vctlinp<1> vcn vcp SwitchCap_2X_TG
+xi41 vdd vss vctl0<2> vctlinp<2> vcn vcp SwitchCap_4X_TG
+xi40 vdd vss vctl0<3> vctlinp<3> vcn vcp SwitchCap_8X_TG
+xi39 vdd vss vctl0<4> vctlinp<4> vcn vcp SwitchCap_16X_TG
+xi38 vdd vss vctl0<5> vctlinp<5> vcn vcp SwitchCap_32X_TG
+xi36 vdd vss vctl0<7> vctlinp<7> vcn vcp SwitchCap_128X_TG
+xi49 vdd vss vctl0<8> vctlinp<8> vcn vcp SwitchCap_256X_TG
+.ends CapArray_Schematic
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: PolyPhaseFilter
+** View name: schematic
+.subckt PolyPhaseFilter inp inphase<7> inphase<6> inphase<5> inphase<4> inphase<3> inphase<2> inphase<1> inphase<0> outp outphase<7> outphase<6> outphase<5> outphase<4> outphase<3> outphase<2> outphase<1> outphase<0> vcn vcp vctl0<8> vctl0<7> vctl0<6> vctl0<5> vctl0<4> vctl0<3> vctl0<2> vctl0<1> vctl0<0> vctlin<8> vctlin<7> vctlin<6> vctlin<5> vctlin<4> vctlin<3> vctlin<2> vctlin<1> vctlin<0> vdd vss
+xi1 vcn outphase<0> outphase<1> outphase<2> outphase<3> outphase<4> outphase<5> outphase<6> outphase<7> TunableRes_NonUniform
+xi0 vcp inphase<0> inphase<1> inphase<2> inphase<3> inphase<4> inphase<5> inphase<6> inphase<7> TunableRes_NonUniform
+xi2 vcn vcp vdd vss vctl0<8> vctl0<7> vctl0<6> vctl0<5> vctl0<4> vctl0<3> vctl0<2> vctl0<1> vctl0<0> vctlin<8> vctlin<7> vctlin<6> vctlin<5> vctlin<4> vctlin<3> vctlin<2> vctlin<1> vctlin<0> CapArray_Schematic
+xc0 vcp vcn vdd crtmom nv=20 nh=42 w=100e-9 s=100e-9 stm=2 spm=7 mf=8 mismatchflag=0
+**Series configuration of R1
+xr1_1__dmy0  inp xr1_1__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_2__dmy0  xr1_1__dmy0 xr1_2__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_3__dmy0  xr1_2__dmy0 xr1_3__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_4__dmy0  xr1_3__dmy0 xr1_4__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_5__dmy0  xr1_4__dmy0 xr1_5__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_6__dmy0  xr1_5__dmy0 xr1_6__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_7__dmy0  xr1_6__dmy0 xr1_7__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_8__dmy0  xr1_7__dmy0 xr1_8__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_9__dmy0  xr1_8__dmy0 xr1_9__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_10__dmy0  xr1_9__dmy0 xr1_10__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_11__dmy0  xr1_10__dmy0 xr1_11__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_12__dmy0  xr1_11__dmy0 xr1_12__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_13__dmy0  xr1_12__dmy0 xr1_13__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_14__dmy0  xr1_13__dmy0 xr1_14__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_15__dmy0  xr1_14__dmy0 xr1_15__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_16__dmy0  xr1_15__dmy0 xr1_16__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_17__dmy0  xr1_16__dmy0 xr1_17__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_18__dmy0  xr1_17__dmy0 xr1_18__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_19__dmy0  xr1_18__dmy0 xr1_19__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_20__dmy0  xr1_19__dmy0 xr1_20__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_21__dmy0  xr1_20__dmy0 xr1_21__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_22__dmy0  xr1_21__dmy0 xr1_22__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr1_23__dmy0  xr1_22__dmy0 net16  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+**End of R1
+
+**Series configuration of R0
+xr0_1__dmy0  net05 xr0_1__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_2__dmy0  xr0_1__dmy0 xr0_2__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_3__dmy0  xr0_2__dmy0 xr0_3__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_4__dmy0  xr0_3__dmy0 xr0_4__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_5__dmy0  xr0_4__dmy0 xr0_5__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_6__dmy0  xr0_5__dmy0 xr0_6__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_7__dmy0  xr0_6__dmy0 xr0_7__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_8__dmy0  xr0_7__dmy0 xr0_8__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_9__dmy0  xr0_8__dmy0 xr0_9__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_10__dmy0  xr0_9__dmy0 xr0_10__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_11__dmy0  xr0_10__dmy0 xr0_11__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_12__dmy0  xr0_11__dmy0 xr0_12__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_13__dmy0  xr0_12__dmy0 xr0_13__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_14__dmy0  xr0_13__dmy0 xr0_14__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_15__dmy0  xr0_14__dmy0 xr0_15__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_16__dmy0  xr0_15__dmy0 xr0_16__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_17__dmy0  xr0_16__dmy0 xr0_17__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_18__dmy0  xr0_17__dmy0 xr0_18__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_19__dmy0  xr0_18__dmy0 xr0_19__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_20__dmy0  xr0_19__dmy0 xr0_20__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_21__dmy0  xr0_20__dmy0 xr0_21__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_22__dmy0  xr0_21__dmy0 xr0_22__dmy0  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+xr0_23__dmy0  xr0_22__dmy0 outp  rppolys l=84.4e-6 w=1.4e-6 m=1 mf=1 mismatchflag=1
+**End of R0
+
+.ends PolyPhaseFilter
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DCAP8LVT
+** View name: schematic
+.subckt DCAP8LVT vdd vss
+mi4 vss net9 vss vss nch_lvt l=880e-9 w=300e-9 m=1 nf=1 
+m_u2 net11 net9 vss vss nch_lvt l=60e-9 w=300e-9 m=1 nf=1 
+mi3 vdd net11 vdd vdd pch_lvt l=880e-9 w=430e-9 m=1 nf=1 
+m_u1 net9 net11 vdd vdd pch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends DCAP8LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD1LVT
+** View name: schematic
+.subckt INVD1LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: CKBD1LVT
+** View name: schematic
+.subckt CKBD1LVT i z vdd vss
+m_u15 net5 i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+mu23 z net5 vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u3 net5 i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mu21 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends CKBD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN2D1LVT
+** View name: schematic
+.subckt AN2D1LVT a1 a2 z vdd vss
+m0 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: CKND1LVT
+** View name: schematic
+.subckt CKND1LVT i zn vdd vss
+m_u2 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends CKND1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DFCND1LVT
+** View name: schematic
+.subckt DFCND1LVT d cp cdn q qn vdd vss
+m0 qn net33 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+mi4 net53 net5 vss vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+mi18 net33 net5 net79 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m1 net95 net79 net9 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net81 net25 vss vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+mi15 net81 net67 net79 vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+m3 net33 net95 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m4 net67 net5 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net25 d net53 vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+mi49 net20 cdn vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net17 net81 net20 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m5 q net95 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 net9 cdn vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 net5 cp vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net25 net67 net17 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m8 net33 net95 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m9 net5 cp vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m10 net67 net5 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net72 net81 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net25 d net104 vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m11 qn net33 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 q net95 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net72 cdn vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi17 net33 net67 net79 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m13 net81 net25 vdd vdd pch_lvt l=60e-9 w=220e-9 m=1 nf=1 
+m14 net95 net79 vdd vdd pch_lvt l=60e-9 w=365e-9 m=1 nf=1 
+mi16 net81 net5 net79 vdd pch_lvt l=60e-9 w=245e-9 m=1 nf=1 
+mi45 net25 net5 net72 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net104 net67 vdd vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m15 net95 cdn vdd vdd pch_lvt l=60e-9 w=365e-9 m=1 nf=1 
+.ends DFCND1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: CKND3LVT
+** View name: schematic
+.subckt CKND3LVT i zn vdd vss
+m_u1_0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u2_1 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_0 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_2 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+.ends CKND3LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: CKND8LVT
+** View name: schematic
+.subckt CKND8LVT i zn vdd vss
+m_u1_7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+di3 vss i ndio_lvt area=66e-15 pj=1.18e-6 m=1
+m_u2_1 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_6 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_3 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_4 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_7 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_0 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_2 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_5 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+.ends CKND8LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: DFCND1LVT
+** View name: schematic
+.subckt DFCND1LVT_schematic cdn cp d qn vdd vss
+m0 qn net33 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+mi4 net53 net5 vss vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+mi18 net33 net5 net79 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m1 net95 net79 net9 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net81 net25 vss vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+mi15 net81 net67 net79 vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+m3 net33 net95 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m4 net67 net5 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net25 d net53 vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+mi49 net20 cdn vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net17 net81 net20 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m5 net036 net95 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 net9 cdn vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 net5 cp vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net25 net67 net17 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m8 net33 net95 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m9 net5 cp vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m10 net67 net5 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net72 net81 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net25 d net104 vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m11 qn net33 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 net036 net95 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net72 cdn vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi17 net33 net67 net79 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m13 net81 net25 vdd vdd pch_lvt l=60e-9 w=220e-9 m=1 nf=1 
+m14 net95 net79 vdd vdd pch_lvt l=60e-9 w=365e-9 m=1 nf=1 
+mi16 net81 net5 net79 vdd pch_lvt l=60e-9 w=245e-9 m=1 nf=1 
+mi45 net25 net5 net72 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net104 net67 vdd vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m15 net95 cdn vdd vdd pch_lvt l=60e-9 w=365e-9 m=1 nf=1 
+.ends DFCND1LVT_schematic
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: CK_DividerBy8
+** View name: schematic
+.subckt CK_DividerBy8 ckin compen inphase outphase preset qphase vdd vss
+xi14 preset net039 vdd vss INVD2LVT
+xi51<18> vdd vss DCAP8LVT
+xi51<17> vdd vss DCAP8LVT
+xi51<16> vdd vss DCAP8LVT
+xi51<15> vdd vss DCAP8LVT
+xi51<14> vdd vss DCAP8LVT
+xi51<13> vdd vss DCAP8LVT
+xi51<12> vdd vss DCAP8LVT
+xi51<11> vdd vss DCAP8LVT
+xi51<10> vdd vss DCAP8LVT
+xi51<9> vdd vss DCAP8LVT
+xi51<8> vdd vss DCAP8LVT
+xi51<7> vdd vss DCAP8LVT
+xi51<6> vdd vss DCAP8LVT
+xi51<5> vdd vss DCAP8LVT
+xi51<4> vdd vss DCAP8LVT
+xi51<3> vdd vss DCAP8LVT
+xi51<2> vdd vss DCAP8LVT
+xi51<1> vdd vss DCAP8LVT
+xi51<0> vdd vss DCAP8LVT
+xi50 preset net048 vdd vss INVD1LVT
+xi6 ckin net45 vdd vss CKBD1LVT
+xi139 net048 net015 compen vdd vss AN2D1LVT
+xi5 net45 net49 vdd vss CKND1LVT
+xi8 net48 net011 net039 net015 net48 vdd vss DFCND1LVT
+xi7 net50 net018 net039 net076 net50 vdd vss DFCND1LVT
+xi43 net076 net059 vdd vss CKND3LVT
+xi39 net48 net063 vdd vss CKND3LVT
+xi37 net015 net064 vdd vss CKND3LVT
+xi42 net059 qphase vdd vss CKND8LVT
+xi38 net063 outphase vdd vss CKND8LVT
+xi20 net064 inphase vdd vss CKND8LVT
+xi29 net039 net49 net016 net016 vdd vss DFCND1LVT_schematic
+xi28 net039 net016 net018 net018 vdd vss DFCND1LVT_schematic
+xi27 net039 net45 net040 net040 vdd vss DFCND1LVT_schematic
+xi26 net039 net040 net011 net011 vdd vss DFCND1LVT_schematic
+.ends CK_DividerBy8
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DFNCND1LVT
+** View name: schematic
+.subckt DFNCND1LVT d cpn cdn q qn vdd vss
+m0 net49 cdn vdd vdd pch_lvt l=60e-9 w=375e-9 m=1 nf=1 
+mi43 net53 net9 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m1 net49 net20 vdd vdd pch_lvt l=60e-9 w=375e-9 m=1 nf=1 
+mi6 net5 d net1 vdd pch_lvt l=60e-9 w=450e-9 m=1 nf=1 
+m2 net11 net67 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 net37 net49 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m4 qn net37 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 net67 cpn vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m6 q net49 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net53 cdn vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi17 net37 net67 net20 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m7 net9 net5 vdd vdd pch_lvt l=60e-9 w=305e-9 m=1 nf=1 
+mi16 net9 net11 net20 vdd pch_lvt l=60e-9 w=270e-9 m=1 nf=1 
+mi45 net5 net11 net53 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net1 net67 vdd vdd pch_lvt l=60e-9 w=450e-9 m=1 nf=1 
+m8 qn net37 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m9 net37 net49 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi4 net109 net11 vss vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+mi18 net37 net11 net20 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m10 net49 net20 net104 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m11 net104 cdn vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m12 net9 net5 vss vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+mi15 net9 net67 net20 vss nch_lvt l=60e-9 w=170e-9 m=1 nf=1 
+mi5 net5 d net109 vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+m13 net67 cpn vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi49 net77 cdn vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net64 net9 net77 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m14 q net49 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m15 net11 net67 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net5 net67 net64 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+.ends DFNCND1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: TIEHLVT
+** View name: schematic
+.subckt TIEHLVT z vdd vss
+m_u2 net7 net7 vss vss nch_lvt l=60e-9 w=410e-9 m=1 nf=1 
+m_u1 z net7 vdd vdd pch_lvt l=60e-9 w=540e-9 m=1 nf=1 
+.ends TIEHLVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DFCNQD1LVT
+** View name: schematic
+.subckt DFCNQD1LVT d cp cdn q vdd vss
+mi4 net53 net5 vss vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+m0 net81 net51 net9 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net37 net97 vss vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+mi29 net51 net5 net44 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi15 net37 net63 net51 vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+m2 net63 net5 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net97 d net53 vss nch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+mi49 net20 cdn vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi26 net44 net81 vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net17 net37 net20 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m3 q net81 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net9 cdn vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 net5 cp vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net97 net63 net17 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m6 net5 cp vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m7 net63 net5 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net101 net37 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net97 d net100 vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m8 q net81 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net101 cdn vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m9 net37 net97 vdd vdd pch_lvt l=60e-9 w=220e-9 m=1 nf=1 
+m10 net81 net51 vdd vdd pch_lvt l=60e-9 w=400e-9 m=1 nf=1 
+mi16 net37 net5 net51 vdd pch_lvt l=60e-9 w=245e-9 m=1 nf=1 
+mi24 net72 net81 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi28 net51 net63 net72 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi45 net97 net5 net101 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net100 net63 vdd vdd pch_lvt l=60e-9 w=460e-9 m=1 nf=1 
+m11 net81 cdn vdd vdd pch_lvt l=60e-9 w=400e-9 m=1 nf=1 
+.ends DFCNQD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: CKND4LVT
+** View name: schematic
+.subckt CKND4LVT i zn vdd vss
+m_u1_0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u1_1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u2_1 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_3 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_0 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+m_u2_2 zn i vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+.ends CKND4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: NR2D1LVT
+** View name: schematic
+.subckt NR2D1LVT a1 a2 zn vdd vss
+m0 zn a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a1 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net13 a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 net13 vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends NR2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: OR2D1LVT
+** View name: schematic
+.subckt OR2D1LVT a1 a2 z vdd vss
+m0 z net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 a1 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m2 net5 a2 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 net17 a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 net5 a1 net17 vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends OR2D1LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: DFNCND1LVT
+** View name: schematic
+.subckt DFNCND1LVT_schematic cdn cpn d q vdd vss
+m0 net49 cdn vdd vdd pch_lvt l=60e-9 w=375e-9 m=1 nf=1 
+mi43 net53 net9 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m1 net49 net20 vdd vdd pch_lvt l=60e-9 w=375e-9 m=1 nf=1 
+mi6 net5 d net1 vdd pch_lvt l=60e-9 w=450e-9 m=1 nf=1 
+m2 net11 net67 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 net37 net49 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m4 net040 net37 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 net67 cpn vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m6 q net49 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net53 cdn vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi17 net37 net67 net20 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m7 net9 net5 vdd vdd pch_lvt l=60e-9 w=305e-9 m=1 nf=1 
+mi16 net9 net11 net20 vdd pch_lvt l=60e-9 w=270e-9 m=1 nf=1 
+mi45 net5 net11 net53 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net1 net67 vdd vdd pch_lvt l=60e-9 w=450e-9 m=1 nf=1 
+m8 net040 net37 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m9 net37 net49 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi4 net109 net11 vss vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+mi18 net37 net11 net20 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m10 net49 net20 net104 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m11 net104 cdn vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m12 net9 net5 vss vss nch_lvt l=60e-9 w=190e-9 m=1 nf=1 
+mi15 net9 net67 net20 vss nch_lvt l=60e-9 w=170e-9 m=1 nf=1 
+mi5 net5 d net109 vss nch_lvt l=60e-9 w=160e-9 m=1 nf=1 
+m13 net67 cpn vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi49 net77 cdn vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net64 net9 net77 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m14 q net49 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m15 net11 net67 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net5 net67 net64 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+.ends DFNCND1LVT_schematic
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: DFSND1LVT
+** View name: schematic
+.subckt DFSND1LVT cp d qn sdn vdd vss
+m0 net57 net61 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net11 cp vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m2 net032 net79 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 net97 sdn net57 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net40 net79 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m5 net25 sdn net40 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+mi20 net97 net81 net67 vss nch_lvt l=60e-9 w=235e-9 m=1 nf=1 
+mi23 net61 net81 net5 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi22 net25 net11 net67 vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi21 net61 d net9 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 net79 net67 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 qn net25 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+mi19 net9 net11 vss vss nch_lvt l=60e-9 w=310e-9 m=1 nf=1 
+mi24 net5 net97 vss vss nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m8 net81 net11 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m9 net11 cp vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+mi33 net25 net81 net67 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m10 net97 sdn vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 net032 net79 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi34 net61 net11 net104 vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+mi30 net97 net11 net67 vdd pch_lvt l=60e-9 w=320e-9 m=1 nf=1 
+m12 qn net25 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 net97 net61 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi28 net85 net81 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 net81 net11 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m15 net25 net79 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+mi35 net104 net97 vdd vdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m16 net25 sdn vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m17 net79 net67 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+mi26 net61 d net85 vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends DFSND1LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: SARLogic
+** View name: schematic
+.subckt SARLogic compen d<8> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> done preset vctl0<8> vctl0<7> vctl0<6> vctl0<5> vctl0<4> vctl0<3> vctl0<2> vctl0<1> vctl0<0> vctlin<8> vctlin<7> vctlin<6> vctlin<5> vctlin<4> vctlin<3> vctlin<2> vctlin<1> vctlin<0> vdd vonlatch voplatch vss
+xi3<27> vdd vss DCAP8LVT
+xi3<26> vdd vss DCAP8LVT
+xi3<25> vdd vss DCAP8LVT
+xi3<24> vdd vss DCAP8LVT
+xi3<23> vdd vss DCAP8LVT
+xi3<22> vdd vss DCAP8LVT
+xi3<21> vdd vss DCAP8LVT
+xi3<20> vdd vss DCAP8LVT
+xi3<19> vdd vss DCAP8LVT
+xi3<18> vdd vss DCAP8LVT
+xi3<17> vdd vss DCAP8LVT
+xi3<16> vdd vss DCAP8LVT
+xi3<15> vdd vss DCAP8LVT
+xi3<14> vdd vss DCAP8LVT
+xi3<13> vdd vss DCAP8LVT
+xi3<12> vdd vss DCAP8LVT
+xi3<11> vdd vss DCAP8LVT
+xi3<10> vdd vss DCAP8LVT
+xi3<9> vdd vss DCAP8LVT
+xi3<8> vdd vss DCAP8LVT
+xi3<7> vdd vss DCAP8LVT
+xi3<6> vdd vss DCAP8LVT
+xi3<5> vdd vss DCAP8LVT
+xi3<4> vdd vss DCAP8LVT
+xi3<3> vdd vss DCAP8LVT
+xi3<2> vdd vss DCAP8LVT
+xi3<1> vdd vss DCAP8LVT
+xi3<0> vdd vss DCAP8LVT
+xi59 ck<1> compen n1 ck<0> ckb<0> vdd vss DFNCND1LVT
+xi58 ck<2> compen n1 ck<1> ckb<1> vdd vss DFNCND1LVT
+xi57 ck<3> compen n1 ck<2> ckb<2> vdd vss DFNCND1LVT
+xi55 ck<4> compen n1 ck<3> ckb<3> vdd vss DFNCND1LVT
+xi56 ck<5> compen n1 ck<4> ckb<4> vdd vss DFNCND1LVT
+xi54 ck<6> compen n1 ck<5> ckb<5> vdd vss DFNCND1LVT
+xi51 ck<7> compen n1 ck<6> ckb<6> vdd vss DFNCND1LVT
+xi65 ck<8> compen n1 ck<7> ckb<7> vdd vss DFNCND1LVT
+xi67 net163 compen n1 ck<8> ckb<8> vdd vss DFNCND1LVT
+xi0 net034 vdd vss TIEHLVT
+xi42 ck<0> compen n1 done vdd vss DFCNQD1LVT
+xi60 voplatch ck<5> n1 d<5> vdd vss DFCNQD1LVT
+xi53 voplatch ck<6> n1 d<6> vdd vss DFCNQD1LVT
+xi52 voplatch ck<7> n1 d<7> vdd vss DFCNQD1LVT
+xi66 voplatch ck<8> n1 d<8> vdd vss DFCNQD1LVT
+xi69 preset n1 vdd vss CKND4LVT
+xi73<7> d<7> net164<0> vctl0<7> vdd vss NR2D1LVT
+xi73<6> d<6> net164<1> vctl0<6> vdd vss NR2D1LVT
+xi73<5> d<5> net164<2> vctl0<5> vdd vss NR2D1LVT
+xi73<4> d<4> net164<3> vctl0<4> vdd vss NR2D1LVT
+xi73<3> d<3> net164<4> vctl0<3> vdd vss NR2D1LVT
+xi73<2> d<2> net164<5> vctl0<2> vdd vss NR2D1LVT
+xi73<1> d<1> net164<6> vctl0<1> vdd vss NR2D1LVT
+xi73<0> d<0> net164<7> vctl0<0> vdd vss NR2D1LVT
+xi84 d<8> ckb<8> net162 vdd vss NR2D1LVT
+xi72<7> ck<8> ckb<7> net164<0> vdd vss AN2D1LVT
+xi72<6> ck<7> ckb<6> net164<1> vdd vss AN2D1LVT
+xi72<5> ck<6> ckb<5> net164<2> vdd vss AN2D1LVT
+xi72<4> ck<5> ckb<4> net164<3> vdd vss AN2D1LVT
+xi72<3> ck<4> ckb<3> net164<4> vdd vss AN2D1LVT
+xi72<2> ck<3> ckb<2> net164<5> vdd vss AN2D1LVT
+xi72<1> ck<2> ckb<1> net164<6> vdd vss AN2D1LVT
+xi72<0> ck<1> ckb<0> net164<7> vdd vss AN2D1LVT
+xi106 preset net162 vctl0<8> vdd vss OR2D1LVT
+xi71<7> vctl0<7> vctlin<7> vdd vss CKND1LVT
+xi71<6> vctl0<6> vctlin<6> vdd vss CKND1LVT
+xi71<5> vctl0<5> vctlin<5> vdd vss CKND1LVT
+xi71<4> vctl0<4> vctlin<4> vdd vss CKND1LVT
+xi71<3> vctl0<3> vctlin<3> vdd vss CKND1LVT
+xi71<2> vctl0<2> vctlin<2> vdd vss CKND1LVT
+xi71<1> vctl0<1> vctlin<1> vdd vss CKND1LVT
+xi71<0> vctl0<0> vctlin<0> vdd vss CKND1LVT
+xi86 vctl0<8> vctlin<8> vdd vss CKND1LVT
+xi50 n1 compen net034 net163 vdd vss DFNCND1LVT_schematic
+xi81 ck<0> vonlatch d<0> n1 vdd vss DFSND1LVT
+xi80 ck<1> vonlatch d<1> n1 vdd vss DFSND1LVT
+xi79 ck<2> vonlatch d<2> n1 vdd vss DFSND1LVT
+xi62 ck<3> vonlatch d<3> n1 vdd vss DFSND1LVT
+xi61 ck<4> vonlatch d<4> n1 vdd vss DFSND1LVT
+.ends SARLogic
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DCAP16LVT
+** View name: schematic
+.subckt DCAP16LVT vdd vss
+mi4 vss net11 vss vss nch_lvt l=690e-9 w=300e-9 m=1 nf=1 
+mi8 vss net11 vss vss nch_lvt l=690e-9 w=300e-9 m=1 nf=1 
+m_u2 net5 net11 vss vss nch_lvt l=60e-9 w=300e-9 m=1 nf=1 
+mi7 vss net11 vss vss nch_lvt l=690e-9 w=300e-9 m=1 nf=1 
+mi3 vdd net5 vdd vdd pch_lvt l=690e-9 w=430e-9 m=1 nf=1 
+mi6 vdd net5 vdd vdd pch_lvt l=690e-9 w=430e-9 m=1 nf=1 
+m_u1 net11 net5 vdd vdd pch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+mi5 vdd net5 vdd vdd pch_lvt l=690e-9 w=430e-9 m=1 nf=1 
+.ends DCAP16LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: DCAP32LVT
+** View name: schematic
+.subckt DCAP32LVT vdd vss
+mi38 vss net11 vss vss nch_lvt l=975e-9 w=300e-9 m=1 nf=1 
+mi6 vss net11 vss vss nch_lvt l=975e-9 w=300e-9 m=1 nf=1 
+mi39 vss net11 vss vss nch_lvt l=975e-9 w=300e-9 m=1 nf=1 
+mi37 vss net11 vss vss nch_lvt l=975e-9 w=300e-9 m=1 nf=1 
+m_u2 net5 net11 vss vss nch_lvt l=60e-9 w=300e-9 m=1 nf=1 
+mi36 vss net11 vss vss nch_lvt l=975e-9 w=300e-9 m=1 nf=1 
+mi33 vdd net5 vdd vdd pch_lvt l=975e-9 w=430e-9 m=1 nf=1 
+m_u1 net11 net5 vdd vdd pch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+mi34 vdd net5 vdd vdd pch_lvt l=975e-9 w=430e-9 m=1 nf=1 
+mi35 vdd net5 vdd vdd pch_lvt l=975e-9 w=430e-9 m=1 nf=1 
+mi32 vdd net5 vdd vdd pch_lvt l=975e-9 w=430e-9 m=1 nf=1 
+mi26 vdd net5 vdd vdd pch_lvt l=975e-9 w=430e-9 m=1 nf=1 
+.ends DCAP32LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: BUFTD16LVT
+** View name: schematic
+.subckt BUFTD16LVT i oe z vdd vss
+m0 net37 i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net25 net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net25 i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 net25 net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net13 oe net9 vss nch_lvt l=60e-9 w=210e-9 m=1 nf=1 
+m_u7 z net25 vss vss nch_lvt l=60e-9 w=3.66e-6 m=1 nf=1 
+m5 net13 oe net37 vss nch_lvt l=60e-9 w=210e-9 m=1 nf=1 
+m6 net9 i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 net5 oe vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m8 net25 i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m9 net5 oe vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 net72 i vdd vdd pch_lvt l=60e-9 w=340e-9 m=1 nf=1 
+m11 net25 net5 net72 vdd pch_lvt l=60e-9 w=340e-9 m=1 nf=1 
+m12 net13 i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 net13 oe vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m_u6 z net13 vdd vdd pch_lvt l=60e-9 w=8.25e-6 m=1 nf=1 
+m14 net53 i vdd vdd pch_lvt l=60e-9 w=340e-9 m=1 nf=1 
+m15 net13 i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m16 net25 net5 net53 vdd pch_lvt l=60e-9 w=340e-9 m=1 nf=1 
+m17 net13 oe vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends BUFTD16LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: ResTune_CFG
+** View name: schematic
+.subckt ResTune_CFG inph inphase<7> inphase<6> inphase<5> inphase<4> inphase<3> inphase<2> inphase<1> inphase<0> outph outphase<7> outphase<6> outphase<5> outphase<4> outphase<3> outphase<2> outphase<1> outphase<0> resen<7> resen<6> resen<5> resen<4> resen<3> resen<2> resen<1> resen<0> vdd vss
+xi3<1> vdd vss DCAP8LVT
+xi3<0> vdd vss DCAP8LVT
+xi2<7> vdd vss DCAP16LVT
+xi2<6> vdd vss DCAP16LVT
+xi2<5> vdd vss DCAP16LVT
+xi2<4> vdd vss DCAP16LVT
+xi2<3> vdd vss DCAP16LVT
+xi2<2> vdd vss DCAP16LVT
+xi2<1> vdd vss DCAP16LVT
+xi2<0> vdd vss DCAP16LVT
+xi4<3> vdd vss DCAP32LVT
+xi4<2> vdd vss DCAP32LVT
+xi4<1> vdd vss DCAP32LVT
+xi4<0> vdd vss DCAP32LVT
+xi1<7> inph resen<7> inphase<7> vdd vss BUFTD16LVT
+xi1<6> inph resen<6> inphase<6> vdd vss BUFTD16LVT
+xi1<5> inph resen<5> inphase<5> vdd vss BUFTD16LVT
+xi1<4> inph resen<4> inphase<4> vdd vss BUFTD16LVT
+xi1<3> inph resen<3> inphase<3> vdd vss BUFTD16LVT
+xi1<2> inph resen<2> inphase<2> vdd vss BUFTD16LVT
+xi1<1> inph resen<1> inphase<1> vdd vss BUFTD16LVT
+xi1<0> inph resen<0> inphase<0> vdd vss BUFTD16LVT
+xi0<7> outph resen<7> outphase<7> vdd vss BUFTD16LVT
+xi0<6> outph resen<6> outphase<6> vdd vss BUFTD16LVT
+xi0<5> outph resen<5> outphase<5> vdd vss BUFTD16LVT
+xi0<4> outph resen<4> outphase<4> vdd vss BUFTD16LVT
+xi0<3> outph resen<3> outphase<3> vdd vss BUFTD16LVT
+xi0<2> outph resen<2> outphase<2> vdd vss BUFTD16LVT
+xi0<1> outph resen<1> outphase<1> vdd vss BUFTD16LVT
+xi0<0> outph resen<0> outphase<0> vdd vss BUFTD16LVT
+.ends ResTune_CFG
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: NR2D2LVT
+** View name: schematic
+.subckt NR2D2LVT a1 a2 zn vdd vss
+m0 zn a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a1 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn a1 net17 vdd pch_lvt l=60e-9 w=530e-9 m=1 nf=1 
+m5 net25 a2 vdd vdd pch_lvt l=60e-9 w=530e-9 m=1 nf=1 
+m6 zn a1 net25 vdd pch_lvt l=60e-9 w=530e-9 m=1 nf=1 
+m7 net17 a2 vdd vdd pch_lvt l=60e-9 w=530e-9 m=1 nf=1 
+.ends NR2D2LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: EdgeComparator
+** View name: schematic
+.subckt EdgeComparator compen preset vdd vin vip vonl vopl vss
+m7 net028 net029 vdd vdd pch_lvt l=80e-9 w=300e-9 m=1 nf=1 
+m6 net25 net033 vdd vdd pch_lvt l=80e-9 w=300e-9 m=1 nf=1 
+m2 net25 vin vdd vdd pch_lvt l=80e-9 w=300e-9 m=1 nf=1 
+m0 net028 vip vdd vdd pch_lvt l=80e-9 w=300e-9 m=1 nf=1 
+m45 net25 net028 vdd vdd pch_lvt l=80e-9 w=1.2e-6 m=1 nf=4 
+m3 net028 net25 vdd vdd pch_lvt l=80e-9 w=1.2e-6 m=1 nf=4 
+xi95 vop vopl vonl vdd vss NR2D2LVT
+xi96 von vonl vopl vdd vss NR2D2LVT
+m5 net032 net028 net015 vss nch_lvt l=180e-9 w=1e-6 m=1 nf=2 
+m4 net24 net25 net015 vss nch_lvt l=180e-9 w=1e-6 m=1 nf=2 
+m28 net25 vin net032 vss nch_lvt l=180e-9 w=1.2e-6 m=1 nf=2 
+m1 net028 vip net24 vss nch_lvt l=180e-9 w=1.2e-6 m=1 nf=2 
+m22 net015 compen vss vss nch_lvt l=180e-9 w=1e-6 m=1 nf=2 
+xi5 preset net029 vdd vss INVD1LVT
+xi4 preset net033 vdd vss INVD1LVT
+xi3 net028 vop vdd vss INVD1LVT
+xi1 net25 von vdd vss INVD1LVT
+.ends EdgeComparator
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: MUX2D2LVT
+** View name: schematic
+.subckt MUX2D2LVT i0 i1 s z vdd vss
+m0 net25 net17 net7 vss nch_lvt l=60e-9 w=230e-9 m=1 nf=1 
+m1 net25 i0 vss vss nch_lvt l=60e-9 w=230e-9 m=1 nf=1 
+m2 net17 s vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m3 net9 s net7 vss nch_lvt l=60e-9 w=240e-9 m=1 nf=1 
+m4 net9 i1 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 z net7 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 z net7 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 net17 s vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m8 net9 i1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 z net7 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 net25 i0 vdd vdd pch_lvt l=60e-9 w=340e-9 m=1 nf=1 
+m11 z net7 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 net9 net17 net7 vdd pch_lvt l=60e-9 w=350e-9 m=1 nf=1 
+m13 net25 s net7 vdd pch_lvt l=60e-9 w=410e-9 m=1 nf=1 
+.ends MUX2D2LVT
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: CrossingDetector_Mux
+** View name: schematic
+.subckt CrossingDetector_Mux in ss vdd vo vss
+xi18 net012 net032 ss vo vdd vss MUX2D2LVT
+xi16 net033 net012 vdd vss CKBD1LVT
+xi10 net012 net032 vdd vss CKBD1LVT
+xi9 net015 net033 vdd vss CKBD1LVT
+xm2 net06 in vdd vdd pch_lvt_mac l=60e-9 w=580e-9 multi=2 nf=1  
+xm1 net06 in vss vss nch_lvt_mac l=60e-9 w=310e-9 multi=2 nf=1 
+xi15 net06 net015 vdd vss CKND1LVT
+.ends CrossingDetector_Mux
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout
+** Cell name: CrossingDetector
+** View name: schematic
+.subckt CrossingDetector qd qphase sq ss vcp vcps vdd vss
+xi2 qphase sq vdd qd vss CrossingDetector_Mux
+xi0 vcp ss vdd vcps vss CrossingDetector_Mux
+.ends CrossingDetector
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout_PostLayout
+** Cell name: TempSensorCore_Pre
+** View name: schematic
+xi2 inp net023<0> net023<1> net023<2> net023<3> net023<4> net023<5> net023<6> net023<7> outp net022<0> net022<1> net022<2> net022<3> net022<4> net022<5> net022<6> net022<7> net016 net010 net024<0> net024<1> net024<2> net024<3> net024<4> net024<5> net024<6> net024<7> net024<8> net025<0> net025<1> net025<2> net025<3> net025<4> net025<5> net025<6> net025<7> net025<8> net08 vss PolyPhaseFilter
+xi0 ckin compen inp outp preset qphase net026 vss CK_DividerBy8
+xi6 compen d<8> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> done preset net024<0> net024<1> net024<2> net024<3> net024<4> net024<5> net024<6> net024<7> net024<8> net025<0> net025<1> net025<2> net025<3> net025<4> net025<5> net025<6> net025<7> net025<8> net07 vonl vopl vss SARLogic
+xi8 inp net023<0> net023<1> net023<2> net023<3> net023<4> net023<5> net023<6> net023<7> outp net022<0> net022<1> net022<2> net022<3> net022<4> net022<5> net022<6> net022<7> cfg<7> cfg<6> cfg<5> cfg<4> cfg<3> cfg<2> cfg<1> cfg<0> net019 vss ResTune_CFG
+v5 vdd net07 DC=0
+v4 vdd net019 DC=0
+v3 vdd net08 DC=0
+v2 vdd net09 DC=0
+v1 vdd net027 DC=0
+v0 vdd net026 DC=0
+xi5 compen preset net027 net018 net017 vonl vopl vss EdgeComparator
+xi9 net018 qphase cfg<15> cfg<14> net010 net017 net09 vss CrossingDetector
+.END
