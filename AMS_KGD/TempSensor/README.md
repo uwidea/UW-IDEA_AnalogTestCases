@@ -8,5 +8,5 @@ This file fold includes a resistor-based area-compact temperature sensor for on-
 3) a highly digital circuit architecture, which can be easily implemented using a standard digital design flow and migrated to different processes. 
 The temperature sensor was desigend in a 65-nm CMOS technology. 
 
-
+The Hspice Netlist and CDL netlist are included in the Netlist filefold.
 The testbench to test the output digits versus temperature is included in the fold Testbench.
