@@ -1,5 +1,5 @@
-To test the temperature sensor, one DC voltage for supply can be from 1.0 to 1.2V, a 32MHz pulse signal with 50% duty cycle for the clock, 
-and one pulse signal for the preset signal are needed. The 9-bit digital output is input to an ideal DAC to convert it to the decimal 
+To test the temperature sensor, one DC voltage for supply from 1.0 to 1.2V, a 32MHz pulse signal with 50% duty cycle for the clock, 
+and one pulse signal for presetting the sensor are needed. The 9-bit digital output is input to an ideal DAC to convert it to decimal 
 numbers. The pin information is summarized in the table below.
 
 | Pin Name | Input/Output | Specification|
