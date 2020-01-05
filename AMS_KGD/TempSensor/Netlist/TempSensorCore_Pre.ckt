@@ -4,7 +4,8 @@
 ** Design cell name: TempSensorCore_Pre
 ** Design view name: schematic
 .PARAM cu
-
+.PARAM Wn_CD
+.PARAM Wp_CD
 
 .TEMP 25.0
 .OPTION
@@ -913,8 +914,8 @@ xi18 net012 net032 ss vo vdd vss MUX2D2LVT
 xi16 net033 net012 vdd vss CKBD1LVT
 xi10 net012 net032 vdd vss CKBD1LVT
 xi9 net015 net033 vdd vss CKBD1LVT
-xm2 net06 in vdd vdd pch_lvt_mac l=60e-9 w=580e-9 multi=2 nf=1  
-xm1 net06 in vss vss nch_lvt_mac l=60e-9 w=310e-9 multi=2 nf=1 
+xm2 net06 in vdd vdd pch_lvt_mac l=60e-9 w=Wn_CD multi=2 nf=1  
+xm1 net06 in vss vss nch_lvt_mac l=60e-9 w=Wp_CD multi=2 nf=1 
 xi15 net06 net015 vdd vss CKND1LVT
 .ends CrossingDetector_Mux
 ** End of subcircuit definition.
