@@ -1,0 +1,1799 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 03:00:27 2020
+** Design library name: TempSensorLayout_PostLayout
+** Design cell name: MDLL_TOP
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lp
+** Cell name: INVD0
+** View name: schematic
+.subckt INVD0 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 zn i vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends INVD0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN3D2
+** View name: schematic
+.subckt AN3D2 a1 a2 a3 z vdd vss
+m0 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net13 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net9 a2 net13 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net5 a1 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m5 net5 a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m7 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m8 net5 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m9 net5 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AN3D2
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: INVD1
+** View name: schematic
+.subckt INVD1 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: NR2D0
+** View name: schematic
+.subckt NR2D0 a1 a2 zn vdd vss
+m0 zn a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 zn a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net13 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 zn a1 net13 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends NR2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFND1
+** View name: schematic
+.subckt DFND1 d cpn q qn vdd vss
+m0 net63 net100 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 qn net97 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi4 net24 net67 vss vss nch l=60e-9 w=200e-9 m=1 nf=1 
+mi55 net97 net67 net100 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m2 net11 net1 vss vss nch l=60e-9 w=190e-9 m=1 nf=1 
+mi50 net11 net95 net100 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m3 net67 net95 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net1 d net24 vss nch l=60e-9 w=200e-9 m=1 nf=1 
+m4 net95 cpn vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m5 net97 net63 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi48 net9 net11 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m6 q net63 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi47 net1 net95 net9 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m7 net63 net100 vdd vdd pch l=60e-9 w=500e-9 m=1 nf=1 
+mi54 net97 net95 net100 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m8 net67 net95 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net60 net11 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net1 d net53 vdd pch l=60e-9 w=430e-9 m=1 nf=1 
+m9 qn net97 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m10 net95 cpn vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m11 q net63 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m12 net11 net1 vdd vdd pch l=60e-9 w=270e-9 m=1 nf=1 
+mi52 net11 net67 net100 vdd pch l=60e-9 w=270e-9 m=1 nf=1 
+m13 net97 net63 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi45 net1 net67 net60 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net53 net95 vdd vdd pch l=60e-9 w=430e-9 m=1 nf=1 
+.ends DFND1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: INVD8
+** View name: schematic
+.subckt INVD8 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m8 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD8
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: TIEL
+** View name: schematic
+.subckt TIEL zn vdd vss
+m_u2 zn net5 vss vss nch l=60e-9 w=410e-9 m=1 nf=1 
+m_u1 net5 net5 vdd vdd pch l=60e-9 w=540e-9 m=1 nf=1 
+.ends TIEL
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFSNQD1
+** View name: schematic
+.subckt DFSNQD1 d cp sdn q vdd vss
+m0 net44 net25 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net11 cp vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 q net13 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net7 sdn net44 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net37 net13 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m5 net33 sdn net37 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi20 net7 net83 net63 vss nch l=60e-9 w=240e-9 m=1 nf=1 
+mi23 net25 net83 net5 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi22 net33 net11 net63 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi21 net25 d net20 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 net13 net63 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi19 net20 net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mi24 net5 net7 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m7 net83 net11 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m8 net11 cp vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi33 net33 net83 net63 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m9 net7 sdn vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m10 q net13 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi34 net25 net11 net96 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi30 net7 net11 net63 vdd pch l=60e-9 w=320e-9 m=1 nf=1 
+m11 net7 net25 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi28 net81 net83 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m12 net83 net11 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m13 net33 net13 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi35 net96 net7 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m14 net33 sdn vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m15 net13 net63 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi26 net25 d net81 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends DFSNQD1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: ND2D0
+** View name: schematic
+.subckt ND2D0 a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends ND2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DEL015
+** View name: schematic
+.subckt DEL015 i z vdd vss
+m0 z net13 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi29 net25 net9 net28 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi30 net28 net9 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi37 net17 net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi28 net13 net9 net25 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi35 net9 net5 net44 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi36 net44 net5 net17 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 z net13 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi20 net57 net9 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi23 net13 net9 net25 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi21 net25 net9 net57 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi32 net9 net5 net44 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi31 net44 net5 net33 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi7 net33 net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends DEL015
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFSND1
+** View name: schematic
+.subckt DFSND1 d cp sdn q qn vdd vss
+m0 net57 net61 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net11 cp vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 q net79 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net97 sdn net57 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net40 net79 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m5 net25 sdn net40 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi20 net97 net81 net67 vss nch l=60e-9 w=235e-9 m=1 nf=1 
+mi23 net61 net81 net5 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi22 net25 net11 net67 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi21 net61 d net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 net79 net67 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m7 qn net25 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi19 net9 net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mi24 net5 net97 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m8 net81 net11 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m9 net11 cp vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi33 net25 net81 net67 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m10 net97 sdn vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m11 q net79 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi34 net61 net11 net104 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi30 net97 net11 net67 vdd pch l=60e-9 w=320e-9 m=1 nf=1 
+m12 qn net25 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m13 net97 net61 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi28 net85 net81 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m14 net81 net11 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m15 net25 net79 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi35 net104 net97 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m16 net25 sdn vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m17 net79 net67 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi26 net61 d net85 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends DFSND1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN2D0
+** View name: schematic
+.subckt AN2D0 a1 a2 z vdd vss
+m0 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFCND1
+** View name: schematic
+.subckt DFCND1 d cp cdn q qn vdd vss
+m0 qn net33 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi4 net53 net5 vss vss nch l=60e-9 w=350e-9 m=1 nf=1 
+mi18 net33 net5 net79 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m1 net95 net79 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net81 net25 vss vss nch l=60e-9 w=190e-9 m=1 nf=1 
+mi15 net81 net67 net79 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m3 net33 net95 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 net67 net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net25 d net53 vss nch l=60e-9 w=350e-9 m=1 nf=1 
+mi49 net20 cdn vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net17 net81 net20 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m5 q net95 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 net9 cdn vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m7 net5 cp vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net25 net67 net17 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m8 net33 net95 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m9 net5 cp vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m10 net67 net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net72 net81 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net25 d net104 vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m11 qn net33 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m12 q net95 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net72 cdn vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi17 net33 net67 net79 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m13 net81 net25 vdd vdd pch l=60e-9 w=220e-9 m=1 nf=1 
+m14 net95 net79 vdd vdd pch l=60e-9 w=365e-9 m=1 nf=1 
+mi16 net81 net5 net79 vdd pch l=60e-9 w=245e-9 m=1 nf=1 
+mi45 net25 net5 net72 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net104 net67 vdd vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m15 net95 cdn vdd vdd pch l=60e-9 w=365e-9 m=1 nf=1 
+.ends DFCND1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN2D2
+** View name: schematic
+.subckt AN2D2 a1 a2 z vdd vss
+m0 z net9 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 net9 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m2 z net9 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 net9 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net29 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m5 net9 a1 net29 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 z net9 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m7 z net9 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends AN2D2
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKBD4
+** View name: schematic
+.subckt CKBD4 i z vdd vss
+m_u15_1 net11 i vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu23_1 z net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu23_3 z net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu23_0 z net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu23_2 z net11 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+m_u15_0 net11 i vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu21_0 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu21_1 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u3_0 net11 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu21_3 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u3_1 net11 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu21_2 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends CKBD4
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: ND3D3
+** View name: schematic
+.subckt ND3D3 a1 a2 a3 zn vdd vss
+m0 zn a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 zn a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m8 zn a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m9 net69 a2 net72 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m10 net56 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m11 zn a1 net69 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m12 zn a1 net53 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m13 net53 a2 net56 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m14 net72 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m15 net44 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m16 net40 a2 net44 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m17 zn a1 net40 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends ND3D3
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN3D1
+** View name: schematic
+.subckt AN3D1 a1 a2 a3 z vdd vss
+m0 net13 a3 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 a2 net13 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 net11 a1 net5 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net11 a3 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m6 net11 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net11 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends AN3D1
+** End of subcircuit definition.
+
+** Library name: modelx
+** Cell name: MDLL_CKGEN_V1
+** View name: schematic
+.subckt MDLL_CKGEN_V1 en_dll free_run md_sar md_trk ref_clk sar_en sclk0 sel_rst trk_en vdd vss
+xi9 net31 net17 vdd vss INVD0
+xi40 net042 en_dll md_sar sar_en vdd vss AN3D2
+xi45 sclk net010 net25 net048 vdd vss AN3D2
+xi25 net010 free_run vdd vss INVD1
+xi5 net37 net25 vdd vss INVD1
+xi0 md_sar md_trk net36 vdd vss NR2D0
+xi43 en_dll sclk0 net032 net045 vdd vss DFND1
+xi44 net048 sel_rst vdd vss INVD8
+xi15 net32 vdd vss TIEL
+xi22 net30 sclk net14 net27 vdd vss DFSNQD1
+xi21 net29 sclk net14 net30 vdd vss DFSNQD1
+xi20 net27 sclk net14 net021 vdd vss DFSNQD1
+xi19 net34 sclk net14 net33 vdd vss DFSNQD1
+xi18 net33 sclk net14 net29 vdd vss DFSNQD1
+xi17 net35 sclk net14 net34 vdd vss DFSNQD1
+xi16 net32 sclk net14 net35 vdd vss DFSNQD1
+xi24 net36 en_dll net010 vdd vss ND2D0
+xi8 en_dll net31 vdd vss DEL015
+xi4 sclk net37 vdd vss DEL015
+xi27 net021 sclk net14 net042 net026 vdd vss DFSND1
+xi28 net026 en_dll trk_rst vdd vss AN2D0
+xi30 net039 net020 trk_rst net027 net039 vdd vss DFCND1
+xi29 net015 sclk trk_rst net020 net015 vdd vss DFCND1
+xi36 net032 sclk0 sclk vdd vss AN2D2
+xi35 sclk ref_clk vdd vss CKBD4
+xi38 en_dll net17 md_sar net14 vdd vss ND3D3
+xi42 net027 net015 md_trk trk_en vdd vss AN3D1
+.ends MDLL_CKGEN_V1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MUX2D1
+** View name: schematic
+.subckt MUX2D1 i0 i1 s z vdd vss
+m0 net5 i1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 net37 i0 vdd vdd pch l=60e-9 w=310e-9 m=1 nf=1 
+m2 z net27 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 net9 s vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net5 net9 net27 vdd pch l=60e-9 w=340e-9 m=1 nf=1 
+m5 net37 s net27 vdd pch l=60e-9 w=410e-9 m=1 nf=1 
+m6 net37 net9 net27 vss nch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net9 s vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m8 net37 i0 vss vss nch l=60e-9 w=230e-9 m=1 nf=1 
+m9 net5 s net27 vss nch l=60e-9 w=240e-9 m=1 nf=1 
+m10 net5 i1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m11 z net27 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends MUX2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DEL0
+** View name: schematic
+.subckt DEL0 i z vdd vss
+m0 net11 net25 vss vss nch l=600e-9 w=390e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net25 net5 vss vss nch l=600e-9 w=390e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net25 net5 vdd vdd pch l=600e-9 w=520e-9 m=1 nf=1 
+m6 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m7 net11 net25 vdd vdd pch l=600e-9 w=520e-9 m=1 nf=1 
+.ends DEL0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MUX2D0
+** View name: schematic
+.subckt MUX2D0 i0 i1 s z vdd vss
+m0 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 net17 s vdd vdd pch l=60e-9 w=250e-9 m=1 nf=1 
+mi111 net13 i0 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi24 net9 i1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi5 net5 s net13 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi25 net5 net17 net9 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m2 net17 s vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi20 net36 i1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi12 net5 net17 net25 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi21 net5 s net36 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi19 net25 i0 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends MUX2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DEL005
+** View name: schematic
+.subckt DEL005 i z vdd vss
+m0 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi3 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi10 net11 i net5 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi13 net5 i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi12 net11 i net5 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends DEL005
+** End of subcircuit definition.
+
+** Library name: modelx
+** Cell name: DEL_3x1_BIN
+** View name: schematic
+.subckt DEL_3x1_BIN del_in del_out lsb<3> lsb<2> lsb<1> vdd vss
+xi9 net020 net027 net033 del_out vdd vss MUX2D1
+xi1 net010 net032 vdd vss DEL0
+xi19 lsb<3> net013 vdd vss DEL0
+xi20 lsb<2> net035 vdd vss DEL015
+xi5 net030 net029 vdd vss DEL015
+xi21 lsb<1> net033 vdd vss DEL015
+xi3 del_in net032 net013 net019 vdd vss MUX2D0
+xi6 net019 net029 net035 net020 vdd vss MUX2D0
+xi8 net028 net027 vdd vss DEL005
+xi14 del_in net05 vdd vss INVD0
+xi16 net019 net018 vdd vss INVD0
+xi17 net020 net023 vdd vss INVD0
+xi15 net018 lsb<2> net030 vdd vss ND2D0
+xi13 net05 lsb<3> net010 vdd vss ND2D0
+xi18 net023 lsb<1> net028 vdd vss ND2D0
+.ends DEL_3x1_BIN
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OR2D0
+** View name: schematic
+.subckt OR2D0 a1 a2 z vdd vss
+m0 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net5 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net5 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net17 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m5 net5 a1 net17 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends OR2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DEL1
+** View name: schematic
+.subckt DEL1 i z vdd vss
+m0 net11 net25 vss vss nch l=980e-9 w=390e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=300e-9 m=1 nf=1 
+m2 net5 i vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net25 net5 vss vss nch l=980e-9 w=390e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net25 net5 vdd vdd pch l=980e-9 w=520e-9 m=1 nf=1 
+m6 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m7 net11 net25 vdd vdd pch l=980e-9 w=520e-9 m=1 nf=1 
+.ends DEL1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MUX4D0
+** View name: schematic
+.subckt MUX4D0 i0 i1 i2 i3 s0 s1 z vdd vss
+m0 z net20 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 net97 s1 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m2 net37 i3 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 net37 net61 net104 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net33 s1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m5 net61 s0 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m6 net81 i2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net5 i1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m8 net104 net33 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m9 net81 s0 net104 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m10 net9 s0 net97 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m11 net5 net61 net97 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m12 net9 i0 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m13 net37 s0 net104 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m14 net97 net33 net20 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m15 net5 i1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m16 net37 i3 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m17 net5 s0 net97 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m18 net81 net61 net104 vss nch l=60e-9 w=180e-9 m=1 nf=1 
+m19 net104 s1 net20 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m20 net9 net61 net97 vss nch l=60e-9 w=170e-9 m=1 nf=1 
+m21 net81 i2 vss vss nch l=60e-9 w=180e-9 m=1 nf=1 
+m22 z net20 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m23 net61 s0 vss vss nch l=60e-9 w=180e-9 m=1 nf=1 
+m24 net9 i0 vss vss nch l=60e-9 w=170e-9 m=1 nf=1 
+m25 net33 s1 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+.ends MUX4D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: BUFFD0
+** View name: schematic
+.subckt BUFFD0 i z vdd vss
+m0 net5 i vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net5 i vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends BUFFD0
+** End of subcircuit definition.
+
+** Library name: modelx
+** Cell name: DEL_3x1
+** View name: schematic
+.subckt DEL_3x1 del_in del_out en sel0 sel1 vdd vss
+xi18 sel1 sel0 s2t<3> vdd vss AN2D0
+xi8 net12 s2t<3> net18 vdd vss AN2D0
+xi6 net11 s2t<2> net19 vdd vss AN2D0
+xi4 net21 s2t<1> net20 vdd vss AN2D0
+xi2 del_in s2t<0> net21 vdd vss AN2D0
+xi9 net18 net17 vdd vss DEL1
+xi7 net19 net12 vdd vss DEL1
+xi5 net20 net11 vdd vss DEL1
+xi11 net21 net11 net12 net17 sel0 sel1 del_out vdd vss MUX4D0
+xi17 sel1 s2t<2> vdd vss BUFFD0
+xi16 en s2t<0> vdd vss BUFFD0
+xi14 sel1 sel0 s2t<1> vdd vss OR2D0
+.ends DEL_3x1
+** End of subcircuit definition.
+
+** Library name: modelx
+** Cell name: DEL_4x1
+** View name: schematic
+.subckt DEL_4x1 del_in del_out en sel0 sel1 vdd vss
+xi18 sel1 sel0 s2t<3> vdd vss AN2D0
+xi8 net12 s2t<3> net18 vdd vss AN2D0
+xi6 net11 s2t<2> net19 vdd vss AN2D0
+xi4 net10 s2t<1> net20 vdd vss AN2D0
+xi2 del_in s2t<0> net21 vdd vss AN2D0
+xi9 net18 net17 vdd vss DEL1
+xi7 net19 net12 vdd vss DEL1
+xi5 net20 net11 vdd vss DEL1
+xi3 net21 net10 vdd vss DEL1
+xi11 net10 net11 net12 net17 sel0 sel1 del_out vdd vss MUX4D0
+xi17 sel1 s2t<2> vdd vss BUFFD0
+xi16 en s2t<0> vdd vss BUFFD0
+xi14 sel1 sel0 s2t<1> vdd vss OR2D0
+.ends DEL_4x1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKBD2
+** View name: schematic
+.subckt CKBD2 i z vdd vss
+mu23_1 z net5 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+m_u15 net5 i vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+mu23_0 z net5 vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+m_u3 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu21_0 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu21_1 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends CKBD2
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MUX4ND0
+** View name: schematic
+.subckt MUX4ND0 i0 i1 i2 i3 s0 s1 zn vdd vss
+m0 net17 i2 vss vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m1 net20 s1 zn vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net61 i0 vss vss nch l=60e-9 w=200e-9 m=1 nf=1 
+m3 net33 net83 zn vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 net61 net67 net33 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m5 net67 s0 vss vss nch l=60e-9 w=180e-9 m=1 nf=1 
+m6 net5 s0 net33 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m7 net17 net67 net20 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m8 net9 s0 net20 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m9 net9 i3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m10 net5 i1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m11 net83 s1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m12 net61 i0 vdd vdd pch l=60e-9 w=340e-9 m=1 nf=1 
+m13 net83 s1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m14 net67 s0 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m15 net20 net83 zn vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m16 net9 i3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m17 net5 i1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m18 net17 i2 vdd vdd pch l=60e-9 w=340e-9 m=1 nf=1 
+m19 net5 net67 net33 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m20 net61 s0 net33 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m21 net9 net67 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m22 net17 s0 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m23 net33 s1 zn vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends MUX4ND0
+** End of subcircuit definition.
+
+** Library name: modelx
+** Cell name: DEL_7b
+** View name: schematic
+.subckt DEL_7b ckout en lsb<3> lsb<2> lsb<1> ref_clk sel0 sel1 sel2 sel3 sel_dl vdd vss
+xi29 net87 net82 lsb<3> lsb<2> lsb<1> vdd vss DEL_3x1_BIN
+xi14 sel3 sel2 s2t<1> vdd vss OR2D0
+xi23 sel1 s2t<1> net90 vdd vss OR2D0
+xi27 sel1 s2t<3> net88 vdd vss OR2D0
+xi25 sel1 s2t<2> net89 vdd vss OR2D0
+xi24 sel0 s2t<1> net83 vdd vss OR2D0
+xi28 sel0 s2t<3> net85 vdd vss OR2D0
+xi26 sel0 s2t<2> net84 vdd vss OR2D0
+xi0 ref_clk net82 sel_dl net91 vdd vss MUX2D0
+xi19 net91 net76 s2t<0> net83 net90 vdd vss DEL_3x1
+xi22 net80 net86 s2t<3> sel0 sel1 vdd vss DEL_4x1
+xi21 net78 net80 s2t<2> net85 net88 vdd vss DEL_4x1
+xi20 net76 net78 s2t<1> net84 net89 vdd vss DEL_4x1
+xi18 sel3 sel2 s2t<3> vdd vss AN2D0
+xi16 en s2t<0> vdd vss BUFFD0
+xi17 sel3 s2t<2> vdd vss BUFFD0
+xi2 net82 ckout vdd vss CKBD2
+xi3 net76 net78 net80 net86 sel2 sel3 net87 vdd vss MUX4ND0
+.ends DEL_7b
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKND0
+** View name: schematic
+.subckt CKND0 i zn vdd vss
+m_u2 zn i vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m_u1 zn i vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends CKND0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AO22D0
+** View name: schematic
+.subckt AO22D0 a1 a2 b1 b2 z vdd vss
+mi23 net17 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m0 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi16 net5 b1 net1 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi24 net5 a1 net17 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi22 net1 b2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi20 net5 a1 net33 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u2 net33 b2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi19 net5 a2 net33 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi21 net33 b1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends AO22D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MOAI22D1
+** View name: schematic
+.subckt MOAI22D1 a1 a2 b1 b2 zn vdd vss
+mu1 net37 b1 net20 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi6 net9 net37 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mu9 net9 a1 zn vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi5 net20 b2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mu10 net9 a2 zn vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi1 net37 b1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi3 net33 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi4 zn a1 net33 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi2 zn net37 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu3 net37 b2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends MOAI22D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKAN2D0
+** View name: schematic
+.subckt CKAN2D0 a1 a2 z vdd vss
+m0 net5 a2 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+m2 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 net21 a2 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m4 z net5 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m5 net5 a1 net21 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+.ends CKAN2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN2XD1
+** View name: schematic
+.subckt AN2XD1 a1 a2 z vdd vss
+m0 net9 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 a1 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net5 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net5 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AN2XD1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN3D0
+** View name: schematic
+.subckt AN3D0 a1 a2 a3 z vdd vss
+m0 net13 a3 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net5 a2 net13 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 net11 a1 net5 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m5 net11 a3 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m6 net11 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net11 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends AN3D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN3XD1
+** View name: schematic
+.subckt AN3XD1 a1 a2 a3 z vdd vss
+m0 net13 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 z net11 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 a2 net13 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net11 a1 net5 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net11 a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 net11 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m7 net11 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AN3XD1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: ND2D1
+** View name: schematic
+.subckt ND2D1 a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKND2D2
+** View name: schematic
+.subckt CKND2D2 a1 a2 zn vdd vss
+m0 zn a1 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a2 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a2 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn a1 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net24 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn a1 net17 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m6 zn a1 net24 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m7 net17 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends CKND2D2
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKND2D1
+** View name: schematic
+.subckt CKND2D1 a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+.ends CKND2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKND1
+** View name: schematic
+.subckt CKND1 i zn vdd vss
+m_u2 zn i vss vss nch l=60e-9 w=310e-9 m=1 nf=1 
+m_u1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends CKND1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKND2D0
+** View name: schematic
+.subckt CKND2D0 a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 zn a2 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+m3 zn a1 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+.ends CKND2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: IND2D0
+** View name: schematic
+.subckt IND2D0 a1 b1 zn vdd vss
+m0 net9 a1 vdd vdd pch l=60e-9 w=250e-9 m=1 nf=1 
+mi11 vdd b1 zn vdd pch l=60e-9 w=250e-9 m=1 nf=1 
+m_u16 vdd net9 zn vdd pch l=60e-9 w=250e-9 m=1 nf=1 
+mi13 net21 net9 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net9 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi12 zn b1 net21 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends IND2D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: IND2D2
+** View name: schematic
+.subckt IND2D2 a1 b1 zn vdd vss
+mi3 vdd net11 zn vdd pch l=60e-9 w=1.04e-6 m=1 nf=1 
+m_u16 vdd b1 zn vdd pch l=60e-9 w=1.04e-6 m=1 nf=1 
+m0 net11 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 net11 a1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi4 net20 b1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi11 net21 b1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi12 zn net11 net20 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi10 zn net11 net21 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends IND2D2
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AO21D0
+** View name: schematic
+.subckt AO21D0 a1 a2 b z vdd vss
+mi9 net5 a2 net9 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u2 net9 b vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi10 net5 a1 net9 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m0 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi11 net5 a1 net25 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi12 net25 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi6 net5 b vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends AO21D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: IND2D1
+** View name: schematic
+.subckt IND2D1 a1 b1 zn vdd vss
+m0 net9 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi11 vdd b1 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u16 vdd net9 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi13 net21 net9 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net9 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi12 zn b1 net21 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends IND2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKXOR2D1
+** View name: schematic
+.subckt CKXOR2D1 a1 a2 z vdd vss
+m0 net27 a1 net44 vdd pch l=60e-9 w=290e-9 m=1 nf=1 
+m1 z net44 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m2 net5 net27 vdd vdd pch l=60e-9 w=290e-9 m=1 nf=1 
+m3 net9 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net5 net9 net44 vdd pch l=60e-9 w=290e-9 m=1 nf=1 
+m5 net27 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 net27 net9 net44 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m7 net5 a1 net44 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m8 net9 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m9 z net44 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m10 net27 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m11 net5 net27 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends CKXOR2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OAI21D1
+** View name: schematic
+.subckt OAI21D1 a1 a2 b zn vdd vss
+m0 net9 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u9 zn b vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn a1 net9 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u3 zn a2 net24 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u4 net24 b vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u2 zn a1 net24 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends OAI21D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: ND3D1
+** View name: schematic
+.subckt ND3D1 a1 a2 a3 zn vdd vss
+m0 net9 a2 net1 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a1 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net1 a3 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 zn a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND3D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: XNR2D1
+** View name: schematic
+.subckt XNR2D1 a1 a2 zn vdd vss
+m0 net27 net9 net44 vdd pch l=60e-9 w=370e-9 m=1 nf=1 
+m1 zn net44 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m2 net5 net27 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 net9 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net5 a1 net44 vdd pch l=60e-9 w=235e-9 m=1 nf=1 
+m5 net27 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 net27 a1 net44 vss nch l=60e-9 w=225e-9 m=1 nf=1 
+m7 net5 net9 net44 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m8 net9 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m9 zn net44 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m10 net27 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m11 net5 net27 vss vss nch l=60e-9 w=190e-9 m=1 nf=1 
+.ends XNR2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AOI21D0
+** View name: schematic
+.subckt AOI21D0 a1 a2 b zn vdd vss
+mi9 zn a1 net5 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u2 net5 b vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi8 zn a2 net5 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi2 zn a1 net13 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi11 zn b vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi10 net13 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends AOI21D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: NR2XD0
+** View name: schematic
+.subckt NR2XD0 a1 a2 zn vdd vss
+m0 zn a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 zn a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net13 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 net13 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends NR2XD0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: NR2D1
+** View name: schematic
+.subckt NR2D1 a1 a2 zn vdd vss
+m0 zn a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net13 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 net13 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends NR2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: NR3D0
+** View name: schematic
+.subckt NR3D0 a1 a2 a3 zn vdd vss
+mi3 zn a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi2 zn a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m_u4 zn a3 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi1 zn a1 net13 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u1 net17 a3 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi0 net13 a2 net17 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends NR3D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: INR2D1
+** View name: schematic
+.subckt INR2D1 a1 b1 zn vdd vss
+m0 zn net11 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn b1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net11 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 net11 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 zn b1 net20 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net20 net11 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends INR2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OAI22D0
+** View name: schematic
+.subckt OAI22D0 a1 a2 b1 b2 zn vdd vss
+m_u4 net13 b2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi8 zn a2 net13 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi9 zn a1 net13 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi7 net13 b1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi4 zn b1 net32 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi6 zn a1 net17 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mu24 net32 b2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi5 net17 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends OAI22D0
+** End of subcircuit definition.
+
+** Library name: model3
+** Cell name: MDLL_LOGIC_VLOG_DW01_sub_J17_0
+** View name: schematic
+.subckt MDLL_LOGIC_VLOG_DW01_sub_J17_0 diff<6> diff<5> diff<4> diff<3> diff<2> diff<1> diff<0> ci co b<6> b<5> b<4> b<3> b<2> b<1> b<0> a<6> a<5> a<4> a<3> a<2> a<1> a<0> in0 in1 in2 vdd vss
+xu35 n1 n16 n15 vdd vss ND2D1
+xu45 n10 n12 n22 vdd vss ND2D1
+xu34 n1 n18 n24 vdd vss ND2D1
+xu38 a<3> n41 n36 vdd vss ND2D1
+xu15 in1 n44 n35 vdd vss ND2D1
+xu6 b<3> n42 n37 vdd vss ND2D1
+xu37 a<1> n54 n27 vdd vss ND2D1
+xu7 b<1> n55 n29 vdd vss ND2D1
+xu10 n23 n18 n10 vdd vss ND2D1
+xu32 n48 n29 n26 vdd vss ND2D1
+xu9 b<0> in0 n51 vdd vss IND2D2
+xu55 n18 n17 vdd vss CKND1
+xu62 n35 n43 vdd vss CKND1
+xu13 n25 n14 vdd vss CKND1
+xu60 n37 n34 vdd vss CKND1
+xu54 n9 n11 vdd vss CKND1
+xu64 n51 n48 vdd vss CKND1
+xu26 b<0> a<0> n48 diff<0> vdd vss AO21D0
+xu8 n37 n36 n40 vdd vss CKND2D0
+xu25 n51 n52 n50 vdd vss CKND2D0
+xu24 n29 n27 n49 vdd vss CKND2D0
+xu20 b<2> a<2> n38 vdd vss CKND2D0
+xu30 n38 n35 n2 vdd vss AN2XD1
+xu28 n38 n37 n1 vdd vss AN2XD1
+xu46 in2 b<5> n9 vdd vss IND2D1
+xu42 b<4> a<4> n12 vdd vss IND2D1
+xu40 a<4> b<4> n18 vdd vss IND2D1
+xu49 b<2> n44 vdd vss INVD1
+xu43 a<3> n42 vdd vss INVD1
+xu39 a<1> n55 vdd vss INVD1
+xu48 b<0> n53 vdd vss CKND0
+xu21 b<3> n41 vdd vss CKND0
+xu19 b<1> n54 vdd vss CKND0
+xu52 n4 n5 diff<6> vdd vss CKXOR2D1
+xu53 b<6> a<6> n5 vdd vss CKXOR2D1
+xu56 n19 n20 diff<5> vdd vss CKXOR2D1
+xu57 b<5> in2 n20 vdd vss CKXOR2D1
+xu59 b<4> a<4> n32 vdd vss CKXOR2D1
+xu58 n31 n32 diff<4> vdd vss CKXOR2D1
+xu61 n39 n40 diff<3> vdd vss CKXOR2D1
+xu29 n33 n2 diff<2> vdd vss CKXOR2D1
+xu27 n34 n35 n36 n23 vdd vss OAI21D1
+xu51 in0 b<0> n30 vdd vss IND2D0
+xu50 in0 b<0> n47 vdd vss IND2D0
+xu12 n29 n30 n28 vdd vss ND2D0
+xu11 n29 n47 n46 vdd vss ND2D0
+xu47 n26 n27 n28 n25 vdd vss ND3D1
+xu5 n26 n27 n46 n33 vdd vss ND3D1
+xu63 n49 n50 diff<1> vdd vss XNR2D1
+xu17 n14 n15 n6 vdd vss NR2D0
+xu23 in0 n53 n52 vdd vss NR2D0
+xu16 n1 n33 n23 n31 vdd vss AOI21D0
+xu18 n33 n38 n43 n39 vdd vss AOI21D0
+xu22 n21 n22 n19 vdd vss NR2XD0
+xu36 n17 n11 n16 vdd vss NR2D1
+xu33 n14 n24 n21 vdd vss NR2D1
+xu3 n6 n7 n8 n4 vdd vss NR3D0
+xu31 n9 n10 n8 vdd vss INR2D1
+xu14 n11 n12 b<5> a<5> n7 vdd vss OAI22D0
+.ends MDLL_LOGIC_VLOG_DW01_sub_J17_0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OR2D1
+** View name: schematic
+.subckt OR2D1 a1 a2 z vdd vss
+m0 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 net5 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net17 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net5 a1 net17 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends OR2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AOI21D1
+** View name: schematic
+.subckt AOI21D1 a1 a2 b zn vdd vss
+m_u3 net5 a1 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u2 net5 b vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u4 net5 a2 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi2 zn a1 net13 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u7 zn b vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi3 net13 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends AOI21D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OR2XD1
+** View name: schematic
+.subckt OR2XD1 a1 a2 z vdd vss
+m0 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 a1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net17 a2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 net5 a1 net17 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends OR2XD1
+** End of subcircuit definition.
+
+** Library name: model3
+** Cell name: MDLL_LOGIC_VLOG_DW01_add_J16_0
+** View name: schematic
+.subckt MDLL_LOGIC_VLOG_DW01_add_J16_0 sum<6> sum<5> sum<4> sum<3> sum<2> sum<1> sum<0> ci co b<6> b<5> b<4> b<3> b<2> b<1> b<0> a<6> a<5> a<4> a<3> a<2> a<1> a<0> in0 in1 vdd vss
+xu41 a<0> b<0> n19 vdd vss CKND2D0
+xu17 n30 n28 n32 vdd vss CKND2D0
+xu18 b<2> in1 n34 vdd vss CKND2D0
+xu39 n21 n20 n37 vdd vss CKND2D0
+xu19 b<3> a<3> n28 vdd vss CKND2D0
+xu35 b<0> a<0> n38 vdd vss CKND2D0
+xu14 n11 n12 n10 vdd vss ND2D1
+xu11 n36 n20 n26 vdd vss ND2D1
+xu30 b<1> a<1> n20 vdd vss ND2D1
+xu32 b<3> a<3> n30 vdd vss OR2D1
+xu10 b<1> a<1> n21 vdd vss OR2D1
+xu3 b<2> a<2> n29 vdd vss IND2D1
+xu31 b<4> a<4> n15 vdd vss IND2D1
+xu47 n34 n33 vdd vss CKND1
+xu16 n30 n16 vdd vss CKND1
+xu45 n29 n17 vdd vss CKND1
+xu36 n24 n7 sum<4> vdd vss XNR2D1
+xu43 b<6> a<6> n9 vdd vss XNR2D1
+xu20 n10 n5 sum<5> vdd vss XNR2D1
+xu21 b<5> a<5> n5 vdd vss XNR2D1
+xu34 a<0> b<0> n39 vdd vss NR2D0
+xu33 n38 n39 sum<0> vdd vss INR2D1
+xu27 b<4> in0 n7 vdd vss CKXOR2D1
+xu42 n8 n9 sum<6> vdd vss CKXOR2D1
+xu46 n31 n32 sum<3> vdd vss CKXOR2D1
+xu24 n26 n6 sum<2> vdd vss CKXOR2D1
+xu23 n37 n38 sum<1> vdd vss CKXOR2D1
+xu6 b<4> in0 n2 vdd vss AN2XD1
+xu5 b<5> a<5> n1 vdd vss AN2XD1
+xu8 b<0> a<0> n4 vdd vss AN2XD1
+xu25 n29 n34 n6 vdd vss AN2XD1
+xu13 n21 n4 n36 vdd vss ND2D0
+xu38 in1 b<2> n27 vdd vss CKND2D1
+xu44 n18 n19 n20 n13 vdd vss OAI21D1
+xu26 n16 n27 n28 n22 vdd vss OAI21D1
+xu15 n26 n29 n33 n31 vdd vss AOI21D0
+xu28 n25 n26 n22 n24 vdd vss AOI21D1
+xu9 n22 n15 n2 n11 vdd vss AOI21D1
+xu29 n3 n10 n1 n8 vdd vss AOI21D1
+xu7 a<5> b<5> n3 vdd vss OR2XD1
+xu37 n21 n18 vdd vss INVD1
+xu12 n16 n17 n14 vdd vss NR2XD0
+xu22 n14 n15 n13 n12 vdd vss ND3D1
+xu40 n16 n17 n25 vdd vss NR2D1
+.ends MDLL_LOGIC_VLOG_DW01_add_J16_0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: IND3D1
+** View name: schematic
+.subckt IND3D1 a1 b1 b2 zn vdd vss
+mi4 vdd net19 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi11 vdd b2 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u16 vdd b1 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m0 net19 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 net19 a1 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi6 net25 b1 net17 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi12 zn b2 net25 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi7 net17 net19 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+.ends IND3D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: HA1D0
+** View name: schematic
+.subckt HA1D0 a b s co vdd vss
+m0 net9 a vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 net13 net5 net72 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m2 net25 a vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 co net25 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m4 net25 b vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m5 net13 net9 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m6 net9 b net72 vdd pch l=60e-9 w=310e-9 m=1 nf=1 
+m7 net5 b vdd vdd pch l=60e-9 w=285e-9 m=1 nf=1 
+m8 s net72 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m9 net9 net5 net72 vss nch l=60e-9 w=205e-9 m=1 nf=1 
+m10 net56 b vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m11 net9 a vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m12 s net72 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m13 net25 a net56 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m14 net13 b net72 vss nch l=60e-9 w=290e-9 m=1 nf=1 
+m15 net5 b vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m16 net13 net9 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m17 co net25 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends HA1D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKXOR2D0
+** View name: schematic
+.subckt CKXOR2D0 a1 a2 z vdd vss
+m0 net37 net17 net44 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m1 net17 a1 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m2 z net44 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m3 net5 a1 net44 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m4 net5 net37 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m5 net37 a2 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m6 net17 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net37 a1 net44 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m8 net37 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m9 z net44 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m10 net5 net37 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m11 net5 net17 net44 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends CKXOR2D0
+** End of subcircuit definition.
+
+** Library name: model3
+** Cell name: MDLL_LOGIC_VLOG_DW01_inc_0
+** View name: schematic
+.subckt MDLL_LOGIC_VLOG_DW01_inc_0 sum<6> sum<5> sum<4> sum<3> sum<2> sum<1> sum<0> a<6> a<5> a<4> a<3> a<2> a<1> a<0> vdd vss
+xu10103 a<3> carry<3> sum<3> carry<4> vdd vss HA1D0
+xu10101 a<1> a<0> sum<1> carry<2> vdd vss HA1D0
+xu10102 a<2> carry<2> sum<2> carry<3> vdd vss HA1D0
+xu10104 a<4> carry<4> sum<4> carry<5> vdd vss HA1D0
+xu10105 a<5> carry<5> sum<5> carry<6> vdd vss HA1D0
+xu2 carry<6> a<6> sum<6> vdd vss CKXOR2D0
+.ends MDLL_LOGIC_VLOG_DW01_inc_0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: CKAN2D1
+** View name: schematic
+.subckt CKAN2D1 a1 a2 z vdd vss
+m0 net5 a2 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch l=60e-9 w=195e-9 m=1 nf=1 
+m2 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 net21 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 z net5 vss vss nch l=60e-9 w=280e-9 m=1 nf=1 
+m5 net5 a1 net21 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends CKAN2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AN2D1
+** View name: schematic
+.subckt AN2D1 a1 a2 z vdd vss
+m0 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFCNQD1
+** View name: schematic
+.subckt DFCNQD1 d cp cdn q vdd vss
+mi4 net53 net5 vss vss nch l=60e-9 w=350e-9 m=1 nf=1 
+m0 net81 net51 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net37 net97 vss vss nch l=60e-9 w=160e-9 m=1 nf=1 
+mi29 net51 net5 net44 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi15 net37 net63 net51 vss nch l=60e-9 w=160e-9 m=1 nf=1 
+m2 net63 net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi5 net97 d net53 vss nch l=60e-9 w=350e-9 m=1 nf=1 
+mi49 net20 cdn vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi26 net44 net81 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net17 net37 net20 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m3 q net81 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net9 cdn vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m5 net5 cp vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi47 net97 net63 net17 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m6 net5 cp vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m7 net63 net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi43 net101 net37 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net97 d net100 vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m8 q net81 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi44 net101 cdn vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m9 net37 net97 vdd vdd pch l=60e-9 w=220e-9 m=1 nf=1 
+m10 net81 net51 vdd vdd pch l=60e-9 w=400e-9 m=1 nf=1 
+mi16 net37 net5 net51 vdd pch l=60e-9 w=245e-9 m=1 nf=1 
+mi24 net72 net81 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi28 net51 net63 net72 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi45 net97 net5 net101 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi7 net100 net63 vdd vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m11 net81 cdn vdd vdd pch l=60e-9 w=400e-9 m=1 nf=1 
+.ends DFCNQD1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OAI21D0
+** View name: schematic
+.subckt OAI21D0 a1 a2 b zn vdd vss
+m0 net9 a2 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u9 zn b vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 zn a1 net9 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u3 zn a2 net24 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m_u4 net24 b vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m_u2 zn a1 net24 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends OAI21D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OA211D0
+** View name: schematic
+.subckt OA211D0 a1 a2 b c z vdd vss
+mi8 net17 b net20 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m0 z net5 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi9 net20 c vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m_u2 net5 a1 net17 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi7 net5 a2 net17 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+mi4 net5 c vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi6 net5 a2 net25 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m_u12 net5 b vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi5 net25 a1 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m1 z net5 vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+.ends OA211D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AO211D1
+** View name: schematic
+.subckt AO211D1 a1 a2 b c z vdd vss
+m_u12 net5 c vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m0 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 a1 net1 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u13 net5 b vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 net1 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net33 b net25 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u3 net33 a1 net5 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi0 net33 a2 net5 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net25 c vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AO211D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: MUX2ND0
+** View name: schematic
+.subckt MUX2ND0 i0 i1 s zn vdd vss
+m0 net37 s vdd vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi111 net13 i0 vdd vdd pch l=60e-9 w=310e-9 m=1 nf=1 
+mi24 net9 i1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi5 zn s net13 vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+mi25 zn net37 net9 vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net37 s vss vss nch l=60e-9 w=210e-9 m=1 nf=1 
+mi20 net33 i1 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi12 zn net37 net32 vss nch l=60e-9 w=230e-9 m=1 nf=1 
+mi21 zn s net33 vss nch l=60e-9 w=230e-9 m=1 nf=1 
+mi19 net32 i0 vss vss nch l=60e-9 w=230e-9 m=1 nf=1 
+.ends MUX2ND0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DFCNQD4
+** View name: schematic
+.subckt DFCNQD4 d cp cdn q vdd vss
+m0 q net123 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi38 net16 net123 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m1 net79 net67 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi43 net61 net125 vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi6 net9 d net1 vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m2 net67 cp vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m3 q net123 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m4 net123 cdn vdd vdd pch l=60e-9 w=440e-9 m=1 nf=1 
+mi44 net61 cdn vdd vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m5 net123 net13 vdd vdd pch l=60e-9 w=440e-9 m=1 nf=1 
+m6 net125 net9 vdd vdd pch l=60e-9 w=220e-9 m=1 nf=1 
+m7 q net123 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi16 net125 net67 net13 vdd pch l=60e-9 w=270e-9 m=1 nf=1 
+m8 net123 net13 vdd vdd pch l=60e-9 w=440e-9 m=1 nf=1 
+m9 net123 cdn vdd vdd pch l=60e-9 w=440e-9 m=1 nf=1 
+mi28 net13 net79 net16 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+mi45 net9 net67 net61 vdd pch l=60e-9 w=150e-9 m=1 nf=1 
+m10 q net123 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi7 net1 net79 vdd vdd pch l=60e-9 w=460e-9 m=1 nf=1 
+m11 q net123 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m12 net145 cdn vss vss nch l=60e-9 w=210e-9 m=1 nf=1 
+mi4 net112 net67 vss vss nch l=60e-9 w=350e-9 m=1 nf=1 
+m13 net125 net9 vss vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m14 net123 net13 net145 vss nch l=60e-9 w=210e-9 m=1 nf=1 
+mi29 net13 net67 net93 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi15 net125 net79 net13 vss nch l=60e-9 w=190e-9 m=1 nf=1 
+m15 q net123 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m16 net123 net13 net97 vss nch l=60e-9 w=210e-9 m=1 nf=1 
+m17 net79 net67 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi5 net9 d net112 vss nch l=60e-9 w=350e-9 m=1 nf=1 
+m18 net67 cp vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi49 net92 cdn vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m19 net97 cdn vss vss nch l=60e-9 w=210e-9 m=1 nf=1 
+mi26 net93 net123 vss vss nch l=60e-9 w=150e-9 m=1 nf=1 
+mi48 net80 net125 net92 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+m20 q net123 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m21 q net123 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi47 net9 net79 net80 vss nch l=60e-9 w=150e-9 m=1 nf=1 
+.ends DFCNQD4
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AO22D1
+** View name: schematic
+.subckt AO22D1 a1 a2 b1 b2 z vdd vss
+m0 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi29 net13 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi22 net9 b2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi28 net5 a1 net13 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi21 net5 b1 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi17 net25 b1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi19 net5 a1 net25 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi18 net5 a2 net25 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi15 net25 b2 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AO22D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AOI22D1
+** View name: schematic
+.subckt AOI22D1 a1 a2 b1 b2 zn vdd vss
+mi3 zn b1 net1 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi9 zn a1 net5 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi10 net5 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi8 net1 b2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u3 net20 a2 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u5 vdd b2 net20 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u2 net20 a1 zn vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u4 vdd b1 net20 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AOI22D1
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AOI222D0
+** View name: schematic
+.subckt AOI222D0 a1 a2 b1 b2 c1 c2 zn vdd vss
+mi17 net17 b1 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi16 net17 b2 net20 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi19 net20 a1 zn vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mu27 vdd c2 net17 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi18 net20 a2 zn vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+mi15 vdd c1 net17 vdd pch l=60e-9 w=260e-9 m=1 nf=1 
+m0 zn b1 net25 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m1 net40 a2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m2 zn a1 net40 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m3 zn c1 net36 vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m4 net36 c2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+m5 net25 b2 vss vss nch l=60e-9 w=195e-9 m=1 nf=1 
+.ends AOI222D0
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: AO221D1
+** View name: schematic
+.subckt AO221D1 a1 a2 b1 b2 c z vdd vss
+m0 net5 a1 net9 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m1 net5 b1 net20 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m2 z net5 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m3 net9 a2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mu20 net5 c vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m4 net20 b2 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi5 net44 a1 net5 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi2 net33 b2 net44 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mu22 vdd c net33 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi3 net33 b1 net44 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi4 net44 a2 net5 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m5 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends AO221D1
+** End of subcircuit definition.
+
+** Library name: model3
+** Cell name: MDLL_LOGIC_VLOG
+** View name: schematic
+.subckt MDLL_LOGIC_VLOG status<2> status<1> status<0> refclk en0dll sar0en trk0en free0run comp code<6> code<5> code<4> code<3> code<2> code<1> code<0> frcode<6> frcode<5> frcode<4> frcode<3> frcode<2> frcode<1> frcode<0> vdd vss
+xu85 n130 n131 vdd vss CKND0
+xu2 sar0code<5> n2 vdd vss CKND0
+xu3 sar0code<2> n3 vdd vss CKND0
+xu4 sar0code<4> n4 vdd vss CKND0
+xu5 sar0code<0> n5 vdd vss CKND0
+xu6 status<0> n6 vdd vss CKND0
+xu1 free0run n1 vdd vss CKND0
+xu56 n41 n75 n27 n53 n89 vdd vss AO22D0
+xu100 n39 n75 n25 n53 n125 vdd vss AO22D0
+xu106 n1 sar0code<3> frcode<3> free0run code<3> vdd vss AO22D0
+xu105 n1 sar0code<2> frcode<2> free0run code<2> vdd vss AO22D0
+xu104 n1 sar0code<1> frcode<1> free0run code<1> vdd vss AO22D0
+xu103 n1 sar0code<0> frcode<0> free0run code<0> vdd vss AO22D0
+xu156 n136 free0run frcode<6> free0run code<6> vdd vss MOAI22D1
+xu155 free0run n2 frcode<5> free0run code<5> vdd vss MOAI22D1
+xu154 free0run n4 frcode<4> free0run code<4> vdd vss MOAI22D1
+xu75 n111 n6 n620 vdd vss CKAN2D0
+xu69 n110 n56 n71 vdd vss CKAN2D0
+xu90 n69 n110 n70 vdd vss CKAN2D0
+xu107 n64 n73 n76 vdd vss AN2XD1
+xu68 n113 n6 n56 vdd vss AN2XD1
+xu63 n640 n108 n55 vdd vss AN2XD1
+xu92 n113 status<0> n69 vdd vss AN2XD1
+xu65 n55 n69 n68 vdd vss AN2XD1
+xu81 n82 n130 n81 n73 vdd vss AN3D0
+xu89 n111 n6 n110 n74 vdd vss AN3D0
+xu57 comp n88 n118 n53 vdd vss AN3XD1
+xu91 n55 status<0> n111 n67 vdd vss AN3XD1
+xu73 n29 n53 n610 vdd vss ND2D1
+xu72 sar0code<4> n101 n600 vdd vss ND2D1
+xu96 n45 n75 n119 vdd vss ND2D1
+xu95 n31 n53 n120 vdd vss ND2D1
+xu101 n6 n85 n107 vdd vss ND2D1
+xu67 status<1> status<0> n590 vdd vss ND2D1
+xu79 n630 n590 n640 vdd vss ND2D1
+xu66 n640 n108 n110 vdd vss ND2D1
+xu80 status<2> n630 vdd vss INVD1
+xu58 n590 n109 vdd vss INVD1
+xu77 n111 n113 vdd vss INVD1
+xu55 n107 n590 n111 vdd vss CKND2D2
+xu133 n97 n96 n46 vdd vss CKND2D1
+xu153 n133 n132 n48 vdd vss CKND2D1
+xu121 n129 n91 n84 vdd vss CKND2D1
+xu60 status<2> n109 n108 vdd vss CKND2D1
+xu150 sar0code<1> n127 vdd vss CKND1
+xu141 n115 n103 vdd vss CKND1
+xu123 n94 n83 vdd vss CKND1
+xu138 n104 n114 vdd vss CKND1
+xu125 sar0en n87 vdd vss CKND1
+xu139 n101 n102 vdd vss CKND1
+xu126 status<1> n85 vdd vss CKND1
+xu129 sar0code<3> n92 vdd vss CKND1
+xu134 n98 n99 vdd vss CKND1
+xu120 n137 n91 vdd vss CKND1
+xu119 n124 n129 vdd vss CKND1
+xu117 comp n86 vdd vss CKND1
+xu115 n80 n88 vdd vss CKND1
+xu87 n114 n2 n117 vdd vss CKND2D0
+xu71 status<2> n109 n58 vdd vss CKND2D0
+xu157 sar0code<1> n5 n137 vdd vss IND2D0
+xu82 n107 n630 n118 vdd vss IND2D0
+xsub049 n45 n44 n43 n42 n41 n40 n39 net582 net581 n74 n70 n71 n67 n72 n68 n66 sar0code<6> n2 sar0code<4> sar0code<3> n3 sar0code<1> n5 sar0code<0> sar0code<2> sar0code<5> vdd vss MDLL_LOGIC_VLOG_DW01_sub_J17_0
+xadd049 n31 n30 n29 n28 n27 n26 n25 net584 net583 n74 n70 n71 n67 n72 n68 n66 sar0code<6> sar0code<5> n4 sar0code<3> n3 sar0code<1> sar0code<0> sar0code<4> sar0code<2> vdd vss MDLL_LOGIC_VLOG_DW01_add_J16_0
+xu114 n58 n82 vdd vss INVD0
+xu99 n123 n122 n430 vdd vss IND2D1
+xu118 comp0reg n86 n81 vdd vss IND2D1
+xu116 trk0en n82 n130 vdd vss IND2D1
+xu93 n81 n82 n130 n124 vdd vss IND3D1
+xadd051 n64 n63 n62 n61 n60 n59 synopsys0unconnected01 sar0code<6> sar0code<5> sar0code<4> sar0code<3> sar0code<2> sar0code<1> sar0code<0> vdd vss MDLL_LOGIC_VLOG_DW01_inc_0
+xu131 n3 n92 n98 n95 vdd vss OAI21D1
+xu151 n5 n127 n137 n128 vdd vss OAI21D1
+xu140 n4 n124 n102 n115 vdd vss OAI21D1
+xu135 n99 n124 n130 n101 vdd vss OAI21D1
+xu122 n91 n124 n130 n94 vdd vss OAI21D1
+xu74 n600 n610 n104 n100 vdd vss ND3D1
+xu94 n120 n119 n118 n121 vdd vss ND3D1
+xu130 n91 n92 n3 n98 vdd vss ND3D1
+xu137 n99 n129 n4 n104 vdd vss ND3D1
+xu70 n113 n6 n65 vdd vss CKAN2D1
+xu64 n55 n65 n66 vdd vss AN2D2
+xu76 n55 n620 n72 vdd vss AN2D1
+xsar0code0reg030 n46 refclk en0dll sar0code<3> vdd vss DFCNQD1
+xsar0code0reg040 n450 refclk en0dll sar0code<4> vdd vss DFCNQD1
+xsar0code0reg010 n48 refclk en0dll sar0code<1> vdd vss DFCNQD1
+xsar0code0reg050 n440 refclk en0dll sar0code<5> vdd vss DFCNQD1
+xsar0code0reg020 n47 refclk en0dll sar0code<2> vdd vss DFCNQD1
+xcomp0reg0reg n54 refclk en0dll comp0reg vdd vss DFCNQD1
+xstatus0reg010 n51 refclk en0dll status<1> vdd vss DFCNQD1
+xstatus0reg000 n52 refclk en0dll status<0> vdd vss DFCNQD1
+xstatus0reg020 n50 refclk en0dll status<2> vdd vss DFCNQD1
+xu109 n590 n80 n630 n50 vdd vss OAI21D0
+xu78 status<1> n79 n51 vdd vss CKXOR2D0
+xu112 status<0> n88 n52 vdd vss CKXOR2D0
+xu110 n6 n80 n79 vdd vss NR2D0
+xu113 sar0en n58 n80 vdd vss ND2D0
+xu83 n87 n86 n118 n58 n75 vdd vss OA211D0
+xu59 comp n54 vdd vss DEL005
+xu144 n63 n73 n106 n105 n440 vdd vss AO211D1
+xu127 n60 n73 n90 n89 n47 vdd vss AO211D1
+xu148 n5 n73 n126 n125 n49 vdd vss AO211D1
+xu142 n104 n103 sar0code<5> n106 vdd vss MUX2ND0
+xu124 n84 n83 sar0code<2> n90 vdd vss MUX2ND0
+xu146 n117 n116 sar0code<6> n123 vdd vss MUX2ND0
+xu147 n124 n130 sar0code<0> n126 vdd vss MUX2ND0
+xsar0code0reg000 n49 refclk en0dll sar0code<0> vdd vss DFCNQD4
+xu88 n121 n76 n122 vdd vss NR2XD0
+xsar0code0reg060 n430 refclk en0dll sar0code<6> n136 vdd vss DFSND1
+xu84 n129 sar0code<5> n115 n116 vdd vss AOI21D0
+xu143 n44 n75 n30 n53 n105 vdd vss AO22D1
+xu132 n42 n75 n61 n73 n96 vdd vss AOI22D1
+xu152 n59 n73 n131 sar0code<1> n132 vdd vss AOI22D1
+xu98 n28 n53 n129 n95 sar0code<3> n94 n97 vdd vss AOI222D0
+xu97 n40 n75 n129 n128 n26 n53 n133 vdd vss AOI222D0
+xu86 n43 n75 n62 n73 n100 n450 vdd vss AO221D1
+.ends MDLL_LOGIC_VLOG
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: DCAP8
+** View name: schematic
+.subckt DCAP8 vdd vss
+mi4 vss net9 vss vss nch l=880e-9 w=300e-9 m=1 nf=1 
+m_u2 net11 net9 vss vss nch l=60e-9 w=300e-9 m=1 nf=1 
+mi3 vdd net11 vdd vdd pch l=880e-9 w=430e-9 m=1 nf=1 
+m_u1 net9 net11 vdd vdd pch l=60e-9 w=390e-9 m=1 nf=1 
+.ends DCAP8
+** End of subcircuit definition.
+
+** Library name: tcbn65lp
+** Cell name: OA31D1
+** View name: schematic
+.subckt OA31D1 a1 a2 a3 b z vdd vss
+m0 z net25 vss vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi6 net5 a1 net25 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+m_u5 vss b net5 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi8 net5 a3 net25 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi7 net5 a2 net25 vss nch l=60e-9 w=390e-9 m=1 nf=1 
+mi3 net37 a1 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi4 net33 a2 net37 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m1 z net25 vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+m_u11 net25 b vdd vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+mi5 net25 a3 net33 vdd pch l=60e-9 w=520e-9 m=1 nf=1 
+.ends OA31D1
+** End of subcircuit definition.
+
+** Library name: model3
+** Cell name: SEL_LOGIC_V2
+** View name: schematic
+.subckt SEL_LOGIC_V2 sel ndiv<5> ndiv<4> ndiv<3> ndiv<2> ndiv<1> ndiv<0> mdlclk srst vdd vss
+xcylcnt0reg010 n1 mdlclk srst cylcnt<1> vdd vss DFCNQD1
+xcylcnt0reg020 n2 mdlclk srst cylcnt<2> vdd vss DFCNQD1
+xcylcnt0reg030 n3 mdlclk srst cylcnt<3> vdd vss DFCNQD1
+xcylcnt0reg040 n4 mdlclk srst cylcnt<4> vdd vss DFCNQD1
+xcylcnt0reg050 n5 mdlclk srst cylcnt<5> vdd vss DFCNQD1
+xcylcnt0reg000 n14 mdlclk srst cylcnt<0> vdd vss DFCNQD1
+xu22 cylcnt<0> n14 vdd vss INVD1
+xu5 n15 n16 n17 sel n10 vdd vss OA31D1
+xu11 ndiv<4> cylcnt<4> n20 vdd vss XNR2D1
+xu12 ndiv<2> cylcnt<2> n19 vdd vss XNR2D1
+xu13 ndiv<5> cylcnt<5> n18 vdd vss XNR2D1
+xu16 ndiv<3> cylcnt<3> n21 vdd vss XNR2D1
+xu15 ndiv<1> cylcnt<1> n22 vdd vss XNR2D1
+xu17 ndiv<0> n14 n15 vdd vss XNR2D1
+xsel0reg n10 mdlclk srst sel vdd vss DFSNQD1
+xu20 n21 n22 n16 vdd vss ND2D1
+xu6 cylcnt<1> cylcnt<0> n1 add0190carry020 vdd vss HA1D0
+xu7 cylcnt<3> add0190carry030 n3 add0190carry040 vdd vss HA1D0
+xu8 cylcnt<2> add0190carry020 n2 add0190carry030 vdd vss HA1D0
+xu9 cylcnt<4> add0190carry040 n4 add0190carry050 vdd vss HA1D0
+xu18 add0190carry050 cylcnt<5> n5 vdd vss CKXOR2D1
+xu21 n18 n19 n20 n17 vdd vss ND3D1
+.ends SEL_LOGIC_V2
+** End of subcircuit definition.
+
+** Library name: TempSensorLayout_PostLayout
+** Cell name: MDLL_TOP
+** View name: schematic
+xi0 en_dll fr md_sar md_trk net15 net19 sclk0 sel_rst net20 vdd vss MDLL_CKGEN_V1
+xi1 net17 en_dll code<2> code<1> code<0> net15 code<3> code<4> code<5> code<6> net013 vdd vss DEL_7b
+xi3 net016<0> net016<1> net016<2> net15 en_dll net19 net20 fr comp code<6> code<5> code<4> code<3> code<2> code<1> code<0> frcode<6> frcode<5> frcode<4> frcode<3> frcode<2> frcode<1> frcode<0> vdd vss MDLL_LOGIC_VLOG
+xi10<131> vdd vss DCAP8
+xi10<130> vdd vss DCAP8
+xi10<129> vdd vss DCAP8
+xi10<128> vdd vss DCAP8
+xi10<127> vdd vss DCAP8
+xi10<126> vdd vss DCAP8
+xi10<125> vdd vss DCAP8
+xi10<124> vdd vss DCAP8
+xi10<123> vdd vss DCAP8
+xi10<122> vdd vss DCAP8
+xi10<121> vdd vss DCAP8
+xi10<120> vdd vss DCAP8
+xi10<119> vdd vss DCAP8
+xi10<118> vdd vss DCAP8
+xi10<117> vdd vss DCAP8
+xi10<116> vdd vss DCAP8
+xi10<115> vdd vss DCAP8
+xi10<114> vdd vss DCAP8
+xi10<113> vdd vss DCAP8
+xi10<112> vdd vss DCAP8
+xi10<111> vdd vss DCAP8
+xi10<110> vdd vss DCAP8
+xi10<109> vdd vss DCAP8
+xi10<108> vdd vss DCAP8
+xi10<107> vdd vss DCAP8
+xi10<106> vdd vss DCAP8
+xi10<105> vdd vss DCAP8
+xi10<104> vdd vss DCAP8
+xi10<103> vdd vss DCAP8
+xi10<102> vdd vss DCAP8
+xi10<101> vdd vss DCAP8
+xi10<100> vdd vss DCAP8
+xi10<99> vdd vss DCAP8
+xi10<98> vdd vss DCAP8
+xi10<97> vdd vss DCAP8
+xi10<96> vdd vss DCAP8
+xi10<95> vdd vss DCAP8
+xi10<94> vdd vss DCAP8
+xi10<93> vdd vss DCAP8
+xi10<92> vdd vss DCAP8
+xi10<91> vdd vss DCAP8
+xi10<90> vdd vss DCAP8
+xi10<89> vdd vss DCAP8
+xi10<88> vdd vss DCAP8
+xi10<87> vdd vss DCAP8
+xi10<86> vdd vss DCAP8
+xi10<85> vdd vss DCAP8
+xi10<84> vdd vss DCAP8
+xi10<83> vdd vss DCAP8
+xi10<82> vdd vss DCAP8
+xi10<81> vdd vss DCAP8
+xi10<80> vdd vss DCAP8
+xi10<79> vdd vss DCAP8
+xi10<78> vdd vss DCAP8
+xi10<77> vdd vss DCAP8
+xi10<76> vdd vss DCAP8
+xi10<75> vdd vss DCAP8
+xi10<74> vdd vss DCAP8
+xi10<73> vdd vss DCAP8
+xi10<72> vdd vss DCAP8
+xi10<71> vdd vss DCAP8
+xi10<70> vdd vss DCAP8
+xi10<69> vdd vss DCAP8
+xi10<68> vdd vss DCAP8
+xi10<67> vdd vss DCAP8
+xi10<66> vdd vss DCAP8
+xi10<65> vdd vss DCAP8
+xi10<64> vdd vss DCAP8
+xi10<63> vdd vss DCAP8
+xi10<62> vdd vss DCAP8
+xi10<61> vdd vss DCAP8
+xi10<60> vdd vss DCAP8
+xi10<59> vdd vss DCAP8
+xi10<58> vdd vss DCAP8
+xi10<57> vdd vss DCAP8
+xi10<56> vdd vss DCAP8
+xi10<55> vdd vss DCAP8
+xi10<54> vdd vss DCAP8
+xi10<53> vdd vss DCAP8
+xi10<52> vdd vss DCAP8
+xi10<51> vdd vss DCAP8
+xi10<50> vdd vss DCAP8
+xi10<49> vdd vss DCAP8
+xi10<48> vdd vss DCAP8
+xi10<47> vdd vss DCAP8
+xi10<46> vdd vss DCAP8
+xi10<45> vdd vss DCAP8
+xi10<44> vdd vss DCAP8
+xi10<43> vdd vss DCAP8
+xi10<42> vdd vss DCAP8
+xi10<41> vdd vss DCAP8
+xi10<40> vdd vss DCAP8
+xi10<39> vdd vss DCAP8
+xi10<38> vdd vss DCAP8
+xi10<37> vdd vss DCAP8
+xi10<36> vdd vss DCAP8
+xi10<35> vdd vss DCAP8
+xi10<34> vdd vss DCAP8
+xi10<33> vdd vss DCAP8
+xi10<32> vdd vss DCAP8
+xi10<31> vdd vss DCAP8
+xi10<30> vdd vss DCAP8
+xi10<29> vdd vss DCAP8
+xi10<28> vdd vss DCAP8
+xi10<27> vdd vss DCAP8
+xi10<26> vdd vss DCAP8
+xi10<25> vdd vss DCAP8
+xi10<24> vdd vss DCAP8
+xi10<23> vdd vss DCAP8
+xi10<22> vdd vss DCAP8
+xi10<21> vdd vss DCAP8
+xi10<20> vdd vss DCAP8
+xi10<19> vdd vss DCAP8
+xi10<18> vdd vss DCAP8
+xi10<17> vdd vss DCAP8
+xi10<16> vdd vss DCAP8
+xi10<15> vdd vss DCAP8
+xi10<14> vdd vss DCAP8
+xi10<13> vdd vss DCAP8
+xi10<12> vdd vss DCAP8
+xi10<11> vdd vss DCAP8
+xi10<10> vdd vss DCAP8
+xi10<9> vdd vss DCAP8
+xi10<8> vdd vss DCAP8
+xi10<7> vdd vss DCAP8
+xi10<6> vdd vss DCAP8
+xi10<5> vdd vss DCAP8
+xi10<4> vdd vss DCAP8
+xi10<3> vdd vss DCAP8
+xi10<2> vdd vss DCAP8
+xi10<1> vdd vss DCAP8
+xi10<0> vdd vss DCAP8
+xi2 net16 ndiv<5> ndiv<4> ndiv<3> ndiv<2> ndiv<1> ndiv<0> net17 sel_rst vdd vss SEL_LOGIC_V2
+xi8 net16 comp vdd vss INVD0
+xi7 net17 ckout vdd vss CKBD2
+xi16 net16 fr net013 vdd vss OR2D1
+.END
