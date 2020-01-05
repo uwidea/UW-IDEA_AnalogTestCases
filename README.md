@@ -9,6 +9,7 @@ Circuit release for Analog Test Cases from UW IDEA project
 ---------
 Circuits
 ---------
+The known good design (KGD) IPs that are illustrated in the following table can be found in the folder AMS_KGD 
 | Circuit       | Architecture               | Design Files           |
 | :------------:| ------------------ | -------------------|
 | SAR_ADC | 12b SAR ADC | SAR_ADC/UW_65nm_SARADC_Apr_2019 |
@@ -21,6 +22,10 @@ Circuits
 --------
 Modules
 --------
+
+The modules that build up the above circuits are presented below.
+
+The modules for the SAR ADC
 | Module       | Cell               | Function           |
 | :-------------:| ------------------ | -------------------|
 | 5b_ADC | 5b coarse SAR ADC | Compute the 5-bit MSBs using merged capacitor switching (MCS) method |
@@ -29,6 +34,10 @@ Modules
 | CK_Divider8	        | Clock Divider by 8	|Generate complementary clock to drive DLPF, Comparison enable signal, and reference clock
 | Coarse_Comp_CK | Coarse Comparator Clock Generator  | Generate clock for the comparator |
 | Coarse_SAR_Logic | SAR Logic | Generate control signal for the CDAC and store output digits from comparator |
+
+The modules for the temperature sensor
+| Module       | Cell               | Function           |
+| :-------------:| ------------------ | -------------------|
 | DLPF_RCFilter         | 	CDAC Embedded DLPF | 	The sensing element with embedded CDAC
 | EdgeComparator        | 	Edge Comparator	| To compare the crossing point with the reference clock
 | LevelCrossingDetector	| Level Crossing Detector	| To compare the crossing point with the reference clock
