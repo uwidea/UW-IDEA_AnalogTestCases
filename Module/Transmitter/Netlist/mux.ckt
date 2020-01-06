@@ -1,0 +1,61 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:49:01 2020
+** Design library name: AP_SerDes
+** Design cell name: mux
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D1LVT
+** View name: schematic
+.subckt ND2D1LVT a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD4LVT
+** View name: schematic
+.subckt INVD4LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: mux
+** View name: schematic
+xi3 s in1 net8 dvdd dvss ND2D1LVT
+xi4 sz in0 net7 dvdd dvss ND2D1LVT
+xi5 net8 net7 net08 dvdd dvss ND2D1LVT
+xi7 net07 out dvdd dvss INVD4LVT
+xi6 net08 net07 dvdd dvss INVD2LVT
+.END

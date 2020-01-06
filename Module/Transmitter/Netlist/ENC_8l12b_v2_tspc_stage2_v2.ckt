@@ -1,0 +1,209 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:42:39 2020
+** Design library name: AP_SerDes
+** Design cell name: ENC_8l12b_v2_tspc_stage2_v2
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: DFF_LVT
+** View name: schematic
+.subckt DFF_LVT ck d dgnd dvdd q qn
+m7 q qn dgnd dgnd nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 qn ck net4 dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m13 n1 d dgnd dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m4 net2 n1 net3 dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m3 net4 net2 dgnd dgnd nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m14 net3 ck dgnd dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m9 net2 ck dvdd dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m8 net1 d dvdd dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m12 q qn dvdd dvdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 qn net2 dvdd dvdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 n1 ck net1 dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+.ends DFF_LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN2D1LVT
+** View name: schematic
+.subckt AN2D1LVT a1 a2 z vdd vss
+m0 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D1LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: ENC_8l12b_v2_tspc_stage2_v2
+** View name: schematic
+xi313<3> net065<0> dec64<3> dvdd dvss INVD2LVT
+xi313<2> net065<1> dec64<2> dvdd dvss INVD2LVT
+xi313<1> net065<2> dec64<1> dvdd dvss INVD2LVT
+xi313<0> net065<3> dec64<0> dvdd dvss INVD2LVT
+xi312<3> net066<0> dec65<3> dvdd dvss INVD2LVT
+xi312<2> net066<1> dec65<2> dvdd dvss INVD2LVT
+xi312<1> net066<2> dec65<1> dvdd dvss INVD2LVT
+xi312<0> net066<3> dec65<0> dvdd dvss INVD2LVT
+xi309<1> bf<4> bzfd<4> dvdd dvss INVD2LVT
+xi309<0> bzf<4> bfd<4> dvdd dvss INVD2LVT
+xi308<1> bf<10> bzfd<10> dvdd dvss INVD2LVT
+xi308<0> bzf<10> bfd<10> dvdd dvss INVD2LVT
+xi307<1> bf<6> bzfd<6> dvdd dvss INVD2LVT
+xi307<0> bzf<6> bfd<6> dvdd dvss INVD2LVT
+xi306<1> bf<5> bzfd<5> dvdd dvss INVD2LVT
+xi306<0> bzf<5> bfd<5> dvdd dvss INVD2LVT
+xi305<1> bf<9> bzfd<9> dvdd dvss INVD2LVT
+xi305<0> bzf<9> bfd<9> dvdd dvss INVD2LVT
+xi304<1> bf<0> bzfd<0> dvdd dvss INVD2LVT
+xi304<0> bzf<0> bfd<0> dvdd dvss INVD2LVT
+xi303<1> bf<8> bzfd<8> dvdd dvss INVD2LVT
+xi303<0> bzf<8> bfd<8> dvdd dvss INVD2LVT
+xi302<1> bf<2> bzfd<2> dvdd dvss INVD2LVT
+xi302<0> bzf<2> bfd<2> dvdd dvss INVD2LVT
+xi301<1> bf<1> bzfd<1> dvdd dvss INVD2LVT
+xi301<0> bzf<1> bfd<1> dvdd dvss INVD2LVT
+xi300<1> bf<11> bzfd<11> dvdd dvss INVD2LVT
+xi300<0> bzf<11> bfd<11> dvdd dvss INVD2LVT
+xi311<3> net067<0> dec20<3> dvdd dvss INVD2LVT
+xi311<2> net067<1> dec20<2> dvdd dvss INVD2LVT
+xi311<1> net067<2> dec20<1> dvdd dvss INVD2LVT
+xi311<0> net067<3> dec20<0> dvdd dvss INVD2LVT
+xi299<1> bf<3> bzfd<3> dvdd dvss INVD2LVT
+xi299<0> bzf<3> bfd<3> dvdd dvss INVD2LVT
+xi310<3> net068<0> dec21<3> dvdd dvss INVD2LVT
+xi310<2> net068<1> dec21<2> dvdd dvss INVD2LVT
+xi310<1> net068<2> dec21<1> dvdd dvss INVD2LVT
+xi310<0> net068<3> dec21<0> dvdd dvss INVD2LVT
+xi249<1> bf<7> bzfd<7> dvdd dvss INVD2LVT
+xi249<0> bzf<7> bfd<7> dvdd dvss INVD2LVT
+xi288 clk din<2> dvss dvdd bf<2> bzf<2> DFF_LVT
+xi298 clk din<3> dvss dvdd bf<3> bzf<3> DFF_LVT
+xi253<3> clk net080<0> dvss dvdd dec113<3> net076<0> DFF_LVT
+xi253<2> clk net080<1> dvss dvdd dec113<2> net076<1> DFF_LVT
+xi253<1> clk net080<2> dvss dvdd dec113<1> net076<2> DFF_LVT
+xi253<0> clk net080<3> dvss dvdd dec113<0> net076<3> DFF_LVT
+xi259<3> clk net049<0> dvss dvdd dec87<3> net069<0> DFF_LVT
+xi259<2> clk net049<1> dvss dvdd dec87<2> net069<1> DFF_LVT
+xi259<1> clk net049<2> dvss dvdd dec87<1> net069<2> DFF_LVT
+xi259<0> clk net049<3> dvss dvdd dec87<0> net069<3> DFF_LVT
+xi255<3> clk net051<0> dvss dvdd dec107<3> net073<0> DFF_LVT
+xi255<2> clk net051<1> dvss dvdd dec107<2> net073<1> DFF_LVT
+xi255<1> clk net051<2> dvss dvdd dec107<1> net073<2> DFF_LVT
+xi255<0> clk net051<3> dvss dvdd dec107<0> net073<3> DFF_LVT
+xi263<3> clk net047<0> dvss dvdd net062<0> net065<0> DFF_LVT
+xi263<2> clk net047<1> dvss dvdd net062<1> net065<1> DFF_LVT
+xi263<1> clk net047<2> dvss dvdd net062<2> net065<2> DFF_LVT
+xi263<0> clk net047<3> dvss dvdd net062<3> net065<3> DFF_LVT
+xi261<3> clk net048<0> dvss dvdd net042<0> net067<0> DFF_LVT
+xi261<2> clk net048<1> dvss dvdd net042<1> net067<1> DFF_LVT
+xi261<1> clk net048<2> dvss dvdd net042<2> net067<2> DFF_LVT
+xi261<0> clk net048<3> dvss dvdd net042<3> net067<3> DFF_LVT
+xi238<3> clk net037<0> dvss dvdd net061<0> net066<0> DFF_LVT
+xi238<2> clk net037<1> dvss dvdd net061<1> net066<1> DFF_LVT
+xi238<1> clk net037<2> dvss dvdd net061<2> net066<2> DFF_LVT
+xi238<0> clk net037<3> dvss dvdd net061<3> net066<3> DFF_LVT
+xi237<3> clk net038<0> dvss dvdd net044<0> net068<0> DFF_LVT
+xi237<2> clk net038<1> dvss dvdd net044<1> net068<1> DFF_LVT
+xi237<1> clk net038<2> dvss dvdd net044<2> net068<2> DFF_LVT
+xi237<0> clk net038<3> dvss dvdd net044<3> net068<3> DFF_LVT
+xi236<3> clk net045<0> dvss dvdd dec83<3> net070<0> DFF_LVT
+xi236<2> clk net045<1> dvss dvdd dec83<2> net070<1> DFF_LVT
+xi236<1> clk net045<2> dvss dvdd dec83<1> net070<2> DFF_LVT
+xi236<0> clk net045<3> dvss dvdd dec83<0> net070<3> DFF_LVT
+xi235<3> clk net046<0> dvss dvdd dec93<3> net072<0> DFF_LVT
+xi235<2> clk net046<1> dvss dvdd dec93<2> net072<1> DFF_LVT
+xi235<1> clk net046<2> dvss dvdd dec93<1> net072<2> DFF_LVT
+xi235<0> clk net046<3> dvss dvdd dec93<0> net072<3> DFF_LVT
+xi296 clk din<6> dvss dvdd bf<6> bzf<6> DFF_LVT
+xi295 clk din<5> dvss dvdd bf<5> bzf<5> DFF_LVT
+xi294 clk din<7> dvss dvdd bf<7> bzf<7> DFF_LVT
+xi293 clk din<9> dvss dvdd bf<9> bzf<9> DFF_LVT
+xi292 clk din<0> dvss dvdd bf<0> bzf<0> DFF_LVT
+xi291 clk din<8> dvss dvdd bf<8> bzf<8> DFF_LVT
+xi257<3> clk net050<0> dvss dvdd dec97<3> net071<0> DFF_LVT
+xi257<2> clk net050<1> dvss dvdd dec97<2> net071<1> DFF_LVT
+xi257<1> clk net050<2> dvss dvdd dec97<1> net071<2> DFF_LVT
+xi257<0> clk net050<3> dvss dvdd dec97<0> net071<3> DFF_LVT
+xi290 clk din<10> dvss dvdd bf<10> bzf<10> DFF_LVT
+xi289 clk din<1> dvss dvdd bf<1> bzf<1> DFF_LVT
+xi21 clk din<11> dvss dvdd bf<11> bzf<11> DFF_LVT
+xi233<3> clk net052<0> dvss dvdd dec117<3> net075<0> DFF_LVT
+xi233<2> clk net052<1> dvss dvdd dec117<2> net075<1> DFF_LVT
+xi233<1> clk net052<2> dvss dvdd dec117<1> net075<2> DFF_LVT
+xi233<0> clk net052<3> dvss dvdd dec117<0> net075<3> DFF_LVT
+xi234<3> clk net079<0> dvss dvdd dec103<3> net074<0> DFF_LVT
+xi234<2> clk net079<1> dvss dvdd dec103<2> net074<1> DFF_LVT
+xi234<1> clk net079<2> dvss dvdd dec103<1> net074<2> DFF_LVT
+xi234<0> clk net079<3> dvss dvdd dec103<0> net074<3> DFF_LVT
+xi297 clk din<4> dvss dvdd bf<4> bzf<4> DFF_LVT
+xi166<3> bfd<3> bfd<10> net079<0> dvdd dvss AN2D1LVT
+xi166<2> bzfd<3> bfd<10> net079<1> dvdd dvss AN2D1LVT
+xi166<1> bfd<3> bzfd<10> net079<2> dvdd dvss AN2D1LVT
+xi166<0> bzfd<3> bzfd<10> net079<3> dvdd dvss AN2D1LVT
+xi262<3> bfd<4> bfd<6> net047<0> dvdd dvss AN2D1LVT
+xi262<2> bzfd<4> bfd<6> net047<1> dvdd dvss AN2D1LVT
+xi262<1> bfd<4> bzfd<6> net047<2> dvdd dvss AN2D1LVT
+xi262<0> bzfd<4> bzfd<6> net047<3> dvdd dvss AN2D1LVT
+xi260<3> bfd<0> bfd<2> net048<0> dvdd dvss AN2D1LVT
+xi260<2> bzfd<0> bfd<2> net048<1> dvdd dvss AN2D1LVT
+xi260<1> bfd<0> bzfd<2> net048<2> dvdd dvss AN2D1LVT
+xi260<0> bzfd<0> bzfd<2> net048<3> dvdd dvss AN2D1LVT
+xi258<3> bfd<7> bfd<8> net049<0> dvdd dvss AN2D1LVT
+xi258<2> bzfd<7> bfd<8> net049<1> dvdd dvss AN2D1LVT
+xi258<1> bfd<7> bzfd<8> net049<2> dvdd dvss AN2D1LVT
+xi258<0> bzfd<7> bzfd<8> net049<3> dvdd dvss AN2D1LVT
+xi256<3> bfd<9> bfd<7> net050<0> dvdd dvss AN2D1LVT
+xi256<2> bfd<9> bzfd<7> net050<1> dvdd dvss AN2D1LVT
+xi256<1> bzfd<9> bfd<7> net050<2> dvdd dvss AN2D1LVT
+xi256<0> bzfd<9> bzfd<7> net050<3> dvdd dvss AN2D1LVT
+xi254<3> bfd<10> bfd<7> net051<0> dvdd dvss AN2D1LVT
+xi254<2> bfd<10> bzfd<7> net051<1> dvdd dvss AN2D1LVT
+xi254<1> bzfd<10> bfd<7> net051<2> dvdd dvss AN2D1LVT
+xi254<0> bzfd<10> bzfd<7> net051<3> dvdd dvss AN2D1LVT
+xi165<3> bfd<11> bfd<7> net052<0> dvdd dvss AN2D1LVT
+xi165<2> bfd<11> bzfd<7> net052<1> dvdd dvss AN2D1LVT
+xi165<1> bzfd<11> bfd<7> net052<2> dvdd dvss AN2D1LVT
+xi165<0> bzfd<11> bzfd<7> net052<3> dvdd dvss AN2D1LVT
+xi252<3> bfd<11> bfd<3> net080<0> dvdd dvss AN2D1LVT
+xi252<2> bfd<11> bzfd<3> net080<1> dvdd dvss AN2D1LVT
+xi252<1> bzfd<11> bfd<3> net080<2> dvdd dvss AN2D1LVT
+xi252<0> bzfd<11> bzfd<3> net080<3> dvdd dvss AN2D1LVT
+xi176<3> bfd<6> bfd<5> net037<0> dvdd dvss AN2D1LVT
+xi176<2> bfd<6> bzfd<5> net037<1> dvdd dvss AN2D1LVT
+xi176<1> bzfd<6> bfd<5> net037<2> dvdd dvss AN2D1LVT
+xi176<0> bzfd<6> bzfd<5> net037<3> dvdd dvss AN2D1LVT
+xi173<3> bfd<2> bfd<1> net038<0> dvdd dvss AN2D1LVT
+xi173<2> bfd<2> bzfd<1> net038<1> dvdd dvss AN2D1LVT
+xi173<1> bzfd<2> bfd<1> net038<2> dvdd dvss AN2D1LVT
+xi173<0> bzfd<2> bzfd<1> net038<3> dvdd dvss AN2D1LVT
+xi168<3> bfd<8> bfd<3> net045<0> dvdd dvss AN2D1LVT
+xi168<2> bfd<8> bzfd<3> net045<1> dvdd dvss AN2D1LVT
+xi168<1> bzfd<8> bfd<3> net045<2> dvdd dvss AN2D1LVT
+xi168<0> bzfd<8> bzfd<3> net045<3> dvdd dvss AN2D1LVT
+xi167<3> bfd<9> bfd<3> net046<0> dvdd dvss AN2D1LVT
+xi167<2> bfd<9> bzfd<3> net046<1> dvdd dvss AN2D1LVT
+xi167<1> bzfd<9> bfd<3> net046<2> dvdd dvss AN2D1LVT
+xi167<0> bzfd<9> bzfd<3> net046<3> dvdd dvss AN2D1LVT
+.END

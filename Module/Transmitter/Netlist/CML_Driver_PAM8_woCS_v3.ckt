@@ -1,0 +1,100 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:53:24 2020
+** Design library name: AP_SerDes
+** Design cell name: CML_Driver_PAM8_woCS_v3
+** Design view name: schematic
+.PARAM wnswitch m wpswitch
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: AP_SerDes
+** Cell name: CML_Driver_PAM8_woCS_v3
+** View name: schematic
+m56 outa a<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m54 outa a<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m50 outa a<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m52 outa a<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m115 outg g<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m111 oute e<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m97 oute e<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m83 oute e<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m64 oute e<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m113 outf f<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m109 outd d<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m95 outd d<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m81 outd d<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m62 outd d<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m107 outc c<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m93 outc c<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m79 outc c<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m60 outc c<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m101 outg g<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m87 outg g<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m99 outf f<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m105 outb b<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m91 outb b<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m73 outb b<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m58 outb b<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m117 outh h<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m103 outh h<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m85 outf f<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m68 outg g<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m89 outh h<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m70 outh h<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m66 outf f<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m53 outa a<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m49 outa a<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m51 outa a<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*3' nf=4 
+m55 outa a<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m104 outb b<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m100 outg g<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m98 outf f<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m112 outf f<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m86 outg g<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m96 oute e<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m82 oute e<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m63 oute e<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m110 oute e<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m94 outd d<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m80 outd d<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m108 outd d<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m61 outd d<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m116 outh h<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m92 outc c<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m75 outc c<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m59 outc c<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m106 outc c<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m67 outg g<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m114 outg g<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m102 outh h<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m90 outb b<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*3' nf=4 
+m71 outb b<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m57 outb b<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m88 outh h<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m84 outf f<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m65 outf f<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m69 outh h<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+xr23  outa ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr3  oute ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr4  outf ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr5  outg ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr1  outc ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr6  outh ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr2  outd ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr0  outb ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+.END

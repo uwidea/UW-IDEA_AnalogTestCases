@@ -1,0 +1,132 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:50:40 2020
+** Design library name: AP_SerDes
+** Design cell name: MUX2to1_dig
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D1LVT
+** View name: schematic
+.subckt ND2D1LVT a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD4LVT
+** View name: schematic
+.subckt INVD4LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: mux
+** View name: schematic
+.subckt mux dvdd dvss in0 in1 out s sz
+xi3 s in1 net8 dvdd dvss ND2D1LVT
+xi4 sz in0 net7 dvdd dvss ND2D1LVT
+xi5 net8 net7 net08 dvdd dvss ND2D1LVT
+xi7 net07 out dvdd dvss INVD4LVT
+xi6 net08 net07 dvdd dvss INVD2LVT
+.ends mux
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: MUX2to1_dig
+** View name: schematic
+xi8<7> dvdd dvss ae<7> ao<7> a<7> clke clko mux
+xi8<6> dvdd dvss ae<6> ao<6> a<6> clke clko mux
+xi8<5> dvdd dvss ae<5> ao<5> a<5> clke clko mux
+xi8<4> dvdd dvss ae<4> ao<4> a<4> clke clko mux
+xi8<3> dvdd dvss ae<3> ao<3> a<3> clke clko mux
+xi8<2> dvdd dvss ae<2> ao<2> a<2> clke clko mux
+xi8<1> dvdd dvss ae<1> ao<1> a<1> clke clko mux
+xi8<0> dvdd dvss ae<0> ao<0> a<0> clke clko mux
+xi15<7> dvdd dvss he<7> ho<7> h<7> clke clko mux
+xi15<6> dvdd dvss he<6> ho<6> h<6> clke clko mux
+xi15<5> dvdd dvss he<5> ho<5> h<5> clke clko mux
+xi15<4> dvdd dvss he<4> ho<4> h<4> clke clko mux
+xi15<3> dvdd dvss he<3> ho<3> h<3> clke clko mux
+xi15<2> dvdd dvss he<2> ho<2> h<2> clke clko mux
+xi15<1> dvdd dvss he<1> ho<1> h<1> clke clko mux
+xi15<0> dvdd dvss he<0> ho<0> h<0> clke clko mux
+xi14<7> dvdd dvss ge<7> go<7> g<7> clke clko mux
+xi14<6> dvdd dvss ge<6> go<6> g<6> clke clko mux
+xi14<5> dvdd dvss ge<5> go<5> g<5> clke clko mux
+xi14<4> dvdd dvss ge<4> go<4> g<4> clke clko mux
+xi14<3> dvdd dvss ge<3> go<3> g<3> clke clko mux
+xi14<2> dvdd dvss ge<2> go<2> g<2> clke clko mux
+xi14<1> dvdd dvss ge<1> go<1> g<1> clke clko mux
+xi14<0> dvdd dvss ge<0> go<0> g<0> clke clko mux
+xi13<7> dvdd dvss fe<7> fo<7> f<7> clke clko mux
+xi13<6> dvdd dvss fe<6> fo<6> f<6> clke clko mux
+xi13<5> dvdd dvss fe<5> fo<5> f<5> clke clko mux
+xi13<4> dvdd dvss fe<4> fo<4> f<4> clke clko mux
+xi13<3> dvdd dvss fe<3> fo<3> f<3> clke clko mux
+xi13<2> dvdd dvss fe<2> fo<2> f<2> clke clko mux
+xi13<1> dvdd dvss fe<1> fo<1> f<1> clke clko mux
+xi13<0> dvdd dvss fe<0> fo<0> f<0> clke clko mux
+xi12<7> dvdd dvss ee<7> eo<7> e<7> clke clko mux
+xi12<6> dvdd dvss ee<6> eo<6> e<6> clke clko mux
+xi12<5> dvdd dvss ee<5> eo<5> e<5> clke clko mux
+xi12<4> dvdd dvss ee<4> eo<4> e<4> clke clko mux
+xi12<3> dvdd dvss ee<3> eo<3> e<3> clke clko mux
+xi12<2> dvdd dvss ee<2> eo<2> e<2> clke clko mux
+xi12<1> dvdd dvss ee<1> eo<1> e<1> clke clko mux
+xi12<0> dvdd dvss ee<0> eo<0> e<0> clke clko mux
+xi11<7> dvdd dvss de<7> do<7> d<7> clke clko mux
+xi11<6> dvdd dvss de<6> do<6> d<6> clke clko mux
+xi11<5> dvdd dvss de<5> do<5> d<5> clke clko mux
+xi11<4> dvdd dvss de<4> do<4> d<4> clke clko mux
+xi11<3> dvdd dvss de<3> do<3> d<3> clke clko mux
+xi11<2> dvdd dvss de<2> do<2> d<2> clke clko mux
+xi11<1> dvdd dvss de<1> do<1> d<1> clke clko mux
+xi11<0> dvdd dvss de<0> do<0> d<0> clke clko mux
+xi10<7> dvdd dvss ce<7> co<7> c<7> clke clko mux
+xi10<6> dvdd dvss ce<6> co<6> c<6> clke clko mux
+xi10<5> dvdd dvss ce<5> co<5> c<5> clke clko mux
+xi10<4> dvdd dvss ce<4> co<4> c<4> clke clko mux
+xi10<3> dvdd dvss ce<3> co<3> c<3> clke clko mux
+xi10<2> dvdd dvss ce<2> co<2> c<2> clke clko mux
+xi10<1> dvdd dvss ce<1> co<1> c<1> clke clko mux
+xi10<0> dvdd dvss ce<0> co<0> c<0> clke clko mux
+xi9<7> dvdd dvss be<7> bo<7> b<7> clke clko mux
+xi9<6> dvdd dvss be<6> bo<6> b<6> clke clko mux
+xi9<5> dvdd dvss be<5> bo<5> b<5> clke clko mux
+xi9<4> dvdd dvss be<4> bo<4> b<4> clke clko mux
+xi9<3> dvdd dvss be<3> bo<3> b<3> clke clko mux
+xi9<2> dvdd dvss be<2> bo<2> b<2> clke clko mux
+xi9<1> dvdd dvss be<1> bo<1> b<1> clke clko mux
+xi9<0> dvdd dvss be<0> bo<0> b<0> clke clko mux
+.END

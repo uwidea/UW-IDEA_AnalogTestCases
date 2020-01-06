@@ -1,0 +1,256 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:57:12 2020
+** Design library name: AP_SerDes
+** Design cell name: Equalizer_8l12b_v7_ctrl
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lplvt
+** Cell name: INVD1LVT
+** View name: schematic
+.subckt INVD1LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D1LVT
+** View name: schematic
+.subckt ND2D1LVT a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD8LVT
+** View name: schematic
+.subckt INVD8LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD8LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN3D1LVT
+** View name: schematic
+.subckt AN3D1LVT a1 a2 a3 z vdd vss
+m0 net13 a3 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net11 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 a2 net13 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m3 net11 a1 net5 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 net11 a3 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m6 net11 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m7 net11 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+.ends AN3D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD16LVT
+** View name: schematic
+.subckt INVD16LVT i zn vdd vss
+m0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m16 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m17 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m18 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m19 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m20 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m21 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m22 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m23 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m24 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m25 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m26 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m27 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m28 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m29 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m30 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m31 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends INVD16LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN2D1LVT
+** View name: schematic
+.subckt AN2D1LVT a1 a2 z vdd vss
+m0 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D2LVT
+** View name: schematic
+.subckt ND2D2LVT a1 a2 zn vdd vss
+m0 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 net20 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn a1 net28 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 net28 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn a1 net20 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends ND2D2LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD4LVT
+** View name: schematic
+.subckt INVD4LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: Equalizer_8l12b_v7_enable
+** View name: schematic
+.subckt Equalizer_8l12b_v7_enable dvdd dvss x<0> x<1> x<2> x<4> x<5> x<6> x<7> ctop<6> ctop<5> ctop<4> ctop<3> ctop<2> ctop<1> ctop<0> en outx
+xi6 net6 net020 dvdd dvss INVD1LVT
+xi3 net8 net030 dvdd dvss INVD1LVT
+xc0 ctop<5> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc1 ctop<4> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc2 ctop<3> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc5 ctop<6> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc3 ctop<2> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc4 ctop<1> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc6 ctop<0> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xi57 x<1> en net026 dvdd dvss ND2D1LVT
+xi56 x<2> en net027 dvdd dvss ND2D1LVT
+xi55 x<4> en net028 dvdd dvss ND2D1LVT
+xi58 x<0> en net6 dvdd dvss ND2D1LVT
+xi43 x<7> en net8 dvdd dvss ND2D1LVT
+xi66 net025 xeq<4> dvdd dvss INVD8LVT
+xi30 net085 xeq<5> dvdd dvss INVD8LVT
+xi26 net066 xeq<2> dvdd dvss INVD8LVT
+xi47 net033 xeq<3> dvdd dvss INVD8LVT
+xi23 net090 xeq<1> dvdd dvss INVD8LVT
+xi19 net092 net094 dvdd dvss INVD8LVT
+xi16 net098 net096 dvdd dvss INVD8LVT
+xi53<1> x<7> x<6> en net04 dvdd dvss AN3D1LVT
+xi53<0> x<7> x<6> en net04 dvdd dvss AN3D1LVT
+xi0 xeq<6> ctop<6> dvdd dvss INVD16LVT
+xi63 xeq<1> ctop<1> dvdd dvss INVD16LVT
+xi60 xeq<4> ctop<4> dvdd dvss INVD16LVT
+xi59 xeq<5> ctop<5> dvdd dvss INVD16LVT
+xi52 net094 xeq<0> dvdd dvss INVD16LVT
+xi44 net096 xeq<6> dvdd dvss INVD16LVT
+xi61 xeq<3> ctop<3> dvdd dvss INVD16LVT
+xi64 xeq<0> ctop<0> dvdd dvss INVD16LVT
+xi62 xeq<2> ctop<2> dvdd dvss INVD16LVT
+xi54 x<5> en net029 dvdd dvss AN2D1LVT
+xi40<1> xeq<4> net023 net033 dvdd dvss ND2D2LVT
+xi40<0> xeq<4> net023 net033 dvdd dvss ND2D2LVT
+xi65 net04 net029 net025 dvdd dvss ND2D2LVT
+xi73 net015 net090 net021 dvdd dvss ND2D2LVT
+xi10 net026 net6 net063 dvdd dvss ND2D2LVT
+xi69 net021 net066 dvdd dvss INVD4LVT
+xi21 net063 net090 dvdd dvss INVD4LVT
+xi17 net095 net092 dvdd dvss INVD4LVT
+xi13 net099 net098 dvdd dvss INVD4LVT
+xi68 net028 net023 dvdd dvss INVD2LVT
+xi72 net027 net015 dvdd dvss INVD2LVT
+xi27 net04 net085 dvdd dvss INVD2LVT
+xi20 net020 net095 dvdd dvss INVD2LVT
+xi14 net030 net099 dvdd dvss INVD2LVT
+.ends Equalizer_8l12b_v7_enable
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: Equalizer_8l12b_v7_ctrl
+** View name: schematic
+xi3<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at0<6> at0<5> at0<4> at0<3> at0<2> at0<1> at0<0> en<0> ta Equalizer_8l12b_v7_enable
+xi3<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt0<6> bt0<5> bt0<4> bt0<3> bt0<2> bt0<1> bt0<0> en<0> tb Equalizer_8l12b_v7_enable
+xi3<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct0<6> ct0<5> ct0<4> ct0<3> ct0<2> ct0<1> ct0<0> en<0> tc Equalizer_8l12b_v7_enable
+xi3<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt0<6> dt0<5> dt0<4> dt0<3> dt0<2> dt0<1> dt0<0> en<0> td Equalizer_8l12b_v7_enable
+xi3<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et0<6> et0<5> et0<4> et0<3> et0<2> et0<1> et0<0> en<0> te Equalizer_8l12b_v7_enable
+xi3<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft0<6> ft0<5> ft0<4> ft0<3> ft0<2> ft0<1> ft0<0> en<0> tf Equalizer_8l12b_v7_enable
+xi3<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt0<6> gt0<5> gt0<4> gt0<3> gt0<2> gt0<1> gt0<0> en<0> tg Equalizer_8l12b_v7_enable
+xi3<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht0<6> ht0<5> ht0<4> ht0<3> ht0<2> ht0<1> ht0<0> en<0> th Equalizer_8l12b_v7_enable
+xi2<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at1<6> at1<5> at1<4> at1<3> at1<2> at1<1> at1<0> en<1> ta Equalizer_8l12b_v7_enable
+xi2<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt1<6> bt1<5> bt1<4> bt1<3> bt1<2> bt1<1> bt1<0> en<1> tb Equalizer_8l12b_v7_enable
+xi2<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct1<6> ct1<5> ct1<4> ct1<3> ct1<2> ct1<1> ct1<0> en<1> tc Equalizer_8l12b_v7_enable
+xi2<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt1<6> dt1<5> dt1<4> dt1<3> dt1<2> dt1<1> dt1<0> en<1> td Equalizer_8l12b_v7_enable
+xi2<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et1<6> et1<5> et1<4> et1<3> et1<2> et1<1> et1<0> en<1> te Equalizer_8l12b_v7_enable
+xi2<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft1<6> ft1<5> ft1<4> ft1<3> ft1<2> ft1<1> ft1<0> en<1> tf Equalizer_8l12b_v7_enable
+xi2<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt1<6> gt1<5> gt1<4> gt1<3> gt1<2> gt1<1> gt1<0> en<1> tg Equalizer_8l12b_v7_enable
+xi2<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht1<6> ht1<5> ht1<4> ht1<3> ht1<2> ht1<1> ht1<0> en<1> th Equalizer_8l12b_v7_enable
+xi0<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at3<6> at3<5> at3<4> at3<3> at3<2> at3<1> at3<0> en<3> ta Equalizer_8l12b_v7_enable
+xi0<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt3<6> bt3<5> bt3<4> bt3<3> bt3<2> bt3<1> bt3<0> en<3> tb Equalizer_8l12b_v7_enable
+xi0<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct3<6> ct3<5> ct3<4> ct3<3> ct3<2> ct3<1> ct3<0> en<3> tc Equalizer_8l12b_v7_enable
+xi0<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt3<6> dt3<5> dt3<4> dt3<3> dt3<2> dt3<1> dt3<0> en<3> td Equalizer_8l12b_v7_enable
+xi0<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et3<6> et3<5> et3<4> et3<3> et3<2> et3<1> et3<0> en<3> te Equalizer_8l12b_v7_enable
+xi0<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft3<6> ft3<5> ft3<4> ft3<3> ft3<2> ft3<1> ft3<0> en<3> tf Equalizer_8l12b_v7_enable
+xi0<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt3<6> gt3<5> gt3<4> gt3<3> gt3<2> gt3<1> gt3<0> en<3> tg Equalizer_8l12b_v7_enable
+xi0<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht3<6> ht3<5> ht3<4> ht3<3> ht3<2> ht3<1> ht3<0> en<3> th Equalizer_8l12b_v7_enable
+xi1<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at2<6> at2<5> at2<4> at2<3> at2<2> at2<1> at2<0> en<2> ta Equalizer_8l12b_v7_enable
+xi1<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt2<6> bt2<5> bt2<4> bt2<3> bt2<2> bt2<1> bt2<0> en<2> tb Equalizer_8l12b_v7_enable
+xi1<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct2<6> ct2<5> ct2<4> ct2<3> ct2<2> ct2<1> ct2<0> en<2> tc Equalizer_8l12b_v7_enable
+xi1<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt2<6> dt2<5> dt2<4> dt2<3> dt2<2> dt2<1> dt2<0> en<2> td Equalizer_8l12b_v7_enable
+xi1<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et2<6> et2<5> et2<4> et2<3> et2<2> et2<1> et2<0> en<2> te Equalizer_8l12b_v7_enable
+xi1<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft2<6> ft2<5> ft2<4> ft2<3> ft2<2> ft2<1> ft2<0> en<2> tf Equalizer_8l12b_v7_enable
+xi1<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt2<6> gt2<5> gt2<4> gt2<3> gt2<2> gt2<1> gt2<0> en<2> tg Equalizer_8l12b_v7_enable
+xi1<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht2<6> ht2<5> ht2<4> ht2<3> ht2<2> ht2<1> ht2<0> en<2> th Equalizer_8l12b_v7_enable
+.END

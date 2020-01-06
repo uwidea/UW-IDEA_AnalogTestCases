@@ -1,0 +1,479 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:52:04 2020
+** Design library name: AP_SerDes
+** Design cell name: PreDriver_PAM8_v4
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: tcbn65lplvt
+** Cell name: INVD1LVT
+** View name: schematic
+.subckt INVD1LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD4LVT
+** View name: schematic
+.subckt INVD4LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD16LVT
+** View name: schematic
+.subckt INVD16LVT i zn vdd vss
+m0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m16 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m17 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m18 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m19 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m20 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m21 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m22 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m23 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m24 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m25 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m26 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m27 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m28 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m29 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m30 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m31 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends INVD16LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD8LVT
+** View name: schematic
+.subckt INVD8LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD8LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: PreDriver_PAM8_v4
+** View name: schematic
+xi0<31> ain<7> net024<0> net053 dvss INVD1LVT
+xi0<30> ain<6> net024<1> net053 dvss INVD1LVT
+xi0<29> ain<5> net024<2> net053 dvss INVD1LVT
+xi0<28> ain<4> net024<3> net053 dvss INVD1LVT
+xi0<27> bin<7> net024<4> net053 dvss INVD1LVT
+xi0<26> bin<6> net024<5> net053 dvss INVD1LVT
+xi0<25> bin<5> net024<6> net053 dvss INVD1LVT
+xi0<24> bin<4> net024<7> net053 dvss INVD1LVT
+xi0<23> cin<7> net024<8> net053 dvss INVD1LVT
+xi0<22> cin<6> net024<9> net053 dvss INVD1LVT
+xi0<21> cin<5> net024<10> net053 dvss INVD1LVT
+xi0<20> cin<4> net024<11> net053 dvss INVD1LVT
+xi0<19> din<7> net024<12> net053 dvss INVD1LVT
+xi0<18> din<6> net024<13> net053 dvss INVD1LVT
+xi0<17> din<5> net024<14> net053 dvss INVD1LVT
+xi0<16> din<4> net024<15> net053 dvss INVD1LVT
+xi0<15> ein<7> net024<16> net053 dvss INVD1LVT
+xi0<14> ein<6> net024<17> net053 dvss INVD1LVT
+xi0<13> ein<5> net024<18> net053 dvss INVD1LVT
+xi0<12> ein<4> net024<19> net053 dvss INVD1LVT
+xi0<11> fin<7> net024<20> net053 dvss INVD1LVT
+xi0<10> fin<6> net024<21> net053 dvss INVD1LVT
+xi0<9> fin<5> net024<22> net053 dvss INVD1LVT
+xi0<8> fin<4> net024<23> net053 dvss INVD1LVT
+xi0<7> gin<7> net024<24> net053 dvss INVD1LVT
+xi0<6> gin<6> net024<25> net053 dvss INVD1LVT
+xi0<5> gin<5> net024<26> net053 dvss INVD1LVT
+xi0<4> gin<4> net024<27> net053 dvss INVD1LVT
+xi0<3> hin<7> net024<28> net053 dvss INVD1LVT
+xi0<2> hin<6> net024<29> net053 dvss INVD1LVT
+xi0<1> hin<5> net024<30> net053 dvss INVD1LVT
+xi0<0> hin<4> net024<31> net053 dvss INVD1LVT
+xi16<31> ain<3> net010<0> net022 dvss INVD1LVT
+xi16<30> ain<2> net010<1> net022 dvss INVD1LVT
+xi16<29> ain<1> net010<2> net022 dvss INVD1LVT
+xi16<28> ain<0> net010<3> net022 dvss INVD1LVT
+xi16<27> bin<3> net010<4> net022 dvss INVD1LVT
+xi16<26> bin<2> net010<5> net022 dvss INVD1LVT
+xi16<25> bin<1> net010<6> net022 dvss INVD1LVT
+xi16<24> bin<0> net010<7> net022 dvss INVD1LVT
+xi16<23> cin<3> net010<8> net022 dvss INVD1LVT
+xi16<22> cin<2> net010<9> net022 dvss INVD1LVT
+xi16<21> cin<1> net010<10> net022 dvss INVD1LVT
+xi16<20> cin<0> net010<11> net022 dvss INVD1LVT
+xi16<19> din<3> net010<12> net022 dvss INVD1LVT
+xi16<18> din<2> net010<13> net022 dvss INVD1LVT
+xi16<17> din<1> net010<14> net022 dvss INVD1LVT
+xi16<16> din<0> net010<15> net022 dvss INVD1LVT
+xi16<15> ein<3> net010<16> net022 dvss INVD1LVT
+xi16<14> ein<2> net010<17> net022 dvss INVD1LVT
+xi16<13> ein<1> net010<18> net022 dvss INVD1LVT
+xi16<12> ein<0> net010<19> net022 dvss INVD1LVT
+xi16<11> fin<3> net010<20> net022 dvss INVD1LVT
+xi16<10> fin<2> net010<21> net022 dvss INVD1LVT
+xi16<9> fin<1> net010<22> net022 dvss INVD1LVT
+xi16<8> fin<0> net010<23> net022 dvss INVD1LVT
+xi16<7> gin<3> net010<24> net022 dvss INVD1LVT
+xi16<6> gin<2> net010<25> net022 dvss INVD1LVT
+xi16<5> gin<1> net010<26> net022 dvss INVD1LVT
+xi16<4> gin<0> net010<27> net022 dvss INVD1LVT
+xi16<3> hin<3> net010<28> net022 dvss INVD1LVT
+xi16<2> hin<2> net010<29> net022 dvss INVD1LVT
+xi16<1> hin<1> net010<30> net022 dvss INVD1LVT
+xi16<0> hin<0> net010<31> net022 dvss INVD1LVT
+xi13<31> net010<0> net012<0> net028 dvss INVD1LVT
+xi13<30> net010<1> net012<1> net028 dvss INVD1LVT
+xi13<29> net010<2> net012<2> net028 dvss INVD1LVT
+xi13<28> net010<3> net012<3> net028 dvss INVD1LVT
+xi13<27> net010<4> net012<4> net028 dvss INVD1LVT
+xi13<26> net010<5> net012<5> net028 dvss INVD1LVT
+xi13<25> net010<6> net012<6> net028 dvss INVD1LVT
+xi13<24> net010<7> net012<7> net028 dvss INVD1LVT
+xi13<23> net010<8> net012<8> net028 dvss INVD1LVT
+xi13<22> net010<9> net012<9> net028 dvss INVD1LVT
+xi13<21> net010<10> net012<10> net028 dvss INVD1LVT
+xi13<20> net010<11> net012<11> net028 dvss INVD1LVT
+xi13<19> net010<12> net012<12> net028 dvss INVD1LVT
+xi13<18> net010<13> net012<13> net028 dvss INVD1LVT
+xi13<17> net010<14> net012<14> net028 dvss INVD1LVT
+xi13<16> net010<15> net012<15> net028 dvss INVD1LVT
+xi13<15> net010<16> net012<16> net028 dvss INVD1LVT
+xi13<14> net010<17> net012<17> net028 dvss INVD1LVT
+xi13<13> net010<18> net012<18> net028 dvss INVD1LVT
+xi13<12> net010<19> net012<19> net028 dvss INVD1LVT
+xi13<11> net010<20> net012<20> net028 dvss INVD1LVT
+xi13<10> net010<21> net012<21> net028 dvss INVD1LVT
+xi13<9> net010<22> net012<22> net028 dvss INVD1LVT
+xi13<8> net010<23> net012<23> net028 dvss INVD1LVT
+xi13<7> net010<24> net012<24> net028 dvss INVD1LVT
+xi13<6> net010<25> net012<25> net028 dvss INVD1LVT
+xi13<5> net010<26> net012<26> net028 dvss INVD1LVT
+xi13<4> net010<27> net012<27> net028 dvss INVD1LVT
+xi13<3> net010<28> net012<28> net028 dvss INVD1LVT
+xi13<2> net010<29> net012<29> net028 dvss INVD1LVT
+xi13<1> net010<30> net012<30> net028 dvss INVD1LVT
+xi13<0> net010<31> net012<31> net028 dvss INVD1LVT
+xi3<31> net012<0> net014<0> net033 dvss INVD2LVT
+xi3<30> net012<1> net014<1> net033 dvss INVD2LVT
+xi3<29> net012<2> net014<2> net033 dvss INVD2LVT
+xi3<28> net012<3> net014<3> net033 dvss INVD2LVT
+xi3<27> net012<4> net014<4> net033 dvss INVD2LVT
+xi3<26> net012<5> net014<5> net033 dvss INVD2LVT
+xi3<25> net012<6> net014<6> net033 dvss INVD2LVT
+xi3<24> net012<7> net014<7> net033 dvss INVD2LVT
+xi3<23> net012<8> net014<8> net033 dvss INVD2LVT
+xi3<22> net012<9> net014<9> net033 dvss INVD2LVT
+xi3<21> net012<10> net014<10> net033 dvss INVD2LVT
+xi3<20> net012<11> net014<11> net033 dvss INVD2LVT
+xi3<19> net012<12> net014<12> net033 dvss INVD2LVT
+xi3<18> net012<13> net014<13> net033 dvss INVD2LVT
+xi3<17> net012<14> net014<14> net033 dvss INVD2LVT
+xi3<16> net012<15> net014<15> net033 dvss INVD2LVT
+xi3<15> net012<16> net014<16> net033 dvss INVD2LVT
+xi3<14> net012<17> net014<17> net033 dvss INVD2LVT
+xi3<13> net012<18> net014<18> net033 dvss INVD2LVT
+xi3<12> net012<19> net014<19> net033 dvss INVD2LVT
+xi3<11> net012<20> net014<20> net033 dvss INVD2LVT
+xi3<10> net012<21> net014<21> net033 dvss INVD2LVT
+xi3<9> net012<22> net014<22> net033 dvss INVD2LVT
+xi3<8> net012<23> net014<23> net033 dvss INVD2LVT
+xi3<7> net012<24> net014<24> net033 dvss INVD2LVT
+xi3<6> net012<25> net014<25> net033 dvss INVD2LVT
+xi3<5> net012<26> net014<26> net033 dvss INVD2LVT
+xi3<4> net012<27> net014<27> net033 dvss INVD2LVT
+xi3<3> net012<28> net014<28> net033 dvss INVD2LVT
+xi3<2> net012<29> net014<29> net033 dvss INVD2LVT
+xi3<1> net012<30> net014<30> net033 dvss INVD2LVT
+xi3<0> net012<31> net014<31> net033 dvss INVD2LVT
+xi1<31> net024<0> net025<0> net031 dvss INVD2LVT
+xi1<30> net024<1> net025<1> net031 dvss INVD2LVT
+xi1<29> net024<2> net025<2> net031 dvss INVD2LVT
+xi1<28> net024<3> net025<3> net031 dvss INVD2LVT
+xi1<27> net024<4> net025<4> net031 dvss INVD2LVT
+xi1<26> net024<5> net025<5> net031 dvss INVD2LVT
+xi1<25> net024<6> net025<6> net031 dvss INVD2LVT
+xi1<24> net024<7> net025<7> net031 dvss INVD2LVT
+xi1<23> net024<8> net025<8> net031 dvss INVD2LVT
+xi1<22> net024<9> net025<9> net031 dvss INVD2LVT
+xi1<21> net024<10> net025<10> net031 dvss INVD2LVT
+xi1<20> net024<11> net025<11> net031 dvss INVD2LVT
+xi1<19> net024<12> net025<12> net031 dvss INVD2LVT
+xi1<18> net024<13> net025<13> net031 dvss INVD2LVT
+xi1<17> net024<14> net025<14> net031 dvss INVD2LVT
+xi1<16> net024<15> net025<15> net031 dvss INVD2LVT
+xi1<15> net024<16> net025<16> net031 dvss INVD2LVT
+xi1<14> net024<17> net025<17> net031 dvss INVD2LVT
+xi1<13> net024<18> net025<18> net031 dvss INVD2LVT
+xi1<12> net024<19> net025<19> net031 dvss INVD2LVT
+xi1<11> net024<20> net025<20> net031 dvss INVD2LVT
+xi1<10> net024<21> net025<21> net031 dvss INVD2LVT
+xi1<9> net024<22> net025<22> net031 dvss INVD2LVT
+xi1<8> net024<23> net025<23> net031 dvss INVD2LVT
+xi1<7> net024<24> net025<24> net031 dvss INVD2LVT
+xi1<6> net024<25> net025<25> net031 dvss INVD2LVT
+xi1<5> net024<26> net025<26> net031 dvss INVD2LVT
+xi1<4> net024<27> net025<27> net031 dvss INVD2LVT
+xi1<3> net024<28> net025<28> net031 dvss INVD2LVT
+xi1<2> net024<29> net025<29> net031 dvss INVD2LVT
+xi1<1> net024<30> net025<30> net031 dvss INVD2LVT
+xi1<0> net024<31> net025<31> net031 dvss INVD2LVT
+xi4<31> net014<0> net015<0> net039 dvss INVD4LVT
+xi4<30> net014<1> net015<1> net039 dvss INVD4LVT
+xi4<29> net014<2> net015<2> net039 dvss INVD4LVT
+xi4<28> net014<3> net015<3> net039 dvss INVD4LVT
+xi4<27> net014<4> net015<4> net039 dvss INVD4LVT
+xi4<26> net014<5> net015<5> net039 dvss INVD4LVT
+xi4<25> net014<6> net015<6> net039 dvss INVD4LVT
+xi4<24> net014<7> net015<7> net039 dvss INVD4LVT
+xi4<23> net014<8> net015<8> net039 dvss INVD4LVT
+xi4<22> net014<9> net015<9> net039 dvss INVD4LVT
+xi4<21> net014<10> net015<10> net039 dvss INVD4LVT
+xi4<20> net014<11> net015<11> net039 dvss INVD4LVT
+xi4<19> net014<12> net015<12> net039 dvss INVD4LVT
+xi4<18> net014<13> net015<13> net039 dvss INVD4LVT
+xi4<17> net014<14> net015<14> net039 dvss INVD4LVT
+xi4<16> net014<15> net015<15> net039 dvss INVD4LVT
+xi4<15> net014<16> net015<16> net039 dvss INVD4LVT
+xi4<14> net014<17> net015<17> net039 dvss INVD4LVT
+xi4<13> net014<18> net015<18> net039 dvss INVD4LVT
+xi4<12> net014<19> net015<19> net039 dvss INVD4LVT
+xi4<11> net014<20> net015<20> net039 dvss INVD4LVT
+xi4<10> net014<21> net015<21> net039 dvss INVD4LVT
+xi4<9> net014<22> net015<22> net039 dvss INVD4LVT
+xi4<8> net014<23> net015<23> net039 dvss INVD4LVT
+xi4<7> net014<24> net015<24> net039 dvss INVD4LVT
+xi4<6> net014<25> net015<25> net039 dvss INVD4LVT
+xi4<5> net014<26> net015<26> net039 dvss INVD4LVT
+xi4<4> net014<27> net015<27> net039 dvss INVD4LVT
+xi4<3> net014<28> net015<28> net039 dvss INVD4LVT
+xi4<2> net014<29> net015<29> net039 dvss INVD4LVT
+xi4<1> net014<30> net015<30> net039 dvss INVD4LVT
+xi4<0> net014<31> net015<31> net039 dvss INVD4LVT
+xi6<31> net017<0> a<3> net051 dvss INVD16LVT
+xi6<30> net017<1> a<2> net051 dvss INVD16LVT
+xi6<29> net017<2> a<1> net051 dvss INVD16LVT
+xi6<28> net017<3> a<0> net051 dvss INVD16LVT
+xi6<27> net017<4> b<3> net051 dvss INVD16LVT
+xi6<26> net017<5> b<2> net051 dvss INVD16LVT
+xi6<25> net017<6> b<1> net051 dvss INVD16LVT
+xi6<24> net017<7> b<0> net051 dvss INVD16LVT
+xi6<23> net017<8> c<3> net051 dvss INVD16LVT
+xi6<22> net017<9> c<2> net051 dvss INVD16LVT
+xi6<21> net017<10> c<1> net051 dvss INVD16LVT
+xi6<20> net017<11> c<0> net051 dvss INVD16LVT
+xi6<19> net017<12> d<3> net051 dvss INVD16LVT
+xi6<18> net017<13> d<2> net051 dvss INVD16LVT
+xi6<17> net017<14> d<1> net051 dvss INVD16LVT
+xi6<16> net017<15> d<0> net051 dvss INVD16LVT
+xi6<15> net017<16> e<3> net051 dvss INVD16LVT
+xi6<14> net017<17> e<2> net051 dvss INVD16LVT
+xi6<13> net017<18> e<1> net051 dvss INVD16LVT
+xi6<12> net017<19> e<0> net051 dvss INVD16LVT
+xi6<11> net017<20> f<3> net051 dvss INVD16LVT
+xi6<10> net017<21> f<2> net051 dvss INVD16LVT
+xi6<9> net017<22> f<1> net051 dvss INVD16LVT
+xi6<8> net017<23> f<0> net051 dvss INVD16LVT
+xi6<7> net017<24> g<3> net051 dvss INVD16LVT
+xi6<6> net017<25> g<2> net051 dvss INVD16LVT
+xi6<5> net017<26> g<1> net051 dvss INVD16LVT
+xi6<4> net017<27> g<0> net051 dvss INVD16LVT
+xi6<3> net017<28> h<3> net051 dvss INVD16LVT
+xi6<2> net017<29> h<2> net051 dvss INVD16LVT
+xi6<1> net017<30> h<1> net051 dvss INVD16LVT
+xi6<0> net017<31> h<0> net051 dvss INVD16LVT
+xi62<31> net026<0> a<7> net044 dvss INVD16LVT
+xi62<30> net026<1> a<6> net044 dvss INVD16LVT
+xi62<29> net026<2> a<5> net044 dvss INVD16LVT
+xi62<28> net026<3> a<4> net044 dvss INVD16LVT
+xi62<27> net026<4> b<7> net044 dvss INVD16LVT
+xi62<26> net026<5> b<6> net044 dvss INVD16LVT
+xi62<25> net026<6> b<5> net044 dvss INVD16LVT
+xi62<24> net026<7> b<4> net044 dvss INVD16LVT
+xi62<23> net026<8> c<7> net044 dvss INVD16LVT
+xi62<22> net026<9> c<6> net044 dvss INVD16LVT
+xi62<21> net026<10> c<5> net044 dvss INVD16LVT
+xi62<20> net026<11> c<4> net044 dvss INVD16LVT
+xi62<19> net026<12> d<7> net044 dvss INVD16LVT
+xi62<18> net026<13> d<6> net044 dvss INVD16LVT
+xi62<17> net026<14> d<5> net044 dvss INVD16LVT
+xi62<16> net026<15> d<4> net044 dvss INVD16LVT
+xi62<15> net026<16> e<7> net044 dvss INVD16LVT
+xi62<14> net026<17> e<6> net044 dvss INVD16LVT
+xi62<13> net026<18> e<5> net044 dvss INVD16LVT
+xi62<12> net026<19> e<4> net044 dvss INVD16LVT
+xi62<11> net026<20> f<7> net044 dvss INVD16LVT
+xi62<10> net026<21> f<6> net044 dvss INVD16LVT
+xi62<9> net026<22> f<5> net044 dvss INVD16LVT
+xi62<8> net026<23> f<4> net044 dvss INVD16LVT
+xi62<7> net026<24> g<7> net044 dvss INVD16LVT
+xi62<6> net026<25> g<6> net044 dvss INVD16LVT
+xi62<5> net026<26> g<5> net044 dvss INVD16LVT
+xi62<4> net026<27> g<4> net044 dvss INVD16LVT
+xi62<3> net026<28> h<7> net044 dvss INVD16LVT
+xi62<2> net026<29> h<6> net044 dvss INVD16LVT
+xi62<1> net026<30> h<5> net044 dvss INVD16LVT
+xi62<0> net026<31> h<4> net044 dvss INVD16LVT
+xi28<31> net026<0> a<7> net046 dvss INVD16LVT
+xi28<30> net026<1> a<6> net046 dvss INVD16LVT
+xi28<29> net026<2> a<5> net046 dvss INVD16LVT
+xi28<28> net026<3> a<4> net046 dvss INVD16LVT
+xi28<27> net026<4> b<7> net046 dvss INVD16LVT
+xi28<26> net026<5> b<6> net046 dvss INVD16LVT
+xi28<25> net026<6> b<5> net046 dvss INVD16LVT
+xi28<24> net026<7> b<4> net046 dvss INVD16LVT
+xi28<23> net026<8> c<7> net046 dvss INVD16LVT
+xi28<22> net026<9> c<6> net046 dvss INVD16LVT
+xi28<21> net026<10> c<5> net046 dvss INVD16LVT
+xi28<20> net026<11> c<4> net046 dvss INVD16LVT
+xi28<19> net026<12> d<7> net046 dvss INVD16LVT
+xi28<18> net026<13> d<6> net046 dvss INVD16LVT
+xi28<17> net026<14> d<5> net046 dvss INVD16LVT
+xi28<16> net026<15> d<4> net046 dvss INVD16LVT
+xi28<15> net026<16> e<7> net046 dvss INVD16LVT
+xi28<14> net026<17> e<6> net046 dvss INVD16LVT
+xi28<13> net026<18> e<5> net046 dvss INVD16LVT
+xi28<12> net026<19> e<4> net046 dvss INVD16LVT
+xi28<11> net026<20> f<7> net046 dvss INVD16LVT
+xi28<10> net026<21> f<6> net046 dvss INVD16LVT
+xi28<9> net026<22> f<5> net046 dvss INVD16LVT
+xi28<8> net026<23> f<4> net046 dvss INVD16LVT
+xi28<7> net026<24> g<7> net046 dvss INVD16LVT
+xi28<6> net026<25> g<6> net046 dvss INVD16LVT
+xi28<5> net026<26> g<5> net046 dvss INVD16LVT
+xi28<4> net026<27> g<4> net046 dvss INVD16LVT
+xi28<3> net026<28> h<7> net046 dvss INVD16LVT
+xi28<2> net026<29> h<6> net046 dvss INVD16LVT
+xi28<1> net026<30> h<5> net046 dvss INVD16LVT
+xi28<0> net026<31> h<4> net046 dvss INVD16LVT
+v8 dvdd net033
+v7 dvdd net039
+v6 dvdd net048
+v5 dvdd net051
+v4 dvdd net044
+v3 dvdd net046
+v2 dvdd net041
+v1 dvdd net031
+v0 dvdd net053
+v10 dvdd net022
+v9 dvdd net028
+xi5<31> net015<0> net017<0> net048 dvss INVD8LVT
+xi5<30> net015<1> net017<1> net048 dvss INVD8LVT
+xi5<29> net015<2> net017<2> net048 dvss INVD8LVT
+xi5<28> net015<3> net017<3> net048 dvss INVD8LVT
+xi5<27> net015<4> net017<4> net048 dvss INVD8LVT
+xi5<26> net015<5> net017<5> net048 dvss INVD8LVT
+xi5<25> net015<6> net017<6> net048 dvss INVD8LVT
+xi5<24> net015<7> net017<7> net048 dvss INVD8LVT
+xi5<23> net015<8> net017<8> net048 dvss INVD8LVT
+xi5<22> net015<9> net017<9> net048 dvss INVD8LVT
+xi5<21> net015<10> net017<10> net048 dvss INVD8LVT
+xi5<20> net015<11> net017<11> net048 dvss INVD8LVT
+xi5<19> net015<12> net017<12> net048 dvss INVD8LVT
+xi5<18> net015<13> net017<13> net048 dvss INVD8LVT
+xi5<17> net015<14> net017<14> net048 dvss INVD8LVT
+xi5<16> net015<15> net017<15> net048 dvss INVD8LVT
+xi5<15> net015<16> net017<16> net048 dvss INVD8LVT
+xi5<14> net015<17> net017<17> net048 dvss INVD8LVT
+xi5<13> net015<18> net017<18> net048 dvss INVD8LVT
+xi5<12> net015<19> net017<19> net048 dvss INVD8LVT
+xi5<11> net015<20> net017<20> net048 dvss INVD8LVT
+xi5<10> net015<21> net017<21> net048 dvss INVD8LVT
+xi5<9> net015<22> net017<22> net048 dvss INVD8LVT
+xi5<8> net015<23> net017<23> net048 dvss INVD8LVT
+xi5<7> net015<24> net017<24> net048 dvss INVD8LVT
+xi5<6> net015<25> net017<25> net048 dvss INVD8LVT
+xi5<5> net015<26> net017<26> net048 dvss INVD8LVT
+xi5<4> net015<27> net017<27> net048 dvss INVD8LVT
+xi5<3> net015<28> net017<28> net048 dvss INVD8LVT
+xi5<2> net015<29> net017<29> net048 dvss INVD8LVT
+xi5<1> net015<30> net017<30> net048 dvss INVD8LVT
+xi5<0> net015<31> net017<31> net048 dvss INVD8LVT
+xi63<31> net025<0> net026<0> net041 dvss INVD8LVT
+xi63<30> net025<1> net026<1> net041 dvss INVD8LVT
+xi63<29> net025<2> net026<2> net041 dvss INVD8LVT
+xi63<28> net025<3> net026<3> net041 dvss INVD8LVT
+xi63<27> net025<4> net026<4> net041 dvss INVD8LVT
+xi63<26> net025<5> net026<5> net041 dvss INVD8LVT
+xi63<25> net025<6> net026<6> net041 dvss INVD8LVT
+xi63<24> net025<7> net026<7> net041 dvss INVD8LVT
+xi63<23> net025<8> net026<8> net041 dvss INVD8LVT
+xi63<22> net025<9> net026<9> net041 dvss INVD8LVT
+xi63<21> net025<10> net026<10> net041 dvss INVD8LVT
+xi63<20> net025<11> net026<11> net041 dvss INVD8LVT
+xi63<19> net025<12> net026<12> net041 dvss INVD8LVT
+xi63<18> net025<13> net026<13> net041 dvss INVD8LVT
+xi63<17> net025<14> net026<14> net041 dvss INVD8LVT
+xi63<16> net025<15> net026<15> net041 dvss INVD8LVT
+xi63<15> net025<16> net026<16> net041 dvss INVD8LVT
+xi63<14> net025<17> net026<17> net041 dvss INVD8LVT
+xi63<13> net025<18> net026<18> net041 dvss INVD8LVT
+xi63<12> net025<19> net026<19> net041 dvss INVD8LVT
+xi63<11> net025<20> net026<20> net041 dvss INVD8LVT
+xi63<10> net025<21> net026<21> net041 dvss INVD8LVT
+xi63<9> net025<22> net026<22> net041 dvss INVD8LVT
+xi63<8> net025<23> net026<23> net041 dvss INVD8LVT
+xi63<7> net025<24> net026<24> net041 dvss INVD8LVT
+xi63<6> net025<25> net026<25> net041 dvss INVD8LVT
+xi63<5> net025<26> net026<26> net041 dvss INVD8LVT
+xi63<4> net025<27> net026<27> net041 dvss INVD8LVT
+xi63<3> net025<28> net026<28> net041 dvss INVD8LVT
+xi63<2> net025<29> net026<29> net041 dvss INVD8LVT
+xi63<1> net025<30> net026<30> net041 dvss INVD8LVT
+xi63<0> net025<31> net026<31> net041 dvss INVD8LVT
+.END
