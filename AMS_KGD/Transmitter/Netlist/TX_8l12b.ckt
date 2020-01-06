@@ -1,0 +1,1764 @@
+** Generated for: hspiceD
+** Generated on: Jan  5 07:58:28 2020
+** Design library name: AP_SerDes
+** Design cell name: TX_8l12b
+** Design view name: schematic
+.PARAM w3 w4 w1mn w w2p w1m w3p wnswitch m wpswitch
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: AP_SerDes
+** Cell name: Bias_v2
+** View name: schematic
+.subckt Bias_v2 avdd avss calin1<3> calin1<2> calin1<1> calin1<0> calin3<3> calin3<2> calin3<1> calin3<0> calin5<3> calin5<2> calin5<1> calin5<0> calin7<3> calin7<2> calin7<1> calin7<0> calip1<3> calip1<2> calip1<1> calip1<0> calip3<3> calip3<2> calip3<1> calip3<0> calip5<3> calip5<2> calip5<1> calip5<0> calip7<3> calip7<2> calip7<1> calip7<0> ibg in_1m in_3m in_5m in_7m ip_1m ip_3m ip_5m ip_7m
+m24<19> in_1m net0159 net0136<0> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<18> in_1m net0159 net0136<1> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<17> in_1m net0159 net0136<2> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<16> in_1m net0159 net0136<3> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<15> in_1m net0159 net0136<4> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<14> in_1m net0159 net0136<5> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<13> in_1m net0159 net0136<6> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<12> in_1m net0159 net0136<7> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<11> in_1m net0159 net0136<8> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<10> in_1m net0159 net0136<9> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m29<9> net0184<0> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<8> net0184<1> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<7> net0184<2> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<6> net0184<3> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m27<0> net073 net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m26<5> net0220<0> net0159 net0165<0> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<4> net0220<1> net0159 net0165<1> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<3> net0220<2> net0159 net0165<2> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m25<9> net0162<0> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<8> net0162<1> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<7> net0162<2> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<6> net0162<3> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m23<0> net081 net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m29<5> net0187<0> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<4> net0187<1> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<3> net0187<2> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m28<0> net0228 net0159 net073 avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m24<2> net0232<0> net0159 net0154<0> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<1> net0232<1> net0159 net0154<1> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m28<2> net0200<0> net0159 net0179<0> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<1> net0200<1> net0159 net0179<1> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m95<5> in_5m calin5<2> net0196<0> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m95<4> in_5m calin5<2> net0196<1> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m95<3> in_5m calin5<2> net0196<2> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m24<5> net0227<0> net0159 net0145<0> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<4> net0227<1> net0159 net0145<1> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<3> net0227<2> net0159 net0145<2> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m23<9> net0140<0> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<8> net0140<1> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<7> net0140<2> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<6> net0140<3> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m27<9> net0173<0> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<8> net0173<1> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<7> net0173<2> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<6> net0173<3> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m25<0> net077 net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m100<5> in_7m calin7<2> net0210<0> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m100<4> in_7m calin7<2> net0210<1> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m100<3> in_7m calin7<2> net0210<2> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m99<2> in_7m calin7<1> net0214<0> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m99<1> in_7m calin7<1> net0214<1> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m98<0> in_7m calin7<0> net062 avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m97<0> in_5m calin5<0> net0228 avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m30<0> net062 net0159 net069 avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m23<5> net0145<0> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<4> net0145<1> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<3> net0145<2> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m96<2> in_5m calin5<1> net0200<0> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m96<1> in_5m calin5<1> net0200<1> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m93<9> in_3m calin3<3> net0178<0> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m93<8> in_3m calin3<3> net0178<1> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m93<7> in_3m calin3<3> net0178<2> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m93<6> in_3m calin3<3> net0178<3> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m94<9> in_5m calin5<3> net0192<0> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m94<8> in_5m calin5<3> net0192<1> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m94<7> in_5m calin5<3> net0192<2> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m94<6> in_5m calin5<3> net0192<3> avss nch l=250e-9 w='w1mn*1' m=100 nf=1 
+m25<5> net0165<0> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<4> net0165<1> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<3> net0165<2> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m74<9> in_1m calin1<3> net0157<0> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m74<8> in_1m calin1<3> net0157<1> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m74<7> in_1m calin1<3> net0157<2> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m74<6> in_1m calin1<3> net0157<3> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m90<0> in_3m calin3<0> net078 avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m30<19> in_7m net0159 net0182<0> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<18> in_7m net0159 net0182<1> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<17> in_7m net0159 net0182<2> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<16> in_7m net0159 net0182<3> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<15> in_7m net0159 net0182<4> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<14> in_7m net0159 net0182<5> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<13> in_7m net0159 net0182<6> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<12> in_7m net0159 net0182<7> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<11> in_7m net0159 net0182<8> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<10> in_7m net0159 net0182<9> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m91<2> in_3m calin3<1> net0186<0> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m91<1> in_3m calin3<1> net0186<1> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m30<5> net0210<0> net0159 net0187<0> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<4> net0210<1> net0159 net0187<1> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<3> net0210<2> net0159 net0187<2> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m28<19> in_5m net0159 net0171<0> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<18> in_5m net0159 net0171<1> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<17> in_5m net0159 net0171<2> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<16> in_5m net0159 net0171<3> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<15> in_5m net0159 net0171<4> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<14> in_5m net0159 net0171<5> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<13> in_5m net0159 net0171<6> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<12> in_5m net0159 net0171<7> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<11> in_5m net0159 net0171<8> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<10> in_5m net0159 net0171<9> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<5> net0196<0> net0159 net0176<0> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<4> net0196<1> net0159 net0176<1> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<3> net0196<2> net0159 net0176<2> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m26<19> in_3m net0159 net0160<0> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<18> in_3m net0159 net0160<1> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<17> in_3m net0159 net0160<2> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<16> in_3m net0159 net0160<3> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<15> in_3m net0159 net0160<4> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<14> in_3m net0159 net0160<5> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<13> in_3m net0159 net0160<6> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<12> in_3m net0159 net0160<7> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<11> in_3m net0159 net0160<8> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<10> in_3m net0159 net0160<9> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m92<5> in_3m calin3<2> net0220<0> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m92<4> in_3m calin3<2> net0220<1> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m92<3> in_3m calin3<2> net0220<2> avss nch l=250e-9 w='w1mn*1' m=60 nf=1 
+m29<0> net069 net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m23<2> net0154<0> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<1> net0154<1> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m30<2> net0214<0> net0159 net0190<0> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<1> net0214<1> net0159 net0190<1> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m27<2> net0179<0> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<1> net0179<1> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m101<9> in_7m calin7<3> net0206<0> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m101<8> in_7m calin7<3> net0206<1> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m101<7> in_7m calin7<3> net0206<2> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m101<6> in_7m calin7<3> net0206<3> avss nch l=250e-9 w='w1mn*1' m=140 nf=1 
+m26<2> net0186<0> net0159 net0168<0> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<1> net0186<1> net0159 net0168<1> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m27<5> net0176<0> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<4> net0176<1> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<3> net0176<2> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m26<0> net078 net0159 net077 avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m24<0> net0222 net0159 net081 avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m102<5> in_1m calin1<2> net0227<0> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m102<4> in_1m calin1<2> net0227<1> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m102<3> in_1m calin1<2> net0227<2> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m25<2> net0168<0> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<1> net0168<1> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m104<0> in_1m calin1<0> net0222 avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m29<2> net0190<0> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<1> net0190<1> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m103<2> in_1m calin1<1> net0232<0> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m103<1> in_1m calin1<1> net0232<1> avss nch l=250e-9 w='w1mn*1' m=20 nf=1 
+m30<9> net0206<0> net0159 net0184<0> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<8> net0206<1> net0159 net0184<1> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<7> net0206<2> net0159 net0184<2> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m30<6> net0206<3> net0159 net0184<3> avss nch l=1e-6 w='w3*1' m=140 nf=1 
+m28<9> net0192<0> net0159 net0173<0> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<8> net0192<1> net0159 net0173<1> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<7> net0192<2> net0159 net0173<2> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m28<6> net0192<3> net0159 net0173<3> avss nch l=1e-6 w='w3*1' m=100 nf=1 
+m29<19> net0182<0> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<18> net0182<1> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<17> net0182<2> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<16> net0182<3> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<15> net0182<4> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<14> net0182<5> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<13> net0182<6> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<12> net0182<7> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<11> net0182<8> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m29<10> net0182<9> net0159 avss avss nch l=1e-6 w='w4*1' m=140 nf=1 
+m26<9> net0178<0> net0159 net0162<0> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<8> net0178<1> net0159 net0162<1> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<7> net0178<2> net0159 net0162<2> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m26<6> net0178<3> net0159 net0162<3> avss nch l=1e-6 w='w3*1' m=60 nf=1 
+m27<19> net0171<0> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<18> net0171<1> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<17> net0171<2> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<16> net0171<3> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<15> net0171<4> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<14> net0171<5> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<13> net0171<6> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<12> net0171<7> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<11> net0171<8> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m27<10> net0171<9> net0159 avss avss nch l=1e-6 w='w4*1' m=100 nf=1 
+m24<9> net0157<0> net0159 net0140<0> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<8> net0157<1> net0159 net0140<1> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<7> net0157<2> net0159 net0140<2> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m24<6> net0157<3> net0159 net0140<3> avss nch l=1e-6 w='w3*1' m=20 nf=1 
+m25<19> net0160<0> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<18> net0160<1> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<17> net0160<2> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<16> net0160<3> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<15> net0160<4> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<14> net0160<5> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<13> net0160<6> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<12> net0160<7> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<11> net0160<8> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m25<10> net0160<9> net0159 avss avss nch l=1e-6 w='w4*1' m=60 nf=1 
+m13<19> net0159 net0159 net067<0> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<18> net0159 net0159 net067<1> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<17> net0159 net0159 net067<2> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<16> net0159 net0159 net067<3> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<15> net0159 net0159 net067<4> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<14> net0159 net0159 net067<5> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<13> net0159 net0159 net067<6> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<12> net0159 net0159 net067<7> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<11> net0159 net0159 net067<8> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<10> net0159 net0159 net067<9> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<9> net0159 net0159 net067<10> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<8> net0159 net0159 net067<11> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<7> net0159 net0159 net067<12> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<6> net0159 net0159 net067<13> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<5> net0159 net0159 net067<14> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<4> net0159 net0159 net067<15> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<3> net0159 net0159 net067<16> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<2> net0159 net0159 net067<17> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<1> net0159 net0159 net067<18> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m13<0> net0159 net0159 net067<19> avss nch l=1e-6 w='w3*1' m=1 nf=1 
+m23<19> net0136<0> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<18> net0136<1> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<17> net0136<2> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<16> net0136<3> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<15> net0136<4> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<14> net0136<5> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<13> net0136<6> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<12> net0136<7> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<11> net0136<8> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m23<10> net0136<9> net0159 avss avss nch l=1e-6 w='w4*1' m=20 nf=1 
+m14<19> net067<0> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<18> net067<1> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<17> net067<2> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<16> net067<3> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<15> net067<4> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<14> net067<5> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<13> net067<6> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<12> net067<7> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<11> net067<8> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<10> net067<9> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<9> net067<10> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<8> net067<11> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<7> net067<12> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<6> net067<13> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<5> net067<14> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<4> net067<15> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<3> net067<16> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<2> net067<17> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<1> net067<18> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m14<0> net067<19> net0159 avss avss nch l=1e-6 w='w4*1' m=1 nf=1 
+m4 net011 ibg avss avss nch l=2e-6 w='w*1' m=1 nf=1 
+m3 ibg ibg avss avss nch l=2e-6 w='w*1' m=1 nf=1 
+m33<9> net0163<0> net011 net089<0> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<8> net0163<1> net011 net089<1> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<7> net0163<2> net011 net089<2> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<6> net0163<3> net011 net089<3> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m82<2> ip_5m calip5<1> net0180<0> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m82<1> ip_5m calip5<1> net0180<1> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m31<0> net0107 net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m33<2> net0169<0> net011 net091<0> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<1> net0169<1> net011 net091<1> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m86<5> ip_7m calip7<2> net0188<0> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m86<4> ip_7m calip7<2> net0188<1> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m86<3> ip_7m calip7<2> net0188<2> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m85<2> ip_7m calip7<1> net0191<0> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m85<1> ip_7m calip7<1> net0191<1> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m84<0> ip_7m calip7<0> net057 avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m83<0> ip_5m calip5<0> net0195 avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m38<0> net041 net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m31<5> net085<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<4> net085<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<3> net085<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m37<2> net0191<0> net011 net0101<0> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<1> net0191<1> net011 net0101<1> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m36<5> net0177<0> net011 net096<0> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<4> net0177<1> net011 net096<1> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<3> net0177<2> net011 net096<2> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m87<9> ip_7m calip7<3> net0185<0> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m87<8> ip_7m calip7<3> net0185<1> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m87<7> ip_7m calip7<3> net0185<2> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m87<6> ip_7m calip7<3> net0185<3> avdd pch l=100e-9 w='w1m*1' m=140 nf=1 
+m32<2> net0113<0> net011 net086<0> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<1> net0113<1> net011 net086<1> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m81<5> ip_5m calip5<2> net0177<0> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m81<4> ip_5m calip5<2> net0177<1> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m81<3> ip_5m calip5<2> net0177<2> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m80<9> ip_5m calip5<3> net0174<0> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m80<8> ip_5m calip5<3> net0174<1> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m80<7> ip_5m calip5<3> net0174<2> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m80<6> ip_5m calip5<3> net0174<3> avdd pch l=100e-9 w='w1m*1' m=100 nf=1 
+m79<9> ip_3m calip3<3> net0163<0> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m79<8> ip_3m calip3<3> net0163<1> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m79<7> ip_3m calip3<3> net0163<2> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m79<6> ip_3m calip3<3> net0163<3> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m36<9> net0174<0> net011 net095<0> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<8> net0174<1> net011 net095<1> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<7> net0174<2> net011 net095<2> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<6> net0174<3> net011 net095<3> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m78<5> ip_3m calip3<2> net0166<0> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m78<4> ip_3m calip3<2> net0166<1> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m78<3> ip_3m calip3<2> net0166<2> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m37<0> net057 net011 net041 avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m32<0> net0117 net011 net0107 avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m35<5> net096<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<4> net096<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<3> net096<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m33<0> net033 net011 net0105 avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m31<2> net086<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<1> net086<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m36<2> net0180<0> net011 net097<0> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<1> net0180<1> net011 net097<1> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m34<2> net091<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<1> net091<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m31<9> net084<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<8> net084<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<7> net084<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<6> net084<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m35<2> net097<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<1> net097<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m34<0> net0105 net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m38<2> net0101<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<1> net0101<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m32<5> net0125<0> net011 net085<0> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<4> net0125<1> net011 net085<1> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<3> net0125<2> net011 net085<2> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m37<5> net0188<0> net011 net0100<0> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<4> net0188<1> net011 net0100<1> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<3> net0188<2> net011 net0100<2> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m35<0> net0106 net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m33<5> net0166<0> net011 net090<0> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<4> net0166<1> net011 net090<1> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<3> net0166<2> net011 net090<2> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m32<9> net0124<0> net011 net084<0> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<8> net0124<1> net011 net084<1> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<7> net0124<2> net011 net084<2> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<6> net0124<3> net011 net084<3> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m35<19> net093<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<18> net093<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<17> net093<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<16> net093<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<15> net093<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<14> net093<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<13> net093<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<12> net093<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<11> net093<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<10> net093<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m31<19> net083<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<18> net083<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<17> net083<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<16> net083<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<15> net083<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<14> net083<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<13> net083<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<12> net083<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<11> net083<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m31<10> net083<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=20 nf=1 
+m72<9> ip_1m calip1<3> net0124<0> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<8> ip_1m calip1<3> net0124<1> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<7> ip_1m calip1<3> net0124<2> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<6> ip_1m calip1<3> net0124<3> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m76<0> ip_3m calip3<0> net033 avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m72<0> ip_1m calip1<0> net0117 avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<2> ip_1m calip1<1> net0113<0> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<1> ip_1m calip1<1> net0113<1> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<5> ip_1m calip1<2> net0125<0> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<4> ip_1m calip1<2> net0125<1> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m72<3> ip_1m calip1<2> net0125<2> avdd pch l=100e-9 w='w1m*1' m=20 nf=1 
+m38<19> net098<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<18> net098<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<17> net098<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<16> net098<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<15> net098<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<14> net098<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<13> net098<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<12> net098<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<11> net098<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<10> net098<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m77<2> ip_3m calip3<1> net0169<0> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m77<1> ip_3m calip3<1> net0169<1> avdd pch l=100e-9 w='w1m*1' m=60 nf=1 
+m37<9> net0185<0> net011 net099<0> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<8> net0185<1> net011 net099<1> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<7> net0185<2> net011 net099<2> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<6> net0185<3> net011 net099<3> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m36<0> net0195 net011 net0106 avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m38<5> net0100<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<4> net0100<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<3> net0100<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m34<19> net088<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<18> net088<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<17> net088<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<16> net088<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<15> net088<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<14> net088<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<13> net088<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<12> net088<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<11> net088<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<10> net088<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m38<9> net099<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<8> net099<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<7> net099<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m38<6> net099<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=140 nf=1 
+m37<19> ip_7m net011 net098<0> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<18> ip_7m net011 net098<1> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<17> ip_7m net011 net098<2> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<16> ip_7m net011 net098<3> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<15> ip_7m net011 net098<4> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<14> ip_7m net011 net098<5> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<13> ip_7m net011 net098<6> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<12> ip_7m net011 net098<7> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<11> ip_7m net011 net098<8> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m37<10> ip_7m net011 net098<9> avdd pch l=1e-6 w='w2p*1' m=140 nf=1 
+m35<9> net095<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<8> net095<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<7> net095<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m35<6> net095<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=100 nf=1 
+m34<9> net089<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<8> net089<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<7> net089<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<6> net089<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m36<19> ip_5m net011 net093<0> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<18> ip_5m net011 net093<1> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<17> ip_5m net011 net093<2> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<16> ip_5m net011 net093<3> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<15> ip_5m net011 net093<4> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<14> ip_5m net011 net093<5> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<13> ip_5m net011 net093<6> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<12> ip_5m net011 net093<7> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<11> ip_5m net011 net093<8> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m36<10> ip_5m net011 net093<9> avdd pch l=1e-6 w='w2p*1' m=100 nf=1 
+m33<19> ip_3m net011 net088<0> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<18> ip_3m net011 net088<1> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<17> ip_3m net011 net088<2> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<16> ip_3m net011 net088<3> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<15> ip_3m net011 net088<4> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<14> ip_3m net011 net088<5> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<13> ip_3m net011 net088<6> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<12> ip_3m net011 net088<7> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<11> ip_3m net011 net088<8> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m33<10> ip_3m net011 net088<9> avdd pch l=1e-6 w='w2p*1' m=60 nf=1 
+m34<5> net090<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<4> net090<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m34<3> net090<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=60 nf=1 
+m32<19> ip_1m net011 net083<0> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<18> ip_1m net011 net083<1> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<17> ip_1m net011 net083<2> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<16> ip_1m net011 net083<3> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<15> ip_1m net011 net083<4> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<14> ip_1m net011 net083<5> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<13> ip_1m net011 net083<6> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<12> ip_1m net011 net083<7> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<11> ip_1m net011 net083<8> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m32<10> ip_1m net011 net083<9> avdd pch l=1e-6 w='w2p*1' m=20 nf=1 
+m10<19> net0159 net011 net046<0> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<18> net0159 net011 net046<1> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<17> net0159 net011 net046<2> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<16> net0159 net011 net046<3> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<15> net0159 net011 net046<4> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<14> net0159 net011 net046<5> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<13> net0159 net011 net046<6> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<12> net0159 net011 net046<7> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<11> net0159 net011 net046<8> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<10> net0159 net011 net046<9> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<9> net0159 net011 net046<10> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<8> net0159 net011 net046<11> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<7> net0159 net011 net046<12> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<6> net0159 net011 net046<13> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<5> net0159 net011 net046<14> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<4> net0159 net011 net046<15> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<3> net0159 net011 net046<16> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<2> net0159 net011 net046<17> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<1> net0159 net011 net046<18> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m10<0> net0159 net011 net046<19> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<19> net011 net011 net045<0> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<18> net011 net011 net045<1> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<17> net011 net011 net045<2> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<16> net011 net011 net045<3> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<15> net011 net011 net045<4> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<14> net011 net011 net045<5> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<13> net011 net011 net045<6> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<12> net011 net011 net045<7> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<11> net011 net011 net045<8> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<10> net011 net011 net045<9> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<9> net011 net011 net045<10> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<8> net011 net011 net045<11> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<7> net011 net011 net045<12> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<6> net011 net011 net045<13> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<5> net011 net011 net045<14> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<4> net011 net011 net045<15> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<3> net011 net011 net045<16> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<2> net011 net011 net045<17> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<1> net011 net011 net045<18> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m7<0> net011 net011 net045<19> avdd pch l=1e-6 w='w2p*1' m=1 nf=1 
+m9<19> net046<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<18> net046<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<17> net046<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<16> net046<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<15> net046<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<14> net046<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<13> net046<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<12> net046<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<11> net046<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<10> net046<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<9> net046<10> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<8> net046<11> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<7> net046<12> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<6> net046<13> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<5> net046<14> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<4> net046<15> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<3> net046<16> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<2> net046<17> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<1> net046<18> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m9<0> net046<19> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<19> net045<0> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<18> net045<1> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<17> net045<2> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<16> net045<3> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<15> net045<4> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<14> net045<5> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<13> net045<6> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<12> net045<7> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<11> net045<8> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<10> net045<9> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<9> net045<10> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<8> net045<11> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<7> net045<12> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<6> net045<13> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<5> net045<14> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<4> net045<15> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<3> net045<16> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<2> net045<17> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<1> net045<18> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+m8<0> net045<19> net011 avdd avdd pch l=1e-6 w='w3p*1' m=1 nf=1 
+.ends Bias_v2
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D1LVT
+** View name: schematic
+.subckt ND2D1LVT a1 a2 zn vdd vss
+m0 zn a1 net1 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 net1 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends ND2D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD4LVT
+** View name: schematic
+.subckt INVD4LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD4LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD2LVT
+** View name: schematic
+.subckt INVD2LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: mux
+** View name: schematic
+.subckt mux dvdd dvss in0 in1 out s sz
+xi3 s in1 net8 dvdd dvss ND2D1LVT
+xi4 sz in0 net7 dvdd dvss ND2D1LVT
+xi5 net8 net7 net08 dvdd dvss ND2D1LVT
+xi7 net07 out dvdd dvss INVD4LVT
+xi6 net08 net07 dvdd dvss INVD2LVT
+.ends mux
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: MUX2to1_dig
+** View name: schematic
+.subckt MUX2to1_dig a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> ae<7> ae<6> ae<5> ae<4> ae<3> ae<2> ae<1> ae<0> ao<7> ao<6> ao<5> ao<4> ao<3> ao<2> ao<1> ao<0> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> be<7> be<6> be<5> be<4> be<3> be<2> be<1> be<0> bo<7> bo<6> bo<5> bo<4> bo<3> bo<2> bo<1> bo<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> ce<7> ce<6> ce<5> ce<4> ce<3> ce<2> ce<1> ce<0> clke clko co<7> co<6> co<5> co<4> co<3> co<2> co<1> co<0> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> de<7> de<6> de<5> de<4> de<3> de<2> de<1> de<0> do<7> do<6> do<5> do<4> do<3> do<2> do<1> do<0> dvdd dvss e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> ee<7> ee<6> ee<5> ee<4> ee<3> ee<2> ee<1> ee<0> eo<7> eo<6> eo<5> eo<4> eo<3> eo<2> eo<1> eo<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> fe<7> fe<6> fe<5> fe<4> fe<3> fe<2> fe<1> fe<0> fo<7> fo<6> fo<5> fo<4> fo<3> fo<2> fo<1> fo<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> ge<7> ge<6> ge<5> ge<4> ge<3> ge<2> ge<1> ge<0> go<7> go<6> go<5> go<4> go<3> go<2> go<1> go<0> h<7> h<6> h<5> h<4> h<3> h<2>
++h<1> h<0> he<7> he<6> he<5> he<4> he<3> he<2> he<1> he<0> ho<7> ho<6> ho<5> ho<4> ho<3> ho<2> ho<1> ho<0>
+xi8<7> dvdd dvss ae<7> ao<7> a<7> clke clko mux
+xi8<6> dvdd dvss ae<6> ao<6> a<6> clke clko mux
+xi8<5> dvdd dvss ae<5> ao<5> a<5> clke clko mux
+xi8<4> dvdd dvss ae<4> ao<4> a<4> clke clko mux
+xi8<3> dvdd dvss ae<3> ao<3> a<3> clke clko mux
+xi8<2> dvdd dvss ae<2> ao<2> a<2> clke clko mux
+xi8<1> dvdd dvss ae<1> ao<1> a<1> clke clko mux
+xi8<0> dvdd dvss ae<0> ao<0> a<0> clke clko mux
+xi15<7> dvdd dvss he<7> ho<7> h<7> clke clko mux
+xi15<6> dvdd dvss he<6> ho<6> h<6> clke clko mux
+xi15<5> dvdd dvss he<5> ho<5> h<5> clke clko mux
+xi15<4> dvdd dvss he<4> ho<4> h<4> clke clko mux
+xi15<3> dvdd dvss he<3> ho<3> h<3> clke clko mux
+xi15<2> dvdd dvss he<2> ho<2> h<2> clke clko mux
+xi15<1> dvdd dvss he<1> ho<1> h<1> clke clko mux
+xi15<0> dvdd dvss he<0> ho<0> h<0> clke clko mux
+xi14<7> dvdd dvss ge<7> go<7> g<7> clke clko mux
+xi14<6> dvdd dvss ge<6> go<6> g<6> clke clko mux
+xi14<5> dvdd dvss ge<5> go<5> g<5> clke clko mux
+xi14<4> dvdd dvss ge<4> go<4> g<4> clke clko mux
+xi14<3> dvdd dvss ge<3> go<3> g<3> clke clko mux
+xi14<2> dvdd dvss ge<2> go<2> g<2> clke clko mux
+xi14<1> dvdd dvss ge<1> go<1> g<1> clke clko mux
+xi14<0> dvdd dvss ge<0> go<0> g<0> clke clko mux
+xi13<7> dvdd dvss fe<7> fo<7> f<7> clke clko mux
+xi13<6> dvdd dvss fe<6> fo<6> f<6> clke clko mux
+xi13<5> dvdd dvss fe<5> fo<5> f<5> clke clko mux
+xi13<4> dvdd dvss fe<4> fo<4> f<4> clke clko mux
+xi13<3> dvdd dvss fe<3> fo<3> f<3> clke clko mux
+xi13<2> dvdd dvss fe<2> fo<2> f<2> clke clko mux
+xi13<1> dvdd dvss fe<1> fo<1> f<1> clke clko mux
+xi13<0> dvdd dvss fe<0> fo<0> f<0> clke clko mux
+xi12<7> dvdd dvss ee<7> eo<7> e<7> clke clko mux
+xi12<6> dvdd dvss ee<6> eo<6> e<6> clke clko mux
+xi12<5> dvdd dvss ee<5> eo<5> e<5> clke clko mux
+xi12<4> dvdd dvss ee<4> eo<4> e<4> clke clko mux
+xi12<3> dvdd dvss ee<3> eo<3> e<3> clke clko mux
+xi12<2> dvdd dvss ee<2> eo<2> e<2> clke clko mux
+xi12<1> dvdd dvss ee<1> eo<1> e<1> clke clko mux
+xi12<0> dvdd dvss ee<0> eo<0> e<0> clke clko mux
+xi11<7> dvdd dvss de<7> do<7> d<7> clke clko mux
+xi11<6> dvdd dvss de<6> do<6> d<6> clke clko mux
+xi11<5> dvdd dvss de<5> do<5> d<5> clke clko mux
+xi11<4> dvdd dvss de<4> do<4> d<4> clke clko mux
+xi11<3> dvdd dvss de<3> do<3> d<3> clke clko mux
+xi11<2> dvdd dvss de<2> do<2> d<2> clke clko mux
+xi11<1> dvdd dvss de<1> do<1> d<1> clke clko mux
+xi11<0> dvdd dvss de<0> do<0> d<0> clke clko mux
+xi10<7> dvdd dvss ce<7> co<7> c<7> clke clko mux
+xi10<6> dvdd dvss ce<6> co<6> c<6> clke clko mux
+xi10<5> dvdd dvss ce<5> co<5> c<5> clke clko mux
+xi10<4> dvdd dvss ce<4> co<4> c<4> clke clko mux
+xi10<3> dvdd dvss ce<3> co<3> c<3> clke clko mux
+xi10<2> dvdd dvss ce<2> co<2> c<2> clke clko mux
+xi10<1> dvdd dvss ce<1> co<1> c<1> clke clko mux
+xi10<0> dvdd dvss ce<0> co<0> c<0> clke clko mux
+xi9<7> dvdd dvss be<7> bo<7> b<7> clke clko mux
+xi9<6> dvdd dvss be<6> bo<6> b<6> clke clko mux
+xi9<5> dvdd dvss be<5> bo<5> b<5> clke clko mux
+xi9<4> dvdd dvss be<4> bo<4> b<4> clke clko mux
+xi9<3> dvdd dvss be<3> bo<3> b<3> clke clko mux
+xi9<2> dvdd dvss be<2> bo<2> b<2> clke clko mux
+xi9<1> dvdd dvss be<1> bo<1> b<1> clke clko mux
+xi9<0> dvdd dvss be<0> bo<0> b<0> clke clko mux
+.ends MUX2to1_dig
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: CML_Driver_PAM8_woCS_v3
+** View name: schematic
+.subckt CML_Driver_PAM8_woCS_v3 a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> avdd avss b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> h<7> h<6> h<5> h<4> h<3> h<2> h<1> h<0> in_1m in_3m in_5m in_7m ip_1m ip_3m ip_5m ip_7m ntx outa outb outc outd oute outf outg outh
+m56 outa a<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m54 outa a<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m50 outa a<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m52 outa a<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m115 outg g<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m111 oute e<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m97 oute e<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m83 oute e<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m64 oute e<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m113 outf f<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m109 outd d<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m95 outd d<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m81 outd d<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m62 outd d<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m107 outc c<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m93 outc c<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m79 outc c<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m60 outc c<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m101 outg g<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m87 outg g<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m99 outf f<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m105 outb b<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m91 outb b<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m73 outb b<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m58 outb b<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m117 outh h<3> in_1m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m103 outh h<2> in_3m avss nch_lvt l=60e-9 w='wnswitch*4' m='m*3' nf=4 
+m85 outf f<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m68 outg g<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m89 outh h<1> in_5m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m70 outh h<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m66 outf f<0> in_7m avss nch_lvt l=60e-9 w='wnswitch*4' m=m nf=4 
+m53 outa a<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m49 outa a<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m51 outa a<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*3' nf=4 
+m55 outa a<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m104 outb b<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m100 outg g<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m98 outf f<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m112 outf f<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m86 outg g<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m96 oute e<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m82 oute e<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m63 oute e<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m110 oute e<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m94 outd d<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m80 outd d<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m108 outd d<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m61 outd d<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m116 outh h<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m92 outc c<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m75 outc c<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m59 outc c<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m106 outc c<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m67 outg g<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m114 outg g<4> ip_1m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m102 outh h<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m=m nf=4 
+m90 outb b<5> ip_3m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*3' nf=4 
+m71 outb b<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m57 outb b<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m88 outh h<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m84 outf f<6> ip_5m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*5' nf=4 
+m65 outf f<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+m69 outh h<7> ip_7m avdd pch_lvt l=60e-9 w='wpswitch*4' m='m*7' nf=4 
+xr23  outa ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr3  oute ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr4  outf ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr5  outg ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr1  outc ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr6  outh ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr2  outd ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+xr0  outb ntx   rppolyl l=10.2e-6 w=3e-6 m=1 mf=1 mismatchflag=0
+
+.ends CML_Driver_PAM8_woCS_v3
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD1LVT
+** View name: schematic
+.subckt INVD1LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD16LVT
+** View name: schematic
+.subckt INVD16LVT i zn vdd vss
+m0 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m6 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m7 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m16 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m17 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m18 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m19 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m20 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m21 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m22 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m23 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m24 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m25 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m26 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m27 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m28 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m29 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m30 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m31 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends INVD16LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: INVD8LVT
+** View name: schematic
+.subckt INVD8LVT i zn vdd vss
+m0 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m3 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn i vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m8 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m9 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m10 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m12 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m13 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m14 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 zn i vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends INVD8LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: PreDriver_PAM8_v4
+** View name: schematic
+.subckt PreDriver_PAM8_v4 a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> ain<7> ain<6> ain<5> ain<4> ain<3> ain<2> ain<1> ain<0> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> bin<7> bin<6> bin<5> bin<4> bin<3> bin<2> bin<1> bin<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> cin<7> cin<6> cin<5> cin<4> cin<3> cin<2> cin<1> cin<0> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> dvdd dvss din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> ein<7> ein<6> ein<5> ein<4> ein<3> ein<2> ein<1> ein<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> fin<7> fin<6> fin<5> fin<4> fin<3> fin<2> fin<1> fin<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> gin<7> gin<6> gin<5> gin<4> gin<3> gin<2> gin<1> gin<0> h<7> h<6> h<5> h<4> h<3> h<2> h<1> h<0> hin<7> hin<6> hin<5> hin<4> hin<3> hin<2> hin<1> hin<0>
+xi0<31> ain<7> net024<0> net053 dvss INVD1LVT
+xi0<30> ain<6> net024<1> net053 dvss INVD1LVT
+xi0<29> ain<5> net024<2> net053 dvss INVD1LVT
+xi0<28> ain<4> net024<3> net053 dvss INVD1LVT
+xi0<27> bin<7> net024<4> net053 dvss INVD1LVT
+xi0<26> bin<6> net024<5> net053 dvss INVD1LVT
+xi0<25> bin<5> net024<6> net053 dvss INVD1LVT
+xi0<24> bin<4> net024<7> net053 dvss INVD1LVT
+xi0<23> cin<7> net024<8> net053 dvss INVD1LVT
+xi0<22> cin<6> net024<9> net053 dvss INVD1LVT
+xi0<21> cin<5> net024<10> net053 dvss INVD1LVT
+xi0<20> cin<4> net024<11> net053 dvss INVD1LVT
+xi0<19> din<7> net024<12> net053 dvss INVD1LVT
+xi0<18> din<6> net024<13> net053 dvss INVD1LVT
+xi0<17> din<5> net024<14> net053 dvss INVD1LVT
+xi0<16> din<4> net024<15> net053 dvss INVD1LVT
+xi0<15> ein<7> net024<16> net053 dvss INVD1LVT
+xi0<14> ein<6> net024<17> net053 dvss INVD1LVT
+xi0<13> ein<5> net024<18> net053 dvss INVD1LVT
+xi0<12> ein<4> net024<19> net053 dvss INVD1LVT
+xi0<11> fin<7> net024<20> net053 dvss INVD1LVT
+xi0<10> fin<6> net024<21> net053 dvss INVD1LVT
+xi0<9> fin<5> net024<22> net053 dvss INVD1LVT
+xi0<8> fin<4> net024<23> net053 dvss INVD1LVT
+xi0<7> gin<7> net024<24> net053 dvss INVD1LVT
+xi0<6> gin<6> net024<25> net053 dvss INVD1LVT
+xi0<5> gin<5> net024<26> net053 dvss INVD1LVT
+xi0<4> gin<4> net024<27> net053 dvss INVD1LVT
+xi0<3> hin<7> net024<28> net053 dvss INVD1LVT
+xi0<2> hin<6> net024<29> net053 dvss INVD1LVT
+xi0<1> hin<5> net024<30> net053 dvss INVD1LVT
+xi0<0> hin<4> net024<31> net053 dvss INVD1LVT
+xi16<31> ain<3> net010<0> net022 dvss INVD1LVT
+xi16<30> ain<2> net010<1> net022 dvss INVD1LVT
+xi16<29> ain<1> net010<2> net022 dvss INVD1LVT
+xi16<28> ain<0> net010<3> net022 dvss INVD1LVT
+xi16<27> bin<3> net010<4> net022 dvss INVD1LVT
+xi16<26> bin<2> net010<5> net022 dvss INVD1LVT
+xi16<25> bin<1> net010<6> net022 dvss INVD1LVT
+xi16<24> bin<0> net010<7> net022 dvss INVD1LVT
+xi16<23> cin<3> net010<8> net022 dvss INVD1LVT
+xi16<22> cin<2> net010<9> net022 dvss INVD1LVT
+xi16<21> cin<1> net010<10> net022 dvss INVD1LVT
+xi16<20> cin<0> net010<11> net022 dvss INVD1LVT
+xi16<19> din<3> net010<12> net022 dvss INVD1LVT
+xi16<18> din<2> net010<13> net022 dvss INVD1LVT
+xi16<17> din<1> net010<14> net022 dvss INVD1LVT
+xi16<16> din<0> net010<15> net022 dvss INVD1LVT
+xi16<15> ein<3> net010<16> net022 dvss INVD1LVT
+xi16<14> ein<2> net010<17> net022 dvss INVD1LVT
+xi16<13> ein<1> net010<18> net022 dvss INVD1LVT
+xi16<12> ein<0> net010<19> net022 dvss INVD1LVT
+xi16<11> fin<3> net010<20> net022 dvss INVD1LVT
+xi16<10> fin<2> net010<21> net022 dvss INVD1LVT
+xi16<9> fin<1> net010<22> net022 dvss INVD1LVT
+xi16<8> fin<0> net010<23> net022 dvss INVD1LVT
+xi16<7> gin<3> net010<24> net022 dvss INVD1LVT
+xi16<6> gin<2> net010<25> net022 dvss INVD1LVT
+xi16<5> gin<1> net010<26> net022 dvss INVD1LVT
+xi16<4> gin<0> net010<27> net022 dvss INVD1LVT
+xi16<3> hin<3> net010<28> net022 dvss INVD1LVT
+xi16<2> hin<2> net010<29> net022 dvss INVD1LVT
+xi16<1> hin<1> net010<30> net022 dvss INVD1LVT
+xi16<0> hin<0> net010<31> net022 dvss INVD1LVT
+xi13<31> net010<0> net012<0> net028 dvss INVD1LVT
+xi13<30> net010<1> net012<1> net028 dvss INVD1LVT
+xi13<29> net010<2> net012<2> net028 dvss INVD1LVT
+xi13<28> net010<3> net012<3> net028 dvss INVD1LVT
+xi13<27> net010<4> net012<4> net028 dvss INVD1LVT
+xi13<26> net010<5> net012<5> net028 dvss INVD1LVT
+xi13<25> net010<6> net012<6> net028 dvss INVD1LVT
+xi13<24> net010<7> net012<7> net028 dvss INVD1LVT
+xi13<23> net010<8> net012<8> net028 dvss INVD1LVT
+xi13<22> net010<9> net012<9> net028 dvss INVD1LVT
+xi13<21> net010<10> net012<10> net028 dvss INVD1LVT
+xi13<20> net010<11> net012<11> net028 dvss INVD1LVT
+xi13<19> net010<12> net012<12> net028 dvss INVD1LVT
+xi13<18> net010<13> net012<13> net028 dvss INVD1LVT
+xi13<17> net010<14> net012<14> net028 dvss INVD1LVT
+xi13<16> net010<15> net012<15> net028 dvss INVD1LVT
+xi13<15> net010<16> net012<16> net028 dvss INVD1LVT
+xi13<14> net010<17> net012<17> net028 dvss INVD1LVT
+xi13<13> net010<18> net012<18> net028 dvss INVD1LVT
+xi13<12> net010<19> net012<19> net028 dvss INVD1LVT
+xi13<11> net010<20> net012<20> net028 dvss INVD1LVT
+xi13<10> net010<21> net012<21> net028 dvss INVD1LVT
+xi13<9> net010<22> net012<22> net028 dvss INVD1LVT
+xi13<8> net010<23> net012<23> net028 dvss INVD1LVT
+xi13<7> net010<24> net012<24> net028 dvss INVD1LVT
+xi13<6> net010<25> net012<25> net028 dvss INVD1LVT
+xi13<5> net010<26> net012<26> net028 dvss INVD1LVT
+xi13<4> net010<27> net012<27> net028 dvss INVD1LVT
+xi13<3> net010<28> net012<28> net028 dvss INVD1LVT
+xi13<2> net010<29> net012<29> net028 dvss INVD1LVT
+xi13<1> net010<30> net012<30> net028 dvss INVD1LVT
+xi13<0> net010<31> net012<31> net028 dvss INVD1LVT
+xi3<31> net012<0> net014<0> net033 dvss INVD2LVT
+xi3<30> net012<1> net014<1> net033 dvss INVD2LVT
+xi3<29> net012<2> net014<2> net033 dvss INVD2LVT
+xi3<28> net012<3> net014<3> net033 dvss INVD2LVT
+xi3<27> net012<4> net014<4> net033 dvss INVD2LVT
+xi3<26> net012<5> net014<5> net033 dvss INVD2LVT
+xi3<25> net012<6> net014<6> net033 dvss INVD2LVT
+xi3<24> net012<7> net014<7> net033 dvss INVD2LVT
+xi3<23> net012<8> net014<8> net033 dvss INVD2LVT
+xi3<22> net012<9> net014<9> net033 dvss INVD2LVT
+xi3<21> net012<10> net014<10> net033 dvss INVD2LVT
+xi3<20> net012<11> net014<11> net033 dvss INVD2LVT
+xi3<19> net012<12> net014<12> net033 dvss INVD2LVT
+xi3<18> net012<13> net014<13> net033 dvss INVD2LVT
+xi3<17> net012<14> net014<14> net033 dvss INVD2LVT
+xi3<16> net012<15> net014<15> net033 dvss INVD2LVT
+xi3<15> net012<16> net014<16> net033 dvss INVD2LVT
+xi3<14> net012<17> net014<17> net033 dvss INVD2LVT
+xi3<13> net012<18> net014<18> net033 dvss INVD2LVT
+xi3<12> net012<19> net014<19> net033 dvss INVD2LVT
+xi3<11> net012<20> net014<20> net033 dvss INVD2LVT
+xi3<10> net012<21> net014<21> net033 dvss INVD2LVT
+xi3<9> net012<22> net014<22> net033 dvss INVD2LVT
+xi3<8> net012<23> net014<23> net033 dvss INVD2LVT
+xi3<7> net012<24> net014<24> net033 dvss INVD2LVT
+xi3<6> net012<25> net014<25> net033 dvss INVD2LVT
+xi3<5> net012<26> net014<26> net033 dvss INVD2LVT
+xi3<4> net012<27> net014<27> net033 dvss INVD2LVT
+xi3<3> net012<28> net014<28> net033 dvss INVD2LVT
+xi3<2> net012<29> net014<29> net033 dvss INVD2LVT
+xi3<1> net012<30> net014<30> net033 dvss INVD2LVT
+xi3<0> net012<31> net014<31> net033 dvss INVD2LVT
+xi1<31> net024<0> net025<0> net031 dvss INVD2LVT
+xi1<30> net024<1> net025<1> net031 dvss INVD2LVT
+xi1<29> net024<2> net025<2> net031 dvss INVD2LVT
+xi1<28> net024<3> net025<3> net031 dvss INVD2LVT
+xi1<27> net024<4> net025<4> net031 dvss INVD2LVT
+xi1<26> net024<5> net025<5> net031 dvss INVD2LVT
+xi1<25> net024<6> net025<6> net031 dvss INVD2LVT
+xi1<24> net024<7> net025<7> net031 dvss INVD2LVT
+xi1<23> net024<8> net025<8> net031 dvss INVD2LVT
+xi1<22> net024<9> net025<9> net031 dvss INVD2LVT
+xi1<21> net024<10> net025<10> net031 dvss INVD2LVT
+xi1<20> net024<11> net025<11> net031 dvss INVD2LVT
+xi1<19> net024<12> net025<12> net031 dvss INVD2LVT
+xi1<18> net024<13> net025<13> net031 dvss INVD2LVT
+xi1<17> net024<14> net025<14> net031 dvss INVD2LVT
+xi1<16> net024<15> net025<15> net031 dvss INVD2LVT
+xi1<15> net024<16> net025<16> net031 dvss INVD2LVT
+xi1<14> net024<17> net025<17> net031 dvss INVD2LVT
+xi1<13> net024<18> net025<18> net031 dvss INVD2LVT
+xi1<12> net024<19> net025<19> net031 dvss INVD2LVT
+xi1<11> net024<20> net025<20> net031 dvss INVD2LVT
+xi1<10> net024<21> net025<21> net031 dvss INVD2LVT
+xi1<9> net024<22> net025<22> net031 dvss INVD2LVT
+xi1<8> net024<23> net025<23> net031 dvss INVD2LVT
+xi1<7> net024<24> net025<24> net031 dvss INVD2LVT
+xi1<6> net024<25> net025<25> net031 dvss INVD2LVT
+xi1<5> net024<26> net025<26> net031 dvss INVD2LVT
+xi1<4> net024<27> net025<27> net031 dvss INVD2LVT
+xi1<3> net024<28> net025<28> net031 dvss INVD2LVT
+xi1<2> net024<29> net025<29> net031 dvss INVD2LVT
+xi1<1> net024<30> net025<30> net031 dvss INVD2LVT
+xi1<0> net024<31> net025<31> net031 dvss INVD2LVT
+xi4<31> net014<0> net015<0> net039 dvss INVD4LVT
+xi4<30> net014<1> net015<1> net039 dvss INVD4LVT
+xi4<29> net014<2> net015<2> net039 dvss INVD4LVT
+xi4<28> net014<3> net015<3> net039 dvss INVD4LVT
+xi4<27> net014<4> net015<4> net039 dvss INVD4LVT
+xi4<26> net014<5> net015<5> net039 dvss INVD4LVT
+xi4<25> net014<6> net015<6> net039 dvss INVD4LVT
+xi4<24> net014<7> net015<7> net039 dvss INVD4LVT
+xi4<23> net014<8> net015<8> net039 dvss INVD4LVT
+xi4<22> net014<9> net015<9> net039 dvss INVD4LVT
+xi4<21> net014<10> net015<10> net039 dvss INVD4LVT
+xi4<20> net014<11> net015<11> net039 dvss INVD4LVT
+xi4<19> net014<12> net015<12> net039 dvss INVD4LVT
+xi4<18> net014<13> net015<13> net039 dvss INVD4LVT
+xi4<17> net014<14> net015<14> net039 dvss INVD4LVT
+xi4<16> net014<15> net015<15> net039 dvss INVD4LVT
+xi4<15> net014<16> net015<16> net039 dvss INVD4LVT
+xi4<14> net014<17> net015<17> net039 dvss INVD4LVT
+xi4<13> net014<18> net015<18> net039 dvss INVD4LVT
+xi4<12> net014<19> net015<19> net039 dvss INVD4LVT
+xi4<11> net014<20> net015<20> net039 dvss INVD4LVT
+xi4<10> net014<21> net015<21> net039 dvss INVD4LVT
+xi4<9> net014<22> net015<22> net039 dvss INVD4LVT
+xi4<8> net014<23> net015<23> net039 dvss INVD4LVT
+xi4<7> net014<24> net015<24> net039 dvss INVD4LVT
+xi4<6> net014<25> net015<25> net039 dvss INVD4LVT
+xi4<5> net014<26> net015<26> net039 dvss INVD4LVT
+xi4<4> net014<27> net015<27> net039 dvss INVD4LVT
+xi4<3> net014<28> net015<28> net039 dvss INVD4LVT
+xi4<2> net014<29> net015<29> net039 dvss INVD4LVT
+xi4<1> net014<30> net015<30> net039 dvss INVD4LVT
+xi4<0> net014<31> net015<31> net039 dvss INVD4LVT
+xi6<31> net017<0> a<3> net051 dvss INVD16LVT
+xi6<30> net017<1> a<2> net051 dvss INVD16LVT
+xi6<29> net017<2> a<1> net051 dvss INVD16LVT
+xi6<28> net017<3> a<0> net051 dvss INVD16LVT
+xi6<27> net017<4> b<3> net051 dvss INVD16LVT
+xi6<26> net017<5> b<2> net051 dvss INVD16LVT
+xi6<25> net017<6> b<1> net051 dvss INVD16LVT
+xi6<24> net017<7> b<0> net051 dvss INVD16LVT
+xi6<23> net017<8> c<3> net051 dvss INVD16LVT
+xi6<22> net017<9> c<2> net051 dvss INVD16LVT
+xi6<21> net017<10> c<1> net051 dvss INVD16LVT
+xi6<20> net017<11> c<0> net051 dvss INVD16LVT
+xi6<19> net017<12> d<3> net051 dvss INVD16LVT
+xi6<18> net017<13> d<2> net051 dvss INVD16LVT
+xi6<17> net017<14> d<1> net051 dvss INVD16LVT
+xi6<16> net017<15> d<0> net051 dvss INVD16LVT
+xi6<15> net017<16> e<3> net051 dvss INVD16LVT
+xi6<14> net017<17> e<2> net051 dvss INVD16LVT
+xi6<13> net017<18> e<1> net051 dvss INVD16LVT
+xi6<12> net017<19> e<0> net051 dvss INVD16LVT
+xi6<11> net017<20> f<3> net051 dvss INVD16LVT
+xi6<10> net017<21> f<2> net051 dvss INVD16LVT
+xi6<9> net017<22> f<1> net051 dvss INVD16LVT
+xi6<8> net017<23> f<0> net051 dvss INVD16LVT
+xi6<7> net017<24> g<3> net051 dvss INVD16LVT
+xi6<6> net017<25> g<2> net051 dvss INVD16LVT
+xi6<5> net017<26> g<1> net051 dvss INVD16LVT
+xi6<4> net017<27> g<0> net051 dvss INVD16LVT
+xi6<3> net017<28> h<3> net051 dvss INVD16LVT
+xi6<2> net017<29> h<2> net051 dvss INVD16LVT
+xi6<1> net017<30> h<1> net051 dvss INVD16LVT
+xi6<0> net017<31> h<0> net051 dvss INVD16LVT
+xi62<31> net026<0> a<7> net044 dvss INVD16LVT
+xi62<30> net026<1> a<6> net044 dvss INVD16LVT
+xi62<29> net026<2> a<5> net044 dvss INVD16LVT
+xi62<28> net026<3> a<4> net044 dvss INVD16LVT
+xi62<27> net026<4> b<7> net044 dvss INVD16LVT
+xi62<26> net026<5> b<6> net044 dvss INVD16LVT
+xi62<25> net026<6> b<5> net044 dvss INVD16LVT
+xi62<24> net026<7> b<4> net044 dvss INVD16LVT
+xi62<23> net026<8> c<7> net044 dvss INVD16LVT
+xi62<22> net026<9> c<6> net044 dvss INVD16LVT
+xi62<21> net026<10> c<5> net044 dvss INVD16LVT
+xi62<20> net026<11> c<4> net044 dvss INVD16LVT
+xi62<19> net026<12> d<7> net044 dvss INVD16LVT
+xi62<18> net026<13> d<6> net044 dvss INVD16LVT
+xi62<17> net026<14> d<5> net044 dvss INVD16LVT
+xi62<16> net026<15> d<4> net044 dvss INVD16LVT
+xi62<15> net026<16> e<7> net044 dvss INVD16LVT
+xi62<14> net026<17> e<6> net044 dvss INVD16LVT
+xi62<13> net026<18> e<5> net044 dvss INVD16LVT
+xi62<12> net026<19> e<4> net044 dvss INVD16LVT
+xi62<11> net026<20> f<7> net044 dvss INVD16LVT
+xi62<10> net026<21> f<6> net044 dvss INVD16LVT
+xi62<9> net026<22> f<5> net044 dvss INVD16LVT
+xi62<8> net026<23> f<4> net044 dvss INVD16LVT
+xi62<7> net026<24> g<7> net044 dvss INVD16LVT
+xi62<6> net026<25> g<6> net044 dvss INVD16LVT
+xi62<5> net026<26> g<5> net044 dvss INVD16LVT
+xi62<4> net026<27> g<4> net044 dvss INVD16LVT
+xi62<3> net026<28> h<7> net044 dvss INVD16LVT
+xi62<2> net026<29> h<6> net044 dvss INVD16LVT
+xi62<1> net026<30> h<5> net044 dvss INVD16LVT
+xi62<0> net026<31> h<4> net044 dvss INVD16LVT
+xi28<31> net026<0> a<7> net046 dvss INVD16LVT
+xi28<30> net026<1> a<6> net046 dvss INVD16LVT
+xi28<29> net026<2> a<5> net046 dvss INVD16LVT
+xi28<28> net026<3> a<4> net046 dvss INVD16LVT
+xi28<27> net026<4> b<7> net046 dvss INVD16LVT
+xi28<26> net026<5> b<6> net046 dvss INVD16LVT
+xi28<25> net026<6> b<5> net046 dvss INVD16LVT
+xi28<24> net026<7> b<4> net046 dvss INVD16LVT
+xi28<23> net026<8> c<7> net046 dvss INVD16LVT
+xi28<22> net026<9> c<6> net046 dvss INVD16LVT
+xi28<21> net026<10> c<5> net046 dvss INVD16LVT
+xi28<20> net026<11> c<4> net046 dvss INVD16LVT
+xi28<19> net026<12> d<7> net046 dvss INVD16LVT
+xi28<18> net026<13> d<6> net046 dvss INVD16LVT
+xi28<17> net026<14> d<5> net046 dvss INVD16LVT
+xi28<16> net026<15> d<4> net046 dvss INVD16LVT
+xi28<15> net026<16> e<7> net046 dvss INVD16LVT
+xi28<14> net026<17> e<6> net046 dvss INVD16LVT
+xi28<13> net026<18> e<5> net046 dvss INVD16LVT
+xi28<12> net026<19> e<4> net046 dvss INVD16LVT
+xi28<11> net026<20> f<7> net046 dvss INVD16LVT
+xi28<10> net026<21> f<6> net046 dvss INVD16LVT
+xi28<9> net026<22> f<5> net046 dvss INVD16LVT
+xi28<8> net026<23> f<4> net046 dvss INVD16LVT
+xi28<7> net026<24> g<7> net046 dvss INVD16LVT
+xi28<6> net026<25> g<6> net046 dvss INVD16LVT
+xi28<5> net026<26> g<5> net046 dvss INVD16LVT
+xi28<4> net026<27> g<4> net046 dvss INVD16LVT
+xi28<3> net026<28> h<7> net046 dvss INVD16LVT
+xi28<2> net026<29> h<6> net046 dvss INVD16LVT
+xi28<1> net026<30> h<5> net046 dvss INVD16LVT
+xi28<0> net026<31> h<4> net046 dvss INVD16LVT
+v8 dvdd net033
+v7 dvdd net039
+v6 dvdd net048
+v5 dvdd net051
+v4 dvdd net044
+v3 dvdd net046
+v2 dvdd net041
+v1 dvdd net031
+v0 dvdd net053
+v10 dvdd net022
+v9 dvdd net028
+xi5<31> net015<0> net017<0> net048 dvss INVD8LVT
+xi5<30> net015<1> net017<1> net048 dvss INVD8LVT
+xi5<29> net015<2> net017<2> net048 dvss INVD8LVT
+xi5<28> net015<3> net017<3> net048 dvss INVD8LVT
+xi5<27> net015<4> net017<4> net048 dvss INVD8LVT
+xi5<26> net015<5> net017<5> net048 dvss INVD8LVT
+xi5<25> net015<6> net017<6> net048 dvss INVD8LVT
+xi5<24> net015<7> net017<7> net048 dvss INVD8LVT
+xi5<23> net015<8> net017<8> net048 dvss INVD8LVT
+xi5<22> net015<9> net017<9> net048 dvss INVD8LVT
+xi5<21> net015<10> net017<10> net048 dvss INVD8LVT
+xi5<20> net015<11> net017<11> net048 dvss INVD8LVT
+xi5<19> net015<12> net017<12> net048 dvss INVD8LVT
+xi5<18> net015<13> net017<13> net048 dvss INVD8LVT
+xi5<17> net015<14> net017<14> net048 dvss INVD8LVT
+xi5<16> net015<15> net017<15> net048 dvss INVD8LVT
+xi5<15> net015<16> net017<16> net048 dvss INVD8LVT
+xi5<14> net015<17> net017<17> net048 dvss INVD8LVT
+xi5<13> net015<18> net017<18> net048 dvss INVD8LVT
+xi5<12> net015<19> net017<19> net048 dvss INVD8LVT
+xi5<11> net015<20> net017<20> net048 dvss INVD8LVT
+xi5<10> net015<21> net017<21> net048 dvss INVD8LVT
+xi5<9> net015<22> net017<22> net048 dvss INVD8LVT
+xi5<8> net015<23> net017<23> net048 dvss INVD8LVT
+xi5<7> net015<24> net017<24> net048 dvss INVD8LVT
+xi5<6> net015<25> net017<25> net048 dvss INVD8LVT
+xi5<5> net015<26> net017<26> net048 dvss INVD8LVT
+xi5<4> net015<27> net017<27> net048 dvss INVD8LVT
+xi5<3> net015<28> net017<28> net048 dvss INVD8LVT
+xi5<2> net015<29> net017<29> net048 dvss INVD8LVT
+xi5<1> net015<30> net017<30> net048 dvss INVD8LVT
+xi5<0> net015<31> net017<31> net048 dvss INVD8LVT
+xi63<31> net025<0> net026<0> net041 dvss INVD8LVT
+xi63<30> net025<1> net026<1> net041 dvss INVD8LVT
+xi63<29> net025<2> net026<2> net041 dvss INVD8LVT
+xi63<28> net025<3> net026<3> net041 dvss INVD8LVT
+xi63<27> net025<4> net026<4> net041 dvss INVD8LVT
+xi63<26> net025<5> net026<5> net041 dvss INVD8LVT
+xi63<25> net025<6> net026<6> net041 dvss INVD8LVT
+xi63<24> net025<7> net026<7> net041 dvss INVD8LVT
+xi63<23> net025<8> net026<8> net041 dvss INVD8LVT
+xi63<22> net025<9> net026<9> net041 dvss INVD8LVT
+xi63<21> net025<10> net026<10> net041 dvss INVD8LVT
+xi63<20> net025<11> net026<11> net041 dvss INVD8LVT
+xi63<19> net025<12> net026<12> net041 dvss INVD8LVT
+xi63<18> net025<13> net026<13> net041 dvss INVD8LVT
+xi63<17> net025<14> net026<14> net041 dvss INVD8LVT
+xi63<16> net025<15> net026<15> net041 dvss INVD8LVT
+xi63<15> net025<16> net026<16> net041 dvss INVD8LVT
+xi63<14> net025<17> net026<17> net041 dvss INVD8LVT
+xi63<13> net025<18> net026<18> net041 dvss INVD8LVT
+xi63<12> net025<19> net026<19> net041 dvss INVD8LVT
+xi63<11> net025<20> net026<20> net041 dvss INVD8LVT
+xi63<10> net025<21> net026<21> net041 dvss INVD8LVT
+xi63<9> net025<22> net026<22> net041 dvss INVD8LVT
+xi63<8> net025<23> net026<23> net041 dvss INVD8LVT
+xi63<7> net025<24> net026<24> net041 dvss INVD8LVT
+xi63<6> net025<25> net026<25> net041 dvss INVD8LVT
+xi63<5> net025<26> net026<26> net041 dvss INVD8LVT
+xi63<4> net025<27> net026<27> net041 dvss INVD8LVT
+xi63<3> net025<28> net026<28> net041 dvss INVD8LVT
+xi63<2> net025<29> net026<29> net041 dvss INVD8LVT
+xi63<1> net025<30> net026<30> net041 dvss INVD8LVT
+xi63<0> net025<31> net026<31> net041 dvss INVD8LVT
+.ends PreDriver_PAM8_v4
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: NR2D1LVT
+** View name: schematic
+.subckt NR2D1LVT a1 a2 zn vdd vss
+m0 zn a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m1 zn a1 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net13 a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 net13 vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+.ends NR2D1LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: DFF_LVT
+** View name: schematic
+.subckt DFF_LVT ck d dgnd dvdd q qn
+m7 q qn dgnd dgnd nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 qn ck net4 dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m13 n1 d dgnd dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m4 net2 n1 net3 dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m3 net4 net2 dgnd dgnd nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m14 net3 ck dgnd dgnd nch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m9 net2 ck dvdd dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m8 net1 d dvdd dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+m12 q qn dvdd dvdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m11 qn net2 dvdd dvdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m15 n1 ck net1 dvdd pch_lvt l=60e-9 w=150e-9 m=1 nf=1 
+.ends DFF_LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN2D1LVT
+** View name: schematic
+.subckt AN2D1LVT a1 a2 z vdd vss
+m0 z net5 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 net5 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m2 net5 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m3 z net5 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m4 net17 a2 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m5 net5 a1 net17 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+.ends AN2D1LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: ENC_8l12b_v2_tspc_stage2_v2
+** View name: schematic
+.subckt ENC_8l12b_v2_tspc_stage2_v2 clk dec103<3> dec103<2> dec103<1> dec103<0> dec107<3> dec107<2> dec107<1> dec107<0> dec113<3> dec113<2> dec113<1> dec113<0> dec117<3> dec117<2> dec117<1> dec117<0> dec20<3> dec20<2> dec20<1> dec20<0> dec21<3> dec21<2> dec21<1> dec21<0> dec64<3> dec64<2> dec64<1> dec64<0> dec65<3> dec65<2> dec65<1> dec65<0> dec83<3> dec83<2> dec83<1> dec83<0> dec87<3> dec87<2> dec87<1> dec87<0> dec93<3> dec93<2> dec93<1> dec93<0> dec97<3> dec97<2> dec97<1> dec97<0> din<11> din<10> din<9> din<8> din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> dvdd dvss
+xi313<3> net065<0> dec64<3> dvdd dvss INVD2LVT
+xi313<2> net065<1> dec64<2> dvdd dvss INVD2LVT
+xi313<1> net065<2> dec64<1> dvdd dvss INVD2LVT
+xi313<0> net065<3> dec64<0> dvdd dvss INVD2LVT
+xi312<3> net066<0> dec65<3> dvdd dvss INVD2LVT
+xi312<2> net066<1> dec65<2> dvdd dvss INVD2LVT
+xi312<1> net066<2> dec65<1> dvdd dvss INVD2LVT
+xi312<0> net066<3> dec65<0> dvdd dvss INVD2LVT
+xi309<1> bf<4> bzfd<4> dvdd dvss INVD2LVT
+xi309<0> bzf<4> bfd<4> dvdd dvss INVD2LVT
+xi308<1> bf<10> bzfd<10> dvdd dvss INVD2LVT
+xi308<0> bzf<10> bfd<10> dvdd dvss INVD2LVT
+xi307<1> bf<6> bzfd<6> dvdd dvss INVD2LVT
+xi307<0> bzf<6> bfd<6> dvdd dvss INVD2LVT
+xi306<1> bf<5> bzfd<5> dvdd dvss INVD2LVT
+xi306<0> bzf<5> bfd<5> dvdd dvss INVD2LVT
+xi305<1> bf<9> bzfd<9> dvdd dvss INVD2LVT
+xi305<0> bzf<9> bfd<9> dvdd dvss INVD2LVT
+xi304<1> bf<0> bzfd<0> dvdd dvss INVD2LVT
+xi304<0> bzf<0> bfd<0> dvdd dvss INVD2LVT
+xi303<1> bf<8> bzfd<8> dvdd dvss INVD2LVT
+xi303<0> bzf<8> bfd<8> dvdd dvss INVD2LVT
+xi302<1> bf<2> bzfd<2> dvdd dvss INVD2LVT
+xi302<0> bzf<2> bfd<2> dvdd dvss INVD2LVT
+xi301<1> bf<1> bzfd<1> dvdd dvss INVD2LVT
+xi301<0> bzf<1> bfd<1> dvdd dvss INVD2LVT
+xi300<1> bf<11> bzfd<11> dvdd dvss INVD2LVT
+xi300<0> bzf<11> bfd<11> dvdd dvss INVD2LVT
+xi311<3> net067<0> dec20<3> dvdd dvss INVD2LVT
+xi311<2> net067<1> dec20<2> dvdd dvss INVD2LVT
+xi311<1> net067<2> dec20<1> dvdd dvss INVD2LVT
+xi311<0> net067<3> dec20<0> dvdd dvss INVD2LVT
+xi299<1> bf<3> bzfd<3> dvdd dvss INVD2LVT
+xi299<0> bzf<3> bfd<3> dvdd dvss INVD2LVT
+xi310<3> net068<0> dec21<3> dvdd dvss INVD2LVT
+xi310<2> net068<1> dec21<2> dvdd dvss INVD2LVT
+xi310<1> net068<2> dec21<1> dvdd dvss INVD2LVT
+xi310<0> net068<3> dec21<0> dvdd dvss INVD2LVT
+xi249<1> bf<7> bzfd<7> dvdd dvss INVD2LVT
+xi249<0> bzf<7> bfd<7> dvdd dvss INVD2LVT
+xi288 clk din<2> dvss dvdd bf<2> bzf<2> DFF_LVT
+xi298 clk din<3> dvss dvdd bf<3> bzf<3> DFF_LVT
+xi253<3> clk net080<0> dvss dvdd dec113<3> net076<0> DFF_LVT
+xi253<2> clk net080<1> dvss dvdd dec113<2> net076<1> DFF_LVT
+xi253<1> clk net080<2> dvss dvdd dec113<1> net076<2> DFF_LVT
+xi253<0> clk net080<3> dvss dvdd dec113<0> net076<3> DFF_LVT
+xi259<3> clk net049<0> dvss dvdd dec87<3> net069<0> DFF_LVT
+xi259<2> clk net049<1> dvss dvdd dec87<2> net069<1> DFF_LVT
+xi259<1> clk net049<2> dvss dvdd dec87<1> net069<2> DFF_LVT
+xi259<0> clk net049<3> dvss dvdd dec87<0> net069<3> DFF_LVT
+xi255<3> clk net051<0> dvss dvdd dec107<3> net073<0> DFF_LVT
+xi255<2> clk net051<1> dvss dvdd dec107<2> net073<1> DFF_LVT
+xi255<1> clk net051<2> dvss dvdd dec107<1> net073<2> DFF_LVT
+xi255<0> clk net051<3> dvss dvdd dec107<0> net073<3> DFF_LVT
+xi263<3> clk net047<0> dvss dvdd net062<0> net065<0> DFF_LVT
+xi263<2> clk net047<1> dvss dvdd net062<1> net065<1> DFF_LVT
+xi263<1> clk net047<2> dvss dvdd net062<2> net065<2> DFF_LVT
+xi263<0> clk net047<3> dvss dvdd net062<3> net065<3> DFF_LVT
+xi261<3> clk net048<0> dvss dvdd net042<0> net067<0> DFF_LVT
+xi261<2> clk net048<1> dvss dvdd net042<1> net067<1> DFF_LVT
+xi261<1> clk net048<2> dvss dvdd net042<2> net067<2> DFF_LVT
+xi261<0> clk net048<3> dvss dvdd net042<3> net067<3> DFF_LVT
+xi238<3> clk net037<0> dvss dvdd net061<0> net066<0> DFF_LVT
+xi238<2> clk net037<1> dvss dvdd net061<1> net066<1> DFF_LVT
+xi238<1> clk net037<2> dvss dvdd net061<2> net066<2> DFF_LVT
+xi238<0> clk net037<3> dvss dvdd net061<3> net066<3> DFF_LVT
+xi237<3> clk net038<0> dvss dvdd net044<0> net068<0> DFF_LVT
+xi237<2> clk net038<1> dvss dvdd net044<1> net068<1> DFF_LVT
+xi237<1> clk net038<2> dvss dvdd net044<2> net068<2> DFF_LVT
+xi237<0> clk net038<3> dvss dvdd net044<3> net068<3> DFF_LVT
+xi236<3> clk net045<0> dvss dvdd dec83<3> net070<0> DFF_LVT
+xi236<2> clk net045<1> dvss dvdd dec83<2> net070<1> DFF_LVT
+xi236<1> clk net045<2> dvss dvdd dec83<1> net070<2> DFF_LVT
+xi236<0> clk net045<3> dvss dvdd dec83<0> net070<3> DFF_LVT
+xi235<3> clk net046<0> dvss dvdd dec93<3> net072<0> DFF_LVT
+xi235<2> clk net046<1> dvss dvdd dec93<2> net072<1> DFF_LVT
+xi235<1> clk net046<2> dvss dvdd dec93<1> net072<2> DFF_LVT
+xi235<0> clk net046<3> dvss dvdd dec93<0> net072<3> DFF_LVT
+xi296 clk din<6> dvss dvdd bf<6> bzf<6> DFF_LVT
+xi295 clk din<5> dvss dvdd bf<5> bzf<5> DFF_LVT
+xi294 clk din<7> dvss dvdd bf<7> bzf<7> DFF_LVT
+xi293 clk din<9> dvss dvdd bf<9> bzf<9> DFF_LVT
+xi292 clk din<0> dvss dvdd bf<0> bzf<0> DFF_LVT
+xi291 clk din<8> dvss dvdd bf<8> bzf<8> DFF_LVT
+xi257<3> clk net050<0> dvss dvdd dec97<3> net071<0> DFF_LVT
+xi257<2> clk net050<1> dvss dvdd dec97<2> net071<1> DFF_LVT
+xi257<1> clk net050<2> dvss dvdd dec97<1> net071<2> DFF_LVT
+xi257<0> clk net050<3> dvss dvdd dec97<0> net071<3> DFF_LVT
+xi290 clk din<10> dvss dvdd bf<10> bzf<10> DFF_LVT
+xi289 clk din<1> dvss dvdd bf<1> bzf<1> DFF_LVT
+xi21 clk din<11> dvss dvdd bf<11> bzf<11> DFF_LVT
+xi233<3> clk net052<0> dvss dvdd dec117<3> net075<0> DFF_LVT
+xi233<2> clk net052<1> dvss dvdd dec117<2> net075<1> DFF_LVT
+xi233<1> clk net052<2> dvss dvdd dec117<1> net075<2> DFF_LVT
+xi233<0> clk net052<3> dvss dvdd dec117<0> net075<3> DFF_LVT
+xi234<3> clk net079<0> dvss dvdd dec103<3> net074<0> DFF_LVT
+xi234<2> clk net079<1> dvss dvdd dec103<2> net074<1> DFF_LVT
+xi234<1> clk net079<2> dvss dvdd dec103<1> net074<2> DFF_LVT
+xi234<0> clk net079<3> dvss dvdd dec103<0> net074<3> DFF_LVT
+xi297 clk din<4> dvss dvdd bf<4> bzf<4> DFF_LVT
+xi166<3> bfd<3> bfd<10> net079<0> dvdd dvss AN2D1LVT
+xi166<2> bzfd<3> bfd<10> net079<1> dvdd dvss AN2D1LVT
+xi166<1> bfd<3> bzfd<10> net079<2> dvdd dvss AN2D1LVT
+xi166<0> bzfd<3> bzfd<10> net079<3> dvdd dvss AN2D1LVT
+xi262<3> bfd<4> bfd<6> net047<0> dvdd dvss AN2D1LVT
+xi262<2> bzfd<4> bfd<6> net047<1> dvdd dvss AN2D1LVT
+xi262<1> bfd<4> bzfd<6> net047<2> dvdd dvss AN2D1LVT
+xi262<0> bzfd<4> bzfd<6> net047<3> dvdd dvss AN2D1LVT
+xi260<3> bfd<0> bfd<2> net048<0> dvdd dvss AN2D1LVT
+xi260<2> bzfd<0> bfd<2> net048<1> dvdd dvss AN2D1LVT
+xi260<1> bfd<0> bzfd<2> net048<2> dvdd dvss AN2D1LVT
+xi260<0> bzfd<0> bzfd<2> net048<3> dvdd dvss AN2D1LVT
+xi258<3> bfd<7> bfd<8> net049<0> dvdd dvss AN2D1LVT
+xi258<2> bzfd<7> bfd<8> net049<1> dvdd dvss AN2D1LVT
+xi258<1> bfd<7> bzfd<8> net049<2> dvdd dvss AN2D1LVT
+xi258<0> bzfd<7> bzfd<8> net049<3> dvdd dvss AN2D1LVT
+xi256<3> bfd<9> bfd<7> net050<0> dvdd dvss AN2D1LVT
+xi256<2> bfd<9> bzfd<7> net050<1> dvdd dvss AN2D1LVT
+xi256<1> bzfd<9> bfd<7> net050<2> dvdd dvss AN2D1LVT
+xi256<0> bzfd<9> bzfd<7> net050<3> dvdd dvss AN2D1LVT
+xi254<3> bfd<10> bfd<7> net051<0> dvdd dvss AN2D1LVT
+xi254<2> bfd<10> bzfd<7> net051<1> dvdd dvss AN2D1LVT
+xi254<1> bzfd<10> bfd<7> net051<2> dvdd dvss AN2D1LVT
+xi254<0> bzfd<10> bzfd<7> net051<3> dvdd dvss AN2D1LVT
+xi165<3> bfd<11> bfd<7> net052<0> dvdd dvss AN2D1LVT
+xi165<2> bfd<11> bzfd<7> net052<1> dvdd dvss AN2D1LVT
+xi165<1> bzfd<11> bfd<7> net052<2> dvdd dvss AN2D1LVT
+xi165<0> bzfd<11> bzfd<7> net052<3> dvdd dvss AN2D1LVT
+xi252<3> bfd<11> bfd<3> net080<0> dvdd dvss AN2D1LVT
+xi252<2> bfd<11> bzfd<3> net080<1> dvdd dvss AN2D1LVT
+xi252<1> bzfd<11> bfd<3> net080<2> dvdd dvss AN2D1LVT
+xi252<0> bzfd<11> bzfd<3> net080<3> dvdd dvss AN2D1LVT
+xi176<3> bfd<6> bfd<5> net037<0> dvdd dvss AN2D1LVT
+xi176<2> bfd<6> bzfd<5> net037<1> dvdd dvss AN2D1LVT
+xi176<1> bzfd<6> bfd<5> net037<2> dvdd dvss AN2D1LVT
+xi176<0> bzfd<6> bzfd<5> net037<3> dvdd dvss AN2D1LVT
+xi173<3> bfd<2> bfd<1> net038<0> dvdd dvss AN2D1LVT
+xi173<2> bfd<2> bzfd<1> net038<1> dvdd dvss AN2D1LVT
+xi173<1> bzfd<2> bfd<1> net038<2> dvdd dvss AN2D1LVT
+xi173<0> bzfd<2> bzfd<1> net038<3> dvdd dvss AN2D1LVT
+xi168<3> bfd<8> bfd<3> net045<0> dvdd dvss AN2D1LVT
+xi168<2> bfd<8> bzfd<3> net045<1> dvdd dvss AN2D1LVT
+xi168<1> bzfd<8> bfd<3> net045<2> dvdd dvss AN2D1LVT
+xi168<0> bzfd<8> bzfd<3> net045<3> dvdd dvss AN2D1LVT
+xi167<3> bfd<9> bfd<3> net046<0> dvdd dvss AN2D1LVT
+xi167<2> bfd<9> bzfd<3> net046<1> dvdd dvss AN2D1LVT
+xi167<1> bzfd<9> bfd<3> net046<2> dvdd dvss AN2D1LVT
+xi167<0> bzfd<9> bzfd<3> net046<3> dvdd dvss AN2D1LVT
+.ends ENC_8l12b_v2_tspc_stage2_v2
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: ENC_8l12b_v2_tspc
+** View name: schematic
+.subckt ENC_8l12b_v2_tspc a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> clk d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> din<11> din<10> din<9> din<8> din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> dvdd dvss e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> h<7> h<6> h<5> h<4> h<3> h<2> h<1> h<0>
+xi281<3> net064<0> net063<0> bz<3> dvdd dvss NR2D1LVT
+xi281<2> net064<1> net063<1> bz<2> dvdd dvss NR2D1LVT
+xi281<1> net064<2> net063<2> bz<1> dvdd dvss NR2D1LVT
+xi281<0> net064<3> net063<3> bz<0> dvdd dvss NR2D1LVT
+xi282<3> net0105<0> net0110<0> cz<3> dvdd dvss NR2D1LVT
+xi282<2> net0105<1> net0110<1> cz<2> dvdd dvss NR2D1LVT
+xi282<1> net0105<2> net0110<2> cz<1> dvdd dvss NR2D1LVT
+xi282<0> net0105<3> net0110<3> cz<0> dvdd dvss NR2D1LVT
+xi280<3> net0109<0> net0111<0> az<3> dvdd dvss NR2D1LVT
+xi280<2> net0109<1> net0111<1> az<2> dvdd dvss NR2D1LVT
+xi280<1> net0109<2> net0111<2> az<1> dvdd dvss NR2D1LVT
+xi280<0> net0109<3> net0111<3> az<0> dvdd dvss NR2D1LVT
+xi284<3> net0119<0> net0115<0> ez<3> dvdd dvss NR2D1LVT
+xi284<2> net0119<1> net0115<1> ez<2> dvdd dvss NR2D1LVT
+xi284<1> net0119<2> net0115<2> ez<1> dvdd dvss NR2D1LVT
+xi284<0> net0119<3> net0115<3> ez<0> dvdd dvss NR2D1LVT
+xi216<3> net084<0> net083<0> h<7> dvdd dvss NR2D1LVT
+xi216<2> net084<1> net083<1> h<6> dvdd dvss NR2D1LVT
+xi216<1> net084<2> net083<2> h<5> dvdd dvss NR2D1LVT
+xi216<0> net084<3> net083<3> h<4> dvdd dvss NR2D1LVT
+xi215<3> net086<0> net085<0> g<7> dvdd dvss NR2D1LVT
+xi215<2> net086<1> net085<1> g<6> dvdd dvss NR2D1LVT
+xi215<1> net086<2> net085<2> g<5> dvdd dvss NR2D1LVT
+xi215<0> net086<3> net085<3> g<4> dvdd dvss NR2D1LVT
+xi214<3> net0107<0> net0117<0> f<7> dvdd dvss NR2D1LVT
+xi214<2> net0107<1> net0117<1> f<6> dvdd dvss NR2D1LVT
+xi214<1> net0107<2> net0117<2> f<5> dvdd dvss NR2D1LVT
+xi214<0> net0107<3> net0117<3> f<4> dvdd dvss NR2D1LVT
+xi212<3> net082<0> net081<0> d<7> dvdd dvss NR2D1LVT
+xi212<2> net082<1> net081<1> d<6> dvdd dvss NR2D1LVT
+xi212<1> net082<2> net081<2> d<5> dvdd dvss NR2D1LVT
+xi212<0> net082<3> net081<3> d<4> dvdd dvss NR2D1LVT
+xi213<3> net078<0> net077<0> e<7> dvdd dvss NR2D1LVT
+xi213<2> net078<1> net077<1> e<6> dvdd dvss NR2D1LVT
+xi213<1> net078<2> net077<2> e<5> dvdd dvss NR2D1LVT
+xi213<0> net078<3> net077<3> e<4> dvdd dvss NR2D1LVT
+xi283<3> net058<0> net057<0> dz<3> dvdd dvss NR2D1LVT
+xi283<2> net058<1> net057<1> dz<2> dvdd dvss NR2D1LVT
+xi283<1> net058<2> net057<2> dz<1> dvdd dvss NR2D1LVT
+xi283<0> net058<3> net057<3> dz<0> dvdd dvss NR2D1LVT
+xi285<3> net062<0> net061<0> fz<3> dvdd dvss NR2D1LVT
+xi285<2> net062<1> net061<1> fz<2> dvdd dvss NR2D1LVT
+xi285<1> net062<2> net061<2> fz<1> dvdd dvss NR2D1LVT
+xi285<0> net062<3> net061<3> fz<0> dvdd dvss NR2D1LVT
+xi286<3> net0113<0> net0108<0> gz<3> dvdd dvss NR2D1LVT
+xi286<2> net0113<1> net0108<1> gz<2> dvdd dvss NR2D1LVT
+xi286<1> net0113<2> net0108<2> gz<1> dvdd dvss NR2D1LVT
+xi286<0> net0113<3> net0108<3> gz<0> dvdd dvss NR2D1LVT
+xi287<3> net060<0> net059<0> hz<3> dvdd dvss NR2D1LVT
+xi287<2> net060<1> net059<1> hz<2> dvdd dvss NR2D1LVT
+xi287<1> net060<2> net059<2> hz<1> dvdd dvss NR2D1LVT
+xi287<0> net060<3> net059<3> hz<0> dvdd dvss NR2D1LVT
+xi209<3> net0106<0> net0104<0> a<7> dvdd dvss NR2D1LVT
+xi209<2> net0106<1> net0104<1> a<6> dvdd dvss NR2D1LVT
+xi209<1> net0106<2> net0104<2> a<5> dvdd dvss NR2D1LVT
+xi209<0> net0106<3> net0104<3> a<4> dvdd dvss NR2D1LVT
+xi211<3> net088<0> net087<0> c<7> dvdd dvss NR2D1LVT
+xi211<2> net088<1> net087<1> c<6> dvdd dvss NR2D1LVT
+xi211<1> net088<2> net087<2> c<5> dvdd dvss NR2D1LVT
+xi211<0> net088<3> net087<3> c<4> dvdd dvss NR2D1LVT
+xi210<3> net0102<0> net0114<0> b<7> dvdd dvss NR2D1LVT
+xi210<2> net0102<1> net0114<1> b<6> dvdd dvss NR2D1LVT
+xi210<1> net0102<2> net0114<2> b<5> dvdd dvss NR2D1LVT
+xi210<0> net0102<3> net0114<3> b<4> dvdd dvss NR2D1LVT
+xi224<3> hz<3> h<3> dvdd dvss INVD1LVT
+xi224<2> hz<2> h<2> dvdd dvss INVD1LVT
+xi224<1> hz<1> h<1> dvdd dvss INVD1LVT
+xi224<0> hz<0> h<0> dvdd dvss INVD1LVT
+xi223<3> gz<3> g<3> dvdd dvss INVD1LVT
+xi223<2> gz<2> g<2> dvdd dvss INVD1LVT
+xi223<1> gz<1> g<1> dvdd dvss INVD1LVT
+xi223<0> gz<0> g<0> dvdd dvss INVD1LVT
+xi222<3> fz<3> f<3> dvdd dvss INVD1LVT
+xi222<2> fz<2> f<2> dvdd dvss INVD1LVT
+xi222<1> fz<1> f<1> dvdd dvss INVD1LVT
+xi222<0> fz<0> f<0> dvdd dvss INVD1LVT
+xi221<3> ez<3> e<3> dvdd dvss INVD1LVT
+xi221<2> ez<2> e<2> dvdd dvss INVD1LVT
+xi221<1> ez<1> e<1> dvdd dvss INVD1LVT
+xi221<0> ez<0> e<0> dvdd dvss INVD1LVT
+xi217<3> az<3> a<3> dvdd dvss INVD1LVT
+xi217<2> az<2> a<2> dvdd dvss INVD1LVT
+xi217<1> az<1> a<1> dvdd dvss INVD1LVT
+xi217<0> az<0> a<0> dvdd dvss INVD1LVT
+xi220<3> dz<3> d<3> dvdd dvss INVD1LVT
+xi220<2> dz<2> d<2> dvdd dvss INVD1LVT
+xi220<1> dz<1> d<1> dvdd dvss INVD1LVT
+xi220<0> dz<0> d<0> dvdd dvss INVD1LVT
+xi219<3> cz<3> c<3> dvdd dvss INVD1LVT
+xi219<2> cz<2> c<2> dvdd dvss INVD1LVT
+xi219<1> cz<1> c<1> dvdd dvss INVD1LVT
+xi219<0> cz<0> c<0> dvdd dvss INVD1LVT
+xi218<3> bz<3> b<3> dvdd dvss INVD1LVT
+xi218<2> bz<2> b<2> dvdd dvss INVD1LVT
+xi218<1> bz<1> b<1> dvdd dvss INVD1LVT
+xi218<0> bz<0> b<0> dvdd dvss INVD1LVT
+xi0 clk dec103<3> dec103<2> dec103<1> dec103<0> dec107<3> dec107<2> dec107<1> dec107<0> dec113<3> dec113<2> dec113<1> dec113<0> dec117<3> dec117<2> dec117<1> dec117<0> dec20<3> dec20<2> dec20<1> dec20<0> dec21<3> dec21<2> dec21<1> dec21<0> dec64<3> dec64<2> dec64<1> dec64<0> dec65<3> dec65<2> dec65<1> dec65<0> dec83<3> dec83<2> dec83<1> dec83<0> dec87<3> dec87<2> dec87<1> dec87<0> dec93<3> dec93<2> dec93<1> dec93<0> dec97<3> dec97<2> dec97<1> dec97<0> din<11> din<10> din<9> din<8> din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> dvdd dvss ENC_8l12b_v2_tspc_stage2_v2
+xi268<3> dec97<0> dec64<1> net0105<0> dvdd dvss AN2D1LVT
+xi268<2> dec97<0> dec64<0> net0105<1> dvdd dvss AN2D1LVT
+xi268<1> dec97<1> dec64<1> net0105<2> dvdd dvss AN2D1LVT
+xi268<0> dec97<1> dec64<0> net0105<3> dvdd dvss AN2D1LVT
+xi276<3> dec97<2> dec64<2> net0108<0> dvdd dvss AN2D1LVT
+xi276<2> dec97<2> dec64<3> net0108<1> dvdd dvss AN2D1LVT
+xi276<1> dec97<3> dec64<2> net0108<2> dvdd dvss AN2D1LVT
+xi276<0> dec97<3> dec64<3> net0108<3> dvdd dvss AN2D1LVT
+xi265<3> dec87<0> dec64<0> net058<0> dvdd dvss AN2D1LVT
+xi265<2> dec87<0> dec64<1> net058<1> dvdd dvss AN2D1LVT
+xi265<1> dec87<0> dec65<3> net058<2> dvdd dvss AN2D1LVT
+xi265<0> dec87<0> dec65<2> net058<3> dvdd dvss AN2D1LVT
+xi177<3> dec113<3> dec21<1> net0106<0> dvdd dvss AN2D1LVT
+xi177<2> dec113<3> dec21<0> net0106<1> dvdd dvss AN2D1LVT
+xi177<1> dec113<2> dec21<1> net0106<2> dvdd dvss AN2D1LVT
+xi177<0> dec113<2> dec21<0> net0106<3> dvdd dvss AN2D1LVT
+xi181<3> dec93<2> dec20<1> net088<0> dvdd dvss AN2D1LVT
+xi181<2> dec93<2> dec20<0> net088<1> dvdd dvss AN2D1LVT
+xi181<1> dec93<3> dec20<1> net088<2> dvdd dvss AN2D1LVT
+xi181<0> dec93<3> dec20<0> net088<3> dvdd dvss AN2D1LVT
+xi271<3> dec117<1> dec65<1> net0109<0> dvdd dvss AN2D1LVT
+xi271<2> dec117<1> dec65<0> net0109<1> dvdd dvss AN2D1LVT
+xi271<1> dec117<0> dec65<1> net0109<2> dvdd dvss AN2D1LVT
+xi271<0> dec117<0> dec65<0> net0109<3> dvdd dvss AN2D1LVT
+xi183<3> dec83<2> dec20<0> net082<0> dvdd dvss AN2D1LVT
+xi183<2> dec83<2> dec20<1> net082<1> dvdd dvss AN2D1LVT
+xi183<1> dec83<2> dec21<3> net082<2> dvdd dvss AN2D1LVT
+xi183<0> dec83<2> dec21<2> net082<3> dvdd dvss AN2D1LVT
+xi179<3> dec103<2> dec20<3> net0102<0> dvdd dvss AN2D1LVT
+xi179<2> dec103<2> dec20<2> net0102<1> dvdd dvss AN2D1LVT
+xi179<1> dec103<2> dec21<0> net0102<2> dvdd dvss AN2D1LVT
+xi179<0> dec103<2> dec21<1> net0102<3> dvdd dvss AN2D1LVT
+xi192<3> dec83<0> dec20<0> net084<0> dvdd dvss AN2D1LVT
+xi192<2> dec83<0> dec20<1> net084<1> dvdd dvss AN2D1LVT
+xi192<1> dec83<0> dec21<3> net084<2> dvdd dvss AN2D1LVT
+xi192<0> dec83<0> dec21<2> net084<3> dvdd dvss AN2D1LVT
+xi190<3> dec93<0> dec20<1> net086<0> dvdd dvss AN2D1LVT
+xi190<2> dec93<0> dec20<0> net086<1> dvdd dvss AN2D1LVT
+xi190<1> dec93<1> dec20<1> net086<2> dvdd dvss AN2D1LVT
+xi190<0> dec93<1> dec20<0> net086<3> dvdd dvss AN2D1LVT
+xi187<3> dec103<0> dec20<3> net0107<0> dvdd dvss AN2D1LVT
+xi187<2> dec103<0> dec20<2> net0107<1> dvdd dvss AN2D1LVT
+xi187<1> dec103<0> dec21<0> net0107<2> dvdd dvss AN2D1LVT
+xi187<0> dec103<0> dec21<1> net0107<3> dvdd dvss AN2D1LVT
+xi184<3> dec113<1> dec21<1> net078<0> dvdd dvss AN2D1LVT
+xi184<2> dec113<1> dec21<0> net078<1> dvdd dvss AN2D1LVT
+xi184<1> dec113<0> dec21<1> net078<2> dvdd dvss AN2D1LVT
+xi184<0> dec113<0> dec21<0> net078<3> dvdd dvss AN2D1LVT
+xi273<3> dec87<1> dec65<3> net057<0> dvdd dvss AN2D1LVT
+xi273<2> dec87<1> dec65<2> net057<1> dvdd dvss AN2D1LVT
+xi273<1> dec87<1> dec64<0> net057<2> dvdd dvss AN2D1LVT
+xi273<0> dec87<1> dec64<1> net057<3> dvdd dvss AN2D1LVT
+xi267<3> dec97<0> dec64<2> net0110<0> dvdd dvss AN2D1LVT
+xi267<2> dec97<0> dec64<3> net0110<1> dvdd dvss AN2D1LVT
+xi267<1> dec97<1> dec64<2> net0110<2> dvdd dvss AN2D1LVT
+xi267<0> dec97<1> dec64<3> net0110<3> dvdd dvss AN2D1LVT
+xi272<3> dec117<3> dec65<2> net0115<0> dvdd dvss AN2D1LVT
+xi272<2> dec117<3> dec65<3> net0115<1> dvdd dvss AN2D1LVT
+xi272<1> dec117<2> dec65<2> net0115<2> dvdd dvss AN2D1LVT
+xi272<0> dec117<2> dec65<3> net0115<3> dvdd dvss AN2D1LVT
+xi270<3> dec117<1> dec65<2> net0111<0> dvdd dvss AN2D1LVT
+xi270<2> dec117<1> dec65<3> net0111<1> dvdd dvss AN2D1LVT
+xi270<1> dec117<0> dec65<2> net0111<2> dvdd dvss AN2D1LVT
+xi270<0> dec117<0> dec65<3> net0111<3> dvdd dvss AN2D1LVT
+xi191<3> dec83<1> dec21<3> net083<0> dvdd dvss AN2D1LVT
+xi191<2> dec83<1> dec21<2> net083<1> dvdd dvss AN2D1LVT
+xi191<1> dec83<1> dec20<0> net083<2> dvdd dvss AN2D1LVT
+xi191<0> dec83<1> dec20<1> net083<3> dvdd dvss AN2D1LVT
+xi189<3> dec93<0> dec20<2> net085<0> dvdd dvss AN2D1LVT
+xi189<2> dec93<0> dec20<3> net085<1> dvdd dvss AN2D1LVT
+xi189<1> dec93<1> dec20<2> net085<2> dvdd dvss AN2D1LVT
+xi189<0> dec93<1> dec20<3> net085<3> dvdd dvss AN2D1LVT
+xi188<3> dec103<1> dec21<0> net0117<0> dvdd dvss AN2D1LVT
+xi188<2> dec103<1> dec21<1> net0117<1> dvdd dvss AN2D1LVT
+xi188<1> dec103<1> dec20<3> net0117<2> dvdd dvss AN2D1LVT
+xi188<0> dec103<1> dec20<2> net0117<3> dvdd dvss AN2D1LVT
+xi178<3> dec113<3> dec21<2> net0104<0> dvdd dvss AN2D1LVT
+xi178<2> dec113<3> dec21<3> net0104<1> dvdd dvss AN2D1LVT
+xi178<1> dec113<2> dec21<2> net0104<2> dvdd dvss AN2D1LVT
+xi178<0> dec113<2> dec21<3> net0104<3> dvdd dvss AN2D1LVT
+xi264<3> dec107<1> dec65<0> net063<0> dvdd dvss AN2D1LVT
+xi264<2> dec107<1> dec65<1> net063<1> dvdd dvss AN2D1LVT
+xi264<1> dec107<1> dec64<3> net063<2> dvdd dvss AN2D1LVT
+xi264<0> dec107<1> dec64<2> net063<3> dvdd dvss AN2D1LVT
+xi275<3> dec107<3> dec65<0> net061<0> dvdd dvss AN2D1LVT
+xi275<2> dec107<3> dec65<1> net061<1> dvdd dvss AN2D1LVT
+xi275<1> dec107<3> dec64<3> net061<2> dvdd dvss AN2D1LVT
+xi275<0> dec107<3> dec64<2> net061<3> dvdd dvss AN2D1LVT
+xi278<3> dec87<3> dec65<3> net059<0> dvdd dvss AN2D1LVT
+xi278<2> dec87<3> dec65<2> net059<1> dvdd dvss AN2D1LVT
+xi278<1> dec87<3> dec64<0> net059<2> dvdd dvss AN2D1LVT
+xi278<0> dec87<3> dec64<1> net059<3> dvdd dvss AN2D1LVT
+xi269<3> dec117<3> dec65<1> net0119<0> dvdd dvss AN2D1LVT
+xi269<2> dec117<3> dec65<0> net0119<1> dvdd dvss AN2D1LVT
+xi269<1> dec117<2> dec65<1> net0119<2> dvdd dvss AN2D1LVT
+xi269<0> dec117<2> dec65<0> net0119<3> dvdd dvss AN2D1LVT
+xi185<3> dec113<1> dec21<2> net077<0> dvdd dvss AN2D1LVT
+xi185<2> dec113<1> dec21<3> net077<1> dvdd dvss AN2D1LVT
+xi185<1> dec113<0> dec21<2> net077<2> dvdd dvss AN2D1LVT
+xi185<0> dec113<0> dec21<3> net077<3> dvdd dvss AN2D1LVT
+xi182<3> dec93<2> dec20<2> net087<0> dvdd dvss AN2D1LVT
+xi182<2> dec93<2> dec20<3> net087<1> dvdd dvss AN2D1LVT
+xi182<1> dec93<3> dec20<2> net087<2> dvdd dvss AN2D1LVT
+xi182<0> dec93<3> dec20<3> net087<3> dvdd dvss AN2D1LVT
+xi180<3> dec103<3> dec21<0> net0114<0> dvdd dvss AN2D1LVT
+xi180<2> dec103<3> dec21<1> net0114<1> dvdd dvss AN2D1LVT
+xi180<1> dec103<3> dec20<3> net0114<2> dvdd dvss AN2D1LVT
+xi180<0> dec103<3> dec20<2> net0114<3> dvdd dvss AN2D1LVT
+xi274<3> dec107<2> dec64<3> net062<0> dvdd dvss AN2D1LVT
+xi274<2> dec107<2> dec64<2> net062<1> dvdd dvss AN2D1LVT
+xi274<1> dec107<2> dec65<0> net062<2> dvdd dvss AN2D1LVT
+xi274<0> dec107<2> dec65<1> net062<3> dvdd dvss AN2D1LVT
+xi186<3> dec83<3> dec21<3> net081<0> dvdd dvss AN2D1LVT
+xi186<2> dec83<3> dec21<2> net081<1> dvdd dvss AN2D1LVT
+xi186<1> dec83<3> dec20<0> net081<2> dvdd dvss AN2D1LVT
+xi186<0> dec83<3> dec20<1> net081<3> dvdd dvss AN2D1LVT
+xi277<3> dec97<2> dec64<1> net0113<0> dvdd dvss AN2D1LVT
+xi277<2> dec97<2> dec64<0> net0113<1> dvdd dvss AN2D1LVT
+xi277<1> dec97<3> dec64<1> net0113<2> dvdd dvss AN2D1LVT
+xi277<0> dec97<3> dec64<0> net0113<3> dvdd dvss AN2D1LVT
+xi279<3> dec87<2> dec64<0> net060<0> dvdd dvss AN2D1LVT
+xi279<2> dec87<2> dec64<1> net060<1> dvdd dvss AN2D1LVT
+xi279<1> dec87<2> dec65<3> net060<2> dvdd dvss AN2D1LVT
+xi279<0> dec87<2> dec65<2> net060<3> dvdd dvss AN2D1LVT
+xi266<3> dec107<0> dec64<3> net064<0> dvdd dvss AN2D1LVT
+xi266<2> dec107<0> dec64<2> net064<1> dvdd dvss AN2D1LVT
+xi266<1> dec107<0> dec65<0> net064<2> dvdd dvss AN2D1LVT
+xi266<0> dec107<0> dec65<1> net064<3> dvdd dvss AN2D1LVT
+.ends ENC_8l12b_v2_tspc
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: AN3D1LVT
+** View name: schematic
+.subckt AN3D1LVT a1 a2 a3 z vdd vss
+m0 net13 a3 vss vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m1 z net11 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m2 net5 a2 net13 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m3 net11 a1 net5 vss nch_lvt l=60e-9 w=195e-9 m=1 nf=1 
+m4 z net11 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m5 net11 a3 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m6 net11 a1 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+m7 net11 a2 vdd vdd pch_lvt l=60e-9 w=260e-9 m=1 nf=1 
+.ends AN3D1LVT
+** End of subcircuit definition.
+
+** Library name: tcbn65lplvt
+** Cell name: ND2D2LVT
+** View name: schematic
+.subckt ND2D2LVT a1 a2 zn vdd vss
+m0 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m1 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m2 zn a2 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m3 zn a1 vdd vdd pch_lvt l=60e-9 w=520e-9 m=1 nf=1 
+m4 net20 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m5 zn a1 net28 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m6 net28 a2 vss vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+m7 zn a1 net20 vss nch_lvt l=60e-9 w=390e-9 m=1 nf=1 
+.ends ND2D2LVT
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: Equalizer_8l12b_v7_enable
+** View name: schematic
+.subckt Equalizer_8l12b_v7_enable dvdd dvss x<0> x<1> x<2> x<4> x<5> x<6> x<7> ctop<6> ctop<5> ctop<4> ctop<3> ctop<2> ctop<1> ctop<0> en outx
+xi6 net6 net020 dvdd dvss INVD1LVT
+xi3 net8 net030 dvdd dvss INVD1LVT
+xc0 ctop<5> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc1 ctop<4> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc2 ctop<3> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc5 ctop<6> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc3 ctop<2> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc4 ctop<1> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xc6 ctop<0> outx dvdd crtmom nv=32 nh=18 w=100e-9 s=100e-9 stm=3 spm=5 mf=1 mismatchflag=1
+xi57 x<1> en net026 dvdd dvss ND2D1LVT
+xi56 x<2> en net027 dvdd dvss ND2D1LVT
+xi55 x<4> en net028 dvdd dvss ND2D1LVT
+xi58 x<0> en net6 dvdd dvss ND2D1LVT
+xi43 x<7> en net8 dvdd dvss ND2D1LVT
+xi66 net025 xeq<4> dvdd dvss INVD8LVT
+xi30 net085 xeq<5> dvdd dvss INVD8LVT
+xi26 net066 xeq<2> dvdd dvss INVD8LVT
+xi47 net033 xeq<3> dvdd dvss INVD8LVT
+xi23 net090 xeq<1> dvdd dvss INVD8LVT
+xi19 net092 net094 dvdd dvss INVD8LVT
+xi16 net098 net096 dvdd dvss INVD8LVT
+xi53<1> x<7> x<6> en net04 dvdd dvss AN3D1LVT
+xi53<0> x<7> x<6> en net04 dvdd dvss AN3D1LVT
+xi0 xeq<6> ctop<6> dvdd dvss INVD16LVT
+xi63 xeq<1> ctop<1> dvdd dvss INVD16LVT
+xi60 xeq<4> ctop<4> dvdd dvss INVD16LVT
+xi59 xeq<5> ctop<5> dvdd dvss INVD16LVT
+xi52 net094 xeq<0> dvdd dvss INVD16LVT
+xi44 net096 xeq<6> dvdd dvss INVD16LVT
+xi61 xeq<3> ctop<3> dvdd dvss INVD16LVT
+xi64 xeq<0> ctop<0> dvdd dvss INVD16LVT
+xi62 xeq<2> ctop<2> dvdd dvss INVD16LVT
+xi54 x<5> en net029 dvdd dvss AN2D1LVT
+xi40<1> xeq<4> net023 net033 dvdd dvss ND2D2LVT
+xi40<0> xeq<4> net023 net033 dvdd dvss ND2D2LVT
+xi65 net04 net029 net025 dvdd dvss ND2D2LVT
+xi73 net015 net090 net021 dvdd dvss ND2D2LVT
+xi10 net026 net6 net063 dvdd dvss ND2D2LVT
+xi69 net021 net066 dvdd dvss INVD4LVT
+xi21 net063 net090 dvdd dvss INVD4LVT
+xi17 net095 net092 dvdd dvss INVD4LVT
+xi13 net099 net098 dvdd dvss INVD4LVT
+xi68 net028 net023 dvdd dvss INVD2LVT
+xi72 net027 net015 dvdd dvss INVD2LVT
+xi27 net04 net085 dvdd dvss INVD2LVT
+xi20 net020 net095 dvdd dvss INVD2LVT
+xi14 net030 net099 dvdd dvss INVD2LVT
+.ends Equalizer_8l12b_v7_enable
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: Equalizer_8l12b_v7_ctrl
+** View name: schematic
+.subckt Equalizer_8l12b_v7_ctrl ain<2> ain<1> ain<0> ain<7> ain<6> ain<5> ain<4> bin<2> bin<1> bin<0> bin<7> bin<6> bin<5> bin<4> cin<2> cin<1> cin<0> cin<7> cin<6> cin<5> cin<4> dvdd dvss din<2> din<1> din<0> din<7> din<6> din<5> din<4> en<3> en<2> en<1> en<0> ein<2> ein<1> ein<0> ein<7> ein<6> ein<5> ein<4> fin<2> fin<1> fin<0> fin<7> fin<6> fin<5> fin<4> gin<2> gin<1> gin<0> gin<7> gin<6> gin<5> gin<4> hin<2> hin<1> hin<0> hin<7> hin<6> hin<5> hin<4> ta tb tc td te tf tg th
+xi3<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at0<6> at0<5> at0<4> at0<3> at0<2> at0<1> at0<0> en<0> ta Equalizer_8l12b_v7_enable
+xi3<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt0<6> bt0<5> bt0<4> bt0<3> bt0<2> bt0<1> bt0<0> en<0> tb Equalizer_8l12b_v7_enable
+xi3<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct0<6> ct0<5> ct0<4> ct0<3> ct0<2> ct0<1> ct0<0> en<0> tc Equalizer_8l12b_v7_enable
+xi3<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt0<6> dt0<5> dt0<4> dt0<3> dt0<2> dt0<1> dt0<0> en<0> td Equalizer_8l12b_v7_enable
+xi3<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et0<6> et0<5> et0<4> et0<3> et0<2> et0<1> et0<0> en<0> te Equalizer_8l12b_v7_enable
+xi3<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft0<6> ft0<5> ft0<4> ft0<3> ft0<2> ft0<1> ft0<0> en<0> tf Equalizer_8l12b_v7_enable
+xi3<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt0<6> gt0<5> gt0<4> gt0<3> gt0<2> gt0<1> gt0<0> en<0> tg Equalizer_8l12b_v7_enable
+xi3<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht0<6> ht0<5> ht0<4> ht0<3> ht0<2> ht0<1> ht0<0> en<0> th Equalizer_8l12b_v7_enable
+xi2<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at1<6> at1<5> at1<4> at1<3> at1<2> at1<1> at1<0> en<1> ta Equalizer_8l12b_v7_enable
+xi2<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt1<6> bt1<5> bt1<4> bt1<3> bt1<2> bt1<1> bt1<0> en<1> tb Equalizer_8l12b_v7_enable
+xi2<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct1<6> ct1<5> ct1<4> ct1<3> ct1<2> ct1<1> ct1<0> en<1> tc Equalizer_8l12b_v7_enable
+xi2<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt1<6> dt1<5> dt1<4> dt1<3> dt1<2> dt1<1> dt1<0> en<1> td Equalizer_8l12b_v7_enable
+xi2<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et1<6> et1<5> et1<4> et1<3> et1<2> et1<1> et1<0> en<1> te Equalizer_8l12b_v7_enable
+xi2<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft1<6> ft1<5> ft1<4> ft1<3> ft1<2> ft1<1> ft1<0> en<1> tf Equalizer_8l12b_v7_enable
+xi2<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt1<6> gt1<5> gt1<4> gt1<3> gt1<2> gt1<1> gt1<0> en<1> tg Equalizer_8l12b_v7_enable
+xi2<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht1<6> ht1<5> ht1<4> ht1<3> ht1<2> ht1<1> ht1<0> en<1> th Equalizer_8l12b_v7_enable
+xi0<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at3<6> at3<5> at3<4> at3<3> at3<2> at3<1> at3<0> en<3> ta Equalizer_8l12b_v7_enable
+xi0<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt3<6> bt3<5> bt3<4> bt3<3> bt3<2> bt3<1> bt3<0> en<3> tb Equalizer_8l12b_v7_enable
+xi0<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct3<6> ct3<5> ct3<4> ct3<3> ct3<2> ct3<1> ct3<0> en<3> tc Equalizer_8l12b_v7_enable
+xi0<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt3<6> dt3<5> dt3<4> dt3<3> dt3<2> dt3<1> dt3<0> en<3> td Equalizer_8l12b_v7_enable
+xi0<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et3<6> et3<5> et3<4> et3<3> et3<2> et3<1> et3<0> en<3> te Equalizer_8l12b_v7_enable
+xi0<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft3<6> ft3<5> ft3<4> ft3<3> ft3<2> ft3<1> ft3<0> en<3> tf Equalizer_8l12b_v7_enable
+xi0<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt3<6> gt3<5> gt3<4> gt3<3> gt3<2> gt3<1> gt3<0> en<3> tg Equalizer_8l12b_v7_enable
+xi0<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht3<6> ht3<5> ht3<4> ht3<3> ht3<2> ht3<1> ht3<0> en<3> th Equalizer_8l12b_v7_enable
+xi1<7> dvdd dvss ain<0> ain<1> ain<2> ain<4> ain<5> ain<6> ain<7> at2<6> at2<5> at2<4> at2<3> at2<2> at2<1> at2<0> en<2> ta Equalizer_8l12b_v7_enable
+xi1<6> dvdd dvss bin<0> bin<1> bin<2> bin<4> bin<5> bin<6> bin<7> bt2<6> bt2<5> bt2<4> bt2<3> bt2<2> bt2<1> bt2<0> en<2> tb Equalizer_8l12b_v7_enable
+xi1<5> dvdd dvss cin<0> cin<1> cin<2> cin<4> cin<5> cin<6> cin<7> ct2<6> ct2<5> ct2<4> ct2<3> ct2<2> ct2<1> ct2<0> en<2> tc Equalizer_8l12b_v7_enable
+xi1<4> dvdd dvss din<0> din<1> din<2> din<4> din<5> din<6> din<7> dt2<6> dt2<5> dt2<4> dt2<3> dt2<2> dt2<1> dt2<0> en<2> td Equalizer_8l12b_v7_enable
+xi1<3> dvdd dvss ein<0> ein<1> ein<2> ein<4> ein<5> ein<6> ein<7> et2<6> et2<5> et2<4> et2<3> et2<2> et2<1> et2<0> en<2> te Equalizer_8l12b_v7_enable
+xi1<2> dvdd dvss fin<0> fin<1> fin<2> fin<4> fin<5> fin<6> fin<7> ft2<6> ft2<5> ft2<4> ft2<3> ft2<2> ft2<1> ft2<0> en<2> tf Equalizer_8l12b_v7_enable
+xi1<1> dvdd dvss gin<0> gin<1> gin<2> gin<4> gin<5> gin<6> gin<7> gt2<6> gt2<5> gt2<4> gt2<3> gt2<2> gt2<1> gt2<0> en<2> tg Equalizer_8l12b_v7_enable
+xi1<0> dvdd dvss hin<0> hin<1> hin<2> hin<4> hin<5> hin<6> hin<7> ht2<6> ht2<5> ht2<4> ht2<3> ht2<2> ht2<1> ht2<0> en<2> th Equalizer_8l12b_v7_enable
+.ends Equalizer_8l12b_v7_ctrl
+** End of subcircuit definition.
+
+** Library name: AP_SerDes
+** Cell name: TX_8l12b
+** View name: schematic
+xi3 avdd_bias avss calin1<3> calin1<2> calin1<1> calin1<0> calin3<3> calin3<2> calin3<1> calin3<0> calin5<3> calin5<2> calin5<1> calin5<0> calin7<3> calin7<2> calin7<1> calin7<0> calip1<3> calip1<2> calip1<1> calip1<0> calip3<3> calip3<2> calip3<1> calip3<0> calip5<3> calip5<2> calip5<1> calip5<0> calip7<3> calip7<2> calip7<1> calip7<0> ibg in_1m in_3m in_5m in_7m ip_1m ip_3m ip_5m ip_7m Bias_v2
+xi59 ain<7> ain<6> ain<5> ain<4> ain<3> ain<2> ain<1> ain<0> ae<7> ae<6> ae<5> ae<4> ae<3> ae<2> ae<1> ae<0> ao<7> ao<6> ao<5> ao<4> ao<3> ao<2> ao<1> ao<0> bin<7> bin<6> bin<5> bin<4> bin<3> bin<2> bin<1> bin<0> be<7> be<6> be<5> be<4> be<3> be<2> be<1> be<0> bo<7> bo<6> bo<5> bo<4> bo<3> bo<2> bo<1> bo<0> cin<7> cin<6> cin<5> cin<4> cin<3> cin<2> cin<1> cin<0> ce<7> ce<6> ce<5> ce<4> ce<3> ce<2> ce<1> ce<0> clktxo clktxe co<7> co<6> co<5> co<4> co<3> co<2> co<1> co<0> din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> de<7> de<6> de<5> de<4> de<3> de<2> de<1> de<0> do<7> do<6> do<5> do<4> do<3> do<2> do<1> do<0> dvdd_mux dvss ein<7> ein<6> ein<5> ein<4> ein<3> ein<2> ein<1> ein<0> ee<7> ee<6> ee<5> ee<4> ee<3> ee<2> ee<1> ee<0> eo<7> eo<6> eo<5> eo<4> eo<3> eo<2> eo<1> eo<0> fin<7> fin<6> fin<5> fin<4> fin<3> fin<2> fin<1> fin<0> fe<7> fe<6> fe<5> fe<4> fe<3> fe<2> fe<1> fe<0> fo<7> fo<6> fo<5> fo<4> fo<3> fo<2> fo<1> fo<0> gin<7> gin<6> gin<5> gin<4> gin<3> gin<2> gin<1> gin<0> ge<7> ge<6> ge<5>
++ge<4> ge<3> ge<2> ge<1> ge<0> go<7> go<6> go<5> go<4> go<3> go<2> go<1> go<0> hin<7> hin<6> hin<5> hin<4> hin<3> hin<2> hin<1> hin<0> he<7> he<6> he<5> he<4> he<3> he<2> he<1> he<0> ho<7> ho<6> ho<5> ho<4> ho<3> ho<2> ho<1> ho<0> MUX2to1_dig
+xi2 a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> avdd_cml avss b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> h<7> h<6> h<5> h<4> h<3> h<2> h<1> h<0> in_1m in_3m in_5m in_7m ip_1m ip_3m ip_5m ip_7m ntx ta tb tc td te tf tg th CML_Driver_PAM8_woCS_v3
+v11 dvdd dvdd_equal DC=0
+v0 avdd avdd_bias DC=0
+v4 avdd avdd_cml DC=0
+v2 dvdd dvdd_enc DC=0
+v12 dvdd dvdd_mux DC=0
+v10 dvdd dvdd_predriver DC=0
+xi51 a<7> a<6> a<5> a<4> a<3> a<2> a<1> a<0> ain<7> ain<6> ain<5> ain<4> ain<3> ain<2> ain<1> ain<0> b<7> b<6> b<5> b<4> b<3> b<2> b<1> b<0> bin<7> bin<6> bin<5> bin<4> bin<3> bin<2> bin<1> bin<0> c<7> c<6> c<5> c<4> c<3> c<2> c<1> c<0> cin<7> cin<6> cin<5> cin<4> cin<3> cin<2> cin<1> cin<0> d<7> d<6> d<5> d<4> d<3> d<2> d<1> d<0> dvdd_predriver dvss din<7> din<6> din<5> din<4> din<3> din<2> din<1> din<0> e<7> e<6> e<5> e<4> e<3> e<2> e<1> e<0> ein<7> ein<6> ein<5> ein<4> ein<3> ein<2> ein<1> ein<0> f<7> f<6> f<5> f<4> f<3> f<2> f<1> f<0> fin<7> fin<6> fin<5> fin<4> fin<3> fin<2> fin<1> fin<0> g<7> g<6> g<5> g<4> g<3> g<2> g<1> g<0> gin<7> gin<6> gin<5> gin<4> gin<3> gin<2> gin<1> gin<0> h<7> h<6> h<5> h<4> h<3> h<2> h<1> h<0> hin<7> hin<6> hin<5> hin<4> hin<3> hin<2> hin<1> hin<0> PreDriver_PAM8_v4
+xi0<1> ae<7> ae<6> ae<5> ae<4> ae<3> ae<2> ae<1> ae<0> be<7> be<6> be<5> be<4> be<3> be<2> be<1> be<0> ce<7> ce<6> ce<5> ce<4> ce<3> ce<2> ce<1> ce<0> clktxe de<7> de<6> de<5> de<4> de<3> de<2> de<1> de<0> dine<11> dine<10> dine<9> dine<8> dine<7> dine<6> dine<5> dine<4> dine<3> dine<2> dine<1> dine<0> dvdd_enc dvss ee<7> ee<6> ee<5> ee<4> ee<3> ee<2> ee<1> ee<0> fe<7> fe<6> fe<5> fe<4> fe<3> fe<2> fe<1> fe<0> ge<7> ge<6> ge<5> ge<4> ge<3> ge<2> ge<1> ge<0> he<7> he<6> he<5> he<4> he<3> he<2> he<1> he<0> ENC_8l12b_v2_tspc
+xi0<0> ao<7> ao<6> ao<5> ao<4> ao<3> ao<2> ao<1> ao<0> bo<7> bo<6> bo<5> bo<4> bo<3> bo<2> bo<1> bo<0> co<7> co<6> co<5> co<4> co<3> co<2> co<1> co<0> clktxo do<7> do<6> do<5> do<4> do<3> do<2> do<1> do<0> dino<11> dino<10> dino<9> dino<8> dino<7> dino<6> dino<5> dino<4> dino<3> dino<2> dino<1> dino<0> dvdd_enc dvss eo<7> eo<6> eo<5> eo<4> eo<3> eo<2> eo<1> eo<0> fo<7> fo<6> fo<5> fo<4> fo<3> fo<2> fo<1> fo<0> go<7> go<6> go<5> go<4> go<3> go<2> go<1> go<0> ho<7> ho<6> ho<5> ho<4> ho<3> ho<2> ho<1> ho<0> ENC_8l12b_v2_tspc
+xi4 ain<2> ain<1> ain<0> ain<7> ain<6> ain<5> ain<4> bin<2> bin<1> bin<0> bin<7> bin<6> bin<5> bin<4> cin<2> cin<1> cin<0> cin<7> cin<6> cin<5> cin<4> dvdd_equal dvss din<2> din<1> din<0> din<7> din<6> din<5> din<4> equa_en<3> equa_en<2> equa_en<1> equa_en<0> ein<2> ein<1> ein<0> ein<7> ein<6> ein<5> ein<4> fin<2> fin<1> fin<0> fin<7> fin<6> fin<5> fin<4> gin<2> gin<1> gin<0> gin<7> gin<6> gin<5> gin<4> hin<2> hin<1> hin<0> hin<7> hin<6> hin<5> hin<4> ta tb tc td te tf tg th Equalizer_8l12b_v7_ctrl
+.END
