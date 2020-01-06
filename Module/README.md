@@ -27,3 +27,6 @@ The modules for the temperature sensor
 | LevelCrossingDetector	| Level Crossing Detector	| To compare the crossing point with the reference clock
 | ResTune_Configure	    | Resistance Tuning Configuration | 	Logic to tune resistance in the DLPF
 
+-------------------------------------
+The modules for the transmitter are in the folder transmitter
+--------------------------------------
