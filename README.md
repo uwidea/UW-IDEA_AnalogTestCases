@@ -6,10 +6,12 @@ Circuit release for Analog Test Cases from UW IDEA project
 * All designs are fabricated and tested
 * Contains hierarchical schematic, documentation, Hspice netlist and sanitized CDL netlist. 
 
+
 ---------
 Circuits
 ---------
-The known good design (KGD) IPs that are illustrated in the following table can be found in the folder AMS_KGD 
+* The known good design (KGD) IPs that are illustrated in the following table can be found in the folder AMS_KGD 
+
 | Circuit       | Architecture               | Design Files           |
 | :------------:| ------------------ | -------------------|
 | SAR_ADC | 12b SAR ADC | SAR_ADC/UW_65nm_SARADC_Apr_2019 |
@@ -22,10 +24,11 @@ The known good design (KGD) IPs that are illustrated in the following table can 
 --------
 Modules
 --------
+* The modules that build up the above circuits are presented below.
+----------------------------
+ The modules for the SAR ADC
+ ---------------------------
 
-The modules that build up the above circuits are presented below.
-
-The modules for the SAR ADC
 | Module       | Cell               | Function           |
 | :-------------:| ------------------ | -------------------|
 | 5b_ADC | 5b coarse SAR ADC | Compute the 5-bit MSBs using merged capacitor switching (MCS) method |
@@ -35,7 +38,9 @@ The modules for the SAR ADC
 | Coarse_Comp_CK | Coarse Comparator Clock Generator  | Generate clock for the comparator |
 | Coarse_SAR_Logic | SAR Logic | Generate control signal for the CDAC and store output digits from comparator |
 
+-------------------------------------
 The modules for the temperature sensor
+--------------------------------------
 | Module       | Cell               | Function           |
 | :-------------:| ------------------ | -------------------|
 | DLPF_RCFilter         | 	CDAC Embedded DLPF | 	The sensing element with embedded CDAC
