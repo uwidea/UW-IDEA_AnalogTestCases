@@ -25,15 +25,11 @@ Circuits
 Modules
 --------
 * The modules that build up the above circuits are included in the folder Module.
-----------------------------
- The modules for the SAR ADC
- ---------------------------
 
--------------------------------------
-The modules for the transmitter
---------------------------------------
+* The modules for the SAR ADC
 
--------------------------------------
-The modules for the temperature sensor
---------------------------------------
+* The modules for the transmitter
+
+* The modules for the temperature sensor
+
 
