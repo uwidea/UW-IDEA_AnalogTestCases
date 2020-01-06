@@ -12,13 +12,13 @@ Circuits
 ---------
 * The known good design (KGD) IPs that are illustrated in the following table can be found in the folder AMS_KGD 
 
-| Circuit       | Architecture               | Design Files           |
+| Circuit       | Architecture               | Design File Location          |
 | :------------:| ------------------ | -------------------|
-| SAR_ADC | 12b SAR ADC | SAR_ADC/UW_65nm_SARADC_Apr_2019 |
-| DLDO | Digital LDO | DLDO/UW_65nm_DLDO_Apr_2019 |
-| MDLL | Multiplying DLL  |	MDLL/UW_65nm_MDLL_Apr_2019 |
-| TX | Transmitter | Transmitter/UW_65nm_Transmitter_Apr_2019 |
-| TS | Temperature Sensor  | TempSensor/UW_65nm_TS_May_2019 |
+| SAR_ADC | 12b SAR ADC | AMS_KGD/SAR_ADC/ |
+| DLDO | Digital LDO | AMS_KGD/DLDO/ |
+| MDLL | Multiplying DLL  |	AMS_KGD/MDLL/|
+| TX | Transmitter | AMS_KGD/Transmitter/ |
+| TS | Temperature Sensor  | AMS_KGD/TempSensor/ |
 
 
 --------
