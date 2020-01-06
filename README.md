@@ -14,11 +14,11 @@ Circuits
 
 | Circuit       | Architecture               | Design File Location          |
 | :------------:| ------------------ | -------------------|
-| SAR_ADC | 12b SAR ADC | AMS_KGD/SAR_ADC/ |
-| DLDO | Digital LDO | AMS_KGD/DLDO/ |
-| MDLL | Multiplying DLL  |	AMS_KGD/MDLL/|
-| TX | Transmitter | AMS_KGD/Transmitter/ |
-| TS | Temperature Sensor  | AMS_KGD/TempSensor/ |
+| SAR_ADC | 12b SAR ADC | AMS_KGD/SAR_ADC |
+| DLDO | Digital LDO | AMS_KGD/DLDO |
+| MDLL | Multiplying DLL  |	AMS_KGD/MDLL|
+| TX | Transmitter | AMS_KGD/Transmitter |
+| TS | Temperature Sensor  | AMS_KGD/TempSensor |
 
 
 --------
