@@ -1,0 +1,138 @@
+.subckt nch_rvt_a2 xb xd xg xs
+xm0 xd xg xs xb nch_mac l=240e-9 w=390e-9 multi=1 
+.ends nch_rvt_a2
+
+.subckt nch_rvt_w2 xb xd xg xs
+m0 xd xg xs xb nch l=60e-9 w=390e-9 m=1 
+.ends nch_rvt_w2
+
+.subckt pch_rvt_w2 xb xd xg xs
+xm0 xd xg xs xb pch_mac l=60e-9 w=520e-9 multi=1 
+.ends pch_rvt_w2
+
+.subckt VCDC ck tl vdd vin vss zn
+xnm1a vss zn vin net09 nch_rvt_a2
+xi1 vss net09 vin tl nch_rvt_a2
+xi2 vss zn vss vss nch_rvt_w2
+xnm0 vss tl ck vss nch_rvt_w2
+xpm0 vdd zn ck vdd pch_rvt_w2
+.ends VCDC
+
+.subckt VCDP ck tl vdd vin vss zn
+xnm1a vss zn vin net09 nch_rvt_a2
+xi1 vss net09 vin tl nch_rvt_a2
+xi2 vss zn vss vss nch_rvt_w2
+xnm0 vss tl ck vss nch_rvt_w2
+xi3 vdd zn vss zn pch_rvt_w2
+.ends VCDP
+
+
+.subckt CKND4 i zn vdd vss
+m_u1_0 zn i vdd vdd pch l=60e-9 w=520e-9 m=1
+m_u1_3 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_2 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u2_1 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_3 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_0 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_2 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+.ends CKND4
+
+.subckt INVD1 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=390e-9 m=1  
+m1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+.ends INVD1
+
+.subckt pch_rvt_w1 xb xd xg xs
+m0 xd xg xs xb pch l=60e-9 w=620e-9 m=1  
+.ends pch_rvt_w1
+
+.subckt PCAP ct vdd vin vss
+xi1 ct net03 vdd vss INVD1
+xi0 vdd net03 vin net03 pch_rvt_w1
+.ends PCAP
+
+.subckt PCAP2 ct vdd vin vss
+xi1 ct net03 vdd vss INVD1
+xi0<1> vdd net03 vin net03 pch_rvt_w1
+xi0<0> vdd net03 vin net03 pch_rvt_w1
+.ends PCAP2
+
+
+.subckt pch_rvt_a2 xb xd xg xs
+xm0 xd xg xs xb pch_mac l=240e-9 w=520e-9 multi=1 
+.ends pch_rvt_a2
+
+.subckt MSNR ain din vdd vss zn
+xi2 vdd net19 ain vdd pch_rvt_a2
+xi3 vss zn ain vss nch_rvt_a2
+xi6<1> vss zn din vss nch_rvt_w2
+xi6<0> vss zn din vss nch_rvt_w2
+xi5<1> vdd zn din net19 pch_rvt_w2
+xi5<0> vdd zn din net19 pch_rvt_w2
+.ends MSNR
+
+.subckt DCAP8 vdd vss
+mi4 vss net9 vss vss nch l=880e-9 w=300e-9 m=1 
+m_u2 net11 net9 vss vss nch l=60e-9 w=300e-9 m=1 
+mi3 vdd net11 vdd vdd pch l=880e-9 w=430e-9 m=1 
+m_u1 net9 net11 vdd vdd pch l=60e-9 w=390e-9 m=1 
+.ends DCAP8
+
+.subckt DCAP16 vdd vss
+mi4 vss net11 vss vss nch l=690e-9 w=300e-9 m=1 
+mi8 vss net11 vss vss nch l=690e-9 w=300e-9 m=1 
+m_u2 net5 net11 vss vss nch l=60e-9 w=300e-9 m=1
+mi7 vss net11 vss vss nch l=690e-9 w=300e-9 m=1 
+mi3 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+mi6 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+m_u1 net11 net5 vdd vdd pch l=60e-9 w=390e-9 m=1 
+mi5 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+.ends DCAP16
+
+
+.TRAN  0.1ns 22ns
+.PRINT TRAN V(ckn) V(vipc) V(vinc) V(cmpp) V(cmpn)
+
+
+xstg1_n2 ckn ctail vdd vinc vss out1p VCDC
+xstg1_n0 ckn ctail vdd vinc vss out1p VCDC
+xstg1_p2 ckn ctail vdd vipc vss out1n VCDC
+xstg1_p0 ckn ctail vdd vipc vss out1n VCDC
+xstg1_n3 ckn ctail vdd vinc vss out1p VCDP
+xstg1_n1 ckn ctail vdd vinc vss out1p VCDP
+xstg1_p3 ckn ctail vdd vipc vss out1n VCDP
+xstg1_p1 ckn ctail vdd vipc vss out1n VCDP
+xckdrv0 clk ckn vdd vss CKND4
+xi7 calp<0> vdd out1n vss PCAP
+xi9 caln<0> vdd out1p vss PCAP
+xi8 caln<1> vdd out1p vss PCAP2
+xi6 calp<1> vdd out1n vss PCAP2
+xstg2_n0 out1p cmpp vdd vss cmpn MSNR
+xstg2_p0 out1n cmpn vdd vss cmpp MSNR
+xi0<3> vdd vss DCAP8
+xi0<2> vdd vss DCAP8
+xi0<1> vdd vss DCAP8
+xi0<0> vdd vss DCAP8
+xi1<1> vdd vss DCAP16
+xi1<0> vdd vss DCAP16
+
+vvdd vdd vss 1.2V
+vvss vss 0 0V
+vvipc vipc vss SIN(0 1.2 1k) 
+vvinc vinc VSS SIN(0 1.2 1k) 
+cvipc vipc vss 2p
+cvinc vinc VSS 2p
+ccmpn cmpn vss 1f
+ccmpp cmpp VSS 1f
+vclk clk vss PULSE(0 1.2 0 10ps 10ps 1ns 2.5n)
+vcalp1 calp<1> vss 1.2
+vcalp0 calp<0> vss 0
+vcaln1 caln<1> vss 1.2
+vcaln0 caln<0> vss 0
+
+.MODEL nch_mac NMOS
+.MODEL pch_mac PMOS
+.MODEL pch PMOS
+.MODEL nch NMOS
+.END
