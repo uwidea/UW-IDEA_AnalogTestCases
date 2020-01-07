@@ -1,0 +1,85 @@
+** Generated for: hspiceD
+** Generated on: Dec  6 00:48:56 2019
+** Design library name: rail_trail
+** Design cell name: VCMP_FAST_golden
+** Design view name: schematic
+
+
+**.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+** Library name: rail_trail
+** Cell name: VCMP_FAST_golden
+** View name: schematic
+
+
+v1 vdd vss 1.2V
+v2 vss 0 0V
+v3 ck vss PULSE(0 1.2 0 0.2ns 0.2ns 0.98ns 200ns)
+v4 vin VSS 1.2V
+v5 vip VSS 0V
+.TRAN  1ps 600ps
+.PRINT TRAN V(ck) V(von)
+
+.
+
+mxi5_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi4_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1
+mxi10_1_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi10_0_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi11_1_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi11_0_xi2_mm0 tl vss vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi7_xi6_1_mm0 vop von vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi6_xi6_1_mm0 von vop vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi7_xi8_1_mm0 vop net8 vss vss nch_lvt l=90e-9 w=390e-9 m=1 
+mxi7_xi8_0_mm0 vop net8 vss vss nch_lvt l=90e-9 w=390e-9 m=1 
+mxi6_xi8_1_mm0 von net10 vss vss nch_lvt l=90e-9 w=390e-9 m=1 
+mxi6_xi8_0_mm0 von net10 vss vss nch_lvt l=90e-9 w=200e-9 m=1 
+mxi5_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi4_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi10_1_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi10_0_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1
+mxi11_1_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi11_0_xnm0_mm0 tl ck vss vss nch_lvt l=60e-9 w=390e-9 m=1 
+mxi4_xnm1a_1_mm1 net8 vip tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi4_xnm1a_0_mm1 net8 vip tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi10_1_xnm1a_1_mm1 net8 vip tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi10_1_xnm1a_0_mm1 net8 vip tl vss nch_lvt l=240e-9 w=200e-9 m=1 
+mxi10_0_xnm1a_1_mm1 net8 vip tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi10_0_xnm1a_0_mm1 net8 vip tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi5_xnm1a_1_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi5_xnm1a_0_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1
+mxi11_1_xnm1a_1_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi11_1_xnm1a_0_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi11_0_xnm1a_1_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi11_0_xnm1a_0_mm1 net10 vin tl vss nch_lvt l=240e-9 w=390e-9 m=1 
+mxi14_1_mmi3 vdd xi14_1_net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+mxi14_1_mmi6 vdd xi14_1_net5 vdd vdd pch l=690e-9 w=430e-9 m=1
+mxi14_1_mmi5 vdd xi14_1_net5 vdd vdd pch l=690e-9 w=430e-9 m=1
+mxi14_1_mm_u1 xi14_1_net11 xi14_1_net5 vdd vdd pch l=60e-9 w=390e-9 m=1 
+mxi14_0_mmi3 vdd xi14_0_net5 vdd vdd pch l=690e-9 w=430e-9 m=1
+mxi14_0_mmi6 vdd xi14_0_net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+mxi14_0_mmi5 vdd xi14_0_net5 vdd vdd pch l=690e-9 w=430e-9 m=1 
+mxi14_0_mm_u1 xi14_0_net11 xi14_0_net5 vdd vdd pch l=60e-9 w=390e-9 m=1 
+mxi4_xpm0_mm0 net8 ck vdd vdd pch l=60e-9 w=520e-9 m=1 
+mxi5_xpm0_mm0 net10 ck vdd vdd pch l=60e-9 w=520e-9 m=1
+mxi14_1_mm_u2 xi14_1_net5 xi14_1_net11 vss vss nch l=60e-9 w=300e-9 m=1 
+mxi14_1_mmi4 vss xi14_1_net11 vss vss nch l=690e-9 w=300e-9 m=1
+mxi14_1_mmi8 vss xi14_1_net11 vss vss nch l=690e-9 w=300e-9 m=1
+mxi14_1_mmi7 vss xi14_1_net11 vss vss nch l=690e-9 w=300e-9 m=1 
+mxi14_0_mm_u2 xi14_0_net5 xi14_0_net11 vss vss nch l=60e-9 w=300e-9 m=1
+mxi14_0_mmi4 vss xi14_0_net11 vss vss nch l=690e-9 w=300e-9 m=1 
+mxi14_0_mmi8 vss xi14_0_net11 vss vss nch l=690e-9 w=300e-9 m=1
+mxi14_0_mmi7 vss xi14_0_net11 vss vss nch l=690e-9 w=300e-9 m=1 
+mxi7_xi5_1_mm0 vop von xi7_cn vdd pch_lvt l=60e-9 w=520e-9 m=1 
+mxi7_xi5_0_mm0 vop von xi7_cn vdd pch_lvt l=60e-9 w=520e-9 m=1
+mxi7_xi7_1_mm0 xi7_cn net8 vdd vdd pch_lvt l=90e-9 w=520e-9 m=1
+mxi7_xi7_0_mm0 xi7_cn net8 vdd vdd pch_lvt l=90e-9 w=520e-9 m=1
+mxi6_xi5_1_mm0 von vop xi6_cn vdd pch_lvt l=60e-9 w=520e-9 m=1 
+mxi6_xi5_0_mm0 von vop xi6_cn vdd pch_lvt l=60e-9 w=520e-9 m=1
+mxi6_xi7_1_mm0 xi6_cn net10 vdd vdd pch_lvt l=90e-9 w=520e-9 m=1 
+mxi6_xi7_0_mm0 xi6_cn net10 vdd vdd pch_lvt l=90e-9 w=520e-9 m=1
+.MODEL nch NMOS
+.MODEL pch PMOS
+.MODEL pch_lvt PMOS
+.MODEL nch_lvt NMOS
+.END
