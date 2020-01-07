@@ -1,0 +1,122 @@
+** Generated for: hspiceD
+** Design cell name: BTSW100
+** Design view name: schematic
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/home/lab.apps/vlsiapps/kits/tsmc/N65LP/models/hspice/toplevel.l" tt_lib
+
+.subckt TIEL zn vdd vss
+m_u2 zn net5 vss vss nch l=60e-9 w=410e-9 m=1 
+m_u1 net5 net5 vdd vdd pch l=60e-9 w=540e-9 m=1 
+.ends TIEL
+
+.subckt nch_rvt_w2 xb xd xg xs
+m0 xd xg xs xb nch l=60e-9 w=390e-9 m=1 
+.ends nch_rvt_w2
+
+.subckt NSW05 gt neg pos vdd vss
+xi1 vss neg gt pos nch_rvt_w2
+.ends NSW05
+
+.subckt nch_rvt_w1 xb xd xg xs
+m0 xd xg xs xb nch l=60e-9 w=460e-9 m=1 
+.ends nch_rvt_w1
+
+.subckt NSW0 gt neg pos vdd vss
+xi1<4> vss neg gt pos nch_rvt_w1
+xi1<3> vss neg gt pos nch_rvt_w1
+xi1<2> vss neg gt pos nch_rvt_w1
+xi1<1> vss neg gt pos nch_rvt_w1
+xi1<0> vss neg gt pos nch_rvt_w1
+.ends NSW0
+
+
+.subckt pch_rvt_w2 xb xd xg xs
+xm0 xd xg xs xb pch_mac l=60e-9 w=520e-9 multi=1 
+.ends pch_rvt_w2
+
+
+.subckt PSW05 gt neg pos vdd vss
+xi1 vdd pos gt neg pch_rvt_w2
+.ends PSW05
+
+.subckt CKND0 i zn vdd vss
+m_u2 zn i vss vss nch l=60e-9 w=150e-9 m=1 
+m_u1 zn i vdd vdd pch l=60e-9 w=260e-9 m=1 
+.ends CKND0
+
+.subckt pch_rvt_w1 xb xd xg xs
+m0 xd xg xs xb pch l=60e-9 w=620e-9 m=1 
+.ends pch_rvt_w1
+
+.subckt CDC1 a1 a2 cap vdd vo vss
+xi3<1> cap cap vo vdd pch_rvt_w1
+xi3<0> cap cap vo vdd pch_rvt_w1
+xi1<1> cap vo a1 cap pch_rvt_w1
+xi1<0> cap vo a1 cap pch_rvt_w1
+xi0<1> vss vo vdd dl<1> nch_rvt_w1
+xi0<0> vss vo vdd dl<0> nch_rvt_w1
+xi2<1> vss dl<1> a2 vss nch_rvt_w1
+xi2<0> vss dl<0> a2 vss nch_rvt_w1
+.ends CDC1
+
+.subckt TIEH z vdd vss
+m_u2 net7 net7 vss vss nch l=60e-9 w=410e-9 m=1
+m_u1 z net7 vdd vdd pch l=60e-9 w=540e-9 m=1
+.ends TIEH
+
+.subckt CKND1 i zn vdd vss
+m_u2 zn i vss vss nch l=60e-9 w=310e-9 m=1
+m_u1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1 
+.ends CKND1
+
+.subckt DCAP4 vdd vss
+mi4 vss net9 vss vss nch l=80e-9 w=330e-9 m=1 
+m_u2 net11 net9 vss vss nch l=60e-9 w=330e-9 m=1
+mi3 vdd net11 vdd vdd pch l=80e-9 w=460e-9 m=1
+m_u1 net9 net11 vdd vdd pch l=60e-9 w=460e-9 m=1
+.ends DCAP4
+
+.subckt BTSW50 vdd vss ck vin vout
+xi5 net011 vdd vss TIEL
+xi0 net8 vin capn vdd vss NSW05
+xi8 ckd net05 capn vdd vss NSW05
+xi4 ckn capn net011 vdd vss NSW05
+xi1 net8 vout vin vdd vss NSW0
+xi7 ckd net08 net05 vdd vss PSW05
+xi3 ckn ckd vdd vss CKND0
+**xc0 capp capn vss crtmom nv=54 nh=8 w=100e-9 s=100e-9 **35f
+xc0 capp capn 35fF
+xi6 net05 ckn capp vdd net8 vss CDC1
+xi9 net08 vdd vss TIEH
+xi2 ck ckn vdd vss CKND1
+xi10 vdd vss DCAP4
+.END
+
+**cell: tb 
+btsw1 vdd vss ckc vin smpn BTSW100
+btsw0 vdd vss ckc vip smpp BTSW100
+
+vckc ckc vss pulse(0 1.2 10ps 10ps 1ns 7.8125ns)
+
+vvin vin vss sin(0 1.2 61M)
+vvip vip vss sin(0 1.2 61M)
+cvin vin vss 2p
+cvip vip vss 2p
+
+csmpn smpn vss 100f
+csmpp smpp vss 100f
+
+.TRAN  1ps 1.08us
+.PRINT TRAN V(smpn) V(smpp)
+
+**spectrum_enob = spectrumMeasurement((vtime('tran "/smpn") - vtime('tran "/smpp")) t 1.64e-08 1.016e-06 128 925900 4.741e+08 0 "Rectangular" 0 0 1 "enob")
+**spectrum_sfdr = spectrumMeasurement((vtime('tran "/smpn") - vtime('tran "/smpp")) t 1.64e-08 1.016e-06 128 925900 4.741e+08 0 "Rectangular" 0 0 1 "sfdr")
+.MODEL pch PMOS
+.MODEL nch NMOS
+.END
