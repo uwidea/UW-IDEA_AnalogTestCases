@@ -1,0 +1,527 @@
+** Generated for: hspiceD
+** Generated on: Dec 10 00:14:29 2019
+** Design library name: rail_trail
+** Design cell name: tb_adc5b
+** Design view name: schematic_flat
+
+
+.subckt nch_rvt_w1 xb xd xg xs
+m0 xd xg xs xb nch l=60e-9 w=460e-9 m=1
+.ends nch_rvt_w1
+
+.subckt NSW0 gt neg pos vdd vss
+xi1<4> vss neg gt pos nch_rvt_w1
+xi1<3> vss neg gt pos nch_rvt_w1
+xi1<2> vss neg gt pos nch_rvt_w1
+xi1<1> vss neg gt pos nch_rvt_w1
+xi1<0> vss neg gt pos nch_rvt_w1
+.ends NSW0
+
+.subckt INVD0 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=195e-9 m=1 
+m1 zn i vdd vdd pch l=60e-9 w=260e-9 m=1 
+.ends INVD0
+
+.subckt CKND2 i zn vdd vss
+m_u1_0 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u2_1 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_0 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+.ends CKND2
+
+.subckt GCAP neg pos
+c0 pos neg 35f
+.ends GCAP
+
+.subckt pch_rvt_w1 xb xd xg xs
+m0 xd xg xs xb pch l=60e-9 w=620e-9 m=1  
+.ends pch_rvt_w1
+
+.subckt CDC1 a1 a2 cap vdd vo vss
+xi3<1> cap cap vo vdd pch_rvt_w1
+xi3<0> cap cap vo vdd pch_rvt_w1
+xi1<1> cap vo a1 cap pch_rvt_w1
+xi1<0> cap vo a1 cap pch_rvt_w1
+xi0<1> vss vo vdd dl<1> nch_rvt_w1
+xi0<0> vss vo vdd dl<0> nch_rvt_w1
+xi2<1> vss dl<1> a2 vss nch_rvt_w1
+xi2<0> vss dl<0> a2 vss nch_rvt_w1
+.ends CDC1
+
+.subckt DCAP vdd vss
+m_u2 net7 net5 vss vss nch l=60e-9 w=345e-9 m=1  
+m_u1 net5 net7 vdd vdd pch l=60e-9 w=485e-9 m=1  
+.ends DCAP
+
+.subckt TIEH z vdd vss
+m_u2 net7 net7 vss vss nch l=60e-9 w=410e-9 m=1  
+m_u1 z net7 vdd vdd pch l=60e-9 w=540e-9 m=1  
+.ends TIEH
+
+.subckt PSW0 gt neg pos vdd vss
+xi1<5> vdd pos gt neg pch_rvt_w1
+xi1<4> vdd pos gt neg pch_rvt_w1
+xi1<3> vdd pos gt neg pch_rvt_w1
+xi1<2> vdd pos gt neg pch_rvt_w1
+xi1<1> vdd pos gt neg pch_rvt_w1
+xi1<0> vdd pos gt neg pch_rvt_w1
+.ends PSW0
+
+.subckt TIEL zn vdd vss
+m_u2 zn net5 vss vss nch l=60e-9 w=410e-9 m=1  
+m_u1 net5 net5 vdd vdd pch l=60e-9 w=540e-9 m=1  
+.ends TIEL
+
+.subckt BTSW_V1 vdd vss ck vin vout
+xpdn_sw0 ckn xvss capn vdd vss NSW0
+xtin_sw0 ckd upin capn vdd vss NSW0
+xinp_sw0 vbst vin capn vdd vss NSW0
+xsmp_sw2 vbst vout vin vdd vss NSW0
+xsmp_sw1 vbst vout vin vdd vss NSW0
+xsmp_sw0 vbst vout vin vdd vss NSW0
+xck_del ckn ckd vdd vss INVD0
+xck_drv ck ckn vdd vss CKND2
+xcap0 capn capp GCAP
+xchinv1 upin ckn capp vdd vbst vss CDC1
+xchinv0 upin ckn capp vdd vbst vss CDC1
+xax2 vdd vss DCAP
+xax1 vdd vss DCAP
+xax0 vdd vss DCAP
+xbvdd0 xvdd vdd vss TIEH
+xpup_sw0 ckd xvdd upin vdd vss PSW0
+xbvss0 xvss vdd vss TIEL
+.ends BTSW_V1
+
+.subckt DCAP4 vdd vss
+mi4 vss net9 vss vss nch l=80e-9 w=330e-9 m=1  
+m_u2 net11 net9 vss vss nch l=60e-9 w=330e-9 m=1  
+mi3 vdd net11 vdd vdd pch l=80e-9 w=460e-9 m=1  
+m_u1 net9 net11 vdd vdd pch l=60e-9 w=460e-9 m=1  
+.ends DCAP4
+
+.subckt BUFFD1 i z vdd vss
+m0 net5 i vss vss nch l=60e-9 w=195e-9 m=1  
+m1 z net5 vss vss nch l=60e-9 w=390e-9 m=1  
+m2 net5 i vdd vdd pch l=60e-9 w=260e-9 m=1  
+m3 z net5 vdd vdd pch l=60e-9 w=520e-9 m=1  
+.ends BUFFD1
+
+.subckt INVD1 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=390e-9 m=1  
+m1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+.ends INVD1
+
+.subckt SWCP01 vdd vss sw_n sw_p vrefp vrefn vtop0
+xaxl0 vdd vss DCAP4
+xdrv_n sw_n dr_n vdd vss BUFFD1
+xdrv_p sw_p dr_p vdd vss INVD1
+xsw_vrp dr_p vbtm vrefp vdd vss PSW0
+xsw_vrn dr_n vbtm vrefn vdd vss NSW0
+xi0 xvdd vdd vss TIEH
+.ends SWCP01
+
+.subckt SWCP04 vdd vss sw_n sw_p vrefp vrefn vtop0
+xbvss0 xvss vdd vss TIEL
+xaxl0 vdd vss DCAP4
+xdrv_n sw_n dr_n vdd vss BUFFD1
+xdrv_p sw_p dr_p vdd vss INVD1
+xsw_vrp dr_p vbtm vrefp vdd vss PSW0
+xsw_vrn dr_n vbtm vrefn vdd vss NSW0
+.ends SWCP04
+
+.subckt DCAP16 vdd vss
+mi4 vss net11 vss vss nch l=690e-9 w=300e-9 m=1  
+mi8 vss net11 vss vss nch l=690e-9 w=300e-9 m=1  
+m_u2 net5 net11 vss vss nch l=60e-9 w=300e-9 m=1  
+mi7 vss net11 vss vss nch l=690e-9 w=300e-9 m=1  
+mi3 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1  
+mi6 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1  
+m_u1 net11 net5 vdd vdd pch l=60e-9 w=390e-9 m=1  
+mi5 vdd net5 vdd vdd pch l=690e-9 w=430e-9 m=1  
+.ends DCAP16
+
+.subckt DCAP32 vdd vss
+mi38 vss net11 vss vss nch l=975e-9 w=300e-9 m=1  
+mi6 vss net11 vss vss nch l=975e-9 w=300e-9 m=1  
+mi39 vss net11 vss vss nch l=975e-9 w=300e-9 m=1  
+mi37 vss net11 vss vss nch l=975e-9 w=300e-9 m=1  
+m_u2 net5 net11 vss vss nch l=60e-9 w=300e-9 m=1  
+mi36 vss net11 vss vss nch l=975e-9 w=300e-9 m=1  
+mi33 vdd net5 vdd vdd pch l=975e-9 w=430e-9 m=1  
+m_u1 net11 net5 vdd vdd pch l=60e-9 w=390e-9 m=1  
+mi34 vdd net5 vdd vdd pch l=975e-9 w=430e-9 m=1  
+mi35 vdd net5 vdd vdd pch l=975e-9 w=430e-9 m=1  
+mi32 vdd net5 vdd vdd pch l=975e-9 w=430e-9 m=1  
+mi26 vdd net5 vdd vdd pch l=975e-9 w=430e-9 m=1  
+.ends DCAP32
+
+.subckt CDAC4b ctop sw_n<3> sw_n<2> sw_n<1> sw_n<0> sw_p<3> sw_p<2> sw_p<1> sw_p<0> vdd vrefn vrefp vss
+xi3 vdd vss sw_n<3> sw_p<3> vrefp vrefn ctop SWCP01
+xi0 vdd vss sw_n<0> sw_p<0> vrefp vrefn ctop SWCP01
+xi2 vdd vss sw_n<2> sw_p<2> vrefp vrefn ctop SWCP04
+xi1 vdd vss sw_n<1> sw_p<1> vrefp vrefn ctop SWCP04
+xi4 vdd vss DCAP16
+xi5 net2 vdd vss TIEH
+xi6 net1 vdd vss TIEH
+xi9 net4 vdd vss TIEL
+xi11 vdd vss DCAP32
+.ends CDAC4b
+
+.subckt BUFFD2 i z vdd vss
+m0 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m1 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m2 net11 i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m3 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m4 net11 i vss vss nch l=60e-9 w=390e-9 m=1  
+m5 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+.ends BUFFD2
+
+.subckt CKND4 i zn vdd vss
+m_u1_0 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_3 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_2 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u1_1 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m_u2_1 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_3 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_0 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+m_u2_2 zn i vss vss nch l=60e-9 w=310e-9 m=1  
+.ends CKND4
+
+.subckt DCAP8 vdd vss
+mi4 vss net9 vss vss nch l=880e-9 w=300e-9 m=1  
+m_u2 net11 net9 vss vss nch l=60e-9 w=300e-9 m=1  
+mi3 vdd net11 vdd vdd pch l=880e-9 w=430e-9 m=1  
+m_u1 net9 net11 vdd vdd pch l=60e-9 w=390e-9 m=1  
+.ends DCAP8
+
+.subckt nch_rvt_a2 xb xd xg xs
+m0 xd xg xs xb nch_mac l=240e-9 w=390e-9 m=1 
+.ends nch_rvt_a2
+
+.subckt nch_rvt_w2 xb xd xg xs
+m0 xd xg xs xb nch l=60e-9 w=390e-9 m=1  
+.ends nch_rvt_w2
+
+.subckt pch_rvt_w2 xb xd xg xs
+m0 xd xg xs xb pch_mac l=60e-9 w=520e-9 m=1  
+.ends pch_rvt_w2
+
+.subckt VCDC2 ck tl vdd vin vss zn
+xnm1a<1> vss zn vin tl nch_rvt_a2
+xnm1a<0> vss zn vin tl nch_rvt_a2
+xi2 vss tl vss vss nch_rvt_w2
+xnm0 vss tl ck vss nch_rvt_w2
+xpm0 vdd zn ck vdd pch_rvt_w2
+.ends VCDC2
+
+.subckt VCDP2 ck tl vdd vin vss zn
+xnm1a<1> vss zn vin tl nch_rvt_a2
+xnm1a<0> vss zn vin tl nch_rvt_a2
+xi2 vss tl vss vss nch_rvt_w2
+xnm0 vss tl ck vss nch_rvt_w2
+m0 zn vss zn vdd pch_mac l=60e-9 w=250e-9 m=1  
+.ends VCDP2
+
+.subckt pch_rvt_w1_schematic xb xd xg xs
+m0 xd xg xs xb pch l=60e-9 w=620e-9 m=1 
+.ends pch_rvt_w1_schematic
+
+.subckt PCAP ct vdd vin vss
+xi1 ct net03 vdd vss INVD1
+xi0 vdd net03 vin net03 pch_rvt_w1_schematic
+.ends PCAP
+
+.subckt PCAP2 ct vdd vin vss
+xi1 ct net03 vdd vss INVD1
+xi0<1> vdd net03 vin net03 pch_rvt_w1_schematic
+xi0<0> vdd net03 vin net03 pch_rvt_w1_schematic
+.ends PCAP2
+
+.subckt pch_rvt_a2 xb xd xg xs
+m0 xd xg xs xb pch_mac l=240e-9 w=520e-9 m=1   
+.ends pch_rvt_a2
+
+.subckt MSNR ain din vdd vss zn
+xi2 vdd net19 ain vdd pch_rvt_a2
+xi3 vss zn ain vss nch_rvt_a2
+xi6<1> vss zn din vss nch_rvt_w2
+xi6<0> vss zn din vss nch_rvt_w2
+xi5<1> vdd zn din net19 pch_rvt_w2
+xi5<0> vdd zn din net19 pch_rvt_w2
+.ends MSNR
+
+.subckt VCMP_PHO vdd vss vipc vinc clk calp<1> calp<0> caln<1> caln<0> cmpp cmpn
+xckdrv0 clk ckn vdd vss CKND4
+xaxr0 vdd vss DCAP8
+xaxl0 vdd vss DCAP8
+xaxr2 vdd vss DCAP16
+xaxl2 vdd vss DCAP16
+xstg1_n0 ckn ctail vdd vinc vss out1p VCDC2
+xstg1_p0 ckn ctail vdd vipc vss out1n VCDC2
+xstg1_n1 ckn ctail vdd vinc vss out1p VCDP2
+xstg1_p1 ckn ctail vdd vipc vss out1n VCDP2
+xstg1_n4 caln<0> vdd out1p vss PCAP
+xstg1_p4 calp<0> vdd out1n vss PCAP
+xstg1_n5 caln<1> vdd out1p vss PCAP2
+xstg1_p5 calp<1> vdd out1n vss PCAP2
+xstg2_n0 out1p cmpp vdd vss cmpn MSNR
+xstg2_p0 out1n cmpn vdd vss cmpp MSNR
+.ends VCMP_PHO
+
+.subckt DFCNQD1 d cp cdn q vdd vss
+mi4 net53 net5 vss vss nch l=60e-9 w=350e-9 m=1  
+m0 net81 net51 net9 vss nch l=60e-9 w=390e-9 m=1  
+m1 net37 net97 vss vss nch l=60e-9 w=160e-9 m=1  
+mi29 net51 net5 net44 vss nch l=60e-9 w=150e-9 m=1  
+mi15 net37 net63 net51 vss nch l=60e-9 w=160e-9 m=1  
+m2 net63 net5 vss vss nch l=60e-9 w=195e-9 m=1  
+mi5 net97 d net53 vss nch l=60e-9 w=350e-9 m=1  
+mi49 net20 cdn vss vss nch l=60e-9 w=150e-9 m=1  
+mi26 net44 net81 vss vss nch l=60e-9 w=150e-9 m=1  
+mi48 net17 net37 net20 vss nch l=60e-9 w=150e-9 m=1  
+m3 q net81 vss vss nch l=60e-9 w=390e-9 m=1  
+m4 net9 cdn vss vss nch l=60e-9 w=390e-9 m=1  
+m5 net5 cp vss vss nch l=60e-9 w=195e-9 m=1  
+mi47 net97 net63 net17 vss nch l=60e-9 w=150e-9 m=1  
+m6 net5 cp vdd vdd pch l=60e-9 w=260e-9 m=1  
+m7 net63 net5 vdd vdd pch l=60e-9 w=260e-9 m=1  
+mi43 net101 net37 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi6 net97 d net100 vdd pch l=60e-9 w=460e-9 m=1  
+m8 q net81 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi44 net101 cdn vdd vdd pch l=60e-9 w=150e-9 m=1  
+m9 net37 net97 vdd vdd pch l=60e-9 w=220e-9 m=1  
+m10 net81 net51 vdd vdd pch l=60e-9 w=400e-9 m=1  
+mi16 net37 net5 net51 vdd pch l=60e-9 w=245e-9 m=1  
+mi24 net72 net81 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi28 net51 net63 net72 vdd pch l=60e-9 w=150e-9 m=1  
+mi45 net97 net5 net101 vdd pch l=60e-9 w=150e-9 m=1  
+mi7 net100 net63 vdd vdd pch l=60e-9 w=460e-9 m=1  
+m11 net81 cdn vdd vdd pch l=60e-9 w=400e-9 m=1  
+.ends DFCNQD1
+
+.subckt DFCND1 d cp cdn q qn vdd vss
+m0 qn net33 vss vss nch l=60e-9 w=390e-9 m=1  
+mi4 net53 net5 vss vss nch l=60e-9 w=350e-9 m=1  
+mi18 net33 net5 net79 vss nch l=60e-9 w=150e-9 m=1  
+m1 net95 net79 net9 vss nch l=60e-9 w=390e-9 m=1  
+m2 net81 net25 vss vss nch l=60e-9 w=190e-9 m=1  
+mi15 net81 net67 net79 vss nch l=60e-9 w=190e-9 m=1  
+m3 net33 net95 vss vss nch l=60e-9 w=195e-9 m=1  
+m4 net67 net5 vss vss nch l=60e-9 w=195e-9 m=1  
+mi5 net25 d net53 vss nch l=60e-9 w=350e-9 m=1  
+mi49 net20 cdn vss vss nch l=60e-9 w=150e-9 m=1  
+mi48 net17 net81 net20 vss nch l=60e-9 w=150e-9 m=1  
+m5 q net95 vss vss nch l=60e-9 w=390e-9 m=1  
+m6 net9 cdn vss vss nch l=60e-9 w=390e-9 m=1  
+m7 net5 cp vss vss nch l=60e-9 w=195e-9 m=1  
+mi47 net25 net67 net17 vss nch l=60e-9 w=150e-9 m=1  
+m8 net33 net95 vdd vdd pch l=60e-9 w=260e-9 m=1  
+m9 net5 cp vdd vdd pch l=60e-9 w=260e-9 m=1  
+m10 net67 net5 vdd vdd pch l=60e-9 w=260e-9 m=1  
+mi43 net72 net81 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi6 net25 d net104 vdd pch l=60e-9 w=460e-9 m=1  
+m11 qn net33 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m12 q net95 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi44 net72 cdn vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi17 net33 net67 net79 vdd pch l=60e-9 w=150e-9 m=1  
+m13 net81 net25 vdd vdd pch l=60e-9 w=220e-9 m=1  
+m14 net95 net79 vdd vdd pch l=60e-9 w=365e-9 m=1  
+mi16 net81 net5 net79 vdd pch l=60e-9 w=245e-9 m=1  
+mi45 net25 net5 net72 vdd pch l=60e-9 w=150e-9 m=1  
+mi7 net104 net67 vdd vdd pch l=60e-9 w=460e-9 m=1  
+m15 net95 cdn vdd vdd pch l=60e-9 w=365e-9 m=1  
+.ends DFCND1
+
+.subckt BUFFD4 i z vdd vss
+m0 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m1 net11 i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m2 net11 i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m3 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m4 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m5 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m6 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m7 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m8 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m9 net11 i vss vss nch l=60e-9 w=390e-9 m=1  
+m10 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m11 net11 i vss vss nch l=60e-9 w=390e-9 m=1  
+.ends BUFFD4
+
+.subckt OR3D1 a1 a2 a3 z vdd vss
+m0 net13 a1 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m1 net9 a3 net1 vdd pch l=60e-9 w=520e-9 m=1  
+m2 z net9 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m3 net1 a2 net13 vdd pch l=60e-9 w=520e-9 m=1  
+m4 net9 a2 vss vss nch l=60e-9 w=195e-9 m=1  
+m5 net9 a1 vss vss nch l=60e-9 w=195e-9 m=1  
+m6 z net9 vss vss nch l=60e-9 w=390e-9 m=1  
+m7 net9 a3 vss vss nch l=60e-9 w=195e-9 m=1  
+.ends OR3D1
+
+.subckt DFCNQD2 d cp cdn q vdd vss
+m0 net79 cp vss vss nch l=60e-9 w=195e-9 m=1  
+m1 net61 cdn vss vss nch l=60e-9 w=190e-9 m=1  
+m2 net11 net81 net37 vss nch l=60e-9 w=190e-9 m=1  
+mi4 net53 net79 vss vss nch l=60e-9 w=350e-9 m=1  
+m3 net97 net25 vss vss nch l=60e-9 w=190e-9 m=1  
+m4 net11 net81 net61 vss nch l=60e-9 w=190e-9 m=1  
+mi29 net81 net79 net44 vss nch l=60e-9 w=150e-9 m=1  
+m5 net37 cdn vss vss nch l=60e-9 w=190e-9 m=1  
+mi15 net97 net83 net81 vss nch l=60e-9 w=170e-9 m=1  
+m6 net83 net79 vss vss nch l=60e-9 w=195e-9 m=1  
+mi5 net25 d net53 vss nch l=60e-9 w=350e-9 m=1  
+mi49 net21 cdn vss vss nch l=60e-9 w=150e-9 m=1  
+mi26 net44 net11 vss vss nch l=60e-9 w=150e-9 m=1  
+mi48 net13 net97 net21 vss nch l=60e-9 w=150e-9 m=1  
+m7 q net11 vss vss nch l=60e-9 w=390e-9 m=1  
+m8 q net11 vss vss nch l=60e-9 w=390e-9 m=1  
+mi47 net25 net83 net13 vss nch l=60e-9 w=150e-9 m=1  
+mi33 net84 net11 vdd vdd pch l=60e-9 w=150e-9 m=1  
+m9 q net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi43 net125 net97 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi6 net25 d net124 vdd pch l=60e-9 w=460e-9 m=1  
+m10 net11 net81 vdd vdd pch l=60e-9 w=440e-9 m=1  
+m11 q net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi44 net125 cdn vdd vdd pch l=60e-9 w=150e-9 m=1  
+m12 net97 net25 vdd vdd pch l=60e-9 w=150e-9 m=1  
+m13 net79 cp vdd vdd pch l=60e-9 w=260e-9 m=1  
+mi16 net97 net79 net81 vdd pch l=60e-9 w=370e-9 m=1  
+m14 net11 net81 vdd vdd pch l=60e-9 w=440e-9 m=1  
+m15 net11 cdn vdd vdd pch l=60e-9 w=440e-9 m=1  
+m16 net83 net79 vdd vdd pch l=60e-9 w=260e-9 m=1  
+mi32 net81 net83 net84 vdd pch l=60e-9 w=150e-9 m=1  
+mi45 net25 net79 net125 vdd pch l=60e-9 w=150e-9 m=1  
+m17 net11 cdn vdd vdd pch l=60e-9 w=440e-9 m=1  
+mi7 net124 net83 vdd vdd pch l=60e-9 w=460e-9 m=1  
+.ends DFCNQD2
+
+.subckt DFQD1 d cp q vdd vss
+m0 net7 net13 vss vss nch l=60e-9 w=390e-9 m=1  
+mi4 net24 net63 vss vss nch l=60e-9 w=370e-9 m=1  
+mi56 net37 net7 vss vss nch l=60e-9 w=150e-9 m=1  
+m1 net11 net67 vss vss nch l=60e-9 w=390e-9 m=1  
+mi50 net11 net25 net13 vss nch l=60e-9 w=190e-9 m=1  
+m2 net25 net63 vss vss nch l=60e-9 w=195e-9 m=1  
+mi5 net67 d net24 vss nch l=60e-9 w=370e-9 m=1  
+m3 net63 cp vss vss nch l=60e-9 w=195e-9 m=1  
+mi49 net13 net63 net37 vss nch l=60e-9 w=150e-9 m=1  
+mi48 net9 net11 vss vss nch l=60e-9 w=150e-9 m=1  
+m4 q net7 vss vss nch l=60e-9 w=390e-9 m=1  
+mi47 net67 net25 net9 vss nch l=60e-9 w=150e-9 m=1  
+m5 net7 net13 vdd vdd pch l=60e-9 w=520e-9 m=1  
+m6 net25 net63 vdd vdd pch l=60e-9 w=260e-9 m=1  
+mi43 net56 net11 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi6 net67 d net49 vdd pch l=60e-9 w=460e-9 m=1  
+m7 net63 cp vdd vdd pch l=60e-9 w=260e-9 m=1  
+m8 q net7 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi57 net13 net25 net72 vdd pch l=60e-9 w=150e-9 m=1  
+m9 net11 net67 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi52 net11 net63 net13 vdd pch l=60e-9 w=260e-9 m=1  
+mi51 net72 net7 vdd vdd pch l=60e-9 w=150e-9 m=1  
+mi45 net67 net63 net56 vdd pch l=60e-9 w=150e-9 m=1  
+mi7 net49 net25 vdd vdd pch l=60e-9 w=460e-9 m=1  
+.ends DFQD1
+
+.subckt INVD2 i zn vdd vss
+m0 zn i vss vss nch l=60e-9 w=390e-9 m=1  
+m1 zn i vss vss nch l=60e-9 w=390e-9 m=1  
+m2 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+m3 zn i vdd vdd pch l=60e-9 w=520e-9 m=1  
+.ends INVD2
+
+.subckt DEL005 i z vdd vss
+m0 z net11 vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi3 net5 i vdd vdd pch l=60e-9 w=520e-9 m=1  
+mi10 net11 i net5 vdd pch l=60e-9 w=520e-9 m=1  
+mi13 net5 i vss vss nch l=60e-9 w=390e-9 m=1  
+m1 z net11 vss vss nch l=60e-9 w=390e-9 m=1  
+mi12 net11 i net5 vss nch l=60e-9 w=390e-9 m=1  
+.ends DEL005
+
+.subckt NR2D0 a1 a2 zn vdd vss
+m0 zn a2 vss vss nch l=60e-9 w=195e-9 m=1 
+m1 zn a1 vss vss nch l=60e-9 w=195e-9 m=1  
+m2 net13 a2 vdd vdd pch l=60e-9 w=260e-9 m=1  
+m3 zn a1 net13 vdd pch l=60e-9 w=260e-9 m=1  
+.ends NR2D0
+
+.subckt SAR5LG ck_adc ck_out cmpn cmpp cmp_ck dout<4> dout<3> dout<2> dout<1> dout<0> sw_n_n<3> sw_n_n<2> sw_n_n<1> sw_n_n<0> sw_n_p<3> sw_n_p<2> sw_n_p<1> sw_n_p<0> sw_p_n<3> sw_p_n<2> sw_p_n<1> sw_p_n<0> sw_p_p<3> sw_p_p<2> sw_p_p<1> sw_p_p<0> vdd vss
+xi16 l1 vdd vss TIEH
+xi58 clk2 valid rst clk3 vdd vss DFCNQD1
+xi59 clk3 valid rst clk4 vdd vss DFCNQD1
+xi57 clk1 valid rst clk2 vdd vss DFCNQD1
+xi61 l1 valid rst clk1 vdd vss DFCNQD1
+xi39 cmppb clk4 rst sw_p_p<0> sw_p_n<0> vdd vss DFCND1
+xi38 cmpnb clk4 rst sw_n_p<0> sw_n_n<0> vdd vss DFCND1
+xi36 cmppb clk3 rst sw_p_p<1> sw_p_n<1> vdd vss DFCND1
+xi35 cmpnb clk3 rst sw_n_p<1> sw_n_n<1> vdd vss DFCND1
+xi33 cmppb clk2 rst sw_p_p<2> sw_p_n<2> vdd vss DFCND1
+xi32 cmpnb clk2 rst sw_n_p<2> sw_n_n<2> vdd vss DFCND1
+xi28 cmppb clk1 rst sw_p_p<3> sw_p_n<3> vdd vss DFCND1
+xi11 cmpnb clk1 rst sw_n_p<3> sw_n_n<3> vdd vss DFCND1
+xi3 ck_adc ck_out vdd vss BUFFD4
+xi30 ck_adc validd clk5 cmp_ck vdd vss OR3D1
+xi60 clk4 valid rst clk5 vdd vss DFCNQD2
+xi41<4> sw_n_p<3> clk5 dout<4> vdd vss DFQD1
+xi41<3> sw_n_p<2> clk5 dout<3> vdd vss DFQD1
+xi41<2> sw_n_p<1> clk5 dout<2> vdd vss DFQD1
+xi41<1> sw_n_p<0> clk5 dout<1> vdd vss DFQD1
+xi41<0> cmpnb clk5 dout<0> vdd vss DFQD1
+xi25 validn valid vdd vss INVD2
+xi23 cmpn cmpnb vdd vss INVD2
+xi22 cmpp cmppb vdd vss INVD2
+xi20 ck_adc rst vdd vss INVD2
+xi1<7> vdd vss DCAP8
+xi1<6> vdd vss DCAP8
+xi1<5> vdd vss DCAP8
+xi1<4> vdd vss DCAP8
+xi1<3> vdd vss DCAP8
+xi1<2> vdd vss DCAP8
+xi1<1> vdd vss DCAP8
+xi1<0> vdd vss DCAP8
+xi12 valid validd vdd vss DEL005
+xi2<4> vdd vss DCAP4
+xi2<3> vdd vss DCAP4
+xi2<2> vdd vss DCAP4
+xi2<1> vdd vss DCAP4
+xi2<0> vdd vss DCAP4
+xi24 cmpp cmpn validn vdd vss NR2D0
+xi19 cmpn cmpp validn vdd vss NR2D0
+.ends SAR5LG
+
+xi3 avdd avss ck_adc net17 net12 BTSW_V1
+xi2 avdd avss ck_adc net16 net11 BTSW_V1
+
+v2 net16 0 SIN (0.36 -0.84 0.1ns 0.1ns 54ns)
+v0 net17 0 SIN (0.36 0.84 0.1ns 0.1ns 54ns)
+v1 net13 0 PULSE(0 1.2 2s 10ps 10ps 4.8ns 20ns)
+v8 l1 l0 1.2
+v7 l0 0 0
+v6 vrp vrn 1.2
+v5 vrn 0 0
+v4 net025 net07 1.2
+v3 net07 0 0
+vavdd avdd avss 1.2
+vavss avss 0 1.2
+
+xi6 net11 sw_n_n<3> sw_n_n<2> sw_n_n<1> sw_n_n<0> sw_n_p<3> sw_n_p<2> sw_n_p<1> sw_n_p<0> avdd vrn vrp avss CDAC4b
+xi5 net12 sw_p_n<3> sw_p_n<2> sw_p_n<1> sw_p_n<0> sw_p_p<3> sw_p_p<2> sw_p_p<1> sw_p_p<0> avdd vrn vrp avss CDAC4b
+xi9 net13 ck_adc avdd avss BUFFD2
+c0 avdd avss 1nf
+xi8 avdd avss net12 net11 cmp_ck l0 l0 l0 l0 cmpp cmpn VCMP_PHO
+r1 avss net07 1
+r0 avdd net025 1
+xi45 ck_adc net026 cmpn cmpp cmp_ck dout<4> dout<3> dout<2> dout<1> dout<0> sw_n_n<3> sw_n_n<2> sw_n_n<1> sw_n_n<0> sw_n_p<3> sw_n_p<2> sw_n_p<1> sw_n_p<0> sw_p_n<3> sw_p_n<2> sw_p_n<1> sw_p_n<0> sw_p_p<3> sw_p_p<2> sw_p_p<1> sw_p_p<0> avdd avss SAR5LG
+
+.TRAN 0.1ns 64ns
+.PRINT TRAN  V(dout<4>) V(dout<3>) V(dout<2>) V(dout<1>) V(dout<0>) 
+.PRINT HB
+.MEASURE TRAN avgi AVG I(vavdd)
+.MEASURE TRAN avgr AVG I(v6)
+
+.MODEL nch NMOS
+.MODEL pch PMOS
+.MODEL pch_mac PMOS
+.MODEL nch_mac NMOS
+** enob = spectrumMeasurement(v("/OUT" ?result "tran") t 2.166e-08 2.582e-06 128 384600 1.969e+08 0 "Rectangular" 0 0 1 "enob")
+.END
