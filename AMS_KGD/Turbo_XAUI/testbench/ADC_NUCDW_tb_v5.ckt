@@ -1,0 +1,39 @@
+** Generated for: hspiceD
+** Generated on: Sep 13 20:19:13 2022
+** Design library name: SARADC
+** Design cell name: ADC_NUCDW_tb_v5
+** Design view name: schematic
+.PARAM delay4 delay3 delay2 delay1 vic vid fin vdd vrp fck duty
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+
+** Library name: SARADC
+** Cell name: ADC_NUCDW_tb_v5
+** View name: schematic
+xi0 cks cksb _net0 _net0 _net0 _net0 _net0 _net0 n1 _net0 n1 _net0 _net0 _net0 n1 _net0 n1 n1 _net0 _net0 n1 n1 _net0 _net0 _net0 _net0 n1 n1 _net0 n1 _net0 _net0 n1 n1 n1 _net0 _net0 _net0 n1 n1 n1 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 n1 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 n1 _net0 _net0 _net0 n1 n1 _net0 _net0 _net0 _net0 n1 n1 n1 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 _net0 _net0 _net0 n1 _net0 n1 _net0 _net0 _net0 n1 _net0 n1 n1 _net0 _net0 n1 n1 _net0 _net0 _net0 _net0 n1 n1 _net0 n1 _net0 _net0 n1 n1 n1 _net0 _net0 _net0 n1 n1 n1 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 n1 _net0 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 n1 _net0 _net0 _net0 n1 n1 _net0 _net0 _net0 _net0 n1 n1 n1 _net0 _net0 n1 _net0 _net0 _net0 _net0 _net0 n1 _net0 _net0 n1 _net0 _net0 readyb<0> rst vdd vin vip von<4> von<3> von<2>
++von<1> von<0> vop<4> vop<3> vop<2> vop<1> vop<0> vrn vrp vss ADC_NUCDW_v4 delay4=delay4 delay3=delay3 delay2=delay2 delay1=delay1 cmp_fps2=2 cmp_fps1=2 cmp_fp=1 cmp_cn=0 cmp_fn2=4 cmp_fn1=8 cmp_fn0=16
+c0<4> von<4> vss 1e-15
+c0<3> von<3> vss 1e-15
+c0<2> von<2> vss 1e-15
+c0<1> von<1> vss 1e-15
+c0<0> von<0> vss 1e-15
+c1 vo vss 1e-15
+c2 readyb<0> vss 1e-15
+v17 vin 0 SIN vic 'vid/2' fin
+v16 vip 0 SIN vic 'vid/2' fin
+v15 n1 0 DC=vdd
+v14 _net0 0 DC=0
+v13 vrp 0 DC=vrp
+v12 vrn 0 DC=0
+v10 vdd 0 DC=vdd
+v5 vss 0 DC=0
+v19 cksb 0 PULSE vdd 0 0 '10e-3/fck' '10e-3/fck' 'duty/fck' '1/fck'
+v18 cks 0 PULSE 0 vdd 0 '10e-3/fck' '10e-3/fck' 'duty/fck' '1/fck'
+.END

@@ -1,0 +1,70 @@
+// Generated for: spectre
+// Generated on: Sep 13 21:07:35 2022
+// Design library name: test_CJ
+// Design cell name: PI
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters VDDA fck Duty VCPL VSELV EN VGEAR VSSA VREF
+
+
+// Library name: test_CJ
+// Cell name: PI
+// View name: schematic
+V16 (sw 0) vsource type=pulse val0=0 val1=VDDA period=2u delay=30/fck
+V15 (clk0 0) vsource type=pulse val0=0 val1=VDDA period=1/fck delay=0 rise=1/(20*fck) fall=1/(20*fck) width=Duty/fck-1/(20*fck)
+C5 (outn vss) capacitor c=1f
+C7 (outn_dual vss) capacitor c=1f
+C4 (outp vss) capacitor c=1f
+C6 (outp_dual vss) capacitor c=1f
+V11 (VCPL 0) vsource dc=VCPL type=dc
+V7 (VSEL 0) vsource dc=VSELV type=dc
+V4 (en 0) vsource dc=EN type=dc
+V6 (VGEAR 0) vsource dc=VGEAR type=dc
+V14 (vdda 0) vsource dc=VDDA type=dc
+V2 (vss 0) vsource dc=VSSA type=dc
+I78 (clk0 clk180 clk270 clk90 SEL\<15\> SEL\<14\> SEL\<13\> SEL\<12\> SEL\<11\> SEL\<10\> SEL\<9\> SEL\<8\> SEL\<7\> SEL\<6\> SEL\<5\> SEL\<4\> SEL\<3\> SEL\<2\> SEL\<1\> SEL\<0\> en gear\<3\> gear\<2\> gear\<1\> gear\<0\> ckop_dual ckon_dual QUAD\<1\> QUAD\<0\> vdda vss xcpl\<3\> xcpl\<2\> xcpl\<1\> xcpl\<0\>) wphy_pi_4g_dual
+DELAY2 (clk180 0 clk90 0) delay td=1/(4*fck) gain=1.0
+DELAY0 (clk90 0 clk0 0) delay td=1/(4*fck) gain=1.0
+DELAY3 (clk270 0 clk180 0) delay td=1/(4*fck) gain=1.0
+W1 (ckop outp sw vss) relay vt1=VSSA vt2=VDDA ropen=1T rclosed=1.0
+W2 (ckon outn sw vss) relay vt1=VSSA vt2=VDDA ropen=1T rclosed=1.0
+W3 (ckon_dual outn_dual sw vss) relay vt1=VSSA vt2=VDDA ropen=1T rclosed=1.0
+W4 (ckop_dual outp_dual sw vss) relay vt1=VSSA vt2=VDDA ropen=1T rclosed=1.0
+I70\<15\> (vs\<4\> code\<15\> SEL\<15\> vdda vss) XOR2D1BWP30P140
+I70\<14\> (vs\<4\> code\<14\> SEL\<14\> vdda vss) XOR2D1BWP30P140
+I70\<13\> (vs\<4\> code\<13\> SEL\<13\> vdda vss) XOR2D1BWP30P140
+I70\<12\> (vs\<4\> code\<12\> SEL\<12\> vdda vss) XOR2D1BWP30P140
+I70\<11\> (vs\<4\> code\<11\> SEL\<11\> vdda vss) XOR2D1BWP30P140
+I70\<10\> (vs\<4\> code\<10\> SEL\<10\> vdda vss) XOR2D1BWP30P140
+I70\<9\> (vs\<4\> code\<9\> SEL\<9\> vdda vss) XOR2D1BWP30P140
+I70\<8\> (vs\<4\> code\<8\> SEL\<8\> vdda vss) XOR2D1BWP30P140
+I70\<7\> (vs\<4\> code\<7\> SEL\<7\> vdda vss) XOR2D1BWP30P140
+I70\<6\> (vs\<4\> code\<6\> SEL\<6\> vdda vss) XOR2D1BWP30P140
+I70\<5\> (vs\<4\> code\<5\> SEL\<5\> vdda vss) XOR2D1BWP30P140
+I70\<4\> (vs\<4\> code\<4\> SEL\<4\> vdda vss) XOR2D1BWP30P140
+I70\<3\> (vs\<4\> code\<3\> SEL\<3\> vdda vss) XOR2D1BWP30P140
+I70\<2\> (vs\<4\> code\<2\> SEL\<2\> vdda vss) XOR2D1BWP30P140
+I70\<1\> (vs\<4\> code\<1\> SEL\<1\> vdda vss) XOR2D1BWP30P140
+I70\<0\> (vs\<4\> vdda SEL\<0\> vdda vss) XOR2D1BWP30P140
+I69 (vs\<5\> vs\<4\> QUAD\<1\> vdda vss) XOR2D1BWP30P140
+I67 (vs\<5\> net15 vdda vss) INVD0BWP30P140
+I61\<15\> (net16\<0\> code\<1\> vdda vss) INVD0BWP30P140
+I61\<14\> (net16\<1\> code\<2\> vdda vss) INVD0BWP30P140
+I61\<13\> (net16\<2\> code\<3\> vdda vss) INVD0BWP30P140
+I61\<12\> (net16\<3\> code\<4\> vdda vss) INVD0BWP30P140
+I61\<11\> (net16\<4\> code\<5\> vdda vss) INVD0BWP30P140
+I61\<10\> (net16\<5\> code\<6\> vdda vss) INVD0BWP30P140
+I61\<9\> (net16\<6\> code\<7\> vdda vss) INVD0BWP30P140
+I61\<8\> (net16\<7\> code\<8\> vdda vss) INVD0BWP30P140
+I61\<7\> (net16\<8\> code\<9\> vdda vss) INVD0BWP30P140
+I61\<6\> (net16\<9\> code\<10\> vdda vss) INVD0BWP30P140
+I61\<5\> (net16\<10\> code\<11\> vdda vss) INVD0BWP30P140
+I61\<4\> (net16\<11\> code\<12\> vdda vss) INVD0BWP30P140
+I61\<3\> (net16\<12\> code\<13\> vdda vss) INVD0BWP30P140
+I61\<2\> (net16\<13\> code\<14\> vdda vss) INVD0BWP30P140
+I61\<1\> (net16\<14\> code\<15\> vdda vss) INVD0BWP30P140
+I68 (net15 QUAD\<0\> vdda vss) INVD0BWP30P140
+I28 (xcpl\<3\> xcpl\<2\> xcpl\<1\> xcpl\<0\> net11 net6 net13 net10 VCPL vss) adc_8bit_ideal trise=0 tfall=0 tdel=0 vlogic_high=VDDA vlogic_low=VSSA vtrans_clk=VDDA/2 vref=VREF
+I35 (gear\<3\> gear\<2\> gear\<1\> gear\<0\> net8 net12 net7 net9 VGEAR vss) adc_8bit_ideal trise=0 tfall=0 tdel=0 vlogic_high=VDDA vlogic_low=VSSA vtrans_clk=VDDA/2 vref=VREF
+I73 (vs\<5\> vs\<4\> vs\<3\> vs\<2\> vs\<1\> vs\<0\> net18 net19 VSEL vss) adc_8bit_ideal trise=0 tfall=0 tdel=0 vlogic_high=VDDA vlogic_low=VSSA vtrans_clk=VDDA/2 vref=4*VREF

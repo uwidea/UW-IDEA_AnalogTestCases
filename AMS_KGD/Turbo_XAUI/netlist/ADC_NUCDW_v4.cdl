@@ -1,0 +1,431 @@
+*****************************************************************************
+* CDL Netlist:
+* Cell Name: ADC_NUCDW_v4
+* Netlisted on: Sep 13 20:43:05 2022
+*****************************************************************************
+
+*****************************************************************************
+* BIPOLAR Declarations
+*****************************************************************************
+*.BIPOLAR
+*.RESI = 2000.000000
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.SCALE METER
+
+
+*****************************************************************************
+* Parameter Statement
+*****************************************************************************
+.PARAM
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : RSLATCH                                                            *
+* View   : schematic                                                          *
+* Last Time Saved: May  1 08:53:48 2019                                       *
+*******************************************************************************
+.subckt RSLATCH Q VDD VSS R S
+*.NOPIN gnd!
+*.PININFO Q:O VDD:B VSS:B R:I S:I 
+XI1 QB VDD VSS Q S ND2D8LVT
+XI0 Q VDD VSS R QB ND2D8LVT
+.ends RSLATCH
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : CMP_LVT                                                            *
+* View   : schematic                                                          *
+* Last Time Saved: May  5 09:55:15 2019                                       *
+*******************************************************************************
+.subckt CMP_LVT VON VOP VDD VSS CK VIN VIP
+*.PININFO VON:O VOP:O VDD:B VSS:B CK:I VIN:I VIP:I 
+XI1 VOP VDD VSS net70 INVD1LVT
+XI0 VON VDD VSS net73 INVD1LVT
+.ends CMP_LVT
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : DAC_7bit                                                           *
+* View   : schematic                                                          *
+* Last Time Saved: May 29 23:06:10 2019                                       *
+*******************************************************************************
+.subckt DAC_7bit VCN VCP VRN VRP VSS CN<5> CN<4> CN<3> CN<2> CN<1> CNB<5>
++CNB<4> CNB<3> CNB<2> CNB<1> CNB<0> CP<5> CP<4> CP<3> CP<2> CP<1> CP<0> CPB<5>
++CPB<4> CPB<3> CPB<2> CPB<1>
+*.NOPIN gnd!
+*.PININFO VCN:B VCP:B VRN:B VRP:B VSS:B CN<5>:I CN<4>:I CN<3>:I CN<2>:I CN<1>:I
+*.PININFO CNB<5>:I CNB<4>:I CNB<3>:I CNB<2>:I CNB<1>:I CNB<0>:I CP<5>:I CP<4>:I
+*.PININFO CP<3>:I CP<2>:I CP<1>:I CP<0>:I CPB<5>:I CPB<4>:I CPB<3>:I CPB<2>:I
+*.PININFO CPB<1>:I 
+XI27 net06 VRP VRN CN<1> INVD1LVT
+XI26 net08 VRP VRN CN<2> INVD1LVT
+XI25 net012 VRP VRN CN<3> INVD1LVT
+XI21 net018 VRP VRN CP<0> INVD1LVT
+XI20 net020 VRP VRN CP<1> INVD1LVT
+XI19 net022 VRP VRN CP<2> INVD1LVT
+XI16 net026 VRP VRN CP<3> INVD1LVT
+XI13 net032 VRP VRN CPB<1> INVD1LVT
+XI12 net034 VRP VRN CPB<2> INVD1LVT
+XI11 net038 VRP VRN CPB<3> INVD1LVT
+XI6 net044 VRP VRN CNB<0> INVD1LVT
+XI5 net046 VRP VRN CNB<1> INVD1LVT
+XI4 net048 VRP VRN CNB<2> INVD1LVT
+XI3 net050 VRP VRN CNB<3> INVD1LVT
+XI23 net013 VRP VRN CN<5> INVD4LVT
+XI18 net027 VRP VRN CP<5> INVD4LVT
+XI9 net039 VRP VRN CPB<5> INVD4LVT
+XI1 net054 VRP VRN CNB<5> INVD4LVT
+XI24 net014 VRP VRN CN<4> INVD2LVT
+XI17 net028 VRP VRN CP<4> INVD2LVT
+XI10 net040 VRP VRN CPB<4> INVD2LVT
+XI2 net052 VRP VRN CNB<4> INVD2LVT
+.ends DAC_7bit
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : BSW_v2                                                             *
+* View   : schematic                                                          *
+* Last Time Saved: May 31 16:00:57 2019                                       *
+*******************************************************************************
+.subckt BSW_v2 VDD VI VO VSS CKS CKSB
+*.PININFO VDD:B VI:B VO:B VSS:B CKS:I CKSB:I 
+.ends BSW_v2
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : MUX2                                                               *
+* View   : schematic                                                          *
+* Last Time Saved: May 29 17:13:43 2019                                       *
+*******************************************************************************
+.subckt MUX2 O VDD VSS A B S SB
+*.NOPIN gnd!
+*.PININFO O:O VDD:B VSS:B A:I B:I S:I SB:I 
+XI2 O VDD VSS net9 net8 ND2D0LVT
+XI1 net8 VDD VSS B SB ND2D0LVT
+XI0 net9 VDD VSS A S ND2D0LVT
+.ends MUX2
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : MUX4                                                               *
+* View   : schematic                                                          *
+* Last Time Saved: May  7 04:29:30 2019                                       *
+*******************************************************************************
+.subckt MUX4 O VDD VSS A B C D S0 S1 SB0 SB1
+*.NOPIN gnd!
+*.PININFO O:O VDD:B VSS:B A:I B:I C:I D:I S0:I S1:I SB0:I SB1:I 
+XI2 O VDD VSS net13 net12 S0 SB0 MUX2
+XI1 net12 VDD VSS B D S1 SB1 MUX2
+XI0 net13 VDD VSS A C S1 SB1 MUX2
+.ends MUX4
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : MUX16                                                              *
+* View   : schematic                                                          *
+* Last Time Saved: May  7 10:16:12 2019                                       *
+*******************************************************************************
+.subckt MUX16 OUT VDD VSS A B C D E F G H I J K L M N O P S0 S1 S2 S3 SB0 SB1
++SB2 SB3
+*.NOPIN gnd!
+*.PININFO OUT:O VDD:B VSS:B A:I B:I C:I D:I E:I F:I G:I H:I I:I J:I K:I L:I M:I
+*.PININFO N:I O:I P:I S0:I S1:I S2:I S3:I SB0:I SB1:I SB2:I SB3:I 
+XI4 net05 VDD VSS C G K O S2 S3 SB2 SB3 MUX4
+XI3 net07 VDD VSS D H L P S2 S3 SB2 SB3 MUX4
+XI0 net27 VDD VSS A E I M S2 S3 SB2 SB3 MUX4
+XI2 OUT VDD VSS net27 net26 net05 net07 S0 S1 SB0 SB1 MUX4
+XI1 net26 VDD VSS B F J N S2 S3 SB2 SB3 MUX4
+.ends MUX16
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : CNFG_NUCDW_v4                                                      *
+* View   : schematic                                                          *
+* Last Time Saved: May 29 22:54:12 2019                                       *
+*******************************************************************************
+.subckt CNFG_NUCDW_v4 CW<5> CW<4> CW<3> CW<2> CW<1> CW<0> VDD VSS CW_P0<5>
++CW_P0<4> CW_P0<3> CW_P0<2> CW_P0<1> CW_P0<0> CW_P1<5> CW_P1<4> CW_P1<3>
++CW_P1<2> CW_P1<1> CW_P1<0> CW_P2<5> CW_P2<4> CW_P2<3> CW_P2<2> CW_P2<1>
++CW_P2<0> CW_P3<5> CW_P3<4> CW_P3<3> CW_P3<2> CW_P3<1> CW_P3<0> CW_P4<5>
++CW_P4<4> CW_P4<3> CW_P4<2> CW_P4<1> CW_P4<0> CW_P5<5> CW_P5<4> CW_P5<3>
++CW_P5<2> CW_P5<1> CW_P5<0> CW_P6<5> CW_P6<4> CW_P6<3> CW_P6<2> CW_P6<1>
++CW_P6<0> CW_P7<5> CW_P7<4> CW_P7<3> CW_P7<2> CW_P7<1> CW_P7<0> CW_P8<5>
++CW_P8<4> CW_P8<3> CW_P8<2> CW_P8<1> CW_P8<0> CW_P9<5> CW_P9<4> CW_P9<3>
++CW_P9<2> CW_P9<1> CW_P9<0> CW_P10<5> CW_P10<4> CW_P10<3> CW_P10<2> CW_P10<1>
++CW_P10<0> CW_P11<5> CW_P11<4> CW_P11<3> CW_P11<2> CW_P11<1> CW_P11<0>
++CW_P12<5> CW_P12<4> CW_P12<3> CW_P12<2> CW_P12<1> CW_P12<0> CW_P13<5>
++CW_P13<4> CW_P13<3> CW_P13<2> CW_P13<1> CW_P13<0> CW_P14<5> CW_P14<4>
++CW_P14<3> CW_P14<2> CW_P14<1> CW_P14<0> CW_P15<5> CW_P15<4> CW_P15<3>
++CW_P15<2> CW_P15<1> CW_P15<0> VPS<4> VPS<3> VPS<2> VPS<1> VPSB<4> VPSB<3>
++VPSB<2> VPSB<1>
+*.NOPIN gnd!
+*.PININFO CW<5>:O CW<4>:O CW<3>:O CW<2>:O CW<1>:O CW<0>:O VDD:B VSS:B
+*.PININFO CW_P0<5>:I CW_P0<4>:I CW_P0<3>:I CW_P0<2>:I CW_P0<1>:I CW_P0<0>:I
+*.PININFO CW_P1<5>:I CW_P1<4>:I CW_P1<3>:I CW_P1<2>:I CW_P1<1>:I CW_P1<0>:I
+*.PININFO CW_P2<5>:I CW_P2<4>:I CW_P2<3>:I CW_P2<2>:I CW_P2<1>:I CW_P2<0>:I
+*.PININFO CW_P3<5>:I CW_P3<4>:I CW_P3<3>:I CW_P3<2>:I CW_P3<1>:I CW_P3<0>:I
+*.PININFO CW_P4<5>:I CW_P4<4>:I CW_P4<3>:I CW_P4<2>:I CW_P4<1>:I CW_P4<0>:I
+*.PININFO CW_P5<5>:I CW_P5<4>:I CW_P5<3>:I CW_P5<2>:I CW_P5<1>:I CW_P5<0>:I
+*.PININFO CW_P6<5>:I CW_P6<4>:I CW_P6<3>:I CW_P6<2>:I CW_P6<1>:I CW_P6<0>:I
+*.PININFO CW_P7<5>:I CW_P7<4>:I CW_P7<3>:I CW_P7<2>:I CW_P7<1>:I CW_P7<0>:I
+*.PININFO CW_P8<5>:I CW_P8<4>:I CW_P8<3>:I CW_P8<2>:I CW_P8<1>:I CW_P8<0>:I
+*.PININFO CW_P9<5>:I CW_P9<4>:I CW_P9<3>:I CW_P9<2>:I CW_P9<1>:I CW_P9<0>:I
+*.PININFO CW_P10<5>:I CW_P10<4>:I CW_P10<3>:I CW_P10<2>:I CW_P10<1>:I
+*.PININFO CW_P10<0>:I CW_P11<5>:I CW_P11<4>:I CW_P11<3>:I CW_P11<2>:I
+*.PININFO CW_P11<1>:I CW_P11<0>:I CW_P12<5>:I CW_P12<4>:I CW_P12<3>:I
+*.PININFO CW_P12<2>:I CW_P12<1>:I CW_P12<0>:I CW_P13<5>:I CW_P13<4>:I
+*.PININFO CW_P13<3>:I CW_P13<2>:I CW_P13<1>:I CW_P13<0>:I CW_P14<5>:I
+*.PININFO CW_P14<4>:I CW_P14<3>:I CW_P14<2>:I CW_P14<1>:I CW_P14<0>:I
+*.PININFO CW_P15<5>:I CW_P15<4>:I CW_P15<3>:I CW_P15<2>:I CW_P15<1>:I
+*.PININFO CW_P15<0>:I VPS<4>:I VPS<3>:I VPS<2>:I VPS<1>:I VPSB<4>:I VPSB<3>:I
+*.PININFO VPSB<2>:I VPSB<1>:I 
+XI3_5 CW<5> VDD VSS CW_P15<5> CW_P14<5> CW_P13<5> CW_P12<5> CW_P11<5> CW_P10<5>
++CW_P9<5> CW_P8<5> CW_P7<5> CW_P6<5> CW_P5<5> CW_P4<5> CW_P3<5> CW_P2<5>
++CW_P1<5> CW_P0<5> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+XI3_4 CW<4> VDD VSS CW_P15<4> CW_P14<4> CW_P13<4> CW_P12<4> CW_P11<4> CW_P10<4>
++CW_P9<4> CW_P8<4> CW_P7<4> CW_P6<4> CW_P5<4> CW_P4<4> CW_P3<4> CW_P2<4>
++CW_P1<4> CW_P0<4> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+XI3_3 CW<3> VDD VSS CW_P15<3> CW_P14<3> CW_P13<3> CW_P12<3> CW_P11<3> CW_P10<3>
++CW_P9<3> CW_P8<3> CW_P7<3> CW_P6<3> CW_P5<3> CW_P4<3> CW_P3<3> CW_P2<3>
++CW_P1<3> CW_P0<3> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+XI3_2 CW<2> VDD VSS CW_P15<2> CW_P14<2> CW_P13<2> CW_P12<2> CW_P11<2> CW_P10<2>
++CW_P9<2> CW_P8<2> CW_P7<2> CW_P6<2> CW_P5<2> CW_P4<2> CW_P3<2> CW_P2<2>
++CW_P1<2> CW_P0<2> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+XI3_1 CW<1> VDD VSS CW_P15<1> CW_P14<1> CW_P13<1> CW_P12<1> CW_P11<1> CW_P10<1>
++CW_P9<1> CW_P8<1> CW_P7<1> CW_P6<1> CW_P5<1> CW_P4<1> CW_P3<1> CW_P2<1>
++CW_P1<1> CW_P0<1> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+XI3_0 CW<0> VDD VSS CW_P15<0> CW_P14<0> CW_P13<0> CW_P12<0> CW_P11<0> CW_P10<0>
++CW_P9<0> CW_P8<0> CW_P7<0> CW_P6<0> CW_P5<0> CW_P4<0> CW_P3<0> CW_P2<0>
++CW_P1<0> CW_P0<0> VPS<1> VPS<2> VPS<3> VPS<4> VPSB<1> VPSB<2> VPSB<3> VPSB<4>
++MUX16
+.ends CNFG_NUCDW_v4
+
+
+*******************************************************************************
+* Main Circuit Netlist:                                                       *
+*                                                                             *
+* Library: SARADC                                                             *
+* Cell   : ADC_NUCDW_v4                                                       *
+* View   : schematic                                                          *
+* Last Time Saved: Jan 13 03:37:46 2020                                       *
+*******************************************************************************
+.subckt ADC_NUCDW_v4 READYB<0> RST VON<4> VON<3> VON<2> VON<1> VON<0> VOP<4>
++VOP<3> VOP<2> VOP<1> VOP<0> VDD VRN VRP VSS CKS CKSB CW_NB0<5> CW_NB0<4>
++CW_NB0<3> CW_NB0<2> CW_NB0<1> CW_NB0<0> CW_NB1<5> CW_NB1<4> CW_NB1<3>
++CW_NB1<2> CW_NB1<1> CW_NB1<0> CW_NB2<5> CW_NB2<4> CW_NB2<3> CW_NB2<2>
++CW_NB2<1> CW_NB2<0> CW_NB3<5> CW_NB3<4> CW_NB3<3> CW_NB3<2> CW_NB3<1>
++CW_NB3<0> CW_NB4<5> CW_NB4<4> CW_NB4<3> CW_NB4<2> CW_NB4<1> CW_NB4<0>
++CW_NB5<5> CW_NB5<4> CW_NB5<3> CW_NB5<2> CW_NB5<1> CW_NB5<0> CW_NB6<5>
++CW_NB6<4> CW_NB6<3> CW_NB6<2> CW_NB6<1> CW_NB6<0> CW_NB7<5> CW_NB7<4>
++CW_NB7<3> CW_NB7<2> CW_NB7<1> CW_NB7<0> CW_NB8<5> CW_NB8<4> CW_NB8<3>
++CW_NB8<2> CW_NB8<1> CW_NB8<0> CW_NB9<5> CW_NB9<4> CW_NB9<3> CW_NB9<2>
++CW_NB9<1> CW_NB9<0> CW_NB10<5> CW_NB10<4> CW_NB10<3> CW_NB10<2> CW_NB10<1>
++CW_NB10<0> CW_NB11<5> CW_NB11<4> CW_NB11<3> CW_NB11<2> CW_NB11<1> CW_NB11<0>
++CW_NB12<5> CW_NB12<4> CW_NB12<3> CW_NB12<2> CW_NB12<1> CW_NB12<0> CW_NB13<5>
++CW_NB13<4> CW_NB13<3> CW_NB13<2> CW_NB13<1> CW_NB13<0> CW_NB14<5> CW_NB14<4>
++CW_NB14<3> CW_NB14<2> CW_NB14<1> CW_NB14<0> CW_NB15<5> CW_NB15<4> CW_NB15<3>
++CW_NB15<2> CW_NB15<1> CW_NB15<0> CW_P0<5> CW_P0<4> CW_P0<3> CW_P0<2> CW_P0<1>
++CW_P0<0> CW_P1<5> CW_P1<4> CW_P1<3> CW_P1<2> CW_P1<1> CW_P1<0> CW_P2<5>
++CW_P2<4> CW_P2<3> CW_P2<2> CW_P2<1> CW_P2<0> CW_P3<5> CW_P3<4> CW_P3<3>
++CW_P3<2> CW_P3<1> CW_P3<0> CW_P4<5> CW_P4<4> CW_P4<3> CW_P4<2> CW_P4<1>
++CW_P4<0> CW_P5<5> CW_P5<4> CW_P5<3> CW_P5<2> CW_P5<1> CW_P5<0> CW_P6<5>
++CW_P6<4> CW_P6<3> CW_P6<2> CW_P6<1> CW_P6<0> CW_P7<5> CW_P7<4> CW_P7<3>
++CW_P7<2> CW_P7<1> CW_P7<0> CW_P8<5> CW_P8<4> CW_P8<3> CW_P8<2> CW_P8<1>
++CW_P8<0> CW_P9<5> CW_P9<4> CW_P9<3> CW_P9<2> CW_P9<1> CW_P9<0> CW_P10<5>
++CW_P10<4> CW_P10<3> CW_P10<2> CW_P10<1> CW_P10<0> CW_P11<5> CW_P11<4>
++CW_P11<3> CW_P11<2> CW_P11<1> CW_P11<0> CW_P12<5> CW_P12<4> CW_P12<3>
++CW_P12<2> CW_P12<1> CW_P12<0> CW_P13<5> CW_P13<4> CW_P13<3> CW_P13<2>
++CW_P13<1> CW_P13<0> CW_P14<5> CW_P14<4> CW_P14<3> CW_P14<2> CW_P14<1>
++CW_P14<0> CW_P15<5> CW_P15<4> CW_P15<3> CW_P15<2> CW_P15<1> CW_P15<0> VIN VIP
+*.PININFO READYB<0>:O RST:O VON<4>:O VON<3>:O VON<2>:O VON<1>:O VON<0>:O
+*.PININFO VOP<4>:O VOP<3>:O VOP<2>:O VOP<1>:O VOP<0>:O VDD:B VRN:B VRP:B VSS:B
+*.PININFO CKS:I CKSB:I CW_NB0<5>:I CW_NB0<4>:I CW_NB0<3>:I CW_NB0<2>:I
+*.PININFO CW_NB0<1>:I CW_NB0<0>:I CW_NB1<5>:I CW_NB1<4>:I CW_NB1<3>:I
+*.PININFO CW_NB1<2>:I CW_NB1<1>:I CW_NB1<0>:I CW_NB2<5>:I CW_NB2<4>:I
+*.PININFO CW_NB2<3>:I CW_NB2<2>:I CW_NB2<1>:I CW_NB2<0>:I CW_NB3<5>:I
+*.PININFO CW_NB3<4>:I CW_NB3<3>:I CW_NB3<2>:I CW_NB3<1>:I CW_NB3<0>:I
+*.PININFO CW_NB4<5>:I CW_NB4<4>:I CW_NB4<3>:I CW_NB4<2>:I CW_NB4<1>:I
+*.PININFO CW_NB4<0>:I CW_NB5<5>:I CW_NB5<4>:I CW_NB5<3>:I CW_NB5<2>:I
+*.PININFO CW_NB5<1>:I CW_NB5<0>:I CW_NB6<5>:I CW_NB6<4>:I CW_NB6<3>:I
+*.PININFO CW_NB6<2>:I CW_NB6<1>:I CW_NB6<0>:I CW_NB7<5>:I CW_NB7<4>:I
+*.PININFO CW_NB7<3>:I CW_NB7<2>:I CW_NB7<1>:I CW_NB7<0>:I CW_NB8<5>:I
+*.PININFO CW_NB8<4>:I CW_NB8<3>:I CW_NB8<2>:I CW_NB8<1>:I CW_NB8<0>:I
+*.PININFO CW_NB9<5>:I CW_NB9<4>:I CW_NB9<3>:I CW_NB9<2>:I CW_NB9<1>:I
+*.PININFO CW_NB9<0>:I CW_NB10<5>:I CW_NB10<4>:I CW_NB10<3>:I CW_NB10<2>:I
+*.PININFO CW_NB10<1>:I CW_NB10<0>:I CW_NB11<5>:I CW_NB11<4>:I CW_NB11<3>:I
+*.PININFO CW_NB11<2>:I CW_NB11<1>:I CW_NB11<0>:I CW_NB12<5>:I CW_NB12<4>:I
+*.PININFO CW_NB12<3>:I CW_NB12<2>:I CW_NB12<1>:I CW_NB12<0>:I CW_NB13<5>:I
+*.PININFO CW_NB13<4>:I CW_NB13<3>:I CW_NB13<2>:I CW_NB13<1>:I CW_NB13<0>:I
+*.PININFO CW_NB14<5>:I CW_NB14<4>:I CW_NB14<3>:I CW_NB14<2>:I CW_NB14<1>:I
+*.PININFO CW_NB14<0>:I CW_NB15<5>:I CW_NB15<4>:I CW_NB15<3>:I CW_NB15<2>:I
+*.PININFO CW_NB15<1>:I CW_NB15<0>:I CW_P0<5>:I CW_P0<4>:I CW_P0<3>:I CW_P0<2>:I
+*.PININFO CW_P0<1>:I CW_P0<0>:I CW_P1<5>:I CW_P1<4>:I CW_P1<3>:I CW_P1<2>:I
+*.PININFO CW_P1<1>:I CW_P1<0>:I CW_P2<5>:I CW_P2<4>:I CW_P2<3>:I CW_P2<2>:I
+*.PININFO CW_P2<1>:I CW_P2<0>:I CW_P3<5>:I CW_P3<4>:I CW_P3<3>:I CW_P3<2>:I
+*.PININFO CW_P3<1>:I CW_P3<0>:I CW_P4<5>:I CW_P4<4>:I CW_P4<3>:I CW_P4<2>:I
+*.PININFO CW_P4<1>:I CW_P4<0>:I CW_P5<5>:I CW_P5<4>:I CW_P5<3>:I CW_P5<2>:I
+*.PININFO CW_P5<1>:I CW_P5<0>:I CW_P6<5>:I CW_P6<4>:I CW_P6<3>:I CW_P6<2>:I
+*.PININFO CW_P6<1>:I CW_P6<0>:I CW_P7<5>:I CW_P7<4>:I CW_P7<3>:I CW_P7<2>:I
+*.PININFO CW_P7<1>:I CW_P7<0>:I CW_P8<5>:I CW_P8<4>:I CW_P8<3>:I CW_P8<2>:I
+*.PININFO CW_P8<1>:I CW_P8<0>:I CW_P9<5>:I CW_P9<4>:I CW_P9<3>:I CW_P9<2>:I
+*.PININFO CW_P9<1>:I CW_P9<0>:I CW_P10<5>:I CW_P10<4>:I CW_P10<3>:I CW_P10<2>:I
+*.PININFO CW_P10<1>:I CW_P10<0>:I CW_P11<5>:I CW_P11<4>:I CW_P11<3>:I
+*.PININFO CW_P11<2>:I CW_P11<1>:I CW_P11<0>:I CW_P12<5>:I CW_P12<4>:I
+*.PININFO CW_P12<3>:I CW_P12<2>:I CW_P12<1>:I CW_P12<0>:I CW_P13<5>:I
+*.PININFO CW_P13<4>:I CW_P13<3>:I CW_P13<2>:I CW_P13<1>:I CW_P13<0>:I
+*.PININFO CW_P14<5>:I CW_P14<4>:I CW_P14<3>:I CW_P14<2>:I CW_P14<1>:I
+*.PININFO CW_P14<0>:I CW_P15<5>:I CW_P15<4>:I CW_P15<3>:I CW_P15<2>:I
+*.PININFO CW_P15<1>:I CW_P15<0>:I VIN:I VIP:I 
+XI5_3 CKC<3> VDD VSS READY<4> RST NR2D4LVT
+XI5_2 CKC<2> VDD VSS READY<3> RST NR2D4LVT
+XI5_1 CKC<1> VDD VSS READY<2> RST NR2D4LVT
+XI5_0 CKC<0> VDD VSS READY<1> RST NR2D4LVT
+XI15 CKC<4> VDD VSS RST CKS NR2D4LVT
+XI14 RST VDD VSS READYB<0> CKSB RSLATCH
+XI3_4 VON<4> VOP<4> VDD VSS CKC<4> VCN VCP CMP_LVT FN0=pPar("CMP_FN0")
++FN1=pPar("CMP_FN1") FN2=pPar("CMP_FN2") FP=pPar("CMP_FP")
++FPS1=pPar("CMP_FPS1") FPS2=pPar("CMP_FPS2") CN=pPar("CMP_CN")
+XI3_3 VON<3> VOP<3> VDD VSS CKC<3> VCN VCP CMP_LVT FN0=pPar("CMP_FN0")
++FN1=pPar("CMP_FN1") FN2=pPar("CMP_FN2") FP=pPar("CMP_FP")
++FPS1=pPar("CMP_FPS1") FPS2=pPar("CMP_FPS2") CN=pPar("CMP_CN")
+XI3_2 VON<2> VOP<2> VDD VSS CKC<2> VCN VCP CMP_LVT FN0=pPar("CMP_FN0")
++FN1=pPar("CMP_FN1") FN2=pPar("CMP_FN2") FP=pPar("CMP_FP")
++FPS1=pPar("CMP_FPS1") FPS2=pPar("CMP_FPS2") CN=pPar("CMP_CN")
+XI3_1 VON<1> VOP<1> VDD VSS CKC<1> VCN VCP CMP_LVT FN0=pPar("CMP_FN0")
++FN1=pPar("CMP_FN1") FN2=pPar("CMP_FN2") FP=pPar("CMP_FP")
++FPS1=pPar("CMP_FPS1") FPS2=pPar("CMP_FPS2") CN=pPar("CMP_CN")
+XI3_0 VON<0> VOP<0> VDD VSS CKC<0> VCN VCP CMP_LVT FN0=pPar("CMP_FN0")
++FN1=pPar("CMP_FN1") FN2=pPar("CMP_FN2") FP=pPar("CMP_FP")
++FPS1=pPar("CMP_FPS1") FPS2=pPar("CMP_FPS2") CN=pPar("CMP_CN")
+XI56_5 CN<5> VDD VSS CW_NB<5> INVD1LVT
+XI56_4 CN<4> VDD VSS CW_NB<4> INVD1LVT
+XI56_3 CN<3> VDD VSS CW_NB<3> INVD1LVT
+XI56_2 CN<2> VDD VSS CW_NB<2> INVD1LVT
+XI56_1 CN<1> VDD VSS CW_NB<1> INVD1LVT
+XI56_0 CN<0> VDD VSS CW_NB<0> INVD1LVT
+XI66_5 CNB<5> VDD VSS CN<5> INVD1LVT
+XI66_4 CNB<4> VDD VSS CN<4> INVD1LVT
+XI66_3 CNB<3> VDD VSS CN<3> INVD1LVT
+XI66_2 CNB<2> VDD VSS CN<2> INVD1LVT
+XI66_1 CNB<1> VDD VSS CN<1> INVD1LVT
+XI66_0 CNB<0> VDD VSS CN<0> INVD1LVT
+XI2 VCN VCP VRN VRP VSS CN<5> CN<4> CN<3> CN<2> CN<1> CNB<5> CNB<4> CNB<3>
++CNB<2> CNB<1> CNB<0> CP<5> CP<4> CP<3> CP<2> CP<1> CP<0> CPB<5> CPB<4> CPB<3>
++CPB<2> CPB<1> DAC_7bit
+XI0 VDD VIP VCP VSS CKS CKSB BSW_v2 C=pPar("BSW_C") FNS=pPar("BSW_FNS")
++FN=pPar("BSW_FN") F3=pPar("BSW_F3") F2=pPar("BSW_F2") F1=pPar("BSW_F1")
+XI1 VDD VIN VCN VSS CKS CKSB BSW_v2 C=pPar("BSW_C") FNS=pPar("BSW_FNS")
++FN=pPar("BSW_FN") F3=pPar("BSW_F3") F2=pPar("BSW_F2") F1=pPar("BSW_F1")
+XI4_4 READYB<4> VDD VSS VOP<4> VON<4> XNR2D2LVT
+XI4_3 READYB<3> VDD VSS VOP<3> VON<3> XNR2D2LVT
+XI4_2 READYB<2> VDD VSS VOP<2> VON<2> XNR2D2LVT
+XI4_1 READYB<1> VDD VSS VOP<1> VON<1> XNR2D2LVT
+XI4_0 READYB<0> VDD VSS VOP<0> VON<0> XNR2D2LVT
+XI61_3 VNSB<4> VDD VSS net042<0> INVD4LVT
+XI61_2 VNSB<3> VDD VSS net042<1> INVD4LVT
+XI61_1 VNSB<2> VDD VSS net042<2> INVD4LVT
+XI61_0 VNSB<1> VDD VSS net042<3> INVD4LVT
+XI63_3 VNS<4> VDD VSS VONB<4> INVD4LVT
+XI63_2 VNS<3> VDD VSS VONB<3> INVD4LVT
+XI63_1 VNS<2> VDD VSS VONB<2> INVD4LVT
+XI63_0 VNS<1> VDD VSS VONB<1> INVD4LVT
+XI40_3 VPSB<4> VDD VSS net070<0> INVD4LVT
+XI40_2 VPSB<3> VDD VSS net070<1> INVD4LVT
+XI40_1 VPSB<2> VDD VSS net070<2> INVD4LVT
+XI40_0 VPSB<1> VDD VSS net070<3> INVD4LVT
+XI41_3 VPS<4> VDD VSS VOPB<4> INVD4LVT
+XI41_2 VPS<3> VDD VSS VOPB<3> INVD4LVT
+XI41_1 VPS<2> VDD VSS VOPB<2> INVD4LVT
+XI41_0 VPS<1> VDD VSS VOPB<1> INVD4LVT
+XI62_3 VONB<4> VDD VSS VON<4> INVD2LVT
+XI62_2 VONB<3> VDD VSS VON<3> INVD2LVT
+XI62_1 VONB<2> VDD VSS VON<2> INVD2LVT
+XI62_0 VONB<1> VDD VSS VON<1> INVD2LVT
+XI65_5 CPB<5> VDD VSS CW_P<5> INVD2LVT
+XI65_4 CPB<4> VDD VSS CW_P<4> INVD2LVT
+XI65_3 CPB<3> VDD VSS CW_P<3> INVD2LVT
+XI65_2 CPB<2> VDD VSS CW_P<2> INVD2LVT
+XI65_1 CPB<1> VDD VSS CW_P<1> INVD2LVT
+XI65_0 CPB<0> VDD VSS CW_P<0> INVD2LVT
+XI43_3 net070<0> VDD VSS VOPB<4> INVD2LVT
+XI43_2 net070<1> VDD VSS VOPB<3> INVD2LVT
+XI43_1 net070<2> VDD VSS VOPB<2> INVD2LVT
+XI43_0 net070<3> VDD VSS VOPB<1> INVD2LVT
+XI67_5 CP<5> VDD VSS CPB<5> INVD2LVT
+XI67_4 CP<4> VDD VSS CPB<4> INVD2LVT
+XI67_3 CP<3> VDD VSS CPB<3> INVD2LVT
+XI67_2 CP<2> VDD VSS CPB<2> INVD2LVT
+XI67_1 CP<1> VDD VSS CPB<1> INVD2LVT
+XI67_0 CP<0> VDD VSS CPB<0> INVD2LVT
+XI44_3 VOPB<4> VDD VSS VOP<4> INVD2LVT
+XI44_2 VOPB<3> VDD VSS VOP<3> INVD2LVT
+XI44_1 VOPB<2> VDD VSS VOP<2> INVD2LVT
+XI44_0 VOPB<1> VDD VSS VOP<1> INVD2LVT
+XI60_3 net042<0> VDD VSS VONB<4> INVD2LVT
+XI60_2 net042<1> VDD VSS VONB<3> INVD2LVT
+XI60_1 net042<2> VDD VSS VONB<2> INVD2LVT
+XI60_0 net042<3> VDD VSS VONB<1> INVD2LVT
+XI64 CW_P<5> CW_P<4> CW_P<3> CW_P<2> CW_P<1> CW_P<0> VDD VSS CW_P0<5> CW_P0<4>
++CW_P0<3> CW_P0<2> CW_P0<1> CW_P0<0> CW_P1<5> CW_P1<4> CW_P1<3> CW_P1<2>
++CW_P1<1> CW_P1<0> CW_P2<5> CW_P2<4> CW_P2<3> CW_P2<2> CW_P2<1> CW_P2<0>
++CW_P3<5> CW_P3<4> CW_P3<3> CW_P3<2> CW_P3<1> CW_P3<0> CW_P4<5> CW_P4<4>
++CW_P4<3> CW_P4<2> CW_P4<1> CW_P4<0> CW_P5<5> CW_P5<4> CW_P5<3> CW_P5<2>
++CW_P5<1> CW_P5<0> CW_P6<5> CW_P6<4> CW_P6<3> CW_P6<2> CW_P6<1> CW_P6<0>
++CW_P7<5> CW_P7<4> CW_P7<3> CW_P7<2> CW_P7<1> CW_P7<0> CW_P8<5> CW_P8<4>
++CW_P8<3> CW_P8<2> CW_P8<1> CW_P8<0> CW_P9<5> CW_P9<4> CW_P9<3> CW_P9<2>
++CW_P9<1> CW_P9<0> CW_P10<5> CW_P10<4> CW_P10<3> CW_P10<2> CW_P10<1> CW_P10<0>
++CW_P11<5> CW_P11<4> CW_P11<3> CW_P11<2> CW_P11<1> CW_P11<0> CW_P12<5>
++CW_P12<4> CW_P12<3> CW_P12<2> CW_P12<1> CW_P12<0> CW_P13<5> CW_P13<4>
++CW_P13<3> CW_P13<2> CW_P13<1> CW_P13<0> CW_P14<5> CW_P14<4> CW_P14<3>
++CW_P14<2> CW_P14<1> CW_P14<0> CW_P15<5> CW_P15<4> CW_P15<3> CW_P15<2>
++CW_P15<1> CW_P15<0> VNS<4> VNS<3> VNS<2> VNS<1> VNSB<4> VNSB<3> VNSB<2>
++VNSB<1> CNFG_NUCDW_v4
+XI6 CW_NB<5> CW_NB<4> CW_NB<3> CW_NB<2> CW_NB<1> CW_NB<0> VDD VSS CW_NB0<5>
++CW_NB0<4> CW_NB0<3> CW_NB0<2> CW_NB0<1> CW_NB0<0> CW_NB1<5> CW_NB1<4>
++CW_NB1<3> CW_NB1<2> CW_NB1<1> CW_NB1<0> CW_NB2<5> CW_NB2<4> CW_NB2<3>
++CW_NB2<2> CW_NB2<1> CW_NB2<0> CW_NB3<5> CW_NB3<4> CW_NB3<3> CW_NB3<2>
++CW_NB3<1> CW_NB3<0> CW_NB4<5> CW_NB4<4> CW_NB4<3> CW_NB4<2> CW_NB4<1>
++CW_NB4<0> CW_NB5<5> CW_NB5<4> CW_NB5<3> CW_NB5<2> CW_NB5<1> CW_NB5<0>
++CW_NB6<5> CW_NB6<4> CW_NB6<3> CW_NB6<2> CW_NB6<1> CW_NB6<0> CW_NB7<5>
++CW_NB7<4> CW_NB7<3> CW_NB7<2> CW_NB7<1> CW_NB7<0> CW_NB8<5> CW_NB8<4>
++CW_NB8<3> CW_NB8<2> CW_NB8<1> CW_NB8<0> CW_NB9<5> CW_NB9<4> CW_NB9<3>
++CW_NB9<2> CW_NB9<1> CW_NB9<0> CW_NB10<5> CW_NB10<4> CW_NB10<3> CW_NB10<2>
++CW_NB10<1> CW_NB10<0> CW_NB11<5> CW_NB11<4> CW_NB11<3> CW_NB11<2> CW_NB11<1>
++CW_NB11<0> CW_NB12<5> CW_NB12<4> CW_NB12<3> CW_NB12<2> CW_NB12<1> CW_NB12<0>
++CW_NB13<5> CW_NB13<4> CW_NB13<3> CW_NB13<2> CW_NB13<1> CW_NB13<0> CW_NB14<5>
++CW_NB14<4> CW_NB14<3> CW_NB14<2> CW_NB14<1> CW_NB14<0> CW_NB15<5> CW_NB15<4>
++CW_NB15<3> CW_NB15<2> CW_NB15<1> CW_NB15<0> VPS<4> VPS<3> VPS<2> VPS<1>
++VPSB<4> VPSB<3> VPSB<2> VPSB<1> CNFG_NUCDW_v4
+.ends ADC_NUCDW_v4

@@ -1,0 +1,584 @@
+*****************************************************************************
+* CDL Netlist:
+* Cell Name: wphy_pi_4g_dual
+* Netlisted on: Sep 13 20:51:18 2022
+*****************************************************************************
+
+
+*****************************************************************************
+* BIPOLAR Declarations
+*****************************************************************************
+*.BIPOLAR
+*.RESI = 2000.000000
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.SCALE METER
+
+
+*****************************************************************************
+* Parameter Statement
+*****************************************************************************
+.PARAM
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: tsmcN28                                                            *
+* Cell   : tri_mac                                                            *
+* View   : schematic                                                          *
+*******************************************************************************
+.subckt tri_mac_pcell_0 Y A EN ENB G Gb P Pb
+*.PININFO Y:O A:I EN:I ENB:I G:I Gb:I P:I Pb:I 
+.ends tri_mac_pcell_0
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : wphy_pi_4g_wphy_pi_4g_outdrv                                       *
+* View   : schematic                                                          *
+* Last Time Saved: Jan 31 19:08:38 2022                                       *
+*******************************************************************************
+.subckt wphy_pi_4g_wphy_pi_4g_outdrv outn outp vdda vss inn inp tiehi tielo
+*.PININFO outn:O outp:O vdda:B vss:B inn:I inp:I tiehi:I tielo:I 
+XI20 net013 net014 tiehi tielo vss vss vdda vdda tri_mac_pcell_0
+.ends wphy_pi_4g_wphy_pi_4g_outdrv
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : Delay_line                                                         *
+* View   : schematic                                                          *
+* Last Time Saved: Feb 11 01:51:09 2022                                       *
+*******************************************************************************
+.subckt Delay_line ZN I vdda vss
+*.PININFO ZN:O I:I vdda:I vss:I 
+.ends Delay_line
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: tsmcN28                                                            *
+* Cell   : trans_mac                                                          *
+* View   : schematic                                                          *
+*******************************************************************************
+.subckt trans_mac_pcell_1 Y A C CB Gb Pb
+*.PININFO Y:O A:I C:I CB:I Gb:I Pb:I 
+.ends trans_mac_pcell_1
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : PI_tri_cell                                                        *
+* View   : schematic                                                          *
+* Last Time Saved: May  6 18:29:50 2022                                       *
+*******************************************************************************
+.subckt PI_tri_cell Y A DS<3> DS<2> DS<1> DS<0> DSB<3> DSB<2> DSB<1> DSB<0> EN
++ENB tiehi tielo vdda vss
+*.PININFO Y:O A:I DS<3>:I DS<2>:I DS<1>:I DS<0>:I DSB<3>:I DSB<2>:I DSB<1>:I
+*.PININFO DSB<0>:I EN:I ENB:I tiehi:I tielo:I vdda:I vss:I 
+.ends PI_tri_cell
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : wphy_pi_4g_wphy_pi_4g_core_dual                                    *
+* View   : schematic                                                          *
+* Last Time Saved: Aug 19 04:43:50 2022                                       *
+*******************************************************************************
+.subckt wphy_pi_4g_wphy_pi_4g_core_dual outn outp vdda vss clk0 clk90 clk180
++clk270 sel0<15> sel0<14> sel0<13> sel0<12> sel0<11> sel0<10> sel0<9> sel0<8>
++sel0<7> sel0<6> sel0<5> sel0<4> sel0<3> sel0<2> sel0<1> sel0<0> sel0b<15>
++sel0b<14> sel0b<13> sel0b<12> sel0b<11> sel0b<10> sel0b<9> sel0b<8> sel0b<7>
++sel0b<6> sel0b<5> sel0b<4> sel0b<3> sel0b<2> sel0b<1> sel0b<0> sel90<15>
++sel90<14> sel90<13> sel90<12> sel90<11> sel90<10> sel90<9> sel90<8> sel90<7>
++sel90<6> sel90<5> sel90<4> sel90<3> sel90<2> sel90<1> sel90<0> sel90b<15>
++sel90b<14> sel90b<13> sel90b<12> sel90b<11> sel90b<10> sel90b<9> sel90b<8>
++sel90b<7> sel90b<6> sel90b<5> sel90b<4> sel90b<3> sel90b<2> sel90b<1>
++sel90b<0> sel180<15> sel180<14> sel180<13> sel180<12> sel180<11> sel180<10>
++sel180<9> sel180<8> sel180<7> sel180<6> sel180<5> sel180<4> sel180<3>
++sel180<2> sel180<1> sel180<0> sel180b<15> sel180b<14> sel180b<13> sel180b<12>
++sel180b<11> sel180b<10> sel180b<9> sel180b<8> sel180b<7> sel180b<6> sel180b<5>
++sel180b<4> sel180b<3> sel180b<2> sel180b<1> sel180b<0> sel270<15> sel270<14>
++sel270<13> sel270<12> sel270<11> sel270<10> sel270<9> sel270<8> sel270<7>
++sel270<6> sel270<5> sel270<4> sel270<3> sel270<2> sel270<1> sel270<0>
++sel270b<15> sel270b<14> sel270b<13> sel270b<12> sel270b<11> sel270b<10>
++sel270b<9> sel270b<8> sel270b<7> sel270b<6> sel270b<5> sel270b<4> sel270b<3>
++sel270b<2> sel270b<1> sel270b<0> tiehi tielo xcpl<3> xcpl<2> xcpl<1> xcpl<0>
++xcplb<3> xcplb<2> xcplb<1> xcplb<0>
+*.PININFO outn:O outp:O vdda:B vss:B clk0:I clk90:I clk180:I clk270:I
+*.PININFO sel0<15>:I sel0<14>:I sel0<13>:I sel0<12>:I sel0<11>:I sel0<10>:I
+*.PININFO sel0<9>:I sel0<8>:I sel0<7>:I sel0<6>:I sel0<5>:I sel0<4>:I sel0<3>:I
+*.PININFO sel0<2>:I sel0<1>:I sel0<0>:I sel0b<15>:I sel0b<14>:I sel0b<13>:I
+*.PININFO sel0b<12>:I sel0b<11>:I sel0b<10>:I sel0b<9>:I sel0b<8>:I sel0b<7>:I
+*.PININFO sel0b<6>:I sel0b<5>:I sel0b<4>:I sel0b<3>:I sel0b<2>:I sel0b<1>:I
+*.PININFO sel0b<0>:I sel90<15>:I sel90<14>:I sel90<13>:I sel90<12>:I
+*.PININFO sel90<11>:I sel90<10>:I sel90<9>:I sel90<8>:I sel90<7>:I sel90<6>:I
+*.PININFO sel90<5>:I sel90<4>:I sel90<3>:I sel90<2>:I sel90<1>:I sel90<0>:I
+*.PININFO sel90b<15>:I sel90b<14>:I sel90b<13>:I sel90b<12>:I sel90b<11>:I
+*.PININFO sel90b<10>:I sel90b<9>:I sel90b<8>:I sel90b<7>:I sel90b<6>:I
+*.PININFO sel90b<5>:I sel90b<4>:I sel90b<3>:I sel90b<2>:I sel90b<1>:I
+*.PININFO sel90b<0>:I sel180<15>:I sel180<14>:I sel180<13>:I sel180<12>:I
+*.PININFO sel180<11>:I sel180<10>:I sel180<9>:I sel180<8>:I sel180<7>:I
+*.PININFO sel180<6>:I sel180<5>:I sel180<4>:I sel180<3>:I sel180<2>:I
+*.PININFO sel180<1>:I sel180<0>:I sel180b<15>:I sel180b<14>:I sel180b<13>:I
+*.PININFO sel180b<12>:I sel180b<11>:I sel180b<10>:I sel180b<9>:I sel180b<8>:I
+*.PININFO sel180b<7>:I sel180b<6>:I sel180b<5>:I sel180b<4>:I sel180b<3>:I
+*.PININFO sel180b<2>:I sel180b<1>:I sel180b<0>:I sel270<15>:I sel270<14>:I
+*.PININFO sel270<13>:I sel270<12>:I sel270<11>:I sel270<10>:I sel270<9>:I
+*.PININFO sel270<8>:I sel270<7>:I sel270<6>:I sel270<5>:I sel270<4>:I
+*.PININFO sel270<3>:I sel270<2>:I sel270<1>:I sel270<0>:I sel270b<15>:I
+*.PININFO sel270b<14>:I sel270b<13>:I sel270b<12>:I sel270b<11>:I sel270b<10>:I
+*.PININFO sel270b<9>:I sel270b<8>:I sel270b<7>:I sel270b<6>:I sel270b<5>:I
+*.PININFO sel270b<4>:I sel270b<3>:I sel270b<2>:I sel270b<1>:I sel270b<0>:I
+*.PININFO tiehi:I tielo:I xcpl<3>:I xcpl<2>:I xcpl<1>:I xcpl<0>:I xcplb<3>:I
+*.PININFO xcplb<2>:I xcplb<1>:I xcplb<0>:I 
+XI151 net28 outp_ac vdda vss Delay_line
+XI160 net6 net1 vdda vss Delay_line
+XI152 net13 outn_ac vdda vss Delay_line
+XI159 net5 net7 vdda vss Delay_line
+XI95 outn_ac net21 vdda vss vss vdda trans_mac_pcell_1
+XI163 outp net4 vdda vss vss vdda trans_mac_pcell_1
+XI94 outp_ac net18 vdda vss vss vdda trans_mac_pcell_1
+XI114_15 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<15> sel270b<15> tiehi tielo vdda vss PI_tri_cell
+XI114_14 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<14> sel270b<14> tiehi tielo vdda vss PI_tri_cell
+XI114_13 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<13> sel270b<13> tiehi tielo vdda vss PI_tri_cell
+XI114_12 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<12> sel270b<12> tiehi tielo vdda vss PI_tri_cell
+XI114_11 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<11> sel270b<11> tiehi tielo vdda vss PI_tri_cell
+XI114_10 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<10> sel270b<10> tiehi tielo vdda vss PI_tri_cell
+XI114_9 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<9> sel270b<9> tiehi tielo vdda vss PI_tri_cell
+XI114_8 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<8> sel270b<8> tiehi tielo vdda vss PI_tri_cell
+XI114_7 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<7> sel270b<7> tiehi tielo vdda vss PI_tri_cell
+XI114_6 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<6> sel270b<6> tiehi tielo vdda vss PI_tri_cell
+XI114_5 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<5> sel270b<5> tiehi tielo vdda vss PI_tri_cell
+XI114_4 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<4> sel270b<4> tiehi tielo vdda vss PI_tri_cell
+XI114_3 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<3> sel270b<3> tiehi tielo vdda vss PI_tri_cell
+XI114_2 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<2> sel270b<2> tiehi tielo vdda vss PI_tri_cell
+XI114_1 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<1> sel270b<1> tiehi tielo vdda vss PI_tri_cell
+XI114_0 outn_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<0> sel270b<0> tiehi tielo vdda vss PI_tri_cell
+XI110_15 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<15> sel270b<15> tiehi tielo vdda vss PI_tri_cell
+XI110_14 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<14> sel270b<14> tiehi tielo vdda vss PI_tri_cell
+XI110_13 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<13> sel270b<13> tiehi tielo vdda vss PI_tri_cell
+XI110_12 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<12> sel270b<12> tiehi tielo vdda vss PI_tri_cell
+XI110_11 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<11> sel270b<11> tiehi tielo vdda vss PI_tri_cell
+XI110_10 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<10> sel270b<10> tiehi tielo vdda vss PI_tri_cell
+XI110_9 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<9> sel270b<9> tiehi tielo vdda vss PI_tri_cell
+XI110_8 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<8> sel270b<8> tiehi tielo vdda vss PI_tri_cell
+XI110_7 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<7> sel270b<7> tiehi tielo vdda vss PI_tri_cell
+XI110_6 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<6> sel270b<6> tiehi tielo vdda vss PI_tri_cell
+XI110_5 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<5> sel270b<5> tiehi tielo vdda vss PI_tri_cell
+XI110_4 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<4> sel270b<4> tiehi tielo vdda vss PI_tri_cell
+XI110_3 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<3> sel270b<3> tiehi tielo vdda vss PI_tri_cell
+XI110_2 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<2> sel270b<2> tiehi tielo vdda vss PI_tri_cell
+XI110_1 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<1> sel270b<1> tiehi tielo vdda vss PI_tri_cell
+XI110_0 outp_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel270<0> sel270b<0> tiehi tielo vdda vss PI_tri_cell
+XI109_15 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<15> sel180b<15> tiehi tielo vdda vss PI_tri_cell
+XI109_14 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<14> sel180b<14> tiehi tielo vdda vss PI_tri_cell
+XI109_13 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<13> sel180b<13> tiehi tielo vdda vss PI_tri_cell
+XI109_12 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<12> sel180b<12> tiehi tielo vdda vss PI_tri_cell
+XI109_11 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<11> sel180b<11> tiehi tielo vdda vss PI_tri_cell
+XI109_10 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<10> sel180b<10> tiehi tielo vdda vss PI_tri_cell
+XI109_9 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<9> sel180b<9> tiehi tielo vdda vss PI_tri_cell
+XI109_8 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<8> sel180b<8> tiehi tielo vdda vss PI_tri_cell
+XI109_7 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<7> sel180b<7> tiehi tielo vdda vss PI_tri_cell
+XI109_6 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<6> sel180b<6> tiehi tielo vdda vss PI_tri_cell
+XI109_5 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<5> sel180b<5> tiehi tielo vdda vss PI_tri_cell
+XI109_4 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<4> sel180b<4> tiehi tielo vdda vss PI_tri_cell
+XI109_3 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<3> sel180b<3> tiehi tielo vdda vss PI_tri_cell
+XI109_2 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<2> sel180b<2> tiehi tielo vdda vss PI_tri_cell
+XI109_1 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<1> sel180b<1> tiehi tielo vdda vss PI_tri_cell
+XI109_0 outp_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<0> sel180b<0> tiehi tielo vdda vss PI_tri_cell
+XI106_15 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<15> sel0b<15> tiehi tielo vdda vss PI_tri_cell
+XI106_14 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<14> sel0b<14> tiehi tielo vdda vss PI_tri_cell
+XI106_13 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<13> sel0b<13> tiehi tielo vdda vss PI_tri_cell
+XI106_12 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<12> sel0b<12> tiehi tielo vdda vss PI_tri_cell
+XI106_11 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<11> sel0b<11> tiehi tielo vdda vss PI_tri_cell
+XI106_10 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<10> sel0b<10> tiehi tielo vdda vss PI_tri_cell
+XI106_9 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<9> sel0b<9> tiehi tielo vdda vss PI_tri_cell
+XI106_8 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<8> sel0b<8> tiehi tielo vdda vss PI_tri_cell
+XI106_7 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<7> sel0b<7> tiehi tielo vdda vss PI_tri_cell
+XI106_6 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<6> sel0b<6> tiehi tielo vdda vss PI_tri_cell
+XI106_5 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<5> sel0b<5> tiehi tielo vdda vss PI_tri_cell
+XI106_4 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<4> sel0b<4> tiehi tielo vdda vss PI_tri_cell
+XI106_3 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<3> sel0b<3> tiehi tielo vdda vss PI_tri_cell
+XI106_2 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<2> sel0b<2> tiehi tielo vdda vss PI_tri_cell
+XI106_1 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<1> sel0b<1> tiehi tielo vdda vss PI_tri_cell
+XI106_0 outp_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<0> sel0b<0> tiehi tielo vdda vss PI_tri_cell
+XI108_15 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<15> sel90b<15> tiehi tielo vdda vss PI_tri_cell
+XI108_14 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<14> sel90b<14> tiehi tielo vdda vss PI_tri_cell
+XI108_13 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<13> sel90b<13> tiehi tielo vdda vss PI_tri_cell
+XI108_12 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<12> sel90b<12> tiehi tielo vdda vss PI_tri_cell
+XI108_11 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<11> sel90b<11> tiehi tielo vdda vss PI_tri_cell
+XI108_10 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<10> sel90b<10> tiehi tielo vdda vss PI_tri_cell
+XI108_9 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<9> sel90b<9> tiehi tielo vdda vss PI_tri_cell
+XI108_8 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<8> sel90b<8> tiehi tielo vdda vss PI_tri_cell
+XI108_7 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<7> sel90b<7> tiehi tielo vdda vss PI_tri_cell
+XI108_6 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<6> sel90b<6> tiehi tielo vdda vss PI_tri_cell
+XI108_5 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<5> sel90b<5> tiehi tielo vdda vss PI_tri_cell
+XI108_4 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<4> sel90b<4> tiehi tielo vdda vss PI_tri_cell
+XI108_3 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<3> sel90b<3> tiehi tielo vdda vss PI_tri_cell
+XI108_2 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<2> sel90b<2> tiehi tielo vdda vss PI_tri_cell
+XI108_1 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<1> sel90b<1> tiehi tielo vdda vss PI_tri_cell
+XI108_0 outp_int clk90 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<0> sel90b<0> tiehi tielo vdda vss PI_tri_cell
+XI111_15 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<15> sel0b<15> tiehi tielo vdda vss PI_tri_cell
+XI111_14 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<14> sel0b<14> tiehi tielo vdda vss PI_tri_cell
+XI111_13 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<13> sel0b<13> tiehi tielo vdda vss PI_tri_cell
+XI111_12 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<12> sel0b<12> tiehi tielo vdda vss PI_tri_cell
+XI111_11 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<11> sel0b<11> tiehi tielo vdda vss PI_tri_cell
+XI111_10 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<10> sel0b<10> tiehi tielo vdda vss PI_tri_cell
+XI111_9 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<9> sel0b<9> tiehi tielo vdda vss PI_tri_cell
+XI111_8 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<8> sel0b<8> tiehi tielo vdda vss PI_tri_cell
+XI111_7 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<7> sel0b<7> tiehi tielo vdda vss PI_tri_cell
+XI111_6 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<6> sel0b<6> tiehi tielo vdda vss PI_tri_cell
+XI111_5 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<5> sel0b<5> tiehi tielo vdda vss PI_tri_cell
+XI111_4 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<4> sel0b<4> tiehi tielo vdda vss PI_tri_cell
+XI111_3 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<3> sel0b<3> tiehi tielo vdda vss PI_tri_cell
+XI111_2 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<2> sel0b<2> tiehi tielo vdda vss PI_tri_cell
+XI111_1 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<1> sel0b<1> tiehi tielo vdda vss PI_tri_cell
+XI111_0 outn_int clk180 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel0<0> sel0b<0> tiehi tielo vdda vss PI_tri_cell
+XI112_15 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<15> sel90b<15> tiehi tielo vdda vss PI_tri_cell
+XI112_14 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<14> sel90b<14> tiehi tielo vdda vss PI_tri_cell
+XI112_13 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<13> sel90b<13> tiehi tielo vdda vss PI_tri_cell
+XI112_12 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<12> sel90b<12> tiehi tielo vdda vss PI_tri_cell
+XI112_11 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<11> sel90b<11> tiehi tielo vdda vss PI_tri_cell
+XI112_10 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<10> sel90b<10> tiehi tielo vdda vss PI_tri_cell
+XI112_9 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<9> sel90b<9> tiehi tielo vdda vss PI_tri_cell
+XI112_8 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<8> sel90b<8> tiehi tielo vdda vss PI_tri_cell
+XI112_7 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<7> sel90b<7> tiehi tielo vdda vss PI_tri_cell
+XI112_6 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<6> sel90b<6> tiehi tielo vdda vss PI_tri_cell
+XI112_5 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<5> sel90b<5> tiehi tielo vdda vss PI_tri_cell
+XI112_4 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<4> sel90b<4> tiehi tielo vdda vss PI_tri_cell
+XI112_3 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<3> sel90b<3> tiehi tielo vdda vss PI_tri_cell
+XI112_2 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<2> sel90b<2> tiehi tielo vdda vss PI_tri_cell
+XI112_1 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<1> sel90b<1> tiehi tielo vdda vss PI_tri_cell
+XI112_0 outn_int clk270 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel90<0> sel90b<0> tiehi tielo vdda vss PI_tri_cell
+XI113_15 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<15> sel180b<15> tiehi tielo vdda vss PI_tri_cell
+XI113_14 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<14> sel180b<14> tiehi tielo vdda vss PI_tri_cell
+XI113_13 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<13> sel180b<13> tiehi tielo vdda vss PI_tri_cell
+XI113_12 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<12> sel180b<12> tiehi tielo vdda vss PI_tri_cell
+XI113_11 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<11> sel180b<11> tiehi tielo vdda vss PI_tri_cell
+XI113_10 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<10> sel180b<10> tiehi tielo vdda vss PI_tri_cell
+XI113_9 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<9> sel180b<9> tiehi tielo vdda vss PI_tri_cell
+XI113_8 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<8> sel180b<8> tiehi tielo vdda vss PI_tri_cell
+XI113_7 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<7> sel180b<7> tiehi tielo vdda vss PI_tri_cell
+XI113_6 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<6> sel180b<6> tiehi tielo vdda vss PI_tri_cell
+XI113_5 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<5> sel180b<5> tiehi tielo vdda vss PI_tri_cell
+XI113_4 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<4> sel180b<4> tiehi tielo vdda vss PI_tri_cell
+XI113_3 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<3> sel180b<3> tiehi tielo vdda vss PI_tri_cell
+XI113_2 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<2> sel180b<2> tiehi tielo vdda vss PI_tri_cell
+XI113_1 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<1> sel180b<1> tiehi tielo vdda vss PI_tri_cell
+XI113_0 outn_int clk0 xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3> xcplb<2>
++xcplb<1> xcplb<0> sel180<0> sel180b<0> tiehi tielo vdda vss PI_tri_cell
+.ends wphy_pi_4g_wphy_pi_4g_core_dual
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : wphy_pi_4g_wphy_pi_logic                                           *
+* View   : schematic                                                          *
+* Last Time Saved: Feb  4 01:04:16 2022                                       *
+*******************************************************************************
+.subckt wphy_pi_4g_wphy_pi_logic en_int enb_int gear_out<3> gear_out<2>
++gear_out<1> gear_out<0> gear_outb<3> gear_outb<2> gear_outb<1> gear_outb<0>
++sel0<15> sel0<14> sel0<13> sel0<12> sel0<11> sel0<10> sel0<9> sel0<8> sel0<7>
++sel0<6> sel0<5> sel0<4> sel0<3> sel0<2> sel0<1> sel0<0> sel0b<15> sel0b<14>
++sel0b<13> sel0b<12> sel0b<11> sel0b<10> sel0b<9> sel0b<8> sel0b<7> sel0b<6>
++sel0b<5> sel0b<4> sel0b<3> sel0b<2> sel0b<1> sel0b<0> sel90<15> sel90<14>
++sel90<13> sel90<12> sel90<11> sel90<10> sel90<9> sel90<8> sel90<7> sel90<6>
++sel90<5> sel90<4> sel90<3> sel90<2> sel90<1> sel90<0> sel90b<15> sel90b<14>
++sel90b<13> sel90b<12> sel90b<11> sel90b<10> sel90b<9> sel90b<8> sel90b<7>
++sel90b<6> sel90b<5> sel90b<4> sel90b<3> sel90b<2> sel90b<1> sel90b<0>
++sel180<15> sel180<14> sel180<13> sel180<12> sel180<11> sel180<10> sel180<9>
++sel180<8> sel180<7> sel180<6> sel180<5> sel180<4> sel180<3> sel180<2>
++sel180<1> sel180<0> sel180b<15> sel180b<14> sel180b<13> sel180b<12>
++sel180b<11> sel180b<10> sel180b<9> sel180b<8> sel180b<7> sel180b<6> sel180b<5>
++sel180b<4> sel180b<3> sel180b<2> sel180b<1> sel180b<0> sel270<15> sel270<14>
++sel270<13> sel270<12> sel270<11> sel270<10> sel270<9> sel270<8> sel270<7>
++sel270<6> sel270<5> sel270<4> sel270<3> sel270<2> sel270<1> sel270<0>
++sel270b<15> sel270b<14> sel270b<13> sel270b<12> sel270b<11> sel270b<10>
++sel270b<9> sel270b<8> sel270b<7> sel270b<6> sel270b<5> sel270b<4> sel270b<3>
++sel270b<2> sel270b<1> sel270b<0> xcpl<3> xcpl<2> xcpl<1> xcpl<0> xcplb<3>
++xcplb<2> xcplb<1> xcplb<0> vdda vss code<15> code<14> code<13> code<12>
++code<11> code<10> code<9> code<8> code<7> code<6> code<5> code<4> code<3>
++code<2> code<1> code<0> en gear<3> gear<2> gear<1> gear<0> quad<1> quad<0>
++tiehi tielo xcpl_in<3> xcpl_in<2> xcpl_in<1> xcpl_in<0>
+*.PININFO en_int:O enb_int:O gear_out<3>:O gear_out<2>:O gear_out<1>:O
+*.PININFO gear_out<0>:O gear_outb<3>:O gear_outb<2>:O gear_outb<1>:O
+*.PININFO gear_outb<0>:O sel0<15>:O sel0<14>:O sel0<13>:O sel0<12>:O sel0<11>:O
+*.PININFO sel0<10>:O sel0<9>:O sel0<8>:O sel0<7>:O sel0<6>:O sel0<5>:O
+*.PININFO sel0<4>:O sel0<3>:O sel0<2>:O sel0<1>:O sel0<0>:O sel0b<15>:O
+*.PININFO sel0b<14>:O sel0b<13>:O sel0b<12>:O sel0b<11>:O sel0b<10>:O
+*.PININFO sel0b<9>:O sel0b<8>:O sel0b<7>:O sel0b<6>:O sel0b<5>:O sel0b<4>:O
+*.PININFO sel0b<3>:O sel0b<2>:O sel0b<1>:O sel0b<0>:O sel90<15>:O sel90<14>:O
+*.PININFO sel90<13>:O sel90<12>:O sel90<11>:O sel90<10>:O sel90<9>:O sel90<8>:O
+*.PININFO sel90<7>:O sel90<6>:O sel90<5>:O sel90<4>:O sel90<3>:O sel90<2>:O
+*.PININFO sel90<1>:O sel90<0>:O sel90b<15>:O sel90b<14>:O sel90b<13>:O
+*.PININFO sel90b<12>:O sel90b<11>:O sel90b<10>:O sel90b<9>:O sel90b<8>:O
+*.PININFO sel90b<7>:O sel90b<6>:O sel90b<5>:O sel90b<4>:O sel90b<3>:O
+*.PININFO sel90b<2>:O sel90b<1>:O sel90b<0>:O sel180<15>:O sel180<14>:O
+*.PININFO sel180<13>:O sel180<12>:O sel180<11>:O sel180<10>:O sel180<9>:O
+*.PININFO sel180<8>:O sel180<7>:O sel180<6>:O sel180<5>:O sel180<4>:O
+*.PININFO sel180<3>:O sel180<2>:O sel180<1>:O sel180<0>:O sel180b<15>:O
+*.PININFO sel180b<14>:O sel180b<13>:O sel180b<12>:O sel180b<11>:O sel180b<10>:O
+*.PININFO sel180b<9>:O sel180b<8>:O sel180b<7>:O sel180b<6>:O sel180b<5>:O
+*.PININFO sel180b<4>:O sel180b<3>:O sel180b<2>:O sel180b<1>:O sel180b<0>:O
+*.PININFO sel270<15>:O sel270<14>:O sel270<13>:O sel270<12>:O sel270<11>:O
+*.PININFO sel270<10>:O sel270<9>:O sel270<8>:O sel270<7>:O sel270<6>:O
+*.PININFO sel270<5>:O sel270<4>:O sel270<3>:O sel270<2>:O sel270<1>:O
+*.PININFO sel270<0>:O sel270b<15>:O sel270b<14>:O sel270b<13>:O sel270b<12>:O
+*.PININFO sel270b<11>:O sel270b<10>:O sel270b<9>:O sel270b<8>:O sel270b<7>:O
+*.PININFO sel270b<6>:O sel270b<5>:O sel270b<4>:O sel270b<3>:O sel270b<2>:O
+*.PININFO sel270b<1>:O sel270b<0>:O xcpl<3>:O xcpl<2>:O xcpl<1>:O xcpl<0>:O
+*.PININFO xcplb<3>:O xcplb<2>:O xcplb<1>:O xcplb<0>:O vdda:B vss:B code<15>:I
+*.PININFO code<14>:I code<13>:I code<12>:I code<11>:I code<10>:I code<9>:I
+*.PININFO code<8>:I code<7>:I code<6>:I code<5>:I code<4>:I code<3>:I code<2>:I
+*.PININFO code<1>:I code<0>:I en:I gear<3>:I gear<2>:I gear<1>:I gear<0>:I
+*.PININFO quad<1>:I quad<0>:I tiehi:I tielo:I xcpl_in<3>:I xcpl_in<2>:I
+*.PININFO xcpl_in<1>:I xcpl_in<0>:I 
+.ends wphy_pi_4g_wphy_pi_logic
+
+
+*******************************************************************************
+* Sub-Circuit Netlist:                                                        *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : wphy_pi_4g_wphy_pi_4g_predrv                                       *
+* View   : schematic                                                          *
+* Last Time Saved: Feb 12 18:49:06 2022                                       *
+*******************************************************************************
+.subckt wphy_pi_4g_wphy_pi_4g_predrv outn outp vdda vss en enb gear<3> gear<2>
++gear<1> gear<0> gearb<3> gearb<2> gearb<1> gearb<0> inn inp
+*.PININFO outn:O outp:O vdda:B vss:B en:I enb:I gear<3>:I gear<2>:I gear<1>:I
+*.PININFO gear<0>:I gearb<3>:I gearb<2>:I gearb<1>:I gearb<0>:I inn:I inp:I 
+XI24_1 outn inp gear<2> gearb<2> vss vss vdda vdda tri_mac_pcell_0
+XI24_0 outn inp gear<2> gearb<2> vss vss vdda vdda tri_mac_pcell_0
+XI26_3 outn inp gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI26_2 outn inp gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI26_1 outn inp gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI26_0 outn inp gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI27_3 outp inn gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI27_2 outp inn gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI27_1 outp inn gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI27_0 outp inn gear<3> gearb<3> vss vss vdda vdda tri_mac_pcell_0
+XI15 outn inp en enb vss vss vdda vdda tri_mac_pcell_0
+XI25_1 outp inn gear<2> gearb<2> vss vss vdda vdda tri_mac_pcell_0
+XI25_0 outp inn gear<2> gearb<2> vss vss vdda vdda tri_mac_pcell_0
+XI20 outn inp gear<0> gearb<0> vss vss vdda vdda tri_mac_pcell_0 
+XI23 outn inp gear<1> gearb<1> vss vss vdda vdda tri_mac_pcell_0 
+XI22 outp inn gear<1> gearb<1> vss vss vdda vdda tri_mac_pcell_0
+XI16 outp inn en enb vss vss vdda vdda tri_mac_pcell_0 
+XI21 outp inn gear<0> gearb<0> vss vss vdda vdda tri_mac_pcell_0
+.ends wphy_pi_4g_wphy_pi_4g_predrv
+
+
+*******************************************************************************
+* Main Circuit Netlist:                                                       *
+*                                                                             *
+* Library: LPDDR4_T28HPC                                                      *
+* Cell   : wphy_pi_4g_dual                                                    *
+* View   : schematic                                                          *
+* Last Time Saved: Apr 18 19:12:44 2022                                       *
+*******************************************************************************
+.subckt wphy_pi_4g_dual out outb vdda vss clk0 clk90 clk180 clk270 code<15>
++code<14> code<13> code<12> code<11> code<10> code<9> code<8> code<7> code<6>
++code<5> code<4> code<3> code<2> code<1> code<0> ena gear<3> gear<2> gear<1>
++gear<0> quad<1> quad<0> xcpl<3> xcpl<2> xcpl<1> xcpl<0>
+*.PININFO out:O outb:O vdda:B vss:B clk0:I clk90:I clk180:I clk270:I code<15>:I
+*.PININFO code<14>:I code<13>:I code<12>:I code<11>:I code<10>:I code<9>:I
+*.PININFO code<8>:I code<7>:I code<6>:I code<5>:I code<4>:I code<3>:I code<2>:I
+*.PININFO code<1>:I code<0>:I ena:I gear<3>:I gear<2>:I gear<1>:I gear<0>:I
+*.PININFO quad<1>:I quad<0>:I xcpl<3>:I xcpl<2>:I xcpl<1>:I xcpl<0>:I 
+XI1 outb out vdda vss mix_outn mix_outp tiehi tielo
++wphy_pi_4g_wphy_pi_4g_outdrv
+XI0 mix_outn mix_outp vdda vss preclk0 preclk90 preclk180 preclk270 sel0<15>
++sel0<14> sel0<13> sel0<12> sel0<11> sel0<10> sel0<9> sel0<8> sel0<7> sel0<6>
++sel0<5> sel0<4> sel0<3> sel0<2> sel0<1> sel0<0> sel0b<15> sel0b<14> sel0b<13>
++sel0b<12> sel0b<11> sel0b<10> sel0b<9> sel0b<8> sel0b<7> sel0b<6> sel0b<5>
++sel0b<4> sel0b<3> sel0b<2> sel0b<1> sel0b<0> sel90<15> sel90<14> sel90<13>
++sel90<12> sel90<11> sel90<10> sel90<9> sel90<8> sel90<7> sel90<6> sel90<5>
++sel90<4> sel90<3> sel90<2> sel90<1> sel90<0> sel90b<15> sel90b<14> sel90b<13>
++sel90b<12> sel90b<11> sel90b<10> sel90b<9> sel90b<8> sel90b<7> sel90b<6>
++sel90b<5> sel90b<4> sel90b<3> sel90b<2> sel90b<1> sel90b<0> sel180<15>
++sel180<14> sel180<13> sel180<12> sel180<11> sel180<10> sel180<9> sel180<8>
++sel180<7> sel180<6> sel180<5> sel180<4> sel180<3> sel180<2> sel180<1>
++sel180<0> sel180b<15> sel180b<14> sel180b<13> sel180b<12> sel180b<11>
++sel180b<10> sel180b<9> sel180b<8> sel180b<7> sel180b<6> sel180b<5> sel180b<4>
++sel180b<3> sel180b<2> sel180b<1> sel180b<0> sel270<15> sel270<14> sel270<13>
++sel270<12> sel270<11> sel270<10> sel270<9> sel270<8> sel270<7> sel270<6>
++sel270<5> sel270<4> sel270<3> sel270<2> sel270<1> sel270<0> sel270b<15>
++sel270b<14> sel270b<13> sel270b<12> sel270b<11> sel270b<10> sel270b<9>
++sel270b<8> sel270b<7> sel270b<6> sel270b<5> sel270b<4> sel270b<3> sel270b<2>
++sel270b<1> sel270b<0> tiehi tielo xcpl_int<3> xcpl_int<2> xcpl_int<1>
++xcpl_int<0> xcplb_int<3> xcplb_int<2> xcplb_int<1> xcplb_int<0>
++wphy_pi_4g_wphy_pi_4g_core_dual
+XI2 en_int enb_int gear_int<3> gear_int<2> gear_int<1> gear_int<0> gear_intb<3>
++gear_intb<2> gear_intb<1> gear_intb<0> sel0<15> sel0<14> sel0<13> sel0<12>
++sel0<11> sel0<10> sel0<9> sel0<8> sel0<7> sel0<6> sel0<5> sel0<4> sel0<3>
++sel0<2> sel0<1> sel0<0> sel0b<15> sel0b<14> sel0b<13> sel0b<12> sel0b<11>
++sel0b<10> sel0b<9> sel0b<8> sel0b<7> sel0b<6> sel0b<5> sel0b<4> sel0b<3>
++sel0b<2> sel0b<1> sel0b<0> sel90<15> sel90<14> sel90<13> sel90<12> sel90<11>
++sel90<10> sel90<9> sel90<8> sel90<7> sel90<6> sel90<5> sel90<4> sel90<3>
++sel90<2> sel90<1> sel90<0> sel90b<15> sel90b<14> sel90b<13> sel90b<12>
++sel90b<11> sel90b<10> sel90b<9> sel90b<8> sel90b<7> sel90b<6> sel90b<5>
++sel90b<4> sel90b<3> sel90b<2> sel90b<1> sel90b<0> sel180<15> sel180<14>
++sel180<13> sel180<12> sel180<11> sel180<10> sel180<9> sel180<8> sel180<7>
++sel180<6> sel180<5> sel180<4> sel180<3> sel180<2> sel180<1> sel180<0>
++sel180b<15> sel180b<14> sel180b<13> sel180b<12> sel180b<11> sel180b<10>
++sel180b<9> sel180b<8> sel180b<7> sel180b<6> sel180b<5> sel180b<4> sel180b<3>
++sel180b<2> sel180b<1> sel180b<0> sel270<15> sel270<14> sel270<13> sel270<12>
++sel270<11> sel270<10> sel270<9> sel270<8> sel270<7> sel270<6> sel270<5>
++sel270<4> sel270<3> sel270<2> sel270<1> sel270<0> sel270b<15> sel270b<14>
++sel270b<13> sel270b<12> sel270b<11> sel270b<10> sel270b<9> sel270b<8>
++sel270b<7> sel270b<6> sel270b<5> sel270b<4> sel270b<3> sel270b<2> sel270b<1>
++sel270b<0> xcpl_int<3> xcpl_int<2> xcpl_int<1> xcpl_int<0> xcplb_int<3>
++xcplb_int<2> xcplb_int<1> xcplb_int<0> vdda vss code<15> code<14> code<13>
++code<12> code<11> code<10> code<9> code<8> code<7> code<6> code<5> code<4>
++code<3> code<2> code<1> code<0> ena gear<3> gear<2> gear<1> gear<0> quad<1>
++quad<0> tiehi tielo xcpl<3> xcpl<2> xcpl<1> xcpl<0> wphy_pi_4g_wphy_pi_logic
+XI4 preclk270 preclk90 vdda vss en_int enb_int gear_int<3> gear_int<2>
++gear_int<1> gear_int<0> gear_intb<3> gear_intb<2> gear_intb<1> gear_intb<0>
++clk270 clk90 wphy_pi_4g_wphy_pi_4g_predrv
+XI3 preclk180 preclk0 vdda vss en_int enb_int gear_int<3> gear_int<2>
++gear_int<1> gear_int<0> gear_intb<3> gear_intb<2> gear_intb<1> gear_intb<0>
++clk180 clk0 wphy_pi_4g_wphy_pi_4g_predrv
+.ends wphy_pi_4g_dual
